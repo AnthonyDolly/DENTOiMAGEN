@@ -1,2 +1,2 @@
-# Gucell-Electronics
-Proyecto web de Tienda de venta y reparación de celulares
+# DENTOiMAGEN
+Proyecto web de una clínica dental para que pueda llegar a mas usuarios en todo Lima.
