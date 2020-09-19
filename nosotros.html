@@ -188,41 +188,43 @@
 
                 <td width="50%">
                     <!-- <h1 size="5" > Agenda tu cita </h1> > -->
-                    <table align="center" border="1" width="80%">
+                    <table align="center" border="0" width="80%">
                         <tr>
                             <td align="">
                                 <font size="5">
-                                    <form action="confirmacion.html" method="GET">
-                                        <p>
-                                            Nombres:
-                                            <input align="end" type="text">
-                                        </p>
-                                        <p>
-                                            Apellidos:
-                                            <input align="end" type="text">
-                                        </p>
-                                        <p>
-                                            Teléfono:
-                                            <input type="text">
-                                        </p>
-                                        <p>
-                                            Correo:
-                                            <input type="email">
-                                        </p>
-                                        <p>
-                                            Fecha
-                                            <input type="date">
-                                        </p>
-                                        <p align="start">
-                                            Mensaje: <br>
-                                            <textarea align="center" width="100%" name="" id="" cols="30" rows="10">
-
-                                            </textarea>
-                                        </p>
-                                        <p align="center">
-                                            <input width="80%" type="submit" value="Enviar">
-                                            </a>
-                                        </p>
+                                    <form action="confirmacion.html" method="GET" >
+                                        <fieldset>
+                                            <legend>Envíanos tus datos</legend>
+                                            <p>
+                                                Nombres:
+                                                <input align="end" name="nombres" value="" required type="text">
+                                            </p>
+                                            <p>
+                                                Apellidos:
+                                                <input align="end" name="apellidos" value="" required type="text">
+                                            </p>
+                                            <p>
+                                                Teléfono:
+                                                <input type="text" name="telefono" value="" required >
+                                            </p>
+                                            <p>
+                                                Correo:
+                                                <input type="email" name="correo" value="" required >
+                                            </p>
+                                            <p>
+                                                Fecha
+                                                <input type="date">
+                                            </p>
+                                            <p align="start">
+                                                Mensaje: <br>
+                                                <textarea align="center" width="100%" name="" id="" cols="30" rows="10">
+                                                </textarea>
+                                            </p>
+                                            <p align="center">
+                                                <input width="80%" type="submit" value="Enviar">
+                                                
+                                            </p>
+                                        </fieldset>
                                     </form>
                                 </font>
 
