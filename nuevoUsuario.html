@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="urf-8">
-<title>Mi propia pagina web</title>
+	<meta charset="urf-8">
+	<title>Mi propia pagina web</title>
+
 <body bgcolor="#EFE4F7">
-</head>
-<body>
-<form name="frm" method="POST" action="login.html">
-	<p><h1>REGISTRO DE DATOS</h1></p>
-	<fieldset style="width:540px">
-	<legend><u><b>Datos del Paciente:</legend></u></b><p>
-	DNI: <input type="text" name="" size=8 required=""><p>
-	Apellidos: <input type="text" name="" size=30 required=""><p>
-	Nombres: <input type="text" name="" size=25 required=""><p>
-	Direccion: <input type="text" name="" size=50 required=""><p>
-    Edad: <input type="number" name="" size=2 required=""><p>
-    Telefono: <input type="number" name="" size=9 required=""><p>
-    Fecha de Nacimiento: <input type="date" name="" required=""><p>
-    Correo: <input type="email" name="" required=""><p>
-    Genero: <input type="radio" name="rdsexo" required="">Masculino
-            <input type="radio" name="rdsexo" required="">Femenino
-	</fieldset>
-	<fieldset style="width:380px">
-	<legend><u><b>Descripcion de la cita:</u></b></legend><p>
-    Consulta:<select name="ConsultaP">
-	<option>Blanqueamiento</option>
-    <option>Ortodoncia</option>
-    <option>Implantologia</option>
-    <option>Estetica Dental</option>
-    <option>Otros</option></select><p>
-	<legend>Informacion Adicional:</legend><p>
-    ¿Cuantas cirugias usted tuvo?<select name="CirugiaN"><p>
-	<option>1</option><p>
-	<option>2</option><p>
-	<option>3 a màs</option></select></p>
-	Inserte su documento de Identidad:<input type="file" name="txtfile"><p>
-	</fieldset>
-	<fieldset style="width:280px">
-	<legend><b><u>Enviar Informacion:</b></u></legend><p>
-	<input type="checkbox" name="dato" value="Acepta">Acepta Terminos y Condiciones<p>
-    <p><input type="submit" name="btenviar" value="Enviar datos">
-    <input type="reset" name="btborrar" value="Limpiar"></p>
-    </form>
-	</fieldset>
-</body>
+	</head>
+
+	<body>
+		<form name="frm" method="POST" action="login.html">
+			<p>
+			<h1>REGISTRO DE DATOS</h1>
+			</p>
+			<fieldset style="width:540px">
+				<legend><u><b>Datos del Paciente:</legend></u></b>
+				<p>
+					DNI: <input type="text" name="" size=8 required="">
+				<p>
+					Apellidos: <input type="text" name="" size=30 required="">
+				<p>
+					Nombres: <input type="text" name="" size=25 required="">
+				<p>
+					Direccion: <input type="text" name="" size=50 required="">
+				<p>
+					Edad: <input type="number" name="" size=2 required="">
+				<p>
+					Telefono: <input type="number" name="" size=9 required="">
+				<p>
+					Fecha de Nacimiento: <input type="date" name="" required="">
+				<p>
+					Correo: <input type="email" name="" required="">
+				<p>
+					Genero: <input type="radio" name="rdsexo" required="">Masculino
+					<input type="radio" name="rdsexo" required="">Femenino
+			</fieldset>
+			<fieldset style="width:380px">
+				<legend><u><b>Descripcion de la cita:</u></b></legend>
+				<p>
+					Consulta:<select name="ConsultaP">
+						<option>Blanqueamiento</option>
+						<option>Ortodoncia</option>
+						<option>Implantologia</option>
+						<option>Estetica Dental</option>
+						<option>Otros</option>
+					</select>
+				<p>
+					<legend>Informacion Adicional:</legend>
+				<p>
+					¿Cuantas cirugias usted tuvo?<select name="CirugiaN">
+						<p>
+							<option>1</option>
+						<p>
+							<option>2</option>
+						<p>
+							<option>3 a màs</option>
+					</select></p>
+				Inserte su documento de Identidad:<input type="file" name="txtfile">
+				<p>
+			</fieldset>
+			<fieldset style="width:280px">
+				<legend><b><u>Enviar Informacion:</b></u></legend>
+				<p>
+					<input type="checkbox" name="dato" value="Acepta">Acepta Terminos y Condiciones
+				<p>
+				<p><input type="submit" name="btenviar" value="Enviar datos">
+					<input type="reset" name="btborrar" value="Limpiar"></p>
+		</form>
+		</fieldset>
+	</body>
+
 </html>
