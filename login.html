@@ -8,27 +8,34 @@
 </head>
 <body>
     <div id="modalLogin">
-        <form name="principal" method="POST" action="nuevoUsuario.html">
-            <table border="1" align="center" width="30%" bgcolor="black">
+        <form name="principal" method="POST" action="index.html">
+            <table border="1" align="center" bgcolor="black" style="min-width: 360px;">
                 <tr>
-                    <td align="center" width="30%">
+                    <td align="center">
                         <font color="white">INICIE SESION</font c>
                     </td>
                 </tr>
             </table>
-            <table border="1" align="center" width="30%" bgcolor="#B6D1E8">
+            <table border="1" align="center" bgcolor="#B6D1E8" style="min-width: 360px;">
                 <tr>
                     <td align="left">
-                        <legend>Datos del usuario:</legend>
                         <p align="center">
-                            Username: <input type="text" name="" size=10 required="">
+                            Username: <input type="text" name="username" required="">
                         </p>
                         <p align="center">
-                            Password: <input type="Password" name="" size=10 required="">
+                            Password:  <input type="Password" name="password" required="">
                         </p>
+<<<<<<< HEAD
                         <p align="center"><input type="submit" name="btenviar" value="Enviar datos">
                             <input type="reset" name="btborrar" value="Limpiar">
                         <a href="register.html">Registrarse</p>
+=======
+                        <p align="center"><a href="register.html"
+                                style="text-decoration: none; color: #6767dd; font-size: .8em;">¿No
+                                tienes cuenta? Registrate
+                            </a>
+                            <input type="submit" name="btenviar" value="Enviar datos"><br><br>
+>>>>>>> 35c5b0060d71c6640c0d92fb7a67bb7288323b45
                         </p>
                     </td>
                 </tr>

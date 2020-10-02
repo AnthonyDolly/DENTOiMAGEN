@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <form name="frm" method="POST" action="login.html">
         <p>
         <h1>REGISTRO DE DATOS</h1>
@@ -34,16 +35,45 @@
                 Genero: <input type="radio" name="sexo" required="">Masculino
                 <input type="radio" name="sexo" required="">Femenino
         </fieldset>
+=======
+        <form name="frm" method="POST" action="confirmacionRegister.html">
+            <p>
+            <h1>REGISTRO DE DATOS</h1>
+            </p>
+            <fieldset style="max-width: 290px; text-align: right;">
+                <legend><u><b>Datos del Paciente:</legend></u></b>
+                <p>
+                    DNI: <input type="text" name="DNI" required="">
+                <p>
+                    Apellidos: <input type="text" name="apellidos" required="">
+                <p>
+                    Nombres: <input type="text" name="nombres" value="" required="">
+                <p>
+                    Direccion: <input type="text" name="direccion" required="">
+                <p>
+                    Edad: <input type="text" name="edad" required="">
+                <p>
+                    Telefono: <input type="text" name="telefono" required="">
+                <p>
+                    Fecha de Nacimiento: <input type="date" name="fecha_nacimiento" required="">
+                <p>
+                    Correo: <input type="email" name="emai" required="">
+                <p>
+                    Genero: <input type="radio" name="sexo" required="">Masculino
+                    <input type="radio" name="sexo" required="">Femenino
+            </fieldset>
+>>>>>>> 35c5b0060d71c6640c0d92fb7a67bb7288323b45
 
-        <fieldset style="max-width:260px">
-            <legend><b><u>Enviar Informacion:</b></u></legend>
-            <p>
-                <input type="checkbox" name="dato" value="Acepta">Acepta Terminos y Condiciones
-            <p>
-            <p><input type="submit" name="btenviar" value="Enviar datos">
-                <input type="reset" name="btborrar" value="Limpiar"></p>
-        </fieldset>
-    </form>
+            <fieldset style="max-width:260px">
+                <legend><b><u>Enviar Informacion:</b></u></legend>
+                <p>
+                    <input type="checkbox" name="dato" value="Acepta" required>Acepta Terminos y Condiciones
+                <p>
+                <p><input type="submit" name="btenviar" value="Enviar datos">
+                    <input type="reset" name="btborrar" value="Limpiar"></p>
+            </fieldset>
+        </form>
+    </center>
 </body>
 
 </html>
