@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
+<style type="text/css">
+ .area{ 
+      resize:none;
+  }
+</style>
 </head>
 
 <body style="font-family: sans-serif;">
@@ -213,6 +218,7 @@
                                             <p>
                                                 Servicios:
                                                 <select name="servicios">
+                                                <option value="0">I---Seleccione---I</option>  
                                                 <option value="1">Diseño de sonrisa</option>
                                                 <option value="2">Plan Dental</option>
                                                 <option value="3">Blanqueamiento</option>
@@ -226,12 +232,12 @@
                                             </p>
                                             <p align="start">
                                                 Mensaje: <br>
-                                                <textarea align="center" width="100%" name="" id="" cols="30" rows="10">
+                                                <textarea align="center" width="100%" name="" id="" cols="30" rows="10" class="area">
                                                 </textarea>
                                             </p>
                                             <p align="center">
                                                 <input width="80%" type="submit" value="Enviar">
-
+                                                <input width="80%" type="reset" value="Limpiar">
                                             </p>
                                         </fieldset>
                                     </form>
