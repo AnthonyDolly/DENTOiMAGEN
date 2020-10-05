@@ -3,11 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 p{
     margin: 0
 }
-
-
 
 /* --colors-- */
 .skyblue{   
@@ -37,10 +36,10 @@ ul{
     height: 20px;
 }
 main{
-    padding-top: 8rem;
+    margin-top: 8rem;
 }
 main > section > table {
-    /* box-shadow: 0 1px 4px rgba(146, 161, 176, 15); */
+    box-shadow: 0 1px 4px rgba(146, 161, 176, 15);
 }
 
 .navigator ul li a{
@@ -71,7 +70,6 @@ main > section > table {
 /* --end style body-- */
 
 
-<<<<<<< HEAD
 /* --MODAL Login-- */
 
 .form-group-login > * {
@@ -120,98 +118,3 @@ div > p > input[type = submit]:hover {
     grid-template: 1fr / 1fr 1fr ;
     margin-bottom: 1em;
 }
-=======
-
-
-
-
-/* --style footer-- */
-.footer-page{
-    position: relative;
-    color: #fff;
-    margin-top: 5rem;
-}
-.footer-page .image-bg{
-    background-image: url(image/dentista2.jpg);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-position: center center;
-    background-size: cover;
-    opacity: 0.1;
-    transition: opacity 0.5s;
-    background-attachment: fixed;
-
-}
-.footer-page .content-footer{
-    text-align: left;
-    max-width: 1140px;
-    padding: 3em 0 5rem;
-}
-
-/* --end style footer-- */
-
-
-
-
-/* --style carousel-- */
-.people-list{
-    color: #fff;
-    font-weight: 700;
-    margin: 3rem 0 5rem;
-}
-
-.carousel{
-    max-width: 1140px;
-    width: 100%;
-}
-.carousel-content{
-    position: relative;
-}
-.arrow-before, .arrow-after{
-    position: absolute;
-    display: block;
-    width: 30px;
-    height: 30px;
-    border: none;
-    top: calc(50% - 15px);
-    cursor: pointer;
-    line-height: 30px;
-    text-align: center;
-    background: none;
-}
-.arrow-before{
-    left: -30px ;
-    outline: none;
-    z-index: 10;
-}
-.arrow-after{
-    right: -30px;
-    outline: none;
-    z-index: 10;
-}
-
-
-.carousel-indicators .glider-dot{
-    outline: none;
-}
-
-
-
-/* --end style carousel-- */
-
-
-@media (max-width: 1199.98px) {
-    .arrow-before{
-        left: 0px ;
-        color: #fff;
-        
-    }
-    .arrow-after{
-        right: 0px;
-        color: #fff;
-    }
-}
->>>>>>> b3b0686f367b3bad0bb01310c20d96dac801c3bf

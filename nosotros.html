@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
     <title>Nosotros</title>
-<style type="text/css">
- .area{ 
-      resize:none;
-  }
-</style>
+    <style type="text/css">
+        .area {
+            resize: none;
+        }
+    </style>
 </head>
 
 <body style="background-color: #fbfbfe; font-family: sans-serif;">
@@ -28,15 +29,18 @@
                 <nav class="col-8 navigator">
                     <ul class="d-flex justify-content-end">
                         <li class="px-3">
-                            <a href="login.html"><i class="fas fa-user"></i> Iniciar Sesión</a>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal"><i class="
+                                fas fa-user"></i> Iniciar sesión</button>
                         </li>
                         <li>
-                            <a href="CliRe.html"><i class="fas fa-user"></i> Regístrate</a>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#RegisterModal"><i
+                                    class="fas fa-user"></i> Regístrate</button>
                         </li>
                     </ul>
                     <ul class="d-flex justify-content-between">
                         <li>
-                            <a href="index.html"> <i class="fas fa-home"></i> Inicio</a>
+                            <a href="index.html"> <i class="fas fa-home"></i>
+                                Inicio</a>
                         </li>
                         <li>
                             <a href="servicios.html"><i class="fa fa-stethoscope fa-fw"></i> Servicios</a>
@@ -57,7 +61,7 @@
 
 
         <main>
-            <section>
+            <section style="margin-bottom: 5em;">
                 <!-- primer bloque -->
                 <table width="80%">
                     <tr>
@@ -155,7 +159,7 @@
                                     reconocida por nuestra calidad de nuestros servicios.
                                 </p>
                             </font>
-                        </td>    
+                        </td>
                     </tr>
                     <tr>
                         <td align="center"> <img width="550px" src="image/dentista2.jpg" alt="" style="padding-top:60px"></td>
@@ -246,8 +250,6 @@
                 </table>
             </section>
 
-
-           
             <footer class="footer-page skyblue">
                 <div class="image-bg">
                 </div>
@@ -256,7 +258,7 @@
                         <div>
                             <h1>DENTOiMAGEN</h1>
                             <p>C. Los Olivos 62, Los Olivos 15304</p>
-                            <p><span>Hoarario de atención</span> <br> 
+                            <p><span>Hoarario de atención</span> <br>
                                 Lun a Vie. de 8am - 1pm y 3pm-8pm <br>
                                 Sab y Dom. de 9am a 2pm
                             </p>
@@ -269,10 +271,10 @@
                                 <strong>Telf: </strong> (01) 540 0543
                             </li>
                             <li>
-                                <strong>Cel: </strong> +51 924 800 200 
+                                <strong>Cel: </strong> +51 924 800 200
                             </li>
                             <li>
-                                <strong>Cel: </strong> +51 924 800 500 
+                                <strong>Cel: </strong> +51 924 800 500
                             </li>
                             <li>
                                 <strong>Correo: </strong> dentoimagen@servicios.pe
@@ -302,6 +304,83 @@
     </center>
 
 
+
+    <!-- Modal Login-->
+    <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="border: 0;">
+                <form action="index.html" method="post">
+                    <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
+                        <h5 class="modal-title">Iniciar Sesión</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div style="text-align: center;">
+                        <div class="form-group-login">
+                            <label style="display: block; font-size: .8em;">Username</label>
+                            <input type="text" name="username" required="" size="30">
+                        </div>
+                        <div class="form-group-login">
+                            <label style="display: block; font-size: .8em;">Password</label>
+                            <input type="Password" name="password" required="" size="30">
+                        </div>
+                        <div class="group-submit-Login">
+                            <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
+                                data-toggle="modal" data-target="#RegisterModal"
+                                style="display: inline-block; font-size: .8em; color: #3498db;">¿No
+                                tienes cuenta? Registrate
+                            </button>
+                            <input type="submit" name="btenviar" value="Ingresar"
+                                style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Register -->
+    <div class="modal fade" id="RegisterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="border: 0;">
+                <form action="confirmacionRegister.html" method="post">
+                    <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
+                        <h5>Registrarse</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div style="margin-left: .2em; margin-right: .2em;">
+                        <div class="form-group-register">
+                            <div class="group-names">
+                                <input type="text" name="nombres" placeholder="Nombres" required>
+                                <input type="text" name="apellidos" placeholder="Apellidos" required>
+                            </div>
+                            <div class="group-correo-username">
+                                <input type="email" name="correo" placeholder="Correo Electrónico" class="email"
+                                    required>
+                                <input type="text" name="username" placeholder="Usuario" required>
+                            </div>
+                            <div class="group-password">
+                                <input type="password" name="password" placeholder="Contraseña" required>
+                                <input type="password" name="r-password" placeholder="Repetir contraseña" required>
+                            </div>
+                            <div class="group-submit">
+                                <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
+                                    data-toggle="modal" data-target="#LoginModal"
+                                    style="display: inline-block; font-size: .8em; color: #3498db;">¿Ya
+                                    tienes cuenta? Iniciar sesión
+                                </button>
+                                <input type="submit" class="right" name="btenviar" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;
+                                ">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
 </body>
