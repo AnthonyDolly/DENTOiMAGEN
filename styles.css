@@ -1,0 +1,159 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    margin: 0
+}
+
+
+
+/* --colors-- */
+.skyblue{   
+    background: #1089bf;
+}
+.white{
+    background: #fff;
+}
+
+/* --style body-- */
+ul{
+    list-style: none;
+}
+.header-home{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+.header-home .content-header {
+    width: 80%;
+    margin:  auto;
+}
+.fila-color{
+    width: 100%;
+    height: 20px;
+}
+main{
+    padding-top: 8rem;
+}
+main > section > table {
+    /* box-shadow: 0 1px 4px rgba(146, 161, 176, 15); */
+}
+
+.navigator ul li a{
+    color: #000;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s linear;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 500px  ;
+}
+.navigator ul li a:hover{
+    background: #1089bf;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navigator ul:first-child li a {
+    font-size: .8em;
+}
+/* --end style body-- */
+
+
+
+
+
+
+/* --style footer-- */
+.footer-page{
+    position: relative;
+    color: #fff;
+    margin-top: 5rem;
+}
+.footer-page .image-bg{
+    background-image: url(image/dentista2.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.1;
+    transition: opacity 0.5s;
+    background-attachment: fixed;
+
+}
+.footer-page .content-footer{
+    text-align: left;
+    max-width: 1140px;
+    padding: 3em 0 5rem;
+}
+
+/* --end style footer-- */
+
+
+
+
+/* --style carousel-- */
+.people-list{
+    color: #fff;
+    font-weight: 700;
+    margin: 3rem 0 5rem;
+}
+
+.carousel{
+    max-width: 1140px;
+    width: 100%;
+}
+.carousel-content{
+    position: relative;
+}
+.arrow-before, .arrow-after{
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 15px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+}
+.arrow-before{
+    left: -30px ;
+    outline: none;
+    z-index: 10;
+}
+.arrow-after{
+    right: -30px;
+    outline: none;
+    z-index: 10;
+}
+
+
+.carousel-indicators .glider-dot{
+    outline: none;
+}
+
+
+
+/* --end style carousel-- */
+
+
+@media (max-width: 1199.98px) {
+    .arrow-before{
+        left: 0px ;
+        color: #fff;
+        
+    }
+    .arrow-after{
+        right: 0px;
+        color: #fff;
+    }
+}
