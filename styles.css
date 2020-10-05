@@ -276,3 +276,58 @@ div > p > input[type = submit]:hover {
 .container-perfil-feature .perfil-feature {
     padding: .3em 2em;
 }
+
+
+/* --index-personal-- */
+
+.username-list:hover {
+    
+}
+
+.username-list-item {
+    position: relative;
+}
+
+.username-list-item > span {
+    font-weight: 600;
+}
+
+span .flecha {
+    width: 10px;
+    display: inline-block;
+}
+
+.username-sublist {
+    text-align: left;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    font-size: 14px;
+    display: none;
+    border-radius: 5px;
+}
+
+.username-list-item:hover .username-sublist {
+    display: block;
+    background-color: white;
+}
+
+.username-subitem {
+    margin-top: .3em;
+    width: 160px;
+}
+
+.username-subitem a {
+    text-decoration: none;
+    color: rgb(83, 87, 90);
+}
+
+.username-subitem a div {
+    display: block;
+}
+
+.username-subitem div > img {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
