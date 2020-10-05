@@ -3,13 +3,38 @@
 <head>
 <title>Primera pagina</title>
     <meta charset="UTF-8">
+    <style type="text/css">
+    	.text{
+    	 text-decoration:none;
+    	 color:red;
+    	 font-size:30px;
+    	 font-family:Agency FB;
+    	}
+    	.volver{
+    	 text-decoration:none;
+    	 position:absolute;
+    	 top:5px;
+    	 right:15px;
+    	 color:#FFFFFF;
+    	 font-size:30px;
+    	 font-family:Agency FB;
+    	 border-radius:5px;
+    	 border-color: #FA7979;
+    	 background-color:#B1B6BC;
+    	}
+    </style>
+    <script type="text/javascript">
+    	function regresa(){
+    	window.location.replace("index.html");
+    	}
+    </script>
 </head>
 <body style="background: url(image/fondiente.jpg) no-repeat; background-size:cover;">
 	<table width="100%">
 		<tr>
 			<td align="center" width="50%">
 				<h1>PERSONAL</h1><hr><p>
-				<a href="PerIn.html" target="columna2" style="font-size:17px;">Iniciar Sesion</a>
+				<a href="PerIn.html" class="text">Iniciar Sesion</a>
 			<p>
 				<img src="image/doctor.jpg" width="50%">
 			</td>
@@ -17,11 +42,12 @@
 
 			<td align="center" width="50%">
 				<h1>CLIENTE</h1><hr><p>
-				<a href="CliIn.html" target="columna2" style="font-size:17px;">
-				Iniciar Sesion</a>
+				<a href="CliIn.html" class="text">Iniciar Sesion</a>
 			<p>
 				<img src="image/paciente.jpg" width="50%">
 			</td>
 		</tr>	
 	</table>
+            <button class="volver" type="button" onclick="regresa()">VOLVER</button>
+</a>
 </body>
