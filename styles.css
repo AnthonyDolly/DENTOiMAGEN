@@ -84,7 +84,6 @@ div > p > input[type = submit]:hover {
 
 /* --Modal Register-- */
 
-
 .group-submit-Login {
     display: grid;
     grid-template: 1fr / 1fr 1fr;
@@ -211,4 +210,69 @@ div > p > input[type = submit]:hover {
         right: 0px;
         color: #fff;
     }
+}
+
+
+
+
+/* --perfil-personal-- */
+
+.container-perfil-personal, .container-perfil-cliente {
+    width: 100%;
+}
+
+.container-perfil-personal .perfil-paisaje {
+    background-image: url(image/fondo-perfil2.jpg);
+    display: block;
+    width: 100%;
+    height: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container-perfil-cliente .perfil-paisaje {
+    background-image: url(image/fondo-perfil1.jpg);
+    display: block;
+    width: 100%;
+    height: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container-perfil-personal .perfil-article-flex, .container-perfil-cliente .perfil-article-flex {
+    margin-top: -12em;
+    display: flex;
+}
+
+.container-perfil-personal .container-perfil-feature, .container-perfil-cliente .container-perfil-feature {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 3px;
+    justify-content: center;
+    padding: .3em;
+}
+
+.container-perfil-personal .container-perfil-feature .perfil-photo {
+    padding: 1em;
+    background-image: url(image/doctora.jpg);
+    display: block;
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.container-perfil-cliente .container-perfil-feature .perfil-photo {
+    padding: 1em;
+    background-image: url(image/paciente5.jpg);
+    display: block;
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.container-perfil-feature .perfil-feature {
+    padding: .3em 2em;
 }
