@@ -52,9 +52,64 @@ main > section > table {
     cursor: pointer;
 }
 
-.navigator ul:first-child li a {
+.navigator ul:first-child li button {
+    color: #fff;
     font-size: .8em;
+    border: 0;
+    background-color: #0394cb;
+}
+
+.navigator ul:first-child li button:focus {
+    box-shadow: none;
 }
 /* --end style body-- */
 
 
+/* --MODAL Login-- */
+
+.form-group-login > * {
+    padding: .3em;
+}
+
+div > p > input[type = submit]:hover {
+    background-color: red;
+}
+
+/* --Modal Register-- */
+
+
+.group-submit-Login {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    margin: 1em;
+}
+
+.group-names {
+    width: 100%;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    grid-gap: 1em;
+    margin-bottom: .6em;
+}
+
+.group-correo-username {
+    width: 100%;
+    display: grid;
+    grid-template: 1fr / 2fr 1fr;
+    grid-gap: 1em;
+    margin-bottom: .6em;
+}
+
+.group-password {
+    width: 100%;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    grid-gap: 1em;
+    margin-bottom: .6em;
+}
+
+.group-submit {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr ;
+    margin-bottom: 1em;
+}
