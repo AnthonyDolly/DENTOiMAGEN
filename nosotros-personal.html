@@ -22,34 +22,56 @@
         <header class="header-home white">
             <div class="d-flex align-items-center content-header">
                 <div class="col-4">
-                    <a href="index.html">
+                    <a href="index-personal.html">
                         <img style="width: 200px;" src="image/logo-clinica.svg" alt="Logo de Clinica">
                     </a>
                 </div>
                 <nav class="col-8 navigator">
-                    <ul class="d-flex justify-content-end">
-                        <li class="px-3">
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">
-                                <i class="fas fa-sign-in-alt"></i> Iniciar sesión</button>
-                        </li>
-                        <li>
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#RegisterModal"><i
-                                    class="fas fa-user"></i> Regístrate</button>
+                    <ul class="d-flex justify-content-end username-list">
+                        <li class="px-3 username-list-item">
+                            <span>
+                                Laura Sifuentes Lozano
+                                <div class="flecha">
+                                    <img src="image/flecha-down.svg" alt="flecha">
+                                </div>
+                            </span>
+                            <ul class="username-sublist">
+                                <li class="username-subitem">
+                                    <a href="perfil-personal.html">
+                                        <div>
+                                            <img src="image/perfil-dentista.svg" alt="mi perfil"> Mi perfil
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="username-subitem">
+                                    <a href="cita-personal.html">
+                                        <div>
+                                            <img src="image/cita.svg" alt="cita"> Citas
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="username-subitem">
+                                    <a href="index.html">
+                                        <div>
+                                            <img src="image/cerrar-sesion.svg" alt="close-sesion"> Cerrar sesión
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                     <ul class="d-flex justify-content-between">
                         <li>
-                            <a href="index.html"> <i class="fas fa-home"></i>
-                                Inicio</a>
+                            <a href="index-personal.html"><i class="fas fa-home"></i> Inicio</a>
                         </li>
                         <li>
-                            <a href="servicios.html"><i class="fa fa-stethoscope fa-fw"></i> Servicios</a>
+                            <a href="servicios-personal.html"><i class="fa fa-stethoscope fa-fw"></i> Servicios</a>
                         </li>
                         <li>
-                            <a href="sedes.html"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
+                            <a href="sedes-personal.html"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
                         </li>
                         <li>
-                            <a href="nosotros.html" style="background: #1089bf; color: #fff;"><i
+                            <a href="nosotros-personal.html" style="background: #1089bf; color: #fff;"><i
                                     class="fas fa-users"></i> Nosotros</a>
                         </li>
                     </ul>
@@ -235,6 +257,7 @@
                                                             <span style="padding-left:32px">
                                                                 <textarea align="center" width="100%" name="" id=""
                                                                     cols="30" rows="10" style="resize: none;">
+                                                </textarea>
                                                         </p>
                                                         <p align="center">
                                                             <input width="80%" type="submit" value="Enviar">
@@ -304,84 +327,6 @@
         </main>
     </center>
 
-
-
-    <!-- Modal Login-->
-    <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content" style="border: 0;">
-                <form action="index-personal.html" method="post">
-                    <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
-                        <h5 class="modal-title">Iniciar Sesión</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div style="text-align: center;">
-                        <div class="form-group-login">
-                            <label style="display: block; font-size: .8em;">Username</label>
-                            <input type="text" name="username" required="" size="30">
-                        </div>
-                        <div class="form-group-login">
-                            <label style="display: block; font-size: .8em;">Password</label>
-                            <input type="Password" name="password" required="" size="30">
-                        </div>
-                        <div class="group-submit-Login">
-                            <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
-                                data-toggle="modal" data-target="#RegisterModal"
-                                style="display: inline-block; font-size: .8em; color: #3498db;">¿No
-                                tienes cuenta? Registrate
-                            </button>
-                            <input type="submit" name="btenviar" value="Ingresar"
-                                style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;">
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Register -->
-    <div class="modal fade" id="RegisterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content" style="border: 0;">
-                <form action="confirmacionRegister.html" method="post">
-                    <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
-                        <h5>Registrarse</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div style="margin-left: .2em; margin-right: .2em;">
-                        <div class="form-group-register">
-                            <div class="group-names">
-                                <input type="text" name="nombres" placeholder="Nombres" required>
-                                <input type="text" name="apellidos" placeholder="Apellidos" required>
-                            </div>
-                            <div class="group-correo-username">
-                                <input type="email" name="correo" placeholder="Correo Electrónico" class="email"
-                                    required>
-                                <input type="text" name="username" placeholder="Usuario" required>
-                            </div>
-                            <div class="group-password">
-                                <input type="password" name="password" placeholder="Contraseña" required>
-                                <input type="password" name="r-password" placeholder="Repetir contraseña" required>
-                            </div>
-                            <div class="group-submit">
-                                <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
-                                    data-toggle="modal" data-target="#LoginModal"
-                                    style="display: inline-block; font-size: .8em; color: #3498db;">¿Ya
-                                    tienes cuenta? Iniciar sesión
-                                </button>
-                                <input type="submit" class="right" name="btenviar" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;
-                                ">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
 
 
