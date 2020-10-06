@@ -331,3 +331,50 @@ span .flecha {
     height: 18px;
     vertical-align: middle;
 }
+
+
+
+/*citas-user*/
+
+.table-citas{
+    max-width: 900px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 0 5px 2px #ccc;
+    padding: 20px;
+}
+.table-citas p{
+    margin: 0;
+    padding: 7px;
+}
+
+.table-citas div div:nth-child(1) p{
+    font-weight: 600;
+}   
+
+/*end citas-user*/
+
+
+
+/*citas-personal*/
+.table-citas-personal{
+    max-width: 900px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 0 5px 2px #ccc;
+    padding: 20px;
+}
+.table-citas-personal p{
+    margin: 0;
+    padding: 7px;
+}
+
+.table-citas-personal div div:nth-child(1) p{
+    font-weight: 600;
+} 
+.table-citas-personal div div:nth-child(2) p{
+    font-weight: 500;
+}
+.table-citas-personal > div{
+    padding-bottom: 30px;
+}
