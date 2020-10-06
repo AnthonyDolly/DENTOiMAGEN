@@ -280,9 +280,6 @@ div > p > input[type = submit]:hover {
 
 /* --index-personal-- */
 
-.username-list:hover {
-    
-}
 
 .username-list-item {
     position: relative;
