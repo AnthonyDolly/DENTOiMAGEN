@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
-    <title>Mi perfil</title>
+    <title>Mis citas</title>
 </head>
 
-<body>
+<body style="background-color: #fbfbfe; font-family: sans-serif;">
     <center>
+        <!-- Header -->
         <header class="header-home white">
             <div class="d-flex align-items-center content-header">
                 <div class="col-4">
@@ -24,14 +25,14 @@
                     <ul class="d-flex justify-content-end username-list">
                         <li class="px-3 username-list-item">
                             <span>
-                                Jose Carmona Peralta
+                                Laura Sifuentes Lozano
                                 <div class="flecha">
                                     <img src="image/flecha-down.svg" alt="flecha">
                                 </div>
                             </span>
                             <ul class="username-sublist">
                                 <li class="username-subitem">
-                                    <a href="perfil-cliente.html">
+                                    <a href="perfil-personal.html">
                                         <div>
                                             <img src="image/perfil-dentista.svg" alt="mi perfil"> Mi perfil
                                         </div>
@@ -63,8 +64,7 @@
                     </ul>
                     <ul class="d-flex justify-content-between">
                         <li>
-                            <a href="index-personal.html"> <i class="fas fa-home"></i>
-                                Inicio</a>
+                            <a href="index-personal.html"> <i class="fas fa-home"></i> Inicio</a>
                         </li>
                         <li>
                             <a href="servicios-personal.html"><i class="fa fa-stethoscope fa-fw"></i> Servicios</a>
@@ -83,23 +83,57 @@
         </header>
 
         <main>
-            <section min-width="360" style="width: 100%; margin-top: -.3em;">
-                <div class="container-perfil-cliente">
-                    <div class="perfil-paisaje"></div>
-                    <article class="perfil-article-flex">
-                        <div class="container-perfil-feature">
-                            <div class="perfil-photo"></div>
-                            <div class="perfil-feature">
-                                <h2>Jose Carmona Peralta</h2>
-                                <h5>Paciente</h5>
-                                <p>JoseCarmona22P@gmail.com</p>
-                                <a href="cita-user.html">Mis citas</a>
+
+            <div class="content-register-treatment">
+                <h1>Registrar nuevo tratamiento</h1>
+                <div class="table-register-treatment">
+                    <form action="">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom01">DNI Paciente</label>
+                            <input type="text" class="form-control" id="validationCustom01"  required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="treatment">Tratamiento</label>
+                            <select id="treatment" name="treatment" class="form-control"  onchange="viewTreatment()" >
+                                <!-- <option selected>Selecciona...</option> -->
+                                <option value="1">Ortodoncia</option>
+                                <option value="2">Periodoncia</option>
+                                <option value="3">Rehabilitación Oral</option>
+                                <option value="4">Implantes</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="precio">Precio</label>
+                            <input type="text" readonly class="form-control" id="precio" name="precio"  required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cuota">Cuotas</label>
+                            <input type="text" readonly class="form-control" id="cuota" name="cuota"  required>
+                        </div>
+                        <div class="d-flex col-md-6 mb-3 justify-content-around">
+                            <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                Activo
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                Inactivo
+                                </label>
                             </div>
                         </div>
-                    </article>
+                        <div class="col-md-6 mb-3 btn-save-treatment">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
                 </div>
-            </section>
+         
+            </div>
 
+
+            
             <footer class="footer-page skyblue">
                 <div class="image-bg">
                 </div>
@@ -108,7 +142,7 @@
                         <div>
                             <h1>DENTOiMAGEN</h1>
                             <p>C. Los Olivos 62, Los Olivos 15304</p>
-                            <p><span>Horario de atención:</span> <br>
+                            <p><span>Horario de atención</span> <br>
                                 Lun a Vie. de 8am - 1pm y 3pm-8pm <br>
                                 Sab y Dom. de 9am a 2pm
                             </p>
@@ -149,89 +183,10 @@
                 <div class="col-12 pt-4 pb-2">
                     <p>Todos los derechos reservados © 2020 | DENTOiMAGEN</p>
                 </div>
+
             </footer>
         </main>
     </center>
-
-    <!-- Modal Login-->
-    <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content" style="border: 0;">
-                <form action="index.html" method="post">
-                    <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
-                        <h5 class="modal-title">Iniciar Sesión</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div style="text-align: center;">
-                        <div class="form-group-login">
-                            <label style="display: block; font-size: .8em;">Username</label>
-                            <input type="text" name="username" required="" size="30">
-                        </div>
-                        <div class="form-group-login">
-                            <label style="display: block; font-size: .8em;">Password</label>
-                            <input type="Password" name="password" required="" size="30">
-                        </div>
-                        <div class="group-submit-Login">
-                            <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
-                                data-toggle="modal" data-target="#RegisterModal"
-                                style="display: inline-block; font-size: .8em; color: #3498db;">¿No
-                                tienes cuenta? Regístrate
-                            </button>
-                            <input type="submit" name="btenviar" value="Ingresar"
-                                style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;">
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Register -->
-    <div class="modal fade" id="RegisterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content" style="border: 0;">
-                <form action="confirmacionRegister.html" method="post">
-                    <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
-                        <h5>Registrarse</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div style="margin-left: .2em; margin-right: .2em;">
-                        <div class="form-group-register">
-                            <div class="group-names">
-                                <input type="text" name="nombres" placeholder="Nombres" required>
-                                <input type="text" name="apellidos" placeholder="Apellidos" required>
-                            </div>
-                            <div class="group-correo-username">
-                                <input type="email" name="correo" placeholder="Correo Electrónico" class="email"
-                                    required>
-                                <input type="text" name="username" placeholder="Usuario" required>
-                            </div>
-                            <div class="group-password">
-                                <input type="password" name="password" placeholder="Contraseña" required>
-                                <input type="password" name="r-password" placeholder="Repetir contraseña" required>
-                            </div>
-                            <div class="group-submit">
-                                <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
-                                    data-toggle="modal" data-target="#LoginModal"
-                                    style="display: inline-block; font-size: .8em; color: #3498db;">¿Ya
-                                    tienes cuenta? Iniciar sesión
-                                </button>
-                                <input type="submit" class="right" name="btenviar" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;
-                                    ">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-
 
 
 

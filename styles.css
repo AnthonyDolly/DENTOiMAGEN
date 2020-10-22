@@ -343,6 +343,7 @@ span .flecha {
 .table-citas p{
     margin: 0;
     padding: 7px;
+    width: 20%;
 }
 
 .table-citas div div:nth-child(1) p{
@@ -375,3 +376,30 @@ span .flecha {
 .table-citas-personal > div{
     padding-bottom: 30px;
 }
+
+
+/*table register treatment*/
+.table-register-treatment{
+    max-width: 900px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 0 5px 2px #ccc;
+    padding: 20px;
+}
+
+.btn-save-treatment{
+    width: 60%;
+}
+
+
+/*table-my-treatment-user*/
+.table-treatment-user{
+    max-width: 900px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 0 5px 2px #ccc;
+    padding: 20px;
+}
+.table-treatment-user div div:nth-child(1) p{
+    font-weight: 600;
+} 
