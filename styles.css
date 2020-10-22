@@ -423,3 +423,128 @@ span .flecha {
 .table-treatment-user div div:nth-child(1) p{
     font-weight: 600;
 } 
+.alinear{
+            display: flex;
+            padding-left: 200px;
+            padding-right: 100px;
+        }
+        #cuadro1{
+            width: 600px;
+            padding-top: 18px; 
+        }
+        #cuadro2{
+            width: 840px; 
+            padding-top: 18px; 
+        }
+        .texto{
+            padding-left: 10px;
+            padding-top: 40px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+        .texto2{
+            padding-left: 10px;
+            padding-top: 5px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+
+.alinea{
+            display: flex;
+            padding-left: 200px;
+            padding-right: 100px;
+        }
+        #cuadro3{
+            width: 800px;
+            padding-top: 30px;
+        }
+        #cuadro4{
+            width: 990px;
+        }
+        .texto3{
+            padding-left: 10px;
+            padding-top: 30px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+        .texto4{
+            padding-left: 10px;
+            padding-top: 40px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+
+.alineador{
+            display: flex;
+            padding-left: 200px;
+            padding-right: 100px;
+        }
+        #cuadro5{
+            width: 1500px;
+            padding-top: 30px;
+        }
+        #cuadro6{
+            width: 1400px;
+        }
+        .texto5{
+            padding-left: 10px;
+            padding-top: 50px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+        .texto6{
+            padding-left: 10px;
+            padding-top: 30px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+
+.alineacion{
+            display: flex;
+            padding-left: 200px;
+            padding-right: 100px;
+        }
+        #cuadro7{
+            width: 1300px;
+            padding-top: 30px;
+        }
+        #cuadro8{
+            width: 1400px;
+        }
+        .texto7{
+            padding-left: 10px;
+            padding-top: 35px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+        .texto8{
+            padding-left: 10px;
+            padding-top: 20px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+
+.alineados{
+            display: flex;
+            padding-left: 200px;
+            padding-right: 100px;
+        }
+        #cuadro9{
+            width: 1700px;
+            padding-top: 30px;
+        }
+        #cuadro10{
+            width: 1200px;
+        }
+        .texto9{
+            padding-left: 10px;
+            padding-top: 20px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+        .texto10{
+            padding-left: 10px;
+            padding-top: 10px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
