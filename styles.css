@@ -17,6 +17,26 @@ p{
 }
 
 /* --style body-- */
+nav li a{ 
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+        nav li{
+            border-bottom: solid 1px rgba(255,255,255,0.2);
+        }
+        nav > li{
+            float: left;
+        }
+        nav li ul{
+            background-color: white;
+            display:none; 
+            position:absolute;
+            min-width: 140px;
+        }
+        nav li:hover > ul{
+            display: block;
+            }
 ul{
     list-style: none;
 }
