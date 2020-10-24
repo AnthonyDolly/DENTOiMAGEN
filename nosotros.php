@@ -189,28 +189,46 @@
                                 <tr>
                                     <td>
                                         <form action="confirmacionNosotros.html" method="post">
-                                            <fieldset>
-                                                <legend><b>Envíanos tus datos aquí</b></legend>
-                                                <p>Nombres: <input type="text" name="nombres" required></p>
-                                                <p>Apellidos: <input type="text" name="apellidos" required></p>
-                                                <p>Telefono: <input type="text" name="telefono" required></p>
-                                                <p>Email: <input type="email" name="email" required></p>
-                                                <p>Fecha: <input type="date" name="fecha" required></p>
-                                                <p>Servicios
-                                                    <select name="servicios">
-                                                        <option value="0">I---Seleccione---I</option>
-                                                        <option value="1">Diseño de sonrisa</option>
-                                                        <option value="2">Plan Dental</option>
-                                                        <option value="3">Blanqueamiento</option>
-                                                        <option value="4">Limpieza dental</option>
-                                                        <option value="5">Brackets</option>
-                                                    </select></p>
-                                                <p>Mensaje <br>
-                                                    <textarea name="descripcion" id="desc" cols="30"
-                                                        rows="10"></textarea>
-                                                </p>
-                                                <p align="center"><input type="submit" name="boton" value="Enviar"></p>
-                                            </fieldset>
+                                            <h1 class="text-center mb-3">Envíanos tu datos</h1>
+                                            <div class="col-12 mb-3 d-flex">
+                                                <label class="w-50" for="validationTooltip01">Nombres</label>
+                                                <input type="text" class="form-control" name="nombres" id="validationTooltip01" required>
+                                            </div>
+
+                                            <div class="col-12 mb-3 d-flex">
+                                                <label class="w-50" for="validationTooltip01">Apellidos</label>
+                                                <input type="text" class="form-control" name="apellidos" id="validationTooltip01" required>
+                                            </div>
+                                            <div class="col-12 mb-3 d-flex">
+                                                <label class="w-50" for="validationTooltip01">Telefono</label>
+                                                <input type="text" class="form-control" name="telefono" id="validationTooltip01" required>
+                                            </div>
+                                            <div class="col-12 mb-3 d-flex">
+                                                <label class="w-50" for="exampleFormControlInput1">Correo</label>
+                                                <input type="email" class="form-control" id="exampleFormControlInput1" required>
+                                            </div>
+                                            <div class="col-12 mb-3 d-flex">
+                                                <label class="w-50" for="exampleFormControlInput1">Fecha</label>
+                                                <input type="date" class="form-control" id="exampleFormControlInput1" required>
+                                            </div>
+                                            <div class="col-12 mb-3 d-flex">
+                                                <label class="w-50" for="validationTooltip04">Servicios</label>
+                                                <select name="servicios" class="custom-select" id="validationTooltip04" required>
+                                                    <option selected disabled value="">Seleccione...</option>
+                                                    <option value="1">Diseño de sonrisa</option>
+                                                    <option value="2">Plan Dental</option>
+                                                    <option value="3">Blanqueamiento</option>
+                                                    <option value="4">Limpieza dental</option>
+                                                    <option value="5">Brackets</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 mb-3 ">
+                                                <label class="w-50" for="exampleFormControlTextarea1">Mensaje</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                            <div class="col-12 mb-3 text-center">
+                                                <button type="submit" name="boton" class="btn btn-primary mt-3 w-50">Enviar</button>
+                                            </div>
                                         </form>
                                     </td>
                                 </tr>
