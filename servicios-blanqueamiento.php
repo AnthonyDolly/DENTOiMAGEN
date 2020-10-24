@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
-    <title>Registrado</title>
+    <title>Servicio Blanqueamiento</title>
 </head>
 
 <body style="background-color: #fbfbfe; font-family: sans-serif;">
     <center>
+        <!-- Header -->
         <header class="header-home white">
             <div class="d-flex align-items-center content-header">
                 <div class="col-4">
@@ -20,7 +22,7 @@
                     </a>
                 </div>
                 <nav class="col-8 navigator">
-                    <ul class="d-flex justify-content-end username-list" id="ul1">
+                    <ul class="d-flex justify-content-end" id="ul1">
                         <li class="px-3">
                             <button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">
                                 <i class="fas fa-sign-in-alt"></i> Iniciar sesión</button>
@@ -32,19 +34,20 @@
                     </ul>
                     <ul class="d-flex justify-content-between">
                         <li>
-                            <a href="index.php"> <i class="fas fa-home"></i>
+                            <a href="index.php"><i class="fas fa-home"></i>
                                 Inicio</a>
                         </li>
                         <li>
-                            <a href="servicios.php"><i class="fa fa-stethoscope fa-fw">
-                                    </i> Servicios</a>
-                                 <ul>
-                                    <li><a href="servicios-DisenoSonrisa.php">Diseño de Sonrisa</a></li>
-                                    <li><a href="servicios-PlanDental.php">Plan Dental</a></li>
-                                    <li><a href="servicios-blanqueamiento.php">Blanqueamiento</a></li>
-                                    <li><a href="servicios-LimpiezaDental.php">Limpieza Dental</a></li>
-                                    <li><a href="servicios-ortodoncia.php">Ortodoncia</a></li>
-                                </ul>
+                            <a href="servicios.php" style="background: #1089bf; color: #fff;"><i
+                                    class="fa fa-stethoscope fa-fw">
+                                </i> Servicios</a>
+                            <ul>
+                                <li><a href="servicios-DisenoSonrisa.php">Diseño de Sonrisa</a></li>
+                                <li><a href="servicios-PlanDental.php">Plan Dental</a></li>
+                                <li><a href="servicios-blanqueamiento.php">Blanqueamiento</a></li>
+                                <li><a href="servicios-LimpiezaDental.php">Limpieza Dental</a></li>
+                                <li><a href="servicios-ortodoncia.php">Ortodoncia</a></li>
+                            </ul>
                         </li>
                         <li>
                             <a href="sedes.php"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
@@ -60,82 +63,92 @@
         </header>
         <main>
             <section min-width="360">
-                <table width="80%">
-                    <tr>
-                        <td>
-                            <center>
-                                <font size="8">
-                                    <h1>¡REGISTRADO!</h1>
-                                </font>
-                                <br>
-                                <font size="5">
-                                    <button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">Inicie
-                                        Sesión</button>
-                                </font>
-                            </center>
-                            <br>
-                            <br>
-                            <br>
-
-                        </td>
-                    </tr>
-                </table>
+                <h4 style="padding-top: 10px;">Los dientes no son, por naturaleza, perfectamente blancos, la mayoría de
+                    la gente siente que puede mejorar su sonrisa con unos dientes más blancos, más brillantes.</h4>
+                <p>
+                <p>
+                <div class="alineador">
+                    <div id="cuadro5">
+                        <img src="image/blanco1.jpg" width="100%">
+                    </div>
+                    <div class="texto5"><b><u>Blanqueamiento Dental Profesional:</u></b>
+                        <p>
+                            Los dientes pueden quedar visiblemente más blancos en una sola visita. Usted también tiene
+                            el beneficio añadido de un tratamiento que es supervisado por un profesional dental.El
+                            blanqueamiento casero adicional es complementario y será indicado con éxito a largo plazo en
+                            estos tratamientos blanqueadores en consultorio.
+                    </div>
+                </div>
+                <p>
+                    <br>
+                    <br>
+                <div class="alineador">
+                    <div id="cuadro6">
+                        <img src="image/blanco2.jpg" width="100%">
+                    </div>
+                    <div class="texto6"><b><u>Sonrisa brillante</u>:</b>
+                        <p>Blanquear o aclarar los dientes es el toque final de un tratamiento de diseño de sonrisa. Es
+                            un paso realmente importante porque permite aclarar los dientes y darles una apariencia más
+                            clara y brillante, brindando resultados estéticos más agradables para el paciente de forma
+                            rápida y fácil.
+                    </div>
             </section>
+        </main>
 
-            <footer class="footer-page skyblue">
-                <div class="image-bg">
+        <!-- Footer -->
+        <footer class="footer-page skyblue">
+            <div class="image-bg">
+            </div>
+            <div class="d-flex content-footer">
+                <div class="col-4">
+                    <div>
+                        <h1>DENTOiMAGEN</h1>
+                        <p>C. Los Olivos 62, Los Olivos 15304</p>
+                        <p><span>Horario de atención:</span> <br>
+                            Lun a Vie. de 8am - 1pm y 3pm-8pm <br>
+                            Sab y Dom. de 9am a 2pm
+                        </p>
+                    </div>
                 </div>
-                <div class="d-flex content-footer">
-                    <div class="col-4">
-                        <div>
-                            <h1>DENTOiMAGEN</h1>
-                            <p>C. Los Olivos 62, Los Olivos 15304</p>
-                            <p><span>Horario de atención:</span> <br>
-                                Lun a Vie. de 8am - 1pm y 3pm-8pm <br>
-                                Sab y Dom. de 9am a 2pm
-                            </p>
-                        </div>
+                <div class="col-4">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>
+                            <strong>Telf: </strong> (01) 540 0543
+                        </li>
+                        <li>
+                            <strong>Cel: </strong> +51 924 800 200
+                        </li>
+                        <li>
+                            <strong>Cel: </strong> +51 924 800 500
+                        </li>
+                        <li>
+                            <strong>Correo: </strong> dentoimagen@servicios.pe
+                        </li>
+                    </ul>
+                    <div>
+                        <img style="width: 20px;" src="image/facebook.svg" alt="">
+                        <img style="width: 20px;" src="image/instagram.svg" alt="">
                     </div>
-                    <div class="col-4">
-                        <h3>Contacto</h3>
-                        <ul>
-                            <li>
-                                <strong>Telf: </strong> (01) 540 0543
-                            </li>
-                            <li>
-                                <strong>Cel: </strong> +51 924 800 200
-                            </li>
-                            <li>
-                                <strong>Cel: </strong> +51 924 800 500
-                            </li>
-                            <li>
-                                <strong>Correo: </strong> dentoimagen@servicios.pe
-                            </li>
-                        </ul>
-                        <div>
-                            <img style="width: 20px; cursor: pointer;" src="image/facebook.svg" alt="">
-                            <img style="width: 20px; cursor: pointer;" src="image/instagram.svg" alt="">
-                        </div>
+                </div>
+                <div class="col-4 ">
+                    <h3>Formas de pago</h3>
+                    <div class="d-flex justify-content-between">
+                        <img src="image/amex.svg" alt="">
+                        <img src="image/diners.svg" alt="">
+                        <img src="image/visa.svg" alt="">
+                        <img src="image/mastercard.svg" alt="">
                     </div>
-                    <div class="col-4 ">
-                        <h3>Formas de pago</h3>
-                        <div class="d-flex justify-content-between">
-                            <img src="image/amex.svg" alt="">
-                            <img src="image/diners.svg" alt="">
-                            <img src="image/visa.svg" alt="">
-                            <img src="image/mastercard.svg" alt="">
-                        </div>
 
-                    </div>
                 </div>
-                <div class="col-12 pt-4 pb-2">
-                    <p>Todos los derechos reservados © 2020 | DENTOiMAGEN</p>
-                </div>
-            </footer>
+            </div>
+            <div class="col-12 pt-4 pb-2">
+                <p>Todos los derechos reservados © 2020 | DENTOiMAGEN</p>
+            </div>
+        </footer>
 
         </main>
     </center>
-
 
 
 
@@ -143,7 +156,7 @@
     <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="border: 0;">
-                <form action="index.php" method="post">
+                <form action="" method="post">
                     <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
                         <h5 class="modal-title">Iniciar Sesión</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -163,7 +176,7 @@
                             <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
                                 data-toggle="modal" data-target="#RegisterModal"
                                 style="display: inline-block; font-size: .8em; color: #3498db;">¿No
-                                tienes cuenta? Registrate
+                                tienes cuenta? Regístrate
                             </button>
                             <input type="submit" name="btenviar" value="Ingresar"
                                 style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;">
@@ -207,7 +220,7 @@
                                     tienes cuenta? Iniciar sesión
                                 </button>
                                 <input type="submit" class="right" name="btenviar" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;
-                                ">
+                                            ">
                             </div>
                         </div>
                     </div>
@@ -217,9 +230,14 @@
     </div>
 
 
+
+
+
+
+
     <!-- jquery, popper, bootstrap     -->
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-    <script src="app.js"></script>
+    <script src="apps.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -230,3 +248,70 @@
 </body>
 
 </html>
+
+
+
+<?php
+    if (isset($_POST['btenviar'])) {
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+
+        // PERFIL DOCTOR //
+        $userDoctor = 'doctor';
+        $contraDoctor = 'doctor';
+        $estadoD = false; 
+
+        if ($username == '' || $password == '') {
+            echo'<script type="text/javascript">
+            alert("Porfavor Rellena todos los campos");
+            </script>';
+        } elseif ($username != $userDoctor || $password != $contraDoctor) {
+            echo'<script type="text/javascript">
+            alert("Datos incorrectos");
+            </script>';
+        } elseif ($username == $userDoctor && $password == $contraDoctor) {
+            $estadoD = true;
+        }
+
+        if ($estadoD == true) {
+            // header('Location: index.php');
+            echo'<script type="text/javascript">
+            alert("Datos Correctos");
+            Dentista();
+            </script>';
+            // clickTheLink();
+        } else {
+            echo "Error";
+        }
+
+        
+        // PERFIL PACIENTE //
+        $userPaciente = 'paciente';
+        $contraPaciente = 'paciente';
+        $estadoP = false;
+
+        if ($username == '' || $password == '') {
+            echo'<script type="text/javascript">
+            alert("Porfavor Rellena todos los campos");
+            </script>';
+        } elseif ($username != $userPaciente || $password != $contraPaciente) {
+            echo'<script type="text/javascript">
+            // alert("Datos incorrectos");
+            </script>';
+        } elseif ($username == $userPaciente && $password == $contraPaciente) {
+            $estadoP = true;
+        }
+
+        if ($estadoP == true) {
+            // header('Location: index.php');
+            echo'<script type="text/javascript">
+            alert("Datos Correctos");
+            Paciente();
+            </script>';
+            // clickTheLink();
+        } else {
+            echo "Error";
+        }
+    
+    }
+?>

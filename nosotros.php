@@ -8,12 +8,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
-    <title>Nosotros</title>
-    <style type="text/css">
-        .area {
-            resize: none;
-        }
-    </style>
+    <title>Dento Imagen</title>
 </head>
 
 <body style="background-color: #fbfbfe; font-family: sans-serif;">
@@ -22,12 +17,12 @@
         <header class="header-home white">
             <div class="d-flex align-items-center content-header">
                 <div class="col-4">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img style="width: 200px;" src="image/logo-clinica.svg" alt="Logo de Clinica">
                     </a>
                 </div>
                 <nav class="col-8 navigator">
-                    <ul class="d-flex justify-content-end">
+                    <ul class="d-flex justify-content-end username-list" id="ul1">
                         <li class="px-3">
                             <button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">
                                 <i class="fas fa-sign-in-alt"></i> Iniciar sesión</button>
@@ -39,18 +34,25 @@
                     </ul>
                     <ul class="d-flex justify-content-between">
                         <li>
-                            <a href="index.html"> <i class="fas fa-home"></i>
+                            <a href="index.php"> <i class="fas fa-home"></i>
                                 Inicio</a>
                         </li>
                         <li>
-                            <a href="servicios.html"><i class="fa fa-stethoscope fa-fw"></i> Servicios</a>
+                            <a href="servicios.php"><i class="fa fa-stethoscope fa-fw">
+                                    </i> Servicios</a>
+                                 <ul>
+                                    <li><a href="servicios-DisenoSonrisa.php">Diseño de Sonrisa</a></li>
+                                    <li><a href="servicios-PlanDental.php">Plan Dental</a></li>
+                                    <li><a href="servicios-blanqueamiento.php">Blanqueamiento</a></li>
+                                    <li><a href="servicios-LimpiezaDental.php">Limpieza Dental</a></li>
+                                    <li><a href="servicios-ortodoncia.php">Ortodoncia</a></li>
+                                </ul>
                         </li>
                         <li>
-                            <a href="sedes.html"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
+                            <a href="sedes.php"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
                         </li>
                         <li>
-                            <a href="nosotros.html" style="background: #1089bf; color: #fff;"><i
-                                    class="fas fa-users"></i> Nosotros</a>
+                            <a href="nosotros.php" style="background: #1089bf; color: #fff;"><i class="fas fa-users"></i> Nosotros</a>
                         </li>
                     </ul>
                 </nav>
@@ -58,7 +60,6 @@
             </div>
             <div class="fila-color skyblue"></div>
         </header>
-
 
         <main>
             <section style="margin-bottom: 5em;">
@@ -183,66 +184,61 @@
                         <td align="center" width="50%">
                             <img width="70%" src="image/doctora.jpg" alt="dentista">
                         </td>
-
                         <td width="50%">
-                            <!-- <h1 size="5" > Agenda tu cita </h1> > -->
-                            <table align="center" border="0" width="80%">
+                            <table>
                                 <tr>
-                                    <td align="">
-                                        <font size="5">
-                                            <form action="confirmacionNosotros.html" method="POST">
-                                                <p>
-                                                <p>
-                                                <p>
-                                                <fieldset>
-                                                    <legend><b>Envíanos tus datos aquí</b></legend>
-                                                    Nombres:
-                                                    <input align="end" name="nombres" value="" required type="text">
-                                                    </p>
-                                                    <p>
-                                                        Apellidos:
-                                                        <input align="end" name="apellidos" value="" required
-                                                            type="text">
-                                                    </p>
-                                                    <p>
-                                                        Teléfono:
-                                                        <span style="padding-left:7px"><input type="text"
-                                                                name="telefono" value="" required>
-                                                    </p>
-                                                    <p>
-                                                        Correo:
-                                                        <span style="padding-left:25px">
-                                                            <input type="email" name="correo" value="" required>
-                                                    </p>
-                                                    <p>
-                                                        Fecha:
-                                                        <span style="padding-left:32px">
-                                                            <input type="date">
-                                                    </p>
-                                                    Servicios:
-                                                    <span style="padding-left:2px">
-                                                        <select name="servicios">
-                                                            <option value="0">I---Seleccione---I</option>
-                                                            <option value="1">Diseño de sonrisa</option>
-                                                            <option value="2">Plan Dental</option>
-                                                            <option value="3">Blanqueamiento</option>
-                                                            <option value="4">Limpieza dental</option>
-                                                            <option value="5">Brackets</option>
-                                                        </select>
-                                                        </p>
-                                                        <p align="start">
-                                                            Mensaje: <br>
-                                                            <span style="padding-left:32px">
-                                                                <textarea align="center" width="100%" name="" id=""
-                                                                    cols="30" rows="10" style="resize: none;">
-                                                        </p>
-                                                        <p align="center">
-                                                            <input width="80%" type="submit" value="Enviar">
+                                    <td>
+                                        <form action="confirmacionNosotros.html" method="post">
+                                            <h1 class="text-center mb-3">Envíanos tu datos</h1>
+                                            <div class="col-12 mb-3 d-flex">
+                                                <label class="w-50" for="validationTooltip01">Nombres</label>
+                                                <input type="text" class="form-control" name="nombres" id="validationTooltip01" required>
+                                            </div>
 
-                                                        </p>
-                                                </fieldset>
-                                            </form>
-                                        </font>
+                                            <div class="col-12 mb-3 d-flex">
+                                                <label class="w-50" for="validationTooltip01">Apellidos</label>
+                                                <input type="text" class="form-control" name="apellidos" id="validationTooltip01" required>
+                                            </div>
+                                            <div class="col-12 mb-3 d-flex">
+                                                <label class="w-50" for="validationTooltip01">Telefono</label>
+                                                <input type="text" class="form-control" name="telefono" id="validationTooltip01" required>
+                                            </div>
+                                            <div class="col-12 mb-3 d-flex">
+                                                <label class="w-50" for="exampleFormControlInput1">Correo</label>
+                                                <input type="email" class="form-control" id="exampleFormControlInput1" required>
+                                            </div>
+                                            <div class="col-12 mb-3 d-flex">
+                                                <label class="w-50" for="exampleFormControlInput1">Fecha</label>
+                                                <input type="date" class="form-control" id="exampleFormControlInput1" required>
+                                            </div>
+                                            <div class="col-12 mb-3 d-flex">
+                                                <label class="w-50" for="validationTooltip04">Servicios</label>
+                                                <select name="servicios" class="custom-select" id="validationTooltip04" required>
+                                                    <option selected disabled value="">Seleccione...</option>
+                                                    <option value="1">Diseño de sonrisa</option>
+                                                    <option value="2">Plan Dental</option>
+                                                    <option value="3">Blanqueamiento</option>
+                                                    <option value="4">Limpieza dental</option>
+                                                    <option value="5">Brackets</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 mb-3 d-flex">
+                                                <label class="w-50" for="validationTooltip05">Sedes</label>
+                                                <select name="sedes" class="custom-select" id="validationTooltip05" required>
+                                                    <option selected disabled value="">Seleccione...</option>
+                                                    <option value="1">Los Olivos</option>
+                                                    <option value="2">Cercado de Lima</option>
+                                                    <option value="3">Trujillo</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 mb-3 ">
+                                                <label class="w-50" for="exampleFormControlTextarea1">Mensaje</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                            <div class="col-12 mb-3 text-center">
+                                                <button type="submit" name="boton" class="btn btn-primary mt-3 w-50">Enviar</button>
+                                            </div>
+                                        </form>
                                     </td>
                                 </tr>
                             </table>
@@ -251,6 +247,7 @@
                 </table>
             </section>
 
+            <!-- Footer -->
             <footer class="footer-page skyblue">
                 <div class="image-bg">
                 </div>
@@ -301,16 +298,16 @@
                     <p>Todos los derechos reservados © 2020 | DENTOiMAGEN</p>
                 </div>
             </footer>
+
         </main>
     </center>
 
-
-
+            
     <!-- Modal Login-->
     <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="border: 0;">
-                <form action="index-personal.html" method="post">
+                <form action="" method="post">
                     <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
                         <h5 class="modal-title">Iniciar Sesión</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -330,7 +327,7 @@
                             <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
                                 data-toggle="modal" data-target="#RegisterModal"
                                 style="display: inline-block; font-size: .8em; color: #3498db;">¿No
-                                tienes cuenta? Registrate
+                                tienes cuenta? Regístrate
                             </button>
                             <input type="submit" name="btenviar" value="Ingresar"
                                 style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;">
@@ -374,7 +371,7 @@
                                     tienes cuenta? Iniciar sesión
                                 </button>
                                 <input type="submit" class="right" name="btenviar" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;
-                                ">
+                                            ">
                             </div>
                         </div>
                     </div>
@@ -386,9 +383,12 @@
 
 
 
+
+
+
     <!-- jquery, popper, bootstrap     -->
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-    <script src="app.js"></script>
+    <script src="apps.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -396,8 +396,72 @@
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-
-
 </body>
 
 </html>
+
+
+<?php
+    if (isset($_POST['btenviar'])) {
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+
+        // PERFIL DOCTOR //
+        $userDoctor = 'doctor';
+        $contraDoctor = 'doctor';
+        $estadoD = false; 
+
+        if ($username == '' || $password == '') {
+            echo'<script type="text/javascript">
+            alert("Porfavor Rellena todos los campos");
+            </script>';
+        } elseif ($username != $userDoctor || $password != $contraDoctor) {
+            echo'<script type="text/javascript">
+            alert("Datos incorrectos");
+            </script>';
+        } elseif ($username == $userDoctor && $password == $contraDoctor) {
+            $estadoD = true;
+        }
+
+        if ($estadoD == true) {
+            // header('Location: index.php');
+            echo'<script type="text/javascript">
+            alert("Correcto");
+            Dentista();
+            </script>';
+            // clickTheLink();
+        } else {
+            echo "Error";
+        }
+
+        
+        // PERFIL PACIENTE //
+        $userPaciente = 'paciente';
+        $contraPaciente = 'paciente';
+        $estadoP = false;
+
+        if ($username == '' || $password == '') {
+            echo'<script type="text/javascript">
+            alert("Porfavor Rellena todos los campos");
+            </script>';
+        } elseif ($username != $userPaciente || $password != $contraPaciente) {
+            echo'<script type="text/javascript">
+            // alert("Datos incorrectos");
+            </script>';
+        } elseif ($username == $userPaciente && $password == $contraPaciente) {
+            $estadoP = true;
+        }
+
+        if ($estadoP == true) {
+            // header('Location: index.php');
+            echo'<script type="text/javascript">
+            alert("Datos Correctos");
+            Paciente();
+            </script>';
+            // clickTheLink();
+        } else {
+            echo "Error";
+        }
+    
+    }
+?>

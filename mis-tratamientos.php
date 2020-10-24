@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
-    <title>Mis citas</title>
+    <title>Mis Tratamientos</title>
 </head>
 
 <body style="background-color: #fbfbfe; font-family: sans-serif;">
@@ -17,7 +17,7 @@
         <header class="header-home white">
             <div class="d-flex align-items-center content-header">
                 <div class="col-4">
-                    <a href="index-personal.html">
+                    <a href="index.php">
                         <img style="width: 200px;" src="image/logo-clinica.svg" alt="Logo de Clinica">
                     </a>
                 </div>
@@ -32,21 +32,28 @@
                             </span>
                             <ul class="username-sublist">
                                 <li class="username-subitem">
-                                    <a href="perfil-personal.html">
+                                    <a href="mi-perfil.php">
                                         <div>
                                             <img src="image/perfil-dentista.svg" alt="mi perfil"> Mi perfil
                                         </div>
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="cita-user.html">
+                                    <a href="mis-citas.php">
                                         <div>
-                                            <img src="image/cita.svg" alt="cita"> Citas
+                                            <img src="image/cita.svg" alt="cita"> Mis Citas
                                         </div>
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="index.html">
+                                    <a href="mis-tratamientos.php">
+                                        <div>
+                                            <img src="image/cita.svg" alt="close-sesion"> Mis Tratamientos
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="username-subitem">
+                                    <a href="index.php">
                                         <div>
                                             <img src="image/cerrar-sesion.svg" alt="close-sesion"> Cerrar sesión
                                         </div>
@@ -57,16 +64,23 @@
                     </ul>
                     <ul class="d-flex justify-content-between">
                         <li>
-                            <a href="index-personal.html"> <i class="fas fa-home"></i> Inicio</a>
+                            <a href="index.php"> <i class="fas fa-home"></i> Inicio</a>
                         </li>
                         <li>
-                            <a href="servicios-personal.html"><i class="fa fa-stethoscope fa-fw"></i> Servicios</a>
+                            <a href="servicios.php"><i class="fa fa-stethoscope fa-fw"></i> Servicios</a>
+                            <ul>
+                                <li><a href="servicios-DisenoSonrisa.php">Diseño de Sonrisa</a></li>
+                                <li><a href="servicios-PlanDental.php">Plan Dental</a></li>
+                                <li><a href="servicios-blanqueamiento.php">Blanqueamiento</a></li>
+                                <li><a href="servicios-LimpiezaDental.php">Limpieza Dental</a></li>
+                                <li><a href="servicios-ortodoncia.php">Ortodoncia</a></li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="sedes-personal.html"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
+                            <a href="sedes.php"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
                         </li>
                         <li>
-                            <a href="nosotros-personal.html"><i class="fas fa-users"></i> Nosotros</a>
+                            <a href="nosotros.php"><i class="fas fa-users"></i> Nosotros</a>
                         </li>
                     </ul>
                 </nav>
@@ -78,7 +92,7 @@
         <main>
 
             <div class="content-citas-personal">
-                <h1>Citas</h1>
+                <h1>Mis Tratamientos</h1>
                 <div class="table-citas-personal" style="max-width: 900px;">
                     <p style="text-align: end;"><i style="cursor: pointer;" class="fas fa-edit"></i></p>
                     <div>
@@ -86,14 +100,14 @@
                             <p><strong>Paciente: Rodrigo Pérez Paredes</strong></p>
                         </div>
                         <div class="d-flex border-bottom">
-                            <p class="col-4 border-right">Fecha</p>
-                            <p class="col-4 border-right">Hora</p>
-                            <p class="col-4 ">Motivo</p>
+                            <p class="col-6 border-right">DNI Paciente</p>
+                            <!-- <p class="col-6 border-right"></p> -->
+                            <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex">
-                            <p class="col-4 border-right pt-3">10/05/2020</p>
-                            <p class="col-4 border-right pt-3">10:00 am</p>
-                            <p class="col-4 pt-3">Consulta</p>
+                            <p class="col-6 border-right pt-3">46412385</p>
+                            <!-- <p class="col-6 border-right pt-3">10:00 am</p> -->
+                            <p class="col-6 pt-3">Ortodoncia</p>
                         </div>
                     </div>
                     <br>
@@ -102,14 +116,14 @@
                             <p><strong>Paciente: Adrian Aliaga Pimentel</strong></p>
                         </div>
                         <div class="d-flex border-bottom">
-                            <p class="col-4 border-right">Fecha</p>
-                            <p class="col-4 border-right">Hora</p>
-                            <p class="col-4 ">Motivo</p>
+                            <p class="col-6 border-right">DNI Paciente</p>
+                            <!-- <p class="col-6 border-right"></p> -->
+                            <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex">
-                            <p class="col-4 border-right pt-3">10/05/2020</p>
-                            <p class="col-4 border-right pt-3">11:00 am</p>
-                            <p class="col-4 pt-3">Implante</p>
+                            <p class="col-6 border-right pt-3">10/05/2020</p>
+                            <!-- <p class="col-6 border-right pt-3">11:00 am</p> -->
+                            <p class="col-6 pt-3">Ortodoncia</p>
                         </div>
                     </div>
 
@@ -119,14 +133,14 @@
                             <p><strong>Paciente: Diego Alfaro Camarena</strong></p>
                         </div>
                         <div class="d-flex border-bottom">
-                            <p class="col-4 border-right">Fecha</p>
-                            <p class="col-4 border-right">Hora</p>
-                            <p class="col-4 ">Motivo</p>
+                            <p class="col-6 border-right">DNI Paciente</p>
+                            <!-- <p class="col-6 border-right"></p> -->
+                            <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex">
-                            <p class="col-4 border-right pt-3">10/05/2020</p>
-                            <p class="col-4 border-right pt-3">2:00 pm</p>
-                            <p class="col-4">Operación</p>
+                            <p class="col-6 border-right pt-3">10/05/2020</p>
+                            <!-- <p class="col-6 border-right pt-3">2:00 pm</p> -->
+                            <p class="col-6">Rehabilitación Oral</p>
                         </div>
                     </div>
 
@@ -136,14 +150,14 @@
                             <p><strong>Paciente: Luis Oroya Garcia</strong></p>
                         </div>
                         <div class="d-flex border-bottom">
-                            <p class="col-4 border-right">Fecha</p>
-                            <p class="col-4 border-right">Hora</p>
-                            <p class="col-4 ">Motivo</p>
+                            <p class="col-6 border-right">DNI Paciente</p>
+                            <!-- <p class="col-6 border-right"></p> -->
+                            <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex">
-                            <p class="col-4 border-right pt-3">10/05/2020</p>
-                            <p class="col-4 border-right pt-3">4:00 am</p>
-                            <p class="col-4">Operación</p>
+                            <p class="col-6 border-right pt-3">10/05/2020</p>
+                            <!-- <p class="col-6 border-right pt-3">4:00 am</p> -->
+                            <p class="col-6">Implantes</p>
                         </div>
                     </div>
 
@@ -153,14 +167,14 @@
                             <p><strong>Paciente: Anthony Busatamente Flores</strong></p>
                         </div>
                         <div class="d-flex border-bottom">
-                            <p class="col-4 border-right">Fecha</p>
-                            <p class="col-4 border-right">Hora</p>
-                            <p class="col-4 ">Motivo</p>
+                            <p class="col-6 border-right">DNI Paciente</p>
+                            <!-- <p class="col-6 border-right"></p> -->
+                            <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex">
-                            <p class="col-4 border-right pt-3">11/05/2020</p>
-                            <p class="col-4 border-right pt-3">10:00 am</p>
-                            <p class="col-4">Ortodoncia</p>
+                            <p class="col-6 border-right pt-3">11/05/2020</p>
+                            <!-- <p class="col-6 border-right pt-3">10:00 am</p> -->
+                            <p class="col-6">Periodoncia</p>
                         </div>
                     </div>
                     <br>
@@ -169,14 +183,14 @@
                             <p><strong>Paciente: Alejandro Mendoza Mansilla</strong></p>
                         </div>
                         <div class="d-flex border-bottom">
-                            <p class="col-4 border-right">Fecha</p>
-                            <p class="col-4 border-right">Hora</p>
-                            <p class="col-4 ">Motivo</p>
+                            <p class="col-6 border-right">DNI Paciente</p>
+                            <!-- <p class="col-6 border-right"></p> -->
+                            <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex">
-                            <p class="col-4 border-right pt-3">11/05/2020</p>
-                            <p class="col-4 border-right pt-3">12:00 pm</p>
-                            <p class="col-4">Implante</p>
+                            <p class="col-6 border-right pt-3">11/05/2020</p>
+                            <!-- <p class="col-6 border-right pt-3">12:00 pm</p> -->
+                            <p class="col-6">Rehabilitación Oral</p>
                         </div>
                     </div>
                     <br>
@@ -185,14 +199,14 @@
                             <p><strong>Paciente: Pedro Suarez Quintanilla</strong></p>
                         </div>
                         <div class="d-flex border-bottom">
-                            <p class="col-4 border-right">Fecha</p>
-                            <p class="col-4 border-right">Hora</p>
-                            <p class="col-4 ">Motivo</p>
+                            <p class="col-6 border-right">DNI Paciente</p>
+                            <!-- <p class="col-6 border-right"></p> -->
+                            <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex">
-                            <p class="col-4 border-right pt-3">11/05/2020</p>
-                            <p class="col-4 border-right pt-3">2:00 pm</p>
-                            <p class="col-4">Consulta</p>
+                            <p class="col-6 border-right pt-3">11/05/2020</p>
+                            <!-- <p class="col-6 border-right pt-3">2:00 pm</p> -->
+                            <p class="col-6">Ortodoncia</p>
                         </div>
                     </div>
                     <br>
@@ -201,14 +215,14 @@
                             <p><strong>Paciente: Mery Mullisaca Becerra</strong></p>
                         </div>
                         <div class="d-flex border-bottom">
-                            <p class="col-4 border-right">Fecha</p>
-                            <p class="col-4 border-right">Hora</p>
-                            <p class="col-4 ">Motivo</p>
+                            <p class="col-6 border-right">DNI Paciente</p>
+                            <!-- <p class="col-6 border-right"></p> -->
+                            <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex">
-                            <p class="col-4 border-right pt-3">11/05/2020</p>
-                            <p class="col-4 border-right pt-3">3:00 pm</p>
-                            <p class="col-4">Consulta</p>
+                            <p class="col-6 border-right pt-3">11/05/2020</p>
+                            <!-- <p class="col-6 border-right pt-3">3:00 pm</p> -->
+                            <p class="col-6">Periodoncia/p>
                         </div>
                     </div>
                     <br>
@@ -217,14 +231,14 @@
                             <p><strong>Paciente: Mario Garcia Nuñez</strong></p>
                         </div>
                         <div class="d-flex border-bottom">
-                            <p class="col-4 border-right">Fecha</p>
-                            <p class="col-4 border-right">Hora</p>
-                            <p class="col-4 ">Motivo</p>
+                            <p class="col-6 border-right">DNI Paciente</p>
+                            <!-- <p class="col-6 border-right"></p> -->
+                            <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex">
-                            <p class="col-4 border-right pt-3">11/05/2020</p>
-                            <p class="col-4 border-right pt-3">4:00 pm</p>
-                            <p class="col-4">Operación</p>
+                            <p class="col-6 border-right pt-3">11/05/2020</p>
+                            <!-- <p class="col-6 border-right pt-3">4:00 pm</p> -->
+                            <p class="col-6">Ortodoncia</p>
                         </div>
                     </div>
                     <br>
@@ -233,14 +247,14 @@
                             <p><strong>Paciente: Esteban Rodriguez Quispe</strong></p>
                         </div>
                         <div class="d-flex border-bottom">
-                            <p class="col-4 border-right">Fecha</p>
-                            <p class="col-4 border-right">Hora</p>
-                            <p class="col-4 ">Motivo</p>
+                            <p class="col-6 border-right">DNI Paciente</p>
+                            <!-- <p class="col-6 border-right"></p> -->
+                            <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex">
-                            <p class="col-4 border-right pt-3">12/05/2020</p>
-                            <p class="col-4 border-right pt-3">9:00 am</p>
-                            <p class="col-4">Endodoncia</p>
+                            <p class="col-6 border-right pt-3">12/05/2020</p>
+                            <!-- <p class="col-6 border-right pt-3">9:00 am</p> -->
+                            <p class="col-6">Rehabilitación Oral</p>
                         </div>
                     </div>
                     <br>
@@ -249,14 +263,14 @@
                             <p><strong>Paciente: Juan Carlos Estrada</strong></p>
                         </div>
                         <div class="d-flex border-bottom">
-                            <p class="col-4 border-right">Fecha</p>
-                            <p class="col-4 border-right">Hora</p>
-                            <p class="col-4 ">Motivo</p>
+                            <p class="col-6 border-right">DNI Paciente</p>
+                            <!-- <p class="col-6 border-right"></p> -->
+                            <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex">
-                            <p class="col-4 border-right pt-3">12/05/2020</p>
-                            <p class="col-4 border-right pt-3">11:00 am</p>
-                            <p class="col-4">Radiografia</p>
+                            <p class="col-6 border-right pt-3">12/05/2020</p>
+                            <!-- <p class="col-6 border-right pt-3">11:00 am</p> -->
+                            <p class="col-6">Implantes</p>
                         </div>
                     </div>
                     <br>
@@ -265,14 +279,14 @@
                             <p><strong>Paciente: Judith Yenpen Garcia</strong></p>
                         </div>
                         <div class="d-flex border-bottom">
-                            <p class="col-4 border-right">Fecha</p>
-                            <p class="col-4 border-right">Hora</p>
-                            <p class="col-4 ">Motivo</p>
+                            <p class="col-6 border-right">DNI Paciente</p>
+                            <!-- <p class="col-6 border-right"></p> -->
+                            <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex">
-                            <p class="col-4 border-right pt-3">12/05/2020</p>
-                            <p class="col-4 border-right pt-3">2:00 pm</p>
-                            <p class="col-4">Radiografia</p>
+                            <p class="col-6 border-right pt-3">12/05/2020</p>
+                            <!-- <p class="col-6 border-right pt-3">2:00 pm</p> -->
+                            <p class="col-6">Implantes</p>
                         </div>
                     </div>
                     <br>
@@ -281,20 +295,22 @@
                             <p><strong>Paciente: Lucia Amelia Flores</strong></p>
                         </div>
                         <div class="d-flex border-bottom">
-                            <p class="col-4 border-right">Fecha</p>
-                            <p class="col-4 border-right">Hora</p>
-                            <p class="col-4 ">Motivo</p>
+                            <p class="col-6 border-right">DNI Paciente</p>
+                            <!-- <p class="col-6 border-right"></p> -->
+                            <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex">
-                            <p class="col-4 border-right pt-3">12/05/2020</p>
-                            <p class="col-4 border-right pt-3">4:00 pm</p>
-                            <p class="col-4">Radiografia</p>
+                            <p class="col-6 border-right pt-3">12/05/2020</p>
+                            <!-- <p class="col-6 border-right pt-3">4:00 pm</p> -->
+                            <p class="col-6">Implantes</p>
                         </div>
                     </div>
 
                 </div>
             </div>
 
+
+            
             <footer class="footer-page skyblue">
                 <div class="image-bg">
                 </div>
@@ -303,7 +319,7 @@
                         <div>
                             <h1>DENTOiMAGEN</h1>
                             <p>C. Los Olivos 62, Los Olivos 15304</p>
-                            <p><span>Horario de atención</span> <br>
+                            <p><span>rio de atención</span> <br>
                                 Lun a Vie. de 8am - 1pm y 3pm-8pm <br>
                                 Sab y Dom. de 9am a 2pm
                             </p>

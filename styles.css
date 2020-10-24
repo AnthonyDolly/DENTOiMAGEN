@@ -17,6 +17,26 @@ p{
 }
 
 /* --style body-- */
+nav li a{ 
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+        nav li{
+            border-bottom: solid 1px rgba(255,255,255,0.2);
+        }
+        nav > li{
+            float: left;
+        }
+        nav li ul{
+            background-color: white;
+            display:none; 
+            position:absolute;
+            min-width: 140px;
+        }
+        nav li:hover > ul{
+            display: block;
+            }
 ul{
     list-style: none;
 }
@@ -311,7 +331,7 @@ span .flecha {
 
 .username-subitem {
     margin-top: .3em;
-    width: 160px;
+    width: 190px;
 }
 
 .username-subitem a {
@@ -343,6 +363,7 @@ span .flecha {
 .table-citas p{
     margin: 0;
     padding: 7px;
+    width: 20%;
 }
 
 .table-citas div div:nth-child(1) p{
@@ -375,3 +396,155 @@ span .flecha {
 .table-citas-personal > div{
     padding-bottom: 30px;
 }
+
+
+/*table register treatment*/
+.table-register-treatment{
+    max-width: 900px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 0 5px 2px #ccc;
+    padding: 20px;
+}
+
+.btn-save-treatment{
+    width: 60%;
+}
+
+
+/*table-my-treatment-user*/
+.table-treatment-user{
+    max-width: 900px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 0 5px 2px #ccc;
+    padding: 20px;
+}
+.table-treatment-user div div:nth-child(1) p{
+    font-weight: 600;
+} 
+.alinear{
+            display: flex;
+            padding-left: 200px;
+            padding-right: 100px;
+        }
+        #cuadro1{
+            width: 600px;
+            padding-top: 18px; 
+        }
+        #cuadro2{
+            width: 840px; 
+            padding-top: 18px; 
+        }
+        .texto{
+            padding-left: 10px;
+            padding-top: 40px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+        .texto2{
+            padding-left: 10px;
+            padding-top: 5px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+
+.alinea{
+            display: flex;
+            padding-left: 200px;
+            padding-right: 100px;
+        }
+        #cuadro3{
+            width: 800px;
+            padding-top: 30px;
+        }
+        #cuadro4{
+            width: 990px;
+        }
+        .texto3{
+            padding-left: 10px;
+            padding-top: 30px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+        .texto4{
+            padding-left: 10px;
+            padding-top: 40px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+
+.alineador{
+            display: flex;
+            padding-left: 200px;
+            padding-right: 100px;
+        }
+        #cuadro5{
+            width: 1500px;
+            padding-top: 30px;
+        }
+        #cuadro6{
+            width: 1400px;
+        }
+        .texto5{
+            padding-left: 10px;
+            padding-top: 50px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+        .texto6{
+            padding-left: 10px;
+            padding-top: 30px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+
+.alineacion{
+            display: flex;
+            padding-left: 200px;
+            padding-right: 100px;
+        }
+        #cuadro7{
+            width: 1300px;
+            padding-top: 30px;
+        }
+        #cuadro8{
+            width: 1400px;
+        }
+        .texto7{
+            padding-left: 10px;
+            padding-top: 35px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+        .texto8{
+            padding-left: 10px;
+            padding-top: 20px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+
+.alineados{
+            display: flex;
+            padding-left: 200px;
+            padding-right: 100px;
+        }
+        #cuadro9{
+            width: 1700px;
+            padding-top: 30px;
+        }
+        #cuadro10{
+            width: 1200px;
+        }
+        .texto9{
+            padding-left: 10px;
+            padding-top: 20px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+        .texto10{
+            padding-left: 10px;
+            padding-top: 10px;
+            font-family: Calibri;
+            font-size: 20px;
+        }

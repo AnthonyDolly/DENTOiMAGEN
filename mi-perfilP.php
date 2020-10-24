@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
-    <title>Recibido</title>
+    <title>Mi perfil</title>
 </head>
 
-<body style="background-color: #fbfbfe; font-family: sans-serif;">
+<body>
     <center>
-        <!-- Header -->
         <header class="header-home white">
             <div class="d-flex align-items-center content-header">
                 <div class="col-4">
@@ -24,37 +24,37 @@
                     <ul class="d-flex justify-content-end username-list">
                         <li class="px-3 username-list-item">
                             <span>
-                                Laura Sifuentes Lozano
+                                Jose Carmona Peralta
                                 <div class="flecha">
                                     <img src="image/flecha-down.svg" alt="flecha">
                                 </div>
                             </span>
                             <ul class="username-sublist">
                                 <li class="username-subitem">
-                                    <a href="mi-perfil.php">
+                                    <a href="mi-perfilP.php">
                                         <div>
-                                            <img src="image/perfil-dentista.svg" alt="mi perfil"> Mi Perfil
+                                            <img src="image/perfil-paciente.svg" alt="mi perfil"> Mi perfil
                                         </div>
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="mis-citas.php">
+                                    <a href="mis-citasP.php">
                                         <div>
-                                            <img src="image/cita.svg" alt="cita"> Mis Citas
+                                            <img src="image/cita.svg" alt="cita"> Mis Controles
                                         </div>
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="mis-tratamientos.php">
+                                    <a href="mi-tratamiento.php">
                                         <div>
-                                            <img src="image/cita.svg" alt="close-sesion"> Mis Tratamientos
+                                            <img src="image/cita.svg" alt="close-sesion"> Mi Tratamiento
                                         </div>
                                     </a>
                                 </li>
                                 <li class="username-subitem">
                                     <a href="index.php">
                                         <div>
-                                            <img src="image/cerrar-sesion.svg" alt="close-sesion"> Cerrar Sesión
+                                            <img src="image/cerrar-sesion.svg" alt="close-sesion"> Cerrar sesión
                                         </div>
                                     </a>
                                 </li>
@@ -63,7 +63,8 @@
                     </ul>
                     <ul class="d-flex justify-content-between">
                         <li>
-                            <a href="index.php"><i class="fas fa-home"></i> Inicio</a>
+                            <a href="index.php"> <i class="fas fa-home"></i>
+                                Inicio</a>
                         </li>
                         <li>
                             <a href="servicios.php"><i class="fa fa-stethoscope fa-fw"></i> Servicios</a>
@@ -89,20 +90,24 @@
         </header>
 
         <main>
-            <section>
-                <table width="80%" height="100%">
-                    <tr>
-                        <td align="center">
-                            <font size="8">
-                                <h1>Reclamo recibido</h1>
-                                <h3>¡Nos estaremos comunicando contigo lo más pronto posible!</h3>
-                            </font>
-                        </td>
-                    </tr>
-
-                </table>
+            <section min-width="360" style="width: 100%; margin-top: -.3em;">
+                <div class="container-perfil-cliente">
+                    <div class="perfil-paisaje"></div>
+                    <article class="perfil-article-flex">
+                        <div class="container-perfil-feature">
+                            <div class="perfil-photo"></div>
+                            <div class="perfil-feature">
+                                <h2>Jose Carmona Peralta</h2>
+                                <h5>Paciente</h5>
+                                <p>JoseCarmona22P@gmail.com</p>
+                                <a href="mis-citasP.php">Mis Controles</a>
+                                <a href="mi-tratamiento.php">Mi tratamiento</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </section>
-            <!-- Footer -->
+
             <footer class="footer-page skyblue">
                 <div class="image-bg">
                 </div>
@@ -160,7 +165,7 @@
 
     <!-- jquery, popper, bootstrap     -->
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-    <script src="apps.js"></script>
+    <script src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

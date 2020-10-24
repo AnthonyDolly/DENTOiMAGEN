@@ -11,12 +11,12 @@
     <title>Mi perfil</title>
 </head>
 
-<body>
+<body style="background-color: #fbfbfe; font-family: sans-serif;">
     <center>
         <header class="header-home white">
             <div class="d-flex align-items-center content-header">
                 <div class="col-4">
-                    <a href="index-personal.html">
+                    <a href="index.php">
                         <img style="width: 200px;" src="image/logo-clinica.svg" alt="Logo de Clinica">
                     </a>
                 </div>
@@ -24,28 +24,35 @@
                     <ul class="d-flex justify-content-end username-list">
                         <li class="px-3 username-list-item">
                             <span>
-                                Jose Carmona Peralta
+                                Laura Sifuentes Lozano
                                 <div class="flecha">
                                     <img src="image/flecha-down.svg" alt="flecha">
                                 </div>
                             </span>
                             <ul class="username-sublist">
                                 <li class="username-subitem">
-                                    <a href="perfil-cliente.html">
+                                    <a href="mi-perfil.php">
                                         <div>
                                             <img src="image/perfil-dentista.svg" alt="mi perfil"> Mi perfil
                                         </div>
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="cita-user.html">
+                                    <a href="mis-citas.php">
                                         <div>
-                                            <img src="image/cita.svg" alt="cita"> Citas
+                                            <img src="image/cita.svg" alt="cita"> Mis Citas
                                         </div>
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="index.html">
+                                    <a href="mis-tratamientos.php">
+                                        <div>
+                                            <img src="image/cita.svg" alt="close-sesion"> Mis Tratamientos
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="username-subitem">
+                                    <a href="index.php">
                                         <div>
                                             <img src="image/cerrar-sesion.svg" alt="close-sesion"> Cerrar sesión
                                         </div>
@@ -56,17 +63,24 @@
                     </ul>
                     <ul class="d-flex justify-content-between">
                         <li>
-                            <a href="index-personal.html"> <i class="fas fa-home"></i>
+                            <a href="index.php"> <i class="fas fa-home"></i>
                                 Inicio</a>
                         </li>
                         <li>
-                            <a href="servicios-personal.html"><i class="fa fa-stethoscope fa-fw"></i> Servicios</a>
+                            <a href="servicios.php"><i class="fa fa-stethoscope fa-fw"></i> Servicios</a>
+                            <ul>
+                                <li><a href="servicios-DisenoSonrisa.php">Diseño de Sonrisa</a></li>
+                                <li><a href="servicios-PlanDental.php">Plan Dental</a></li>
+                                <li><a href="servicios-blanqueamiento.php">Blanqueamiento</a></li>
+                                <li><a href="servicios-LimpiezaDental.php">Limpieza Dental</a></li>
+                                <li><a href="servicios-ortodoncia.php">Ortodoncia</a></li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="sedes-personal.html"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
+                            <a href="sedes.php"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
                         </li>
                         <li>
-                            <a href="nosotros-personal.html"><i class="fas fa-users"></i> Nosotros</a>
+                            <a href="nosotros.php"><i class="fas fa-users"></i> Nosotros</a>
                         </li>
                     </ul>
                 </nav>
@@ -77,16 +91,23 @@
 
         <main>
             <section min-width="360" style="width: 100%; margin-top: -.3em;">
-                <div class="container-perfil-cliente">
+                <div class="container-perfil-personal">
                     <div class="perfil-paisaje"></div>
                     <article class="perfil-article-flex">
                         <div class="container-perfil-feature">
                             <div class="perfil-photo"></div>
                             <div class="perfil-feature">
-                                <h2>Jose Carmona Peralta</h2>
-                                <h5>Paciente</h5>
-                                <p>JoseCarmona22P@gmail.com</p>
-                                <a href="cita-user.html">Mis citas</a>
+                                <h2>Laura Sifuentes Lozano</h2>
+                                <h5>Cirujana Dentista</h>
+                                    <p>LauraSL@hotmail.com</p>
+                                    <a href="mis-citas.php">Mis citas</a>
+                                    <a href="horario-trabajo.html" style="margin-left: 1em;">Horario de trabajo</a>
+                                    <a href="reclamo.php" style="display: block; margin-top: .5em;">Realizar
+                                        reclamo</a>
+                                    <a href="nuevo-tratamiento.php"
+                                        style="display: block; margin-top: .5em;">Registrar Nuevo Tramiento</a>
+                                    <a href="mis-tratamientos.php" style="display: block; margin-top: .5em;">Ver mis
+                                        Tratamientos</a>
                             </div>
                         </div>
                     </article>
@@ -146,89 +167,6 @@
         </main>
     </center>
 
-    <!-- Modal Login-->
-    <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content" style="border: 0;">
-                <form action="index.html" method="post">
-                    <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
-                        <h5 class="modal-title">Iniciar Sesión</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div style="text-align: center;">
-                        <div class="form-group-login">
-                            <label style="display: block; font-size: .8em;">Username</label>
-                            <input type="text" name="username" required="" size="30">
-                        </div>
-                        <div class="form-group-login">
-                            <label style="display: block; font-size: .8em;">Password</label>
-                            <input type="Password" name="password" required="" size="30">
-                        </div>
-                        <div class="group-submit-Login">
-                            <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
-                                data-toggle="modal" data-target="#RegisterModal"
-                                style="display: inline-block; font-size: .8em; color: #3498db;">¿No
-                                tienes cuenta? Regístrate
-                            </button>
-                            <input type="submit" name="btenviar" value="Ingresar"
-                                style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;">
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Register -->
-    <div class="modal fade" id="RegisterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content" style="border: 0;">
-                <form action="confirmacionRegister.html" method="post">
-                    <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
-                        <h5>Registrarse</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div style="margin-left: .2em; margin-right: .2em;">
-                        <div class="form-group-register">
-                            <div class="group-names">
-                                <input type="text" name="nombres" placeholder="Nombres" required>
-                                <input type="text" name="apellidos" placeholder="Apellidos" required>
-                            </div>
-                            <div class="group-correo-username">
-                                <input type="email" name="correo" placeholder="Correo Electrónico" class="email"
-                                    required>
-                                <input type="text" name="username" placeholder="Usuario" required>
-                            </div>
-                            <div class="group-password">
-                                <input type="password" name="password" placeholder="Contraseña" required>
-                                <input type="password" name="r-password" placeholder="Repetir contraseña" required>
-                            </div>
-                            <div class="group-submit">
-                                <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
-                                    data-toggle="modal" data-target="#LoginModal"
-                                    style="display: inline-block; font-size: .8em; color: #3498db;">¿Ya
-                                    tienes cuenta? Iniciar sesión
-                                </button>
-                                <input type="submit" class="right" name="btenviar" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;
-                                    ">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
     <!-- jquery, popper, bootstrap     -->
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
     <script src="app.js"></script>
@@ -243,3 +181,43 @@
 </body>
 
 </html>
+
+
+<?php
+    // if (isset($_POST['btenviar'])) {
+    //     $username=$_POST['username'];
+    //     $password=$_POST['password'];
+
+    //     // PERFIL DOCTOR //
+    //     $userDoctor = 'doctor';
+    //     $contraDoctor = 'doctor';
+    //     $estadoD = false; 
+
+    //     if ($username == '' || $password == '') {
+    //         echo'<script type="text/javascript">
+    //         alert("Porfavor Rellena todos los campos");
+    //         </script>';
+    //     } elseif ($username != $userDoctor || $password != $contraDoctor) {
+    //         echo'<script type="text/javascript">
+    //         alert("Datos incorrectos");
+    //         </script>';
+    //     } elseif ($username == $userDoctor && $password == $contraDoctor) {
+    //         $estadoD = true;
+    //     }
+
+    //     if ($estadoD == true) {
+    //         // header('Location: index.php');
+    //         echo'<script type="text/javascript">
+    //         alert("Correcto");
+    //         Dentista();
+    //         </script>';
+    //         // clickTheLink();
+    //     } else {
+    //         echo "Error";
+    //     }
+
+        
+    //     // PERFIL PACIENTE //
+    
+    // }
+?>
