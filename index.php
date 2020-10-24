@@ -349,7 +349,7 @@
             </script>';
         } elseif ($username != $userDoctor || $password != $contraDoctor) {
             echo'<script type="text/javascript">
-            alert("Datos incorrectos");
+            // alert("Datos incorrectos");
             </script>';
         } elseif ($username == $userDoctor && $password == $contraDoctor) {
             $estadoD = true;
@@ -368,6 +368,32 @@
 
         
         // PERFIL PACIENTE //
+        $userPaciente = 'paciente';
+        $contraPaciente = 'paciente';
+        $estadoP = false;
+
+        if ($username == '' || $password == '') {
+            echo'<script type="text/javascript">
+            alert("Porfavor Rellena todos los campos");
+            </script>';
+        } elseif ($username != $userPaciente || $password != $contraPaciente) {
+            echo'<script type="text/javascript">
+            // alert("Datos incorrectos");
+            </script>';
+        } elseif ($username == $userPaciente && $password == $contraPaciente) {
+            $estadoP = true;
+        }
+
+        if ($estadoP == true) {
+            // header('Location: index.php');
+            echo'<script type="text/javascript">
+            alert("Datos Correctos");
+            Paciente();
+            </script>';
+            // clickTheLink();
+        } else {
+            echo "Error";
+        }
     
     }
 ?>

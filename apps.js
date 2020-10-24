@@ -82,6 +82,53 @@ function Dentista() {
 }
 
 
+function Paciente() {
+  ul = document.getElementById('ul1');
+  while (ul.firstChild) {
+    ul.removeChild(ul.firstChild);
+  }
+
+  ul.insertAdjacentHTML('afterbegin', `
+    <li class="px-3 username-list-item">
+      <span>
+        Jose Carmona Peralta
+          <div class="flecha">
+              <img src="image/flecha-down.svg" alt="flecha">
+          </div>
+      </span>
+      <ul class="username-sublist">
+          <li class="username-subitem">
+              <a href="mi-perfilP.php">
+                  <div>
+                      <img src="image/perfil-paciente.svg" alt="mi perfil"> Mi Perfil
+                  </div>
+              </a>
+          </li>
+          <li class="username-subitem">
+              <a href="mis-citasP.php">
+                  <div>
+                      <img src="image/cita.svg" alt="cita"> Mis Controles
+                  </div>
+              </a>
+          </li>
+          <li class="username-subitem">
+              <a href="mi-tratamiento.php">
+                  <div>
+                      <img src="image/cita.svg" alt="close-sesion"> Mi Tratamiento
+                  </div>
+              </a>
+          </li>
+          <li class="username-subitem">
+              <a href="index.php">
+                  <div>
+                      <img src="image/cerrar-sesion.svg" alt="close-sesion"> Cerrar Sesión
+                  </div>
+              </a>
+          </li>
+      </ul>
+    </li>`);
+}
+
 
 function clickTheLink() {
   window.location.href = 'validar.php';
