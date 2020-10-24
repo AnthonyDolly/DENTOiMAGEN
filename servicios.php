@@ -8,12 +8,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
-    <title>Nosotros</title>
-    <style type="text/css">
-        .area {
-            resize: none;
-        }
-    </style>
+    <title>Servicios</title>
 </head>
 
 <body style="background-color: #fbfbfe; font-family: sans-serif;">
@@ -22,12 +17,12 @@
         <header class="header-home white">
             <div class="d-flex align-items-center content-header">
                 <div class="col-4">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img style="width: 200px;" src="image/logo-clinica.svg" alt="Logo de Clinica">
                     </a>
                 </div>
                 <nav class="col-8 navigator">
-                    <ul class="d-flex justify-content-end">
+                    <ul class="d-flex justify-content-end username-list" id="ul1">
                         <li class="px-3">
                             <button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">
                                 <i class="fas fa-sign-in-alt"></i> Iniciar sesión</button>
@@ -39,13 +34,13 @@
                     </ul>
                     <ul class="d-flex justify-content-between">
                         <li>
-                            <a href="index.html"> <i class="fas fa-home"></i>
+                            <a href="index.php"> <i class="fas fa-home"></i>
                                 Inicio</a>
                         </li>
                         <li>
-                            <a href="servicios.html"><i class="fa fa-stethoscope fa-fw">
+                            <a href="servicios.php" style="background: #1089bf; color: #fff;"><i class="fa fa-stethoscope fa-fw">
                                     </i> Servicios</a>
-                            <ul>
+                                 <ul>
                                     <li><a href="DiseñoSonrisa.html">Diseño de Sonrisa</a></li>
                                     <li><a href="PlanDental.html">Plan Dental</a></li>
                                     <li><a href="blanqueamiento.html">Blanqueamiento</a></li>
@@ -54,11 +49,10 @@
                                 </ul>
                         </li>
                         <li>
-                            <a href="sedes.html"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
+                            <a href="sedes.php"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
                         </li>
                         <li>
-                            <a href="nosotros.html" style="background: #1089bf; color: #fff;"><i
-                                    class="fas fa-users"></i> Nosotros</a>
+                            <a href="nosotros.php"><i class="fas fa-users"></i> Nosotros</a>
                         </li>
                     </ul>
                 </nav>
@@ -67,198 +61,112 @@
             <div class="fila-color skyblue"></div>
         </header>
 
-
         <main>
-            <section style="margin-bottom: 5em;">
-                <!-- primer bloque -->
+            <section min-width="360">
+                <!-- contenido 1 -->
                 <table width="80%">
                     <tr>
                         <td width="50%">
-                            <h1>Nosotros </h1> <small>DENTOiMAGEN</small>
+                            <h1>Radiografía - Ortopantomografía Panorámica </h1> <small>DENTOiMAGEN</small>
                             <p>
                                 <font size="5">
-                                    Somos una Clínica especializada en tratamiento como inplantalogía oral,
-                                    rehabilitación,
-                                    ortodoncia y estética. Un equipo comprometido a brindar servicios de sensibilidad,
-                                    cordialidad y trato humano que satisfaga todas las expectativas de nuestros
-                                    clientes.
-                                    ¡Con
-                                    los más altos estándares de calidad!.
+                                    Es una técnica que se sirve de rayos X para obtener información detallada acerca de
+                                    las
+                                    estructuras dentales y la anatomía oral. Es el primer estudio ideal como radiografia
+                                    antes
+                                    de comenzar a tratar a cualquier paciente.
                                 </font>
 
                             </p>
                             <br>
                             <p>
                                 <font size="5">
-                                    Clínica fundada en el año 2015 por la Dra. Vásquez Acevedo en el distrito de los
-                                    Olivos.
-                                    Con
-                                    su compañero de trabajo el Dr. Herrera García decidieron tomar juntos este trayecto
-                                    de
-                                    implementar un sistema de atención dental con la mejor calidad de servicio.
+                                    Se utiliza para:
+                                    <ul style="margin-left: 1.2em;">
+                                        <li>Evaluar dientes incluidos, retenidos e impactados.</li>
+                                        <li>Examinar la extensión de lesiones grandes.</li>
+                                        <li>Evaluar traumatismo.</li>
+                                    </ul>
                                 </font>
                             </p>
                         </td>
                         <td align="end" width="50%">
-                            <img width="90%" src="image/dentista.jpg" alt="dentista">
+                            <img width="90%" src="image/ortopantomografia.jpg" alt="Ortopantomografía">
                         </td>
                     </tr>
                 </table>
-                <br><br>
-                <!-- objetivos -->
+                <br>
+                <br>
+
+                <!-- contenido 2 -->
+                <table width="80%">
+                    <tr>
+                        <td align="center" width="100%">
+                            <h1>Diseño de Sonrisa </h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" width="100%">
+                            <img width="70%" src="image/diseñoSonrisa.jpg" alt="Ortopantomografía">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <font size="5">
+                                Al final de la sesión se puede solicitar fotos para observar el antes y el después de
+                                esta
+                                reconstrucción. Todos nuestros pacientes afimran una muy buena atención de calidad y
+                                seguridad.
+                            </font>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!-- contenido 3 -->
                 <table width="80%">
                     <tr>
                         <td align="start" width="50%">
-                            <img width="90%" src="image/paciente2.jpg" alt="dentista">
+                            <img width="90%" src="image/sonrisa.jpg" alt="sonrisa">
                         </td>
+
                         <td width="50%">
-                            <h1>Objetivos </h1>
+                            <h1>Plan dental </h1>
                             <p>
                                 <font size="5">
-                                    <ul>
-                                        <li>Obtener prestigio con la profesión médica y odontológica que brindamos.</li>
-                                        <li>Crear un estilo propio de atención odontológica.</li>
-                                        <li>Pacientes plenamente satisfechos con la atención recibida.</li>
-                                        <li>Formación de un equipo de profesionales sanitarios comprometidos con la
-                                            salud.
-                                        </li>
-                                    </ul>
+                                    Plan de ahorro para el mejor cuidado de usted y su familia a solo un cómodo precio
+                                    de
+                                    S/.
+                                    49.90 mensuales para cualquier tipo de servicio. Gracias a este plan usted entrará a
+                                    atenciones preferenciales donde el primer y segundo mes será totalmente gratis.
                                 </font>
 
                             </p>
-                            <!-- <br> -->
-
+                            <br>
+                            <p>
+                                <font size="5">
+                                    El plan consta de:
+                                    <ul>
+                                        <li>Monto fijo que no aumentará con el tiempo.</li>
+                                        <li>Válido solo para dos personas</li>
+                                        <li>Si desea añadir a un familiar más el costo sería de S/. 39.90 por persona
+                                        </li>
+                                    </ul>
+                                </font>
+                            </p>
                         </td>
 
-                    </tr>
-                </table>
-                <br><br><br>
-
-
-
-                <table width="80%">
-                    <tr height="20" bgcolor="#52c1f3">
-                        <td align="center">
-                            <font size="5" color="#fff">
-                                <h1 color="#ffffff">NUESTRA MISIÓN</h1>
-                                <p>
-                                    Brindar el mejor servicio de calidad y con excelencia a nuestros pacientes a precios
-                                    accesibles para todos ellos.
-                                </p>
-                            </font>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center"><img width="550px" src="image/girl.jpg" alt="" style="padding-top:60px"></td>
-                    </tr>
-                </table>
-                <br>
-                <br>
-                <br>
-
-                <!-- segundo bloque -->
-                <table width="80%">
-                    <tr height="20" bgcolor="#52c1f3">
-                        <td align="center">
-                            <font size="5" color="#fff">
-                                <h1 color="#ffffff">NUESTRA VISIÓN</h1>
-                                <p>
-                                    Ser una de las clínicas dentales más grandes en el Perú, generando utilidades y ser
-                                    reconocida por nuestra calidad de nuestros servicios.
-                                </p>
-                            </font>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center"> <img width="550px" src="image/dentista2.jpg" alt=""
-                                style="padding-top:60px"></td>
-                    </tr>
-                </table>
-                <br>
-                <br>
-                <br>
-
-                <!-- tercer bloque -->
-                <table width="80%">
-                    <tr height="20" bgcolor="#52c1f3">
-                        <td align="center" colspan="2">
-                            <font size="5" color="#fff">
-                                <h1 color="#ffffff">Agenda tu cita</h1>
-                            </font>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" width="50%">
-                            <img width="70%" src="image/doctora.jpg" alt="dentista">
-                        </td>
-
-                        <td width="50%">
-                            <!-- <h1 size="5" > Agenda tu cita </h1> > -->
-                            <table align="center" border="0" width="80%">
-                                <tr>
-                                    <td align="">
-                                        <font size="5">
-                                            <form action="confirmacionNosotros.html" method="POST">
-                                                <p>
-                                                <p>
-                                                <p>
-                                                <fieldset>
-                                                    <legend><b>Envíanos tus datos aquí</b></legend>
-                                                    Nombres:
-                                                    <input align="end" name="nombres" value="" required type="text">
-                                                    </p>
-                                                    <p>
-                                                        Apellidos:
-                                                        <input align="end" name="apellidos" value="" required
-                                                            type="text">
-                                                    </p>
-                                                    <p>
-                                                        Teléfono:
-                                                        <span style="padding-left:7px"><input type="text"
-                                                                name="telefono" value="" required>
-                                                    </p>
-                                                    <p>
-                                                        Correo:
-                                                        <span style="padding-left:25px">
-                                                            <input type="email" name="correo" value="" required>
-                                                    </p>
-                                                    <p>
-                                                        Fecha:
-                                                        <span style="padding-left:32px">
-                                                            <input type="date">
-                                                    </p>
-                                                    Servicios:
-                                                    <span style="padding-left:2px">
-                                                        <select name="servicios">
-                                                            <option value="0">I---Seleccione---I</option>
-                                                            <option value="1">Diseño de sonrisa</option>
-                                                            <option value="2">Plan Dental</option>
-                                                            <option value="3">Blanqueamiento</option>
-                                                            <option value="4">Limpieza dental</option>
-                                                            <option value="5">Brackets</option>
-                                                        </select>
-                                                        </p>
-                                                        <p align="start">
-                                                            Mensaje: <br>
-                                                            <span style="padding-left:32px">
-                                                                <textarea align="center" width="100%" name="" id=""
-                                                                    cols="30" rows="10" style="resize: none;">
-                                                        </p>
-                                                        <p align="center">
-                                                            <input width="80%" type="submit" value="Enviar">
-
-                                                        </p>
-                                                </fieldset>
-                                            </form>
-                                        </font>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
                     </tr>
                 </table>
             </section>
 
+            <!-- Footer -->
             <footer class="footer-page skyblue">
                 <div class="image-bg">
                 </div>
@@ -318,7 +226,7 @@
     <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="border: 0;">
-                <form action="index-personal.html" method="post">
+                <form action="" method="post">
                     <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
                         <h5 class="modal-title">Iniciar Sesión</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -394,9 +302,10 @@
 
 
 
+
     <!-- jquery, popper, bootstrap     -->
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-    <script src="app.js"></script>
+    <script src="apps.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -404,8 +313,46 @@
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-
-
 </body>
 
 </html>
+
+
+<?php
+    if (isset($_POST['btenviar'])) {
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+
+        // PERFIL DOCTOR //
+        $userDoctor = 'doctor';
+        $contraDoctor = 'doctor';
+        $estadoD = false; 
+
+        if ($username == '' || $password == '') {
+            echo'<script type="text/javascript">
+            alert("Porfavor Rellena todos los campos");
+            </script>';
+        } elseif ($username != $userDoctor || $password != $contraDoctor) {
+            echo'<script type="text/javascript">
+            alert("Datos incorrectos");
+            </script>';
+        } elseif ($username == $userDoctor && $password == $contraDoctor) {
+            $estadoD = true;
+        }
+
+        if ($estadoD == true) {
+            // header('Location: index.php');
+            echo'<script type="text/javascript">
+            alert("Correcto");
+            Dentista();
+            </script>';
+            // clickTheLink();
+        } else {
+            echo "Error";
+        }
+
+        
+        // PERFIL PACIENTE //
+    
+    }
+?>

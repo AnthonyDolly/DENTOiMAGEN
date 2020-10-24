@@ -8,12 +8,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
-    <title>Nosotros</title>
-    <style type="text/css">
-        .area {
-            resize: none;
-        }
-    </style>
+    <title>Dento Imagen</title>
 </head>
 
 <body style="background-color: #fbfbfe; font-family: sans-serif;">
@@ -22,71 +17,42 @@
         <header class="header-home white">
             <div class="d-flex align-items-center content-header">
                 <div class="col-4">
-                    <a href="index-personal.html">
+                    <a href="index.php">
                         <img style="width: 200px;" src="image/logo-clinica.svg" alt="Logo de Clinica">
                     </a>
                 </div>
                 <nav class="col-8 navigator">
-                    <ul class="d-flex justify-content-end username-list">
-                        <li class="px-3 username-list-item">
-                            <span>
-                                Laura Sifuentes Lozano
-                                <div class="flecha">
-                                    <img src="image/flecha-down.svg" alt="flecha">
-                                </div>
-                            </span>
-                            <ul class="username-sublist">
-                                <li class="username-subitem">
-                                    <a href="perfil-personal.html">
-                                        <div>
-                                            <img src="image/perfil-dentista.svg" alt="mi perfil"> Mi perfil
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="username-subitem">
-                                    <a href="cita-user.html">
-                                        <div>
-                                            <img src="image/cita.svg" alt="cita">Mis Controles
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="username-subitem">
-                                    <a href="my-treatment.html">
-                                        <div>
-                                            <img src="image/cita.svg" alt="close-sesion"> Mi Tratamiento
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="username-subitem">
-                                    <a href="index.html">
-                                        <div>
-                                            <img src="image/cerrar-sesion.svg" alt="close-sesion"> Cerrar sesión
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                    <ul class="d-flex justify-content-end username-list" id="ul1">
+                        <li class="px-3">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">
+                                <i class="fas fa-sign-in-alt"></i> Iniciar sesión</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#RegisterModal"><i
+                                    class="fas fa-user"></i> Regístrate</button>
                         </li>
                     </ul>
                     <ul class="d-flex justify-content-between">
                         <li>
-                            <a href="index-personal.html"><i class="fas fa-home"></i> Inicio</a>
+                            <a href="index.php"> <i class="fas fa-home"></i>
+                                Inicio</a>
                         </li>
                         <li>
-                            <a href="servicios-personal.html"><i class="fa fa-stethoscope fa-fw"></i> Servicios</a>
-                        <ul>
+                            <a href="servicios.php"><i class="fa fa-stethoscope fa-fw">
+                                    </i> Servicios</a>
+                                 <ul>
                                     <li><a href="DiseñoSonrisa.html">Diseño de Sonrisa</a></li>
                                     <li><a href="PlanDental.html">Plan Dental</a></li>
                                     <li><a href="blanqueamiento.html">Blanqueamiento</a></li>
                                     <li><a href="LimpiezaDental.html">Limpieza Dental</a></li>
                                     <li><a href="brakects.html">Brackets</a></li>
-                            </ul>
+                                </ul>
                         </li>
                         <li>
-                            <a href="sedes-personal.html"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
+                            <a href="sedes.php"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
                         </li>
                         <li>
-                            <a href="nosotros-personal.html" style="background: #1089bf; color: #fff;"><i
-                                    class="fas fa-users"></i> Nosotros</a>
+                            <a href="nosotros.php" style="background: #1089bf; color: #fff;"><i class="fas fa-users"></i> Nosotros</a>
                         </li>
                     </ul>
                 </nav>
@@ -94,7 +60,6 @@
             </div>
             <div class="fila-color skyblue"></div>
         </header>
-
 
         <main>
             <section style="margin-bottom: 5em;">
@@ -219,67 +184,34 @@
                         <td align="center" width="50%">
                             <img width="70%" src="image/doctora.jpg" alt="dentista">
                         </td>
-
                         <td width="50%">
-                            <!-- <h1 size="5" > Agenda tu cita </h1> > -->
-                            <table align="center" border="0" width="80%">
+                            <table>
                                 <tr>
-                                    <td align="">
-                                        <font size="5">
-                                            <form action="confirmacionNosotros.html" method="POST">
-                                                <p>
-                                                <p>
-                                                <p>
-                                                <fieldset>
-                                                    <legend><b>Envíanos tus datos aquí</b></legend>
-                                                    Nombres:
-                                                    <input align="end" name="nombres" value="" required type="text">
-                                                    </p>
-                                                    <p>
-                                                        Apellidos:
-                                                        <input align="end" name="apellidos" value="" required
-                                                            type="text">
-                                                    </p>
-                                                    <p>
-                                                        Teléfono:
-                                                        <span style="padding-left:7px"><input type="text"
-                                                                name="telefono" value="" required>
-                                                    </p>
-                                                    <p>
-                                                        Correo:
-                                                        <span style="padding-left:25px">
-                                                            <input type="email" name="correo" value="" required>
-                                                    </p>
-                                                    <p>
-                                                        Fecha:
-                                                        <span style="padding-left:32px">
-                                                            <input type="date">
-                                                    </p>
-                                                    Servicios:
-                                                    <span style="padding-left:2px">
-                                                        <select name="servicios">
-                                                            <option value="0">I---Seleccione---I</option>
-                                                            <option value="1">Diseño de sonrisa</option>
-                                                            <option value="2">Plan Dental</option>
-                                                            <option value="3">Blanqueamiento</option>
-                                                            <option value="4">Limpieza dental</option>
-                                                            <option value="5">Brackets</option>
-                                                        </select>
-                                                        </p>
-                                                        <p align="start">
-                                                            Mensaje: <br>
-                                                            <span style="padding-left:32px">
-                                                                <textarea align="center" width="100%" name="" id=""
-                                                                    cols="30" rows="10" style="resize: none;">
-                                                </textarea>
-                                                        </p>
-                                                        <p align="center">
-                                                            <input width="80%" type="submit" value="Enviar">
-
-                                                        </p>
-                                                </fieldset>
-                                            </form>
-                                        </font>
+                                    <td>
+                                        <form action="confirmacionNosotros.html" method="post">
+                                            <fieldset>
+                                                <legend><b>Envíanos tus datos aquí</b></legend>
+                                                <p>Nombres: <input type="text" name="nombres" required></p>
+                                                <p>Apellidos: <input type="text" name="apellidos" required></p>
+                                                <p>Telefono: <input type="text" name="telefono" required></p>
+                                                <p>Email: <input type="email" name="email" required></p>
+                                                <p>Fecha: <input type="date" name="fecha" required></p>
+                                                <p>Servicios
+                                                    <select name="servicios">
+                                                        <option value="0">I---Seleccione---I</option>
+                                                        <option value="1">Diseño de sonrisa</option>
+                                                        <option value="2">Plan Dental</option>
+                                                        <option value="3">Blanqueamiento</option>
+                                                        <option value="4">Limpieza dental</option>
+                                                        <option value="5">Brackets</option>
+                                                    </select></p>
+                                                <p>Mensaje <br>
+                                                    <textarea name="descripcion" id="desc" cols="30"
+                                                        rows="10"></textarea>
+                                                </p>
+                                                <p align="center"><input type="submit" name="boton" value="Enviar"></p>
+                                            </fieldset>
+                                        </form>
                                     </td>
                                 </tr>
                             </table>
@@ -288,6 +220,7 @@
                 </table>
             </section>
 
+            <!-- Footer -->
             <footer class="footer-page skyblue">
                 <div class="image-bg">
                 </div>
@@ -338,8 +271,89 @@
                     <p>Todos los derechos reservados © 2020 | DENTOiMAGEN</p>
                 </div>
             </footer>
+
         </main>
     </center>
+
+            
+    <!-- Modal Login-->
+    <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="border: 0;">
+                <form action="" method="post">
+                    <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
+                        <h5 class="modal-title">Iniciar Sesión</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div style="text-align: center;">
+                        <div class="form-group-login">
+                            <label style="display: block; font-size: .8em;">Username</label>
+                            <input type="text" name="username" required="" size="30">
+                        </div>
+                        <div class="form-group-login">
+                            <label style="display: block; font-size: .8em;">Password</label>
+                            <input type="Password" name="password" required="" size="30">
+                        </div>
+                        <div class="group-submit-Login">
+                            <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
+                                data-toggle="modal" data-target="#RegisterModal"
+                                style="display: inline-block; font-size: .8em; color: #3498db;">¿No
+                                tienes cuenta? Regístrate
+                            </button>
+                            <input type="submit" name="btenviar" value="Ingresar"
+                                style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Register -->
+    <div class="modal fade" id="RegisterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="border: 0;">
+                <form action="confirmacionRegister.html" method="post">
+                    <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
+                        <h5>Registrarse</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div style="margin-left: .2em; margin-right: .2em;">
+                        <div class="form-group-register">
+                            <div class="group-names">
+                                <input type="text" name="nombres" placeholder="Nombres" required>
+                                <input type="text" name="apellidos" placeholder="Apellidos" required>
+                            </div>
+                            <div class="group-correo-username">
+                                <input type="email" name="correo" placeholder="Correo Electrónico" class="email"
+                                    required>
+                                <input type="text" name="username" placeholder="Usuario" required>
+                            </div>
+                            <div class="group-password">
+                                <input type="password" name="password" placeholder="Contraseña" required>
+                                <input type="password" name="r-password" placeholder="Repetir contraseña" required>
+                            </div>
+                            <div class="group-submit">
+                                <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
+                                    data-toggle="modal" data-target="#LoginModal"
+                                    style="display: inline-block; font-size: .8em; color: #3498db;">¿Ya
+                                    tienes cuenta? Iniciar sesión
+                                </button>
+                                <input type="submit" class="right" name="btenviar" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;
+                                            ">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
 
 
 
@@ -347,7 +361,7 @@
 
     <!-- jquery, popper, bootstrap     -->
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-    <script src="app.js"></script>
+    <script src="apps.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -355,8 +369,46 @@
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-
-
 </body>
 
 </html>
+
+
+<?php
+    if (isset($_POST['btenviar'])) {
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+
+        // PERFIL DOCTOR //
+        $userDoctor = 'doctor';
+        $contraDoctor = 'doctor';
+        $estadoD = false; 
+
+        if ($username == '' || $password == '') {
+            echo'<script type="text/javascript">
+            alert("Porfavor Rellena todos los campos");
+            </script>';
+        } elseif ($username != $userDoctor || $password != $contraDoctor) {
+            echo'<script type="text/javascript">
+            alert("Datos incorrectos");
+            </script>';
+        } elseif ($username == $userDoctor && $password == $contraDoctor) {
+            $estadoD = true;
+        }
+
+        if ($estadoD == true) {
+            // header('Location: index.php');
+            echo'<script type="text/javascript">
+            alert("Correcto");
+            Dentista();
+            </script>';
+            // clickTheLink();
+        } else {
+            echo "Error";
+        }
+
+        
+        // PERFIL PACIENTE //
+    
+    }
+?>

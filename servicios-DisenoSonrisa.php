@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
-    <title>Dento Imagen</title>
+    <title>Servicio Diseño de Sonrisa</title>
 </head>
 
 <body style="background-color: #fbfbfe; font-family: sans-serif;">
@@ -17,12 +17,12 @@
         <header class="header-home white">
             <div class="d-flex align-items-center content-header">
                 <div class="col-4">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img style="width: 200px;" src="image/logo-clinica.svg" alt="Logo de Clinica">
                     </a>
                 </div>
                 <nav class="col-8 navigator">
-                    <ul class="d-flex justify-content-end">
+                    <ul class="d-flex justify-content-end" id="ul1">
                         <li class="px-3">
                             <button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">
                                 <i class="fas fa-sign-in-alt"></i> Iniciar sesión</button>
@@ -30,29 +30,30 @@
                         <li>
                             <button class="btn btn-primary" data-toggle="modal" data-target="#RegisterModal"><i
                                     class="fas fa-user"></i> Regístrate</button>
-                            </li>
+                        </li>
                     </ul>
                     <ul class="d-flex justify-content-between">
                         <li>
-                            <a href="index.html"><i class="fas fa-home"></i>
+                            <a href="index.php"><i class="fas fa-home"></i>
                                 Inicio</a>
                         </li>
                         <li>
-                            <a href="servicios.html" style="background: #1089bf; color: #fff;"><i class="fa fa-stethoscope fa-fw">
-                                    </i> Servicios</a>
-                                    <ul>
-                                    <li><a href="DiseñoSonrisa.html">Diseño de Sonrisa</a></li>
-                                    <li><a href="PlanDental.html">Plan Dental</a></li>
-                                    <li><a href="blanqueamiento.html">Blanqueamiento</a></li>
-                                    <li><a href="LimpiezaDental.html">Limpieza Dental</a></li>
-                                    <li><a href="brakects.html">Brackets</a></li>
-                                </ul>
+                            <a href="servicios.php" style="background: #1089bf; color: #fff;"><i
+                                    class="fa fa-stethoscope fa-fw">
+                                </i> Servicios</a>
+                            <ul>
+                                <li><a href="DiseñoSonrisa.html">Diseño de Sonrisa</a></li>
+                                <li><a href="PlanDental.html">Plan Dental</a></li>
+                                <li><a href="blanqueamiento.html">Blanqueamiento</a></li>
+                                <li><a href="LimpiezaDental.html">Limpieza Dental</a></li>
+                                <li><a href="brakects.html">Brackets</a></li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="sedes.html"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
+                            <a href="sedes.php"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
                         </li>
                         <li>
-                            <a href="nosotros.html"><i class="fas fa-users"></i> Nosotros</a>
+                            <a href="nosotros.php"><i class="fas fa-users"></i> Nosotros</a>
                         </li>
                     </ul>
                 </nav>
@@ -61,80 +62,88 @@
             <div class="fila-color skyblue"></div>
         </header>
         <main>
-        <section min-width="360">
-        <h4 style="padding-top: 10px;">El diseño dental sirve para aumentar el autoestima del paciente ayudando a darle un aspecto mas frezco y naturalmente cuidado.</h4>
-                 <p>
+            <section min-width="360">
+                <h4 style="padding-top: 10px;">El diseño dental sirve para aumentar el autoestima del paciente ayudando
+                    a darle un aspecto mas frezco y naturalmente cuidado.</h4>
                 <p>
-            <div class="alinea">
-            <div id="cuadro3">
-                <img src="image/smile1.jpg" width="100%">
-            </div>
-            <div class="texto3"><b><u>Estilo Dental</u>:</b><p>El diseño de sonrisa es un procedimiento dental que crea artísticamente sonrisas con armonía, estética y función.<p> Los diseños de sonrisas pueden hacer maravillas para restaurar completamente tu salud dental y apariencia, independientemente del estado original de tus dientes existentes.
+                <p>
+                <div class="alinea">
+                    <div id="cuadro3">
+                        <img src="image/smile1.jpg" width="100%">
+                    </div>
+                    <div class="texto3"><b><u>Estilo Dental</u>:</b>
+                        <p>El diseño de sonrisa es un procedimiento dental que crea artísticamente sonrisas con armonía,
+                            estética y función.
+                        <p> Los diseños de sonrisas pueden hacer maravillas para restaurar completamente tu salud dental
+                            y apariencia, independientemente del estado original de tus dientes existentes.
+                    </div>
                 </div>
-            </div>
-            <p>
-           <br>
-         <br>
-            <div class="alinea">
-            <div id="cuadro4">
-            <img src="image/smile2.jpg" width="100%">
-            </div>
-            <div class="texto4"><b><u>Sonrisa Ideal</u>:</b><p>Nosotros vemos el diseño de sonrisa como un nuevo concepto debido a las altas expectativas estéticas de los pacientes; centrando los acabados de la misma en coherencia con sus características físicas y su personalidad.
-            </div>
-        </section>  
-         </main>     
+                <p>
+                    <br>
+                    <br>
+                <div class="alinea">
+                    <div id="cuadro4">
+                        <img src="image/smile2.jpg" width="100%">
+                    </div>
+                    <div class="texto4"><b><u>Sonrisa Ideal</u>:</b>
+                        <p>Nosotros vemos el diseño de sonrisa como un nuevo concepto debido a las altas expectativas
+                            estéticas de los pacientes; centrando los acabados de la misma en coherencia con sus
+                            características físicas y su personalidad.
+                    </div>
+            </section>
+        </main>
 
-            <!-- Footer -->
-            <footer class="footer-page skyblue">
-                <div class="image-bg">
+        <!-- Footer -->
+        <footer class="footer-page skyblue">
+            <div class="image-bg">
+            </div>
+            <div class="d-flex content-footer">
+                <div class="col-4">
+                    <div>
+                        <h1>DENTOiMAGEN</h1>
+                        <p>C. Los Olivos 62, Los Olivos 15304</p>
+                        <p><span>Horario de atención:</span> <br>
+                            Lun a Vie. de 8am - 1pm y 3pm-8pm <br>
+                            Sab y Dom. de 9am a 2pm
+                        </p>
+                    </div>
                 </div>
-                <div class="d-flex content-footer">
-                    <div class="col-4">
-                        <div>
-                            <h1>DENTOiMAGEN</h1>
-                            <p>C. Los Olivos 62, Los Olivos 15304</p>
-                            <p><span>Horario de atención:</span> <br>
-                                Lun a Vie. de 8am - 1pm y 3pm-8pm <br>
-                                Sab y Dom. de 9am a 2pm
-                            </p>
-                        </div>
+                <div class="col-4">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>
+                            <strong>Telf: </strong> (01) 540 0543
+                        </li>
+                        <li>
+                            <strong>Cel: </strong> +51 924 800 200
+                        </li>
+                        <li>
+                            <strong>Cel: </strong> +51 924 800 500
+                        </li>
+                        <li>
+                            <strong>Correo: </strong> dentoimagen@servicios.pe
+                        </li>
+                    </ul>
+                    <div>
+                        <img style="width: 20px;" src="image/facebook.svg" alt="">
+                        <img style="width: 20px;" src="image/instagram.svg" alt="">
                     </div>
-                    <div class="col-4">
-                        <h3>Contacto</h3>
-                        <ul>
-                            <li>
-                                <strong>Telf: </strong> (01) 540 0543
-                            </li>
-                            <li>
-                                <strong>Cel: </strong> +51 924 800 200
-                            </li>
-                            <li>
-                                <strong>Cel: </strong> +51 924 800 500
-                            </li>
-                            <li>
-                                <strong>Correo: </strong> dentoimagen@servicios.pe
-                            </li>
-                        </ul>
-                        <div>
-                            <img style="width: 20px;" src="image/facebook.svg" alt="">
-                            <img style="width: 20px;" src="image/instagram.svg" alt="">
-                        </div>
+                </div>
+                <div class="col-4 ">
+                    <h3>Formas de pago</h3>
+                    <div class="d-flex justify-content-between">
+                        <img src="image/amex.svg" alt="">
+                        <img src="image/diners.svg" alt="">
+                        <img src="image/visa.svg" alt="">
+                        <img src="image/mastercard.svg" alt="">
                     </div>
-                    <div class="col-4 ">
-                        <h3>Formas de pago</h3>
-                        <div class="d-flex justify-content-between">
-                            <img src="image/amex.svg" alt="">
-                            <img src="image/diners.svg" alt="">
-                            <img src="image/visa.svg" alt="">
-                            <img src="image/mastercard.svg" alt="">
-                        </div>
 
-                    </div>
                 </div>
-                <div class="col-12 pt-4 pb-2">
-                    <p>Todos los derechos reservados © 2020 | DENTOiMAGEN</p>
-                </div>
-            </footer>
+            </div>
+            <div class="col-12 pt-4 pb-2">
+                <p>Todos los derechos reservados © 2020 | DENTOiMAGEN</p>
+            </div>
+        </footer>
 
         </main>
     </center>
@@ -145,7 +154,7 @@
     <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="border: 0;">
-                <form action="index-personal.html" method="post">
+                <form action="" method="post">
                     <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
                         <h5 class="modal-title">Iniciar Sesión</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -226,7 +235,7 @@
 
     <!-- jquery, popper, bootstrap     -->
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-    <script src="app.js"></script>
+    <script src="apps.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -237,3 +246,43 @@
 </body>
 
 </html>
+
+
+<?php
+    if (isset($_POST['btenviar'])) {
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+
+        // PERFIL DOCTOR //
+        $userDoctor = 'doctor';
+        $contraDoctor = 'doctor';
+        $estadoD = false; 
+
+        if ($username == '' || $password == '') {
+            echo'<script type="text/javascript">
+            alert("Porfavor Rellena todos los campos");
+            </script>';
+        } elseif ($username != $userDoctor || $password != $contraDoctor) {
+            echo'<script type="text/javascript">
+            alert("Datos incorrectos");
+            </script>';
+        } elseif ($username == $userDoctor && $password == $contraDoctor) {
+            $estadoD = true;
+        }
+
+        if ($estadoD == true) {
+            // header('Location: index.php');
+            echo'<script type="text/javascript">
+            alert("Datos Correctos");
+            Dentista();
+            </script>';
+            // clickTheLink();
+        } else {
+            echo "Error";
+        }
+
+        
+        // PERFIL PACIENTE //
+    
+    }
+?>

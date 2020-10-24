@@ -32,28 +32,28 @@
                             </span>
                             <ul class="username-sublist">
                                 <li class="username-subitem">
-                                    <a href="perfil-personal.html">
+                                    <a href="mi-perfil.php">
                                         <div>
                                             <img src="image/perfil-dentista.svg" alt="mi perfil"> Mi perfil
                                         </div>
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="cita-user.html">
+                                    <a href="mis-citas.php">
                                         <div>
                                             <img src="image/cita.svg" alt="cita"> Mis Citas
                                         </div>
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="my-treatment.html">
+                                    <a href="mis-tratamientos.php">
                                         <div>
-                                            <img src="image/cita.svg" alt="close-sesion"> Mi Tratamiento
+                                            <img src="image/cita.svg" alt="close-sesion"> Mis Tratamientos
                                         </div>
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="index.html">
+                                    <a href="index.php">
                                         <div>
                                             <img src="image/cerrar-sesion.svg" alt="close-sesion"> Cerrar sesión
                                         </div>
@@ -64,24 +64,23 @@
                     </ul>
                     <ul class="d-flex justify-content-between">
                         <li>
-                            <a href="index-personal.html"> <i class="fas fa-home"></i> Inicio</a>
+                            <a href="index.php"> <i class="fas fa-home"></i> Inicio</a>
                         </li>
                         <li>
-                            <a href="servicios-personal.html"><i class="fa fa-stethoscope fa-fw"></i> Servicios</a>
+                            <a href="servicios.php"><i class="fa fa-stethoscope fa-fw"></i> Servicios</a>
                             <ul>
-                                    <li><a href="DiseñoSonrisa.html">Diseño de Sonrisa</a></li>
-                                    <li><a href="PlanDental.html">Plan Dental</a></li>
-                                    <li><a href="blanqueamiento.html">Blanqueamiento</a></li>
-                                    <li><a href="LimpiezaDental.html">Limpieza Dental</a></li>
-                                    <li><a href="brakects.html">Brackets</a></li>
+                                <li><a href="DiseñoSonrisa.html">Diseño de Sonrisa</a></li>
+                                <li><a href="PlanDental.html">Plan Dental</a></li>
+                                <li><a href="blanqueamiento.html">Blanqueamiento</a></li>
+                                <li><a href="LimpiezaDental.html">Limpieza Dental</a></li>
+                                <li><a href="brakects.html">Brackets</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="sedes-personal.html"><i
-                                    class="fa fa-map-marker fa-fw"></i> Sedes</a>
+                            <a href="sedes.php"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
                         </li>
                         <li>
-                            <a href="nosotros-personal.html"><i class="fas fa-users"></i> Nosotros</a>
+                            <a href="nosotros.php"><i class="fas fa-users"></i> Nosotros</a>
                         </li>
                     </ul>
                 </nav>
@@ -92,51 +91,57 @@
 
         <main>
 
-            <div class="content-treatment-user">
-                <h1>Mi Tratamiento</h1>
-                <div class="table-treatment-user" style="max-width: 900px; width: 100%;" >
-                    <div>
-                        <div class="d-flex border-bottom">
-                            <p class="col-4 border-right" >Fecha</p>
-                            <p class="col-4 border-right">Hora</p>
-                            <p class="col-4" >Tratamiento</p>
+            <div class="content-register-treatment">
+                <h1>Registrar nuevo tratamiento</h1>
+                <div class="table-register-treatment">
+                    <form action="">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom01">DNI Paciente</label>
+                            <input type="text" class="form-control" id="validationCustom01" required>
                         </div>
-                        <div class="d-flex">
-                            <p class="col-4 border-right pt-3">15/10/2020</p>
-                            <p class="col-4 border-right pt-3">10:00 am</p>
-                            <p class="col-4 pt-3"> Periodoncia</p>
+                        <div class="col-md-6 mb-3">
+                            <label for="treatment">Tratamiento</label>
+                            <select id="treatment" name="treatment" class="form-control" onchange="viewTreatment()">
+                                <!-- <option selected>Selecciona...</option> -->
+                                <option value="1">Ortodoncia</option>
+                                <option value="2">Periodoncia</option>
+                                <option value="3">Rehabilitación Oral</option>
+                                <option value="4">Implantes</option>
+                            </select>
                         </div>
-                    </div>
-                    <br>
-                    <div>
-                        <div class="d-flex border-bottom">
-                            <p class="col-4 border-right" >Fecha</p>
-                            <p class="col-4 border-right" >Hora</p>
-                            <p class="col-4" >Tratamiento</p>
+                        <div class="col-md-6 mb-3">
+                            <label for="precio">Precio</label>
+                            <input type="text" readonly class="form-control" id="precio" name="precio" required>
                         </div>
-                        <div class="d-flex">
-                            <p class="col-4 border-right pt-3" >29/10/2020</p>
-                            <p class="col-4 border-right pt-3" >1:00 pm</p>
-                            <p class="col-4 pt-3"> Periodoncia</p>
+                        <div class="col-md-6 mb-3">
+                            <label for="cuota">Cuotas</label>
+                            <input type="text" readonly class="form-control" id="cuota" name="cuota" required>
                         </div>
-                    </div>
-
-                    <br>
-                    <div>
-                        <div class="d-flex border-bottom">
-                            <p class="col-4 border-right" >Fecha</p>
-                            <p class="col-4 border-right">Hora</p>
-                            <p class="col-4" >Tratamiento</p>
+                        <div class="d-flex col-md-6 mb-3 justify-content-around">
+                            <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    Activo
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                    value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Inactivo
+                                </label>
+                            </div>
                         </div>
-                        <div class="d-flex">
-                            <p class="col-4 border-right pt-3">12/11/2020</p>
-                            <p class="col-4 border-right pt-3">11:00 am</p>
-                            <p class="col-4 pt-3"> Periodoncia</p>
+                        <div class="col-md-6 mb-3 btn-save-treatment">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
                         </div>
-                    </div>
-            
+                    </form>
                 </div>
+
             </div>
+
+
 
             <footer class="footer-page skyblue">
                 <div class="image-bg">

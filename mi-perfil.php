@@ -8,16 +8,15 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
-    <title>Mis citas</title>
+    <title>Mi perfil</title>
 </head>
 
 <body style="background-color: #fbfbfe; font-family: sans-serif;">
     <center>
-        <!-- Header -->
         <header class="header-home white">
             <div class="d-flex align-items-center content-header">
                 <div class="col-4">
-                    <a href="index-personal.html">
+                    <a href="index.php">
                         <img style="width: 200px;" src="image/logo-clinica.svg" alt="Logo de Clinica">
                     </a>
                 </div>
@@ -32,28 +31,28 @@
                             </span>
                             <ul class="username-sublist">
                                 <li class="username-subitem">
-                                    <a href="perfil-personal.html">
+                                    <a href="mi-perfil.php">
                                         <div>
                                             <img src="image/perfil-dentista.svg" alt="mi perfil"> Mi perfil
                                         </div>
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="cita-user.html">
+                                    <a href="mis-citas.php">
                                         <div>
-                                            <img src="image/cita.svg" alt="cita">Mis Controles
+                                            <img src="image/cita.svg" alt="cita"> Mis Citas
                                         </div>
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="my-treatment.html">
+                                    <a href="mis-tratamientos.php">
                                         <div>
-                                            <img src="image/cita.svg" alt="close-sesion"> Mi Tratamiento
+                                            <img src="image/cita.svg" alt="close-sesion"> Mis Tratamientos
                                         </div>
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="index.html">
+                                    <a href="index.php">
                                         <div>
                                             <img src="image/cerrar-sesion.svg" alt="close-sesion"> Cerrar sesión
                                         </div>
@@ -64,23 +63,24 @@
                     </ul>
                     <ul class="d-flex justify-content-between">
                         <li>
-                            <a href="index-personal.html"> <i class="fas fa-home"></i> Inicio</a>
+                            <a href="index.php"> <i class="fas fa-home"></i>
+                                Inicio</a>
                         </li>
                         <li>
-                            <a href="servicios-personal.html"><i class="fa fa-stethoscope fa-fw"></i> Servicios</a>
-                        <ul>
-                                    <li><a href="DiseñoSonrisa.html">Diseño de Sonrisa</a></li>
-                                    <li><a href="PlanDental.html">Plan Dental</a></li>
-                                    <li><a href="blanqueamiento.html">Blanqueamiento</a></li>
-                                    <li><a href="LimpiezaDental.html">Limpieza Dental</a></li>
-                                    <li><a href="brakects.html">Brackets</a></li>
+                            <a href="servicios.php"><i class="fa fa-stethoscope fa-fw"></i> Servicios</a>
+                            <ul>
+                                <li><a href="DiseñoSonrisa.html">Diseño de Sonrisa</a></li>
+                                <li><a href="PlanDental.html">Plan Dental</a></li>
+                                <li><a href="blanqueamiento.html">Blanqueamiento</a></li>
+                                <li><a href="LimpiezaDental.html">Limpieza Dental</a></li>
+                                <li><a href="brakects.html">Brackets</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="sedes-personal.html"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
+                            <a href="sedes.php"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
                         </li>
                         <li>
-                            <a href="nosotros-personal.html"><i class="fas fa-users"></i> Nosotros</a>
+                            <a href="nosotros.php"><i class="fas fa-users"></i> Nosotros</a>
                         </li>
                     </ul>
                 </nav>
@@ -90,57 +90,30 @@
         </header>
 
         <main>
-
-            <div class="content-register-treatment">
-                <h1>Registrar nuevo tratamiento</h1>
-                <div class="table-register-treatment">
-                    <form action="">
-                        <div class="col-md-6 mb-3">
-                            <label for="validationCustom01">DNI Paciente</label>
-                            <input type="text" class="form-control" id="validationCustom01"  required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="treatment">Tratamiento</label>
-                            <select id="treatment" name="treatment" class="form-control"  onchange="viewTreatment()" >
-                                <!-- <option selected>Selecciona...</option> -->
-                                <option value="1">Ortodoncia</option>
-                                <option value="2">Periodoncia</option>
-                                <option value="3">Rehabilitación Oral</option>
-                                <option value="4">Implantes</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="precio">Precio</label>
-                            <input type="text" readonly class="form-control" id="precio" name="precio"  required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="cuota">Cuotas</label>
-                            <input type="text" readonly class="form-control" id="cuota" name="cuota"  required>
-                        </div>
-                        <div class="d-flex col-md-6 mb-3 justify-content-around">
-                            <div class="form-check ">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                                <label class="form-check-label" for="gridRadios1">
-                                Activo
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                <label class="form-check-label" for="gridRadios2">
-                                Inactivo
-                                </label>
+            <section min-width="360" style="width: 100%; margin-top: -.3em;">
+                <div class="container-perfil-personal">
+                    <div class="perfil-paisaje"></div>
+                    <article class="perfil-article-flex">
+                        <div class="container-perfil-feature">
+                            <div class="perfil-photo"></div>
+                            <div class="perfil-feature">
+                                <h2>Laura Sifuentes Lozano</h2>
+                                <h5>Cirujana Dentista</h>
+                                    <p>LauraSL@hotmail.com</p>
+                                    <a href="mis-citas.php">Mis citas</a>
+                                    <a href="horario-trabajo.html" style="margin-left: 1em;">Horario de trabajo</a>
+                                    <a href="reclamo.php" style="display: block; margin-top: .5em;">Realizar
+                                        reclamo</a>
+                                    <a href="nuevo-tratamiento.php"
+                                        style="display: block; margin-top: .5em;">Registrar Nuevo Tramiento</a>
+                                    <a href="mis-tratamientos.php" style="display: block; margin-top: .5em;">Ver mis
+                                        Tratamientos</a>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3 btn-save-treatment">
-                            <button type="submit" class="btn btn-primary">Guardar</button>
-                        </div>
-                    </form>
+                    </article>
                 </div>
-         
-            </div>
+            </section>
 
-
-            
             <footer class="footer-page skyblue">
                 <div class="image-bg">
                 </div>
@@ -149,7 +122,7 @@
                         <div>
                             <h1>DENTOiMAGEN</h1>
                             <p>C. Los Olivos 62, Los Olivos 15304</p>
-                            <p><span>Horario de atención</span> <br>
+                            <p><span>Horario de atención:</span> <br>
                                 Lun a Vie. de 8am - 1pm y 3pm-8pm <br>
                                 Sab y Dom. de 9am a 2pm
                             </p>
@@ -190,13 +163,9 @@
                 <div class="col-12 pt-4 pb-2">
                     <p>Todos los derechos reservados © 2020 | DENTOiMAGEN</p>
                 </div>
-
             </footer>
         </main>
     </center>
-
-
-
 
     <!-- jquery, popper, bootstrap     -->
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
@@ -212,3 +181,43 @@
 </body>
 
 </html>
+
+
+<?php
+    // if (isset($_POST['btenviar'])) {
+    //     $username=$_POST['username'];
+    //     $password=$_POST['password'];
+
+    //     // PERFIL DOCTOR //
+    //     $userDoctor = 'doctor';
+    //     $contraDoctor = 'doctor';
+    //     $estadoD = false; 
+
+    //     if ($username == '' || $password == '') {
+    //         echo'<script type="text/javascript">
+    //         alert("Porfavor Rellena todos los campos");
+    //         </script>';
+    //     } elseif ($username != $userDoctor || $password != $contraDoctor) {
+    //         echo'<script type="text/javascript">
+    //         alert("Datos incorrectos");
+    //         </script>';
+    //     } elseif ($username == $userDoctor && $password == $contraDoctor) {
+    //         $estadoD = true;
+    //     }
+
+    //     if ($estadoD == true) {
+    //         // header('Location: index.php');
+    //         echo'<script type="text/javascript">
+    //         alert("Correcto");
+    //         Dentista();
+    //         </script>';
+    //         // clickTheLink();
+    //     } else {
+    //         echo "Error";
+    //     }
+
+        
+    //     // PERFIL PACIENTE //
+    
+    // }
+?>

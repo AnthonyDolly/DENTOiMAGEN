@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
-    <title>Mis citas</title>
+    <title>Mis Tratamientos</title>
 </head>
 
 <body style="background-color: #fbfbfe; font-family: sans-serif;">
@@ -17,7 +17,7 @@
         <header class="header-home white">
             <div class="d-flex align-items-center content-header">
                 <div class="col-4">
-                    <a href="index-personal.html">
+                    <a href="index.php">
                         <img style="width: 200px;" src="image/logo-clinica.svg" alt="Logo de Clinica">
                     </a>
                 </div>
@@ -32,28 +32,28 @@
                             </span>
                             <ul class="username-sublist">
                                 <li class="username-subitem">
-                                    <a href="perfil-personal.html">
+                                    <a href="mi-perfil.php">
                                         <div>
                                             <img src="image/perfil-dentista.svg" alt="mi perfil"> Mi perfil
                                         </div>
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="cita-user.html">
+                                    <a href="mis-citas.php">
                                         <div>
-                                            <img src="image/cita.svg" alt="cita">Mis Controles
+                                            <img src="image/cita.svg" alt="cita"> Mis Citas
                                         </div>
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="my-treatment.html">
+                                    <a href="mis-tratamientos.php">
                                         <div>
-                                            <img src="image/cita.svg" alt="close-sesion"> Mi Tratamiento
+                                            <img src="image/cita.svg" alt="close-sesion"> Mis Tratamientos
                                         </div>
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="index.html">
+                                    <a href="index.php">
                                         <div>
                                             <img src="image/cerrar-sesion.svg" alt="close-sesion"> Cerrar sesión
                                         </div>
@@ -64,23 +64,23 @@
                     </ul>
                     <ul class="d-flex justify-content-between">
                         <li>
-                            <a href="index-personal.html"> <i class="fas fa-home"></i> Inicio</a>
+                            <a href="index.php"> <i class="fas fa-home"></i> Inicio</a>
                         </li>
                         <li>
-                            <a href="servicios-personal.html"><i class="fa fa-stethoscope fa-fw"></i> Servicios</a>
+                            <a href="servicios.php"><i class="fa fa-stethoscope fa-fw"></i> Servicios</a>
                             <ul>
-                                    <li><a href="DiseñoSonrisa.html">Diseño de Sonrisa</a></li>
-                                    <li><a href="PlanDental.html">Plan Dental</a></li>
-                                    <li><a href="blanqueamiento.html">Blanqueamiento</a></li>
-                                    <li><a href="LimpiezaDental.html">Limpieza Dental</a></li>
-                                    <li><a href="brakects.html">Brackets</a></li>
+                                <li><a href="DiseñoSonrisa.html">Diseño de Sonrisa</a></li>
+                                <li><a href="PlanDental.html">Plan Dental</a></li>
+                                <li><a href="blanqueamiento.html">Blanqueamiento</a></li>
+                                <li><a href="LimpiezaDental.html">Limpieza Dental</a></li>
+                                <li><a href="brakects.html">Brackets</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="sedes-personal.html"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
+                            <a href="sedes.php"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
                         </li>
                         <li>
-                            <a href="nosotros-personal.html"><i class="fas fa-users"></i> Nosotros</a>
+                            <a href="nosotros.php"><i class="fas fa-users"></i> Nosotros</a>
                         </li>
                     </ul>
                 </nav>

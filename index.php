@@ -17,12 +17,12 @@
         <header class="header-home white">
             <div class="d-flex align-items-center content-header">
                 <div class="col-4">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img style="width: 200px;" src="image/logo-clinica.svg" alt="Logo de Clinica">
                     </a>
                 </div>
                 <nav class="col-8 navigator">
-                    <ul class="d-flex justify-content-end">
+                    <ul class="d-flex justify-content-end username-list" id="ul1">
                         <li class="px-3">
                             <button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">
                                 <i class="fas fa-sign-in-alt"></i> Iniciar sesión</button>
@@ -34,13 +34,13 @@
                     </ul>
                     <ul class="d-flex justify-content-between">
                         <li>
-                            <a href="index.html"><i class="fas fa-home"></i>
+                            <a href="index.php" style="background: #1089bf; color: #fff;"> <i class="fas fa-home"></i>
                                 Inicio</a>
                         </li>
                         <li>
-                            <a href="servicios.html" style="background: #1089bf; color: #fff;"><i class="fa fa-stethoscope fa-fw">
+                            <a href="servicios.php"><i class="fa fa-stethoscope fa-fw">
                                     </i> Servicios</a>
-                                    <ul>
+                                 <ul>
                                     <li><a href="DiseñoSonrisa.html">Diseño de Sonrisa</a></li>
                                     <li><a href="PlanDental.html">Plan Dental</a></li>
                                     <li><a href="blanqueamiento.html">Blanqueamiento</a></li>
@@ -49,10 +49,10 @@
                                 </ul>
                         </li>
                         <li>
-                            <a href="sedes.html"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
+                            <a href="sedes.php"><i class="fa fa-map-marker fa-fw"></i> Sedes</a>
                         </li>
                         <li>
-                            <a href="nosotros.html"><i class="fas fa-users"></i> Nosotros</a>
+                            <a href="nosotros.php"><i class="fas fa-users"></i> Nosotros</a>
                         </li>
                     </ul>
                 </nav>
@@ -60,29 +60,123 @@
             </div>
             <div class="fila-color skyblue"></div>
         </header>
+
         <main>
-        <section min-width="360">
-        <h4 style="padding-top: 10px;">Los brackets o también conocido como frenos, son los instrumentos terapéuticos utilizados por el ortodontista para poder ejercer la ortodoncia.</h4>
-                 <p>
-                <p>
-            <div class="alineados">
-            <div id="cuadro9">
-                <img src="image/brackets1.jpg" width="100%">
+
+            <section min-width="360">
+                <table width="80%">
+                    <tr>
+                        <td colspan="2">
+                            <img src="image/imagen3.jpg" alt="imagen de portada" width="100%" min-height="90%">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="50%" style="vertical-align: top;">
+                            <table width="100%" bgcolor="#fff">
+                                <tr>
+                                    <td>
+                                        <a href="servicios.php">
+                                            <h1>Servicios</h1>
+                                        </a>
+                                        <p>
+                                            <font size="5">Tenemos los más altos estandares de calidad. ¡Ven y
+                                                conoce
+                                                nuestros servicios!</font>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                        <td width="50%" style="vertical-align: top;">
+                            <table width="100%" bgcolor="#fff">
+                                <tr>
+                                    <td>
+                                        <a href="sedes.php">
+                                            <h1>Sedes</h1>
+                                        </a>
+                                        <p>
+                                            <font size="5">Poco a poco nos estamos expandiendo. ¡Conoce nuestras
+                                                sedes!
+                                            </font>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href="nosotros.php">
+                                <h1>Nosotros</h1>
+                            </a>
+                            <p>
+                                <font size="5">Somos un equipo especializado
+                                    en la ortodoncia con un precio asequible!Puedes realizar tu consulta virtual.
+                                    ¡Ahora!
+                                </font>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+
+            <div class="skyblue people-list">
+                <h1 class="py-3">Nuestros pacientes</h1>
             </div>
-            <div class="texto9"><b><u>Reseña Histórica</u>:</b><p>La ortodoncia clásica utiliza habitualmente brackets metálicos, si bien desde hace tiempo existe una opción más estética gracias a que se pueden fabricar con otros materiales, como porcelana, circonio o zafiro. Todos ellos hacen que el aparato de ortodoncia sea menos visible: la porcelana porque su color se adapta al del diente, mientras que el circonio es transparente y el zafiro prácticamente traslúcido.
+
+            <div class="carousel">
+                <div class="carousel-content">
+                    <button style="outline: none;" aria-label="Anterior" class="arrow-before">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="carousel-list">
+                        <div class="carousel-elements">
+                            <img src="image/sonrisa1.jpg" alt="">
+                        </div>
+                        <div class="carousel-elements">
+                            <img src="image/sonrisa2.jpg" alt="">
+                        </div>
+                        <div class="carousel-elements">
+                            <img src="image/sonrisa3.jpg" alt="">
+                        </div>
+                        <div class="carousel-elements">
+                            <img src="image/sonrisa4.jpg" alt="">
+                        </div>
+                        <div class="carousel-elements">
+                            <img src="image/sonrisa5.jpg" alt="">
+                        </div>
+                        <div class="carousel-elements">
+                            <img src="image/sonrisa6.jpg" alt="">
+                        </div>
+                        <div class="carousel-elements">
+                            <img src="image/sonrisa7.jpg" alt="">
+                        </div>
+                        <div class="carousel-elements">
+                            <img src="image/sonrisa8.jpg" alt="">
+                        </div>
+                        <div class="carousel-elements">
+                            <img src="image/sonrisa9.jpg" alt="">
+                        </div>
+                        <div class="carousel-elements">
+                            <img src="image/sonrisa10.jpg" alt="">
+                        </div>
+                        <div class="carousel-elements">
+                            <img src="image/sonrisa11.jpg" alt="">
+                        </div>
+                        <div class="carousel-elements">
+                            <img src="image/sonrisa12.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <button style="outline: none;" aria-label="Anterior" class="arrow-after">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
+                <div role="tablist" class="carousel-indicators"></div>
             </div>
-            <p>
-           <br>
-         <br>
-            <div class="alineados">
-            <div id="cuadro10">
-            <img src="image/brackets2.jpg" width="100%">
-            </div>
-            <div class="texto10"><b><u>¿Cuándo debo usarlos?</u></b><p>El tratamiento ortodóntico puede proporcionárselo el dentista o el ortodoncista, un dentista que se especializa en el diagnóstico, la prevención y el tratamiento de las irregularidades dentales y faciales. Dependerá de la experiencia en ortodoncia del dentista y de la gravedad del caso.
-            </div>
-        </section>  
-         </main>     
 
             <!-- Footer -->
             <footer class="footer-page skyblue">
@@ -116,8 +210,8 @@
                             </li>
                         </ul>
                         <div>
-                            <img style="width: 20px;" src="image/facebook.svg" alt="">
-                            <img style="width: 20px;" src="image/instagram.svg" alt="">
+                            <img style="width: 20px; cursor: pointer;" src="image/facebook.svg" alt="">
+                            <img style="width: 20px; cursor: pointer;" src="image/instagram.svg" alt="">
                         </div>
                     </div>
                     <div class="col-4 ">
@@ -145,7 +239,7 @@
     <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="border: 0;">
-                <form action="index-personal.html" method="post">
+                <form action="" method="post">
                     <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
                         <h5 class="modal-title">Iniciar Sesión</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -226,7 +320,7 @@
 
     <!-- jquery, popper, bootstrap     -->
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-    <script src="app.js"></script>
+    <script src="apps.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -237,3 +331,43 @@
 </body>
 
 </html>
+
+
+<?php
+    if (isset($_POST['btenviar'])) {
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+
+        // PERFIL DOCTOR //
+        $userDoctor = 'doctor';
+        $contraDoctor = 'doctor';
+        $estadoD = false; 
+
+        if ($username == '' || $password == '') {
+            echo'<script type="text/javascript">
+            alert("Porfavor Rellena todos los campos");
+            </script>';
+        } elseif ($username != $userDoctor || $password != $contraDoctor) {
+            echo'<script type="text/javascript">
+            alert("Datos incorrectos");
+            </script>';
+        } elseif ($username == $userDoctor && $password == $contraDoctor) {
+            $estadoD = true;
+        }
+
+        if ($estadoD == true) {
+            // header('Location: index.php');
+            echo'<script type="text/javascript">
+            alert("Datos Correctos");
+            Dentista();
+            </script>';
+            // clickTheLink();
+        } else {
+            echo "Error";
+        }
+
+        
+        // PERFIL PACIENTE //
+    
+    }
+?>
