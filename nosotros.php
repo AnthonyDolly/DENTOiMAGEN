@@ -222,6 +222,15 @@
                                                     <option value="5">Brackets</option>
                                                 </select>
                                             </div>
+                                            <div class="col-12 mb-3 d-flex">
+                                                <label class="w-50" for="validationTooltip05">Sedes</label>
+                                                <select name="sedes" class="custom-select" id="validationTooltip05" required>
+                                                    <option selected disabled value="">Seleccione...</option>
+                                                    <option value="1">Los Olivos</option>
+                                                    <option value="2">Cercado de Lima</option>
+                                                    <option value="3">Trujillo</option>
+                                                </select>
+                                            </div>
                                             <div class="col-12 mb-3 ">
                                                 <label class="w-50" for="exampleFormControlTextarea1">Mensaje</label>
                                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>

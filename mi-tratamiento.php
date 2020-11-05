@@ -97,44 +97,23 @@
                 <div class="table-treatment-user" style="max-width: 900px; width: 100%;" >
                     <div>
                         <div class="d-flex border-bottom">
-                            <p class="col-4 border-right" >Fecha</p>
-                            <p class="col-4 border-right">Hora</p>
-                            <p class="col-4" >Tratamiento</p>
+                            <p class="col-2 border-right">DNI Paciente</p>
+                            <p class="col-2 border-right" >Fecha</p>
+                            <p class="col-2 border-right">Hora</p>
+                            <p class="col-2 border-right" >Tratamiento</p>
+                            <p class="col-2 border-right">Doctor(a)</p>
+                            <p class="col-2">Costo</p>
                         </div>
                         <div class="d-flex">
-                            <p class="col-4 border-right pt-3">15/10/2020</p>
-                            <p class="col-4 border-right pt-3">10:00 am</p>
-                            <p class="col-4 pt-3"> Periodoncia</p>
+                            <p class="col-2 border-right pt-3">10667806</p>
+                            <p class="col-2 border-right pt-3">15/10/2020</p>
+                            <p class="col-2 border-right pt-3">10:00 am</p>
+                            <p class="col-2 border-right pt-3"> Ortodoncia</p>
+                            <p class="col-2 border-right pt-3">Lizeth Alvina Acevedo</p>
+                            <p class="col-2 pt-3">2500</p>
                         </div>
                     </div>
                     <br>
-                    <div>
-                        <div class="d-flex border-bottom">
-                            <p class="col-4 border-right" >Fecha</p>
-                            <p class="col-4 border-right" >Hora</p>
-                            <p class="col-4" >Tratamiento</p>
-                        </div>
-                        <div class="d-flex">
-                            <p class="col-4 border-right pt-3" >29/10/2020</p>
-                            <p class="col-4 border-right pt-3" >1:00 pm</p>
-                            <p class="col-4 pt-3"> Periodoncia</p>
-                        </div>
-                    </div>
-
-                    <br>
-                    <div>
-                        <div class="d-flex border-bottom">
-                            <p class="col-4 border-right" >Fecha</p>
-                            <p class="col-4 border-right">Hora</p>
-                            <p class="col-4" >Tratamiento</p>
-                        </div>
-                        <div class="d-flex">
-                            <p class="col-4 border-right pt-3">12/11/2020</p>
-                            <p class="col-4 border-right pt-3">11:00 am</p>
-                            <p class="col-4 pt-3"> Periodoncia</p>
-                        </div>
-                    </div>
-            
                 </div>
             </div>
 
