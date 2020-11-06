@@ -176,7 +176,7 @@
                     <tr height="20" bgcolor="#52c1f3">
                         <td align="center" colspan="2">
                             <font size="5" color="#fff">
-                                <h1 color="#ffffff">Agenda tu cita</h1>
+                                <h1 color="#ffffff">Agenda tu consulta</h1>
                             </font>
                         </td>
                     </tr>
@@ -189,7 +189,7 @@
                                 <tr>
                                     <td>
                                         <form action="confirmacionNosotros.html" method="post">
-                                            <h1 class="text-center mb-3">Envíanos tu datos</h1>
+                                            <h1 class="text-center mb-3 mt-2">Envíanos tu datos</h1>
                                             <div class="col-12 mb-3 d-flex">
                                                 <label class="w-50" for="validationTooltip01">Nombres</label>
                                                 <input type="text" class="form-control" name="nombres" id="validationTooltip01" required>

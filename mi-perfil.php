@@ -102,8 +102,8 @@
                                     <p>LauraSL@hotmail.com</p>
                                     <a href="mis-citas.php">Mis citas</a>
                                     <a href="horario-trabajo.html" style="margin-left: 1em;">Horario de trabajo</a>
-                                    <a href="reclamo.php" style="display: block; margin-top: .5em;">Realizar
-                                        reclamo</a>
+                                    <a href="reclamo.php" style="display: block; margin-top: .5em;">Registrar
+                                        incidencia</a>
                                     <a href="nuevo-tratamiento.php"
                                         style="display: block; margin-top: .5em;">Registrar Nuevo Tramiento</a>
                                     <a href="mis-tratamientos.php" style="display: block; margin-top: .5em;">Ver mis

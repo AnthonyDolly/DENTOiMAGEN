@@ -93,7 +93,7 @@
         <main>
 
             <div class="content-citas">
-                <h1>Mis Citas</h1>
+                <h1>Mis Controles de Tratamiento</h1>
                 <div class="table-citas" style="max-width: 900px; width: 100%;" >
                     <div>
                         <div class="d-flex border-bottom">

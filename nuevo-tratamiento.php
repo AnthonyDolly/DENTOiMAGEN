@@ -92,7 +92,7 @@
         <main>
 
             <div class="content-register-treatment">
-                <h1>Registrar nuevo tratamiento</h1>
+                <h1>Registrar tratamiento</h1>
                 <div class="table-register-treatment">
                     <form action="">
                         <div class="col-md-6 mb-3">
