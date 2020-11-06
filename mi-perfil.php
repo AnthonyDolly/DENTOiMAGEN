@@ -105,7 +105,7 @@
                                     <a href="reclamo.php" style="display: block; margin-top: .5em;">Registrar
                                         incidencia</a>
                                     <a href="nuevo-tratamiento.php"
-                                        style="display: block; margin-top: .5em;">Registrar Nuevo Tramiento</a>
+                                        style="display: block; margin-top: .5em;">Registrar Tramiento</a>
                                     <a href="mis-tratamientos.php" style="display: block; margin-top: .5em;">Ver mis
                                         Tratamientos</a>
                             </div>

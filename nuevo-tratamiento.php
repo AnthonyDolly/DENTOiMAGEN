@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
+    <script src="./DENTOiMAGEN/apps.js"></script>
     <title>Mis citas</title>
 </head>
 
@@ -94,10 +95,18 @@
             <div class="content-register-treatment">
                 <h1>Registrar tratamiento</h1>
                 <div class="table-register-treatment">
-                    <form action="">
+                    <form action="" method="POST">
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom01">DNI Paciente</label>
                             <input type="text" class="form-control" id="validationCustom01" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="precio">Doctor</label>
+                            <input type="text" readonly class="form-control" id="doctor" name="doctor" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="precio">Sede</label>
+                            <input type="text" readonly class="form-control" id="sede" name="sede" required>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="treatment">Tratamiento</label>
@@ -201,8 +210,9 @@
 
 
     <!-- jquery, popper, bootstrap     -->
+    <!-- <script src="app.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-    <script src="app.js"></script>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

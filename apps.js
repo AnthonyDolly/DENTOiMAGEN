@@ -136,7 +136,6 @@ function clickTheLink() {
 
 
 /*register new tratment */
-try {
   function viewTreatment() {
     let typeTreatment = document.querySelector('#treatment').value;
     switch (typeTreatment) {
@@ -169,8 +168,9 @@ try {
     console.log(cuota);
 
   }
-}
-catch (error) {
-  console.log(error);
-}
 
+
+
+  function prueba(){
+    
+  }
