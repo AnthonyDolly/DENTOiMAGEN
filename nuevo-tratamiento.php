@@ -112,10 +112,11 @@
                             <label for="treatment">Tratamiento</label>
                             <select id="treatment" name="treatment" class="form-control" onchange="viewTreatment()">
                                 <!-- <option selected>Selecciona...</option> -->
-                                <option value="1">Ortodoncia</option>
-                                <option value="2">Periodoncia</option>
-                                <option value="3">Rehabilitación Oral</option>
-                                <option value="4">Implantes</option>
+                                <option value="1">Limpieza dental</option>
+                                <option value="2">Blanqueamiento</option>
+                                <option value="3">Diseño de sonrisa</option>
+                                <option value="4">Ortodoncia</option>
+                                <option value="5">Plan dental</option>
                             </select>
                         </div>
                         <div class="col-md-6 mb-3">
