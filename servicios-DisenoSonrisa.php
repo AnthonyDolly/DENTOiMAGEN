@@ -217,7 +217,7 @@
                                     style="display: inline-block; font-size: .8em; color: #3498db;">¿Ya
                                     tienes cuenta? Iniciar sesión
                                 </button>
-                                <input type="submit" class="right" name="btenviar" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;
+                                <input type="submit" class="right" name="btningresar" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;
                                             ">
                             </div>
                         </div>
@@ -248,67 +248,40 @@
 </html>
 
 
-<?php
-    if (isset($_POST['btenviar'])) {
-        $username=$_POST['username'];
-        $password=$_POST['password'];
+<<?php
 
-        // PERFIL DOCTOR //
-        $userDoctor = 'doctor';
-        $contraDoctor = 'doctor';
-        $estadoD = false; 
+if (isset($_POST['btningresar'])) {
+    $username=$_POST['username'];
+    $password=$_POST['password'];
+    $password = md5($password);
 
-        if ($username == '' || $password == '') {
-            echo'<script type="text/javascript">
-            alert("Porfavor Rellena todos los campos");
-            </script>';
-        } elseif ($username != $userDoctor || $password != $contraDoctor) {
-            echo'<script type="text/javascript">
-            alert("Datos incorrectos");
-            </script>';
-        } elseif ($username == $userDoctor && $password == $contraDoctor) {
-            $estadoD = true;
-        }
+    if ($username == '' || $password == '') {
+        echo'<script type="text/javascript">
+        alert("Porfavor Rellena todos los campos");
+        </script>';
+    } else {
+        require 'conexion.php';
+        session_start();
 
-        if ($estadoD == true) {
-            // header('Location: index.php');
-            echo'<script type="text/javascript">
-            alert("Datos Correctos");
-            Dentista();
-            </script>';
-            // clickTheLink();
-        } else {
-            echo "Error";
-        }
-
-        
-        // PERFIL PACIENTE //
-        $userPaciente = 'paciente';
-        $contraPaciente = 'paciente';
-        $estadoP = false;
-
-        if ($username == '' || $password == '') {
-            echo'<script type="text/javascript">
-            alert("Porfavor Rellena todos los campos");
-            </script>';
-        } elseif ($username != $userPaciente || $password != $contraPaciente) {
-            echo'<script type="text/javascript">
-            // alert("Datos incorrectos");
-            </script>';
-        } elseif ($username == $userPaciente && $password == $contraPaciente) {
-            $estadoP = true;
-        }
-
-        if ($estadoP == true) {
-            // header('Location: index.php');
+        $query = "SELECT * FROM clientes WHERE id='$username' AND contra='$password'";
+        $resultado= mysqli_query($conexion,$query);
+        $rows = mysqli_num_rows($resultado);
+        if ($rows>0) {
             echo'<script type="text/javascript">
             alert("Datos Correctos");
             Paciente();
             </script>';
-            // clickTheLink();
+            // header("location:index.php");
+            
         } else {
-            echo "Error";
+            echo'<script type="text/javascript">
+            alert("Datos Incorrectos");
+            </script>';
         }
-    
+        mysqli_free_result($resultado);
+        mysqli_close($conexion);
     }
+
+}
+
 ?>
