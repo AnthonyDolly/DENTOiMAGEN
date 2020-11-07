@@ -3,7 +3,7 @@
 $server = "localhost";
 $user = "root";
 $pass = "";
-$db = "clinicadental";
+$db = "clinica_dental";
 
 $conexion = mysqli_connect($server,$user,$pass,$db);
 
