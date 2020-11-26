@@ -250,7 +250,7 @@
 
 
 <?php
-
+/*
     if (isset($_POST['btningresar'])) {
         $username=$_POST['username'];
         $password=$_POST['password'];
@@ -284,5 +284,5 @@
         }
 
     }
-
+*/
 ?>
