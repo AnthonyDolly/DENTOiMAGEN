@@ -1,18 +1,17 @@
 <?php 
     session_start();
-    // $varsesion = $_SESSION['username'];
-    // if(isset($varsesion)){
-    //     if($varsesion == null || $varsesion == ""){
-    //         echo'<script type="text/javascript">
-    //             alert("Por favor inicie sesion");
-    //             </script>';
-    //         die();
-    //     }
-    // }
+    $varsesion = $_SESSION['username'];
+    if(isset($varsesion)){
+        if($varsesion == null || $varsesion == ""){
+            echo'<script type="text/javascript">
+                alert("Por favor inicie sesion");
+                </script>';
+            die();
+        }
+    }
 
 
 ?>
-
 
 
 <!DOCTYPE html>
@@ -41,23 +40,25 @@
                 </div>
                 <nav class="col-8 navigator">
                     <ul class="d-flex justify-content-end username-list" id="ul1">
-                        <li class="px-3">
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">
-                                <i class="fas fa-sign-in-alt"></i> Iniciar sesión</button>
-                        </li>
+                        <!-- <li class="px-3">
+                            
+                        </li> -->
                         <li>
+                        <!-- </script>'.$_SESSION['username'].'<script> -->
                         <?php
                             if (isset($_SESSION['username'])){
                                 //$variable = $_SESSION['username'];
                                 echo ' <script type="text/javascript" >
                                 alert("hola");
-                                Paciente(</script>'.$_SESSION['username'].'<script>);
-                                
+                                Paciente();
                                 </script>';
+                                //var_dump($_SESSION['username']);
 
                             } 
                             else{
                                 ?>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">
+                                <i class="fas fa-sign-in-alt"></i> Iniciar sesión</button>
                                 <button class="btn btn-primary" data-toggle="modal" data-target="#RegisterModal">
                                     <i class="fas fa-user">Regístrate</i> 
                                 </button>

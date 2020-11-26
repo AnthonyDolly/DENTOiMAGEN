@@ -2,8 +2,6 @@
     session_start();
     include("conexion.php");
     $varsesion = $_SESSION['username'];
-    //$nombreCliente = "SELECT nombres FROM clientes WHERE id='$username' AND contra='$password'";
-    //$nombreString = strval($nombreCliente);
     if($varsesion == null || $varsesion == ""){
         echo'<script type="text/javascript">
             alert("Por favor inicie sesion");

@@ -1,5 +1,4 @@
 <?php
-    //require 'conexion.php';
 
 
     session_start();
@@ -8,12 +7,6 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
         //$password = md5($password);
-
-        //$_SESSION['username'] = $username;
-
-
-        //consultas
-        //$queryName = "SELECT nombres, apellidos FROM clientes WHERE nombre='$name' AND contra='$password'";
 
         
         if ($username == '' || $password == '') {
@@ -53,18 +46,6 @@
 
     }
 
-    // $query = "SELECT * FROM clientes WHERE id='$username' AND contra='$password'";
-    // $resultado= mysqli_query($conexion,$query);
-    
-    // $rows = mysqli_num_rows($resultado);
-    // if ($rows>0) {
-    //     echo ("Datos correctos");
-    //     header("location:index.php");
-    // } else {
-    //     echo ("Datos incorrectos");
-    // }
-    // mysqli_free_result($resultado);
-    // mysqli_close($conexion);
 
     
 

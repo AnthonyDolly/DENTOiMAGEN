@@ -84,7 +84,7 @@ function Dentista() {
           
 </script> */}
 
-function Paciente(nombreCompleto) {
+function Paciente() {
   ul = document.getElementById('ul1');
   while (ul.firstChild) {
     ul.removeChild(ul.firstChild);
@@ -93,7 +93,7 @@ function Paciente(nombreCompleto) {
   ul.insertAdjacentHTML('afterbegin', `
     <li class="px-3 username-list-item">
       <span>
-       ${nombreCompleto}
+        Juan Carlos Carmona
           <div class="flecha">
               <img src="image/flecha-down.svg" alt="flecha">
           </div>
