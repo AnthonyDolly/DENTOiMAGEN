@@ -1,3 +1,18 @@
+<?php 
+    session_start();
+    include("conexion.php");
+    $varsesion = $_SESSION['username'];
+    //$nombreCliente = "SELECT nombres FROM clientes WHERE id='$username' AND contra='$password'";
+    //$nombreString = strval($nombreCliente);
+    if($varsesion == null || $varsesion == ""){
+        echo'<script type="text/javascript">
+            alert("Por favor inicie sesion");
+            </script>';
+        die();
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +39,10 @@
                     <ul class="d-flex justify-content-end username-list">
                         <li class="px-3 username-list-item">
                             <span>
-                                Laura Sifuentes Lozano
+                                <!-- Laura Sifuentes Lozano -->
+                                <!-- $resultado =  mysqli_query($conexion, $nombreString); -->
+                                <?php echo $_SESSION['username']                        
+                                ?>
                                 <div class="flecha">
                                     <img src="image/flecha-down.svg" alt="flecha">
                                 </div>
@@ -52,7 +70,7 @@
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="index.php">
+                                    <a href="cerrar-sesion.php">
                                         <div>
                                             <img src="image/cerrar-sesion.svg" alt="close-sesion"> Cerrar sesión
                                         </div>
@@ -184,6 +202,7 @@
 
 
 <?php
+
     // if (isset($_POST['btenviar'])) {
     //     $username=$_POST['username'];
     //     $password=$_POST['password'];

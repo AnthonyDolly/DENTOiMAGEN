@@ -1,3 +1,20 @@
+<?php 
+    session_start();
+    // $varsesion = $_SESSION['username'];
+    // if(isset($varsesion)){
+    //     if($varsesion == null || $varsesion == ""){
+    //         echo'<script type="text/javascript">
+    //             alert("Por favor inicie sesion");
+    //             </script>';
+    //         die();
+    //     }
+    // }
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +24,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+    <script src="apps.js"></script>;
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
     <title>Dento Imagen</title>
 </head>
@@ -28,8 +46,27 @@
                                 <i class="fas fa-sign-in-alt"></i> Iniciar sesión</button>
                         </li>
                         <li>
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#RegisterModal"><i
-                                    class="fas fa-user"></i> Regístrate</button>
+                        <?php
+                            if (isset($_SESSION['username'])){
+                                //$variable = $_SESSION['username'];
+                                echo ' <script type="text/javascript" >
+                                alert("hola");
+                                Paciente(</script>'.$_SESSION['username'].'<script>);
+                                
+                                </script>';
+
+                            } 
+                            else{
+                                ?>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#RegisterModal">
+                                    <i class="fas fa-user">Regístrate</i> 
+                                </button>
+                                <?php
+
+                            }
+                        
+                        ?>
+                       
                         </li>
                     </ul>
                     <ul class="d-flex justify-content-between">
@@ -239,7 +276,7 @@
     <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="border: 0;">
-                <form action="" method="post">
+                <form action="validar.php" method="post">
                     <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
                         <h5 class="modal-title">Iniciar Sesión</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -315,12 +352,14 @@
 
 
 
-
+    <script src="text/javascript">
+    
+    </script>
 
 
     <!-- jquery, popper, bootstrap     -->
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-    <script src="apps.js"></script>
+    <!-- <script src="apps.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -335,11 +374,11 @@
 
 
 <?php
-
+/*
     if (isset($_POST['btningresar'])) {
         $username=$_POST['username'];
         $password=$_POST['password'];
-        $password = md5($password);
+        //$password = md5($password);
 
         if ($username == '' || $password == '') {
             echo'<script type="text/javascript">
@@ -396,7 +435,6 @@
         }
 
     }
-
+*/
 ?>
-
 
