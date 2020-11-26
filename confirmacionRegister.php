@@ -230,3 +230,27 @@
 </body>
 
 </html>
+
+
+<?php
+    if (isset($_POST['btnregistrar'])) {
+        $dni=$_POST['dni'];
+        $nombres=$_POST['nombres'];
+        $apellidos=$_POST['apellidos'];
+        $telefono=$_POST['telefono'];
+        $correo=$_POST['correo'];
+        $password=$_POST['password'];
+        $password = md5($password);
+
+        require 'conexion.php';
+        session_start();
+        $queryI = "INSERT INTO clientes (id,nombres,apellidos,correo,telefono,contra) values('$dni', '$nombres', '$apellidos', '$correo', '$telefono', '$password')";
+
+        $resultado = mysqli_query($conexion,$queryI);
+
+        if ($resultado) {
+            echo '<script type="text/javascript"> alert("Usuario registrado")</script>';
+        }
+
+    }
+?>

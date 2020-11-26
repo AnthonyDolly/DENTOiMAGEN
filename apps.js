@@ -80,9 +80,6 @@ function Dentista() {
       </ul>
     </li>`);
 }
-{/* <script type="text/javascript">
-          
-</script> */}
 
 function Paciente() {
   ul = document.getElementById('ul1');
@@ -128,14 +125,12 @@ function Paciente() {
               </a>
           </li>
       </ul>
-    </li>`
-  );
+    </li>`);
 }
 
 
 function clickTheLink() {
   window.location.href = 'validar.php';
-
 }
 
 

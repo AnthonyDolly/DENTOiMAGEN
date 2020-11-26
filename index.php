@@ -1,19 +1,3 @@
-<?php 
-    session_start();
-    $varsesion = $_SESSION['username'];
-    if(isset($varsesion)){
-        if($varsesion == null || $varsesion == ""){
-            echo'<script type="text/javascript">
-                alert("Por favor inicie sesion");
-                </script>';
-            die();
-        }
-    }
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
-    <script src="apps.js"></script>;
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
     <title>Dento Imagen</title>
 </head>
@@ -44,30 +27,8 @@
                             
                         </li> -->
                         <li>
-                        <!-- </script>'.$_SESSION['username'].'<script> -->
-                        <?php
-                            if (isset($_SESSION['username'])){
-                                //$variable = $_SESSION['username'];
-                                echo ' <script type="text/javascript" >
-                                alert("hola");
-                                Paciente();
-                                </script>';
-                                //var_dump($_SESSION['username']);
-
-                            } 
-                            else{
-                                ?>
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">
-                                <i class="fas fa-sign-in-alt"></i> Iniciar sesión</button>
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#RegisterModal">
-                                    <i class="fas fa-user">Regístrate</i> 
-                                </button>
-                                <?php
-
-                            }
-                        
-                        ?>
-                       
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#RegisterModal"><i
+                                    class="fas fa-user"></i> Regístrate</button>
                         </li>
                     </ul>
                     <ul class="d-flex justify-content-between">
@@ -277,7 +238,7 @@
     <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="border: 0;">
-                <form action="validar.php" method="post">
+                <form action="" method="post">
                     <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
                         <h5 class="modal-title">Iniciar Sesión</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -312,7 +273,7 @@
     <div class="modal fade" id="RegisterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="border: 0;">
-                <form action="confirmacionRegister.html" method="post">
+                <form action="confirmacionRegister.php" method="post">
                     <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
                         <h5>Registrarse</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -322,13 +283,14 @@
                     <div style="margin-left: .2em; margin-right: .2em;">
                         <div class="form-group-register">
                             <div class="group-names">
+                                <input type="text" name="dni" placeholder="DNI" required>
                                 <input type="text" name="nombres" placeholder="Nombres" required>
                                 <input type="text" name="apellidos" placeholder="Apellidos" required>
+                                <input type="text" name="telefono" placeholder="Telefono" required>
                             </div>
                             <div class="group-correo-username">
                                 <input type="email" name="correo" placeholder="Correo Electrónico" class="email"
                                     required>
-                                <input type="text" name="username" placeholder="Usuario" required>
                             </div>
                             <div class="group-password">
                                 <input type="password" name="password" placeholder="Contraseña" required>
@@ -340,7 +302,7 @@
                                     style="display: inline-block; font-size: .8em; color: #3498db;">¿Ya
                                     tienes cuenta? Iniciar sesión
                                 </button>
-                                <input type="submit" class="right" name="btenviar" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;
+                                <input type="submit" class="right" name="btnregistrar" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;
                                             ">
                             </div>
                         </div>
@@ -353,14 +315,12 @@
 
 
 
-    <script src="text/javascript">
-    
-    </script>
+
 
 
     <!-- jquery, popper, bootstrap     -->
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-    <!-- <script src="apps.js"></script> -->
+    <script src="apps.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -375,11 +335,11 @@
 
 
 <?php
-/*
+
     if (isset($_POST['btningresar'])) {
         $username=$_POST['username'];
         $password=$_POST['password'];
-        //$password = md5($password);
+        $password = md5($password);
 
         if ($username == '' || $password == '') {
             echo'<script type="text/javascript">
@@ -389,8 +349,8 @@
             require 'conexion.php';
             session_start();
 
-            $query = "SELECT * FROM clientes WHERE id='$username' AND contra='$password'";
-            $resultado= mysqli_query($conexion,$query);
+            $queryS = "SELECT * FROM clientes WHERE id='$username' AND contra='$password'";
+            $resultado= mysqli_query($conexion,$queryS);
             $rows = mysqli_num_rows($resultado);
             if ($rows>0) {
                 echo'<script type="text/javascript">
@@ -416,8 +376,8 @@
             require 'conexion.php';
             session_start();
 
-            $query = "SELECT * FROM medicos WHERE id='$username' AND contra='$password'";
-            $resultado= mysqli_query($conexion,$query);
+            $queryS = "SELECT * FROM medicos WHERE id='$username' AND contra='$password'";
+            $resultado= mysqli_query($conexion,$queryS);
             $rows = mysqli_num_rows($resultado);
             if ($rows>0) {
                 echo'<script type="text/javascript">
@@ -436,6 +396,7 @@
         }
 
     }
-*/
+
 ?>
+
 
