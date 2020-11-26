@@ -23,12 +23,13 @@
                 </div>
                 <nav class="col-8 navigator">
                     <ul class="d-flex justify-content-end username-list" id="ul1">
-                        <!-- <li class="px-3">
-                            
-                        </li> -->
+                        <li class="px-3">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">
+                            <i class="fas fa-sign-in-alt"></i> Iniciar sesión</button>
+                        </li>
                         <li>
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#RegisterModal"><i
-                                    class="fas fa-user"></i> Regístrate</button>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#RegisterModal">
+                                <i class="fas fa-user"></i> Regístrate</button>
                         </li>
                     </ul>
                     <ul class="d-flex justify-content-between">
