@@ -80,11 +80,9 @@ function Dentista() {
       </ul>
     </li>`);
 }
-{/* <script type="text/javascript">
-          
-</script> */}
 
-function Paciente(nombreCompleto) {
+
+function Paciente() {
   ul = document.getElementById('ul1');
   while (ul.firstChild) {
     ul.removeChild(ul.firstChild);
@@ -93,7 +91,7 @@ function Paciente(nombreCompleto) {
   ul.insertAdjacentHTML('afterbegin', `
     <li class="px-3 username-list-item">
       <span>
-       ${nombreCompleto}
+        Jose Carmona Peralta
           <div class="flecha">
               <img src="image/flecha-down.svg" alt="flecha">
           </div>
@@ -128,14 +126,12 @@ function Paciente(nombreCompleto) {
               </a>
           </li>
       </ul>
-    </li>`
-  );
+    </li>`);
 }
 
 
 function clickTheLink() {
   window.location.href = 'validar.php';
-
 }
 
 

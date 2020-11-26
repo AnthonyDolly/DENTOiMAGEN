@@ -1,9 +1,3 @@
-<?php 
-    session_start();
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -264,7 +258,7 @@
     <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="border: 0;">
-                <form action="validar.php" method="post">
+                <form action="" method="post">
                     <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
                         <h5 class="modal-title">Iniciar Sesión</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -359,7 +353,7 @@
 
 
 <?php
-/*
+    
     if (isset($_POST['btningresar'])) {
         $username=$_POST['username'];
         $password=$_POST['password'];
@@ -393,5 +387,5 @@
         }
 
     }
-*/
+
 ?>
