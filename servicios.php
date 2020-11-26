@@ -271,13 +271,14 @@
                     <div style="margin-left: .2em; margin-right: .2em;">
                         <div class="form-group-register">
                             <div class="group-names">
+                                <input type="text" name="dni" placeholder="DNI" required>
                                 <input type="text" name="nombres" placeholder="Nombres" required>
                                 <input type="text" name="apellidos" placeholder="Apellidos" required>
+                                <input type="text" name="telefono" placeholder="Telefono" required>
                             </div>
                             <div class="group-correo-username">
                                 <input type="email" name="correo" placeholder="Correo Electrónico" class="email"
                                     required>
-                                <input type="text" name="username" placeholder="Usuario" required>
                             </div>
                             <div class="group-password">
                                 <input type="password" name="password" placeholder="Contraseña" required>
@@ -290,7 +291,7 @@
                                     tienes cuenta? Iniciar sesión
                                 </button>
                                 <input type="submit" class="right" name="btenviar" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;
-                                ">
+                                            ">
                             </div>
                         </div>
                     </div>
