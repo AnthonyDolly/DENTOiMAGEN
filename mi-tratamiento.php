@@ -1,3 +1,17 @@
+
+<?php 
+    session_start();
+    include("conexion.php");
+    $varsesion = $_SESSION['username'];
+    if($varsesion == null || $varsesion == ""){
+        echo'<script type="text/javascript">
+            alert("Por favor inicie sesion");
+            </script>';
+        die();
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +39,7 @@
                     <ul class="d-flex justify-content-end username-list">
                         <li class="px-3 username-list-item">
                             <span>
-                                Jose Carmona Peralta
+                            <?php echo $_SESSION['username']  ?>
                                 <div class="flecha">
                                     <img src="image/flecha-down.svg" alt="flecha">
                                 </div>
@@ -53,7 +67,7 @@
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="index.php">
+                                    <a href="cerrar-sesion.php">
                                         <div>
                                             <img src="image/cerrar-sesion.svg" alt="close-sesion"> Cerrar sesión
                                         </div>

@@ -71,7 +71,7 @@ function Dentista() {
               </a>
           </li>
           <li class="username-subitem">
-              <a href="index.php">
+              <a href="cerrar-sesion.php">
                   <div>
                       <img src="image/cerrar-sesion.svg" alt="close-sesion"> Cerrar Sesión
                   </div>
@@ -81,7 +81,13 @@ function Dentista() {
     </li>`);
 }
 
-function Paciente() {
+
+function test(){
+  let num = 3;
+  console.log(num);
+}
+
+function Paciente(fullName) {
   ul = document.getElementById('ul1');
   while (ul.firstChild) {
     ul.removeChild(ul.firstChild);
@@ -90,7 +96,7 @@ function Paciente() {
   ul.insertAdjacentHTML('afterbegin', `
     <li class="px-3 username-list-item">
       <span>
-        Juan Carlos Carmona
+          ${fullName}
           <div class="flecha">
               <img src="image/flecha-down.svg" alt="flecha">
           </div>
@@ -118,7 +124,7 @@ function Paciente() {
               </a>
           </li>
           <li class="username-subitem">
-              <a href="index.php">
+              <a href="cerrar-sesion.php">
                   <div>
                       <img src="image/cerrar-sesion.svg" alt="close-sesion"> Cerrar Sesión
                   </div>

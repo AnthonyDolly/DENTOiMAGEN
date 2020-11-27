@@ -1,3 +1,17 @@
+<?php 
+    session_start();
+    include("conexion.php");
+    $varsesion = $_SESSION['username'];
+    if($varsesion == null || $varsesion == ""){
+        echo'<script type="text/javascript">
+            alert("Por favor inicie sesion");
+            </script>';
+        die();
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +38,9 @@
                     <ul class="d-flex justify-content-end username-list">
                         <li class="px-3 username-list-item">
                             <span>
-                                Laura Sifuentes Lozano
+                                <?php
+                                    echo $_SESSION['username'];
+                                ?>
                                 <div class="flecha">
                                     <img src="image/flecha-down.svg" alt="flecha">
                                 </div>
@@ -52,7 +68,7 @@
                                     </a>
                                 </li>
                                 <li class="username-subitem">
-                                    <a href="index.php">
+                                    <a href="cerrar-sesion.php">
                                         <div>
                                             <img src="image/cerrar-sesion.svg" alt="close-sesion"> Cerrar sesión
                                         </div>
@@ -97,9 +113,17 @@
                         <div class="container-perfil-feature">
                             <div class="perfil-photo"></div>
                             <div class="perfil-feature">
-                                <h2>Laura Sifuentes Lozano</h2>
+                                <h2>
+                                <?php
+                                    echo $_SESSION['username'];
+                                ?>
+                                </h2>
                                 <h5>Cirujana Dentista</h>
-                                    <p>LauraSL@hotmail.com</p>
+                                    <p> 
+                                    <?php
+                                        echo $_SESSION['correo'];
+                                    ?>
+                                    </p>
                                     <a href="mis-citas.php">Mis citas</a>
                                     <a href="horario-trabajo.html" style="margin-left: 1em;">Horario de trabajo</a>
                                     <a href="reclamo.php" style="display: block; margin-top: .5em;">Registrar

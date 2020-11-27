@@ -250,38 +250,38 @@
 
 <?php
 
-    if (isset($_POST['btningresar'])) {
-        $username=$_POST['username'];
-        $password=$_POST['password'];
-        $password = md5($password);
+    // if (isset($_POST['btningresar'])) {
+    //     $username=$_POST['username'];
+    //     $password=$_POST['password'];
+    //     $password = md5($password);
 
-        if ($username == '' || $password == '') {
-            echo'<script type="text/javascript">
-            alert("Porfavor Rellena todos los campos");
-            </script>';
-        } else {
-            require 'conexion.php';
-            session_start();
+    //     if ($username == '' || $password == '') {
+    //         echo'<script type="text/javascript">
+    //         alert("Porfavor Rellena todos los campos");
+    //         </script>';
+    //     } else {
+    //         require 'conexion.php';
+    //         session_start();
 
-            $query = "SELECT * FROM clientes WHERE id='$username' AND contra='$password'";
-            $resultado= mysqli_query($conexion,$query);
-            $rows = mysqli_num_rows($resultado);
-            if ($rows>0) {
-                echo'<script type="text/javascript">
-                alert("Datos Correctos");
-                Paciente();
-                </script>';
-                // header("location:index.php");
+    //         $query = "SELECT * FROM clientes WHERE id='$username' AND contra='$password'";
+    //         $resultado= mysqli_query($conexion,$query);
+    //         $rows = mysqli_num_rows($resultado);
+    //         if ($rows>0) {
+    //             echo'<script type="text/javascript">
+    //             alert("Datos Correctos");
+    //             Paciente();
+    //             </script>';
+    //             // header("location:index.php");
                 
-            } else {
-                echo'<script type="text/javascript">
-                alert("Datos Incorrectos");
-                </script>';
-            }
-            mysqli_free_result($resultado);
-            mysqli_close($conexion);
-        }
+    //         } else {
+    //             echo'<script type="text/javascript">
+    //             alert("Datos Incorrectos");
+    //             </script>';
+    //         }
+    //         mysqli_free_result($resultado);
+    //         mysqli_close($conexion);
+    //     }
 
-    }
+    // }
 
 ?>

@@ -257,45 +257,45 @@
 
 <?php
 
-    if (isset($_POST['btningresar'])) {
-        $username=$_POST['username'];
-        $password=$_POST['password'];
-        $password = md5($password);
+//     if (isset($_POST['btningresar'])) {
+//         $username=$_POST['username'];
+//         $password=$_POST['password'];
+//         $password = md5($password);
 
-        if ($username == '' || $password == '') {
-            echo'<script type="text/javascript">
-            alert("Porfavor Rellena todos los campos");
-            </script>';
-        } else {
-            require 'conexion.php';
-            session_start();
+//         if ($username == '' || $password == '') {
+//             echo'<script type="text/javascript">
+//             alert("Porfavor Rellena todos los campos");
+//             </script>';
+//         } else {
+//             require 'conexion.php';
+//             session_start();
 
-            $query = "SELECT CONCAT(nombres, ' ', apellidos) AS usuario from clientes WHERE id='$username' AND contra='$password'";
-            $resultado= mysqli_query($conexion,$query);
-            $rows = mysqli_num_rows($resultado);
-            if ($rows>0) {
-                while ($row=mysqli_fetch_assoc($resultado)) {
-                    $row["usuario"];
-                    $usuarioP = $row["usuario"];
-?>
-                    <script type="text/javascript">
-                    var userGlobal = "<?php echo $usuarioP; ?>";
-                    alert(userGlobal);
-                    alert("Datos Correctos");
-                    alert( "<?php echo $usuarioP; ?>");
-                    Paciente();
-                    </script>;
-                    <?php
-                }               
-            } else {
-                echo'<script type="text/javascript">
-                alert("Datos Incorrectos");
-                </script>';
-            }
-            mysqli_free_result($resultado);
-            mysqli_close($conexion);
-        }
+//             $query = "SELECT CONCAT(nombres, ' ', apellidos) AS usuario from clientes WHERE id='$username' AND contra='$password'";
+//             $resultado= mysqli_query($conexion,$query);
+//             $rows = mysqli_num_rows($resultado);
+//             if ($rows>0) {
+//                 while ($row=mysqli_fetch_assoc($resultado)) {
+//                     $row["usuario"];
+//                     $usuarioP = $row["usuario"];
+// ?>
+//                     <script type="text/javascript">
+//                     var userGlobal = "<?php echo $usuarioP; ?>";
+//                     alert(userGlobal);
+//                     alert("Datos Correctos");
+//                     alert( "<?php echo $usuarioP; ?>");
+//                     Paciente();
+//                     </script>;
+//                     <?php
+//                 }               
+//             } else {
+//                 echo'<script type="text/javascript">
+//                 alert("Datos Incorrectos");
+//                 </script>';
+//             }
+//             mysqli_free_result($resultado);
+//             mysqli_close($conexion);
+//         }
 
-    }
+//     }
 
 ?>
