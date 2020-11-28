@@ -147,7 +147,7 @@
                                         <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-danger borderd d-block">
                                             <i class="fas fa-trash-alt"></i>
                                         </button> -->
-                                    <a href="agendarCitaMensual.php">
+                                    <a href="agendarCitaMensual.php?id=<?php echo $row["id"]?>">
                                         <button style="position: absolute; right: 0;"  type="submit" name="boton" class="btn btn-light borderd d-block">+</button>
                                     </a>
                                     <!-- </div>     -->

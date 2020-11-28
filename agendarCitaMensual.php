@@ -23,8 +23,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
     <title>Mis Tratamientos</title>
+<style type="text/css">
+.a{
+  display: block;
+  width: 10%;
+  height: calc(1.5em + 0.75rem + 2px);
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+</style>
 </head>
-
 <body style="background-color: #fbfbfe; font-family: sans-serif;">
     <center>
         <!-- Header -->
@@ -112,7 +126,25 @@
                 <div class="table-citas-personal" style="max-width: 900px;">
                     <div class="table-register-treatment">
                         <form action="" method="POST">
-    
+<div style="display: flex;"> <input type="text" class="a" value="<?php error_reporting(E_ALL^E_NOTICE);class Conexion{function __construct() {
+        $user="root";
+        $Password="";
+        $server="localhost";
+        $BD="dentoimagen";
+        $url="mysql:host=".$server.";dbname=".$BD;
+        $conex=new PDO($url,$user,$Password);
+        return $conex;
+    }
+} 
+$codigo=$_GET["id"];
+$editar=new Conexion();
+$sql="select * from clientes where clientes.id=$codigo";
+$consulta=$editar->__construct()->prepare($sql);
+$consulta->execute();
+$campo=$consulta->fetch(PDO::FETCH_ASSOC);
+
+ echo $campo['id']?>" disabled>
+    <span style="padding-left: 100px;"> </span></div>
                             <div class="col-md-6 mb-3">
                                 <label class="" for="exampleFormControlInput1">Fecha</label>
                                 <input type="date" class="form-control" id="exampleFormControlInput1" required>
