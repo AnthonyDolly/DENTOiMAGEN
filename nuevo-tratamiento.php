@@ -115,15 +115,10 @@
                             <label for="validationCustom01">DNI Paciente</label>
                             <input type="text" class="form-control" id="dnipaciente" name="DNIPaciente" required>
                         </div>
-                        
-                        <!-- <div class="col-md-6 mb-3">
-                            <label class="" for="exampleFormControlInput1">Fecha</label>
-                            <input type="date" class="form-control" id="exampleFormControlInput1" required>
-                        </div> -->
+
                         <div class="col-md-6 mb-3">
                             <label for="treatment">Tratamiento</label>
                             <select id="treatment" name="treatment" class="form-control" onchange="viewTreatment()">
-                                <!-- <option selected>Selecciona...</option> -->
                                 <option value="1">Ortodoncia</option>
                                 <option value="2">Diseño de sonrisa</option>
                                 <option value="3">Plan dental</option>
@@ -136,22 +131,12 @@
                             <label for="validationTooltip01">Sesiones Tratamiento</label>
                             <input type="number" class="form-control" name="sesiones" id="sesiones" required>
                         </div>
-                        <!-- <div class="col-md-6 mb-3">
-                            <label for="validationTooltip01">Sesiones Tratamiento</label>
-                            <input type="number" class="form-control" name="sesiones" id="sesiones" required>
-                        </div> -->
+
                         <div class="col-md-6 mb-3 ">
                             <label class="" for="exampleFormControlTextarea1">Descripción</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" name="descripcion"></textarea>
                         </div>
-                        <!-- <div class="col-md-6 mb-3">
-                            <label for="precio">Precio</label>
-                            <input type="text" readonly class="form-control" id="precio" name="precio" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="cuota">Cuotas</label>
-                            <input type="text" readonly class="form-control" id="cuota" name="cuota" required>
-                        </div> -->
+
                         <div class="d-flex col-md-6 mb-3 justify-content-around">
                             <div class="form-check ">
                                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"

@@ -1,6 +1,16 @@
 <?php 
     session_start();
     include("conexion.php");
+    $usuarioQuery = "SELECT concat(c.nombres,' ',c.apellidos) Paciente, c.id, tt.nombre 
+                    from clientes c
+                    INNER JOIN clientes_tratamientos ct
+                    ON c.id = ct.cliente_id
+                    INNER JOIN tratamientos t
+                    ON ct.tratamiento_id = t.id
+                    INNER JOIN tipos_tratamientos tt
+                    ON t.tipo_tratamiento_id = tt.id
+                    ORDER BY c.nombres";
+
     $varsesion = $_SESSION['username'];
     if($varsesion == null || $varsesion == ""){
         echo'<script type="text/javascript">
@@ -110,31 +120,69 @@
             <div class="content-citas-personal">
                 <h1>Mis Tratamientos</h1>
                 <div class="table-citas-personal" style="max-width: 900px;">
-                    <p style="text-align: end;"><i style="cursor: pointer;" class="fas fa-edit"></i></p>
+                    <p style="text-align: end;">
+                        <a href="editarMisTratamientos.php">
+                            <i style="cursor: pointer;" class="fas fa-edit"></i>
+                        </a>
+                    </p>
                     <div>
-                        <div class="border-botom" style="position: relative;">
-                            <p class="text-center"><strong>Paciente: Rodrigo Pérez Paredes</strong></p>
-                            <a href="agendarCitaMensual.php">
-                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-                            </a>                          
-                        </div>
+                        <?php 
+                            require 'conexion.php';
+                            $result = mysqli_query($conexion, $usuarioQuery);
+                            
+                            while($row = mysqli_fetch_assoc($result)){
+                            ?>
+                            <div class="border-botom" style="position: relative;">
+                                <div class="border-botom" style="position: relative;">
+                                    <!-- <p   style="width: 25%;" ></p> -->
+                                    <p   style="width: 100%;" class="text-center">
+                                        <strong>Paciente: 
+                                        <?php echo $row["Paciente"]; ?>
+                                        </strong>
+                                    </p>
+                                    <!-- <div style="" class="d-flex justify-content-between align-items-center" > -->
+                                        <!-- <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-secondary borderd d-block">
+                                            <i style="cursor: pointer;" class="fas fa-edit"></i>
+                                        </button>
+                                        <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-danger borderd d-block">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button> -->
+                                    <a href="agendarCitaMensual.php">
+                                        <button style="position: absolute; right: 0;"  type="submit" name="boton" class="btn btn-light borderd d-block">+</button>
+                                    </a>
+                                    <!-- </div>     -->
+                                </div>   
+                            </div>
                  
-                        <div class="d-flex border-bottom col-md-8 mb-3">
-                            <p class="col-6 border-right">DNI Paciente</p>
-                            <p class="col-6 ">Tratamiento</p>
-                        </div>
-                        <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">46412385</p>
-                            <p class="col-6 pt-3">Ortodoncia</p>
-                        </div>
+                            <div class="d-flex border-bottom col-md-8 mb-3">
+                                <p class="col-6 border-right">DNI Paciente</p>
+                                <p class="col-6 ">Tratamiento</p>
+                            </div>
+                            <div class="d-flex col-md-8 mb-3">
+                                <p class="col-6 border-right pt-3"><?php echo $row["id"] ?> </p>
+                                <p class="col-6 pt-3"><?php echo $row["nombre"] ?> </p>
+                            </div>
+                        <?php } ?>
                     </div>
                     <br>
-                    <div>
+
+                    <!-- <div>
                         <div class="border-botom" style="position: relative;">
-                            <p class="text-center"> <strong>Paciente: Adrian Aliaga Pimentel</strong></p>
-                            <a href="agendarCitaMensual.php">
-                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-                            </a>
+                            <div class="d-flex justify-content-between">
+                                <p   style="width: 25%;" ></p>
+                                <p   style="width: 100%;" class="text-center"><strong>Paciente: Rodrigo Pérez Paredes</strong></p>
+                                <div style="" class="d-flex justify-content-between align-items-center" >
+                                    <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-secondary borderd d-block">
+                                        <i style="cursor: pointer;" class="fas fa-edit"></i>
+                                    </button>
+                                    <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-danger borderd d-block">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <a href="agendarCitaMensual.php">
+                                        <button  type="submit" name="boton" class="btn btn-light borderd d-block">+</button>
+                                    </a>
+                                </div>    
+                            </div>
                         </div>
                         <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
@@ -149,10 +197,21 @@
                     <br>
                     <div>
                         <div class="border-botom" style="position: relative;">
-                            <p class="text-center"> <strong>Paciente: Diego Alfaro Camarena</strong></p>
-                            <a href="agendarCitaMensual.php">
-                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-                            </a>
+                            <div class="d-flex justify-content-between">
+                                <p   style="width: 25%;" ></p>
+                                <p   style="width: 100%;" class="text-center"><strong>Paciente: Rodrigo Pérez Paredes</strong></p>
+                                <div style="" class="d-flex justify-content-between align-items-center" >
+                                    <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-secondary borderd d-block">
+                                        <i style="cursor: pointer;" class="fas fa-edit"></i>
+                                    </button>
+                                    <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-danger borderd d-block">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <a href="agendarCitaMensual.php">
+                                        <button  type="submit" name="boton" class="btn btn-light borderd d-block">+</button>
+                                    </a>
+                                </div>    
+                            </div>
                         </div>
                         <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
@@ -167,10 +226,21 @@
                     <br>
                     <div>
                         <div class="border-botom" style="position: relative;">
-                            <p class="text-center"> <strong>Paciente: Luis Oroya Garcia</strong></p>
-                            <a href="agendarCitaMensual.php">
-                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-                            </a>
+                            <div class="d-flex justify-content-between">
+                                <p   style="width: 25%;" ></p>
+                                <p   style="width: 100%;" class="text-center"><strong>Paciente: Rodrigo Pérez Paredes</strong></p>
+                                <div style="" class="d-flex justify-content-between align-items-center" >
+                                    <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-secondary borderd d-block">
+                                        <i style="cursor: pointer;" class="fas fa-edit"></i>
+                                    </button>
+                                    <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-danger borderd d-block">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <a href="agendarCitaMensual.php">
+                                        <button  type="submit" name="boton" class="btn btn-light borderd d-block">+</button>
+                                    </a>
+                                </div>    
+                            </div>
                         </div>
                         <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
@@ -185,10 +255,21 @@
                     <br>
                     <div>
                         <div class="border-botom" style="position: relative;">
-                            <p class="text-center"> <strong>Paciente: Anthony Busatamente Flores</strong></p>
-                            <a href="agendarCitaMensual.php">
-                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-                            </a>
+                            <div class="d-flex justify-content-between">
+                                <p   style="width: 25%;" ></p>
+                                <p   style="width: 100%;" class="text-center"><strong>Paciente: Rodrigo Pérez Paredes</strong></p>
+                                <div style="" class="d-flex justify-content-between align-items-center" >
+                                    <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-secondary borderd d-block">
+                                        <i style="cursor: pointer;" class="fas fa-edit"></i>
+                                    </button>
+                                    <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-danger borderd d-block">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <a href="agendarCitaMensual.php">
+                                        <button  type="submit" name="boton" class="btn btn-light borderd d-block">+</button>
+                                    </a>
+                                </div>    
+                            </div>
                         </div>
                         <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
@@ -199,141 +280,8 @@
                             <p class="col-6">Periodoncia</p>
                         </div>
                     </div>
-                    <br>
-                    <div>
-                        <div class="border-botom" style="position: relative;">
-                            <p class="text-center"> <strong>Paciente: Alejandro Mendoza Mansilla</strong></p>
-                            <a href="agendarCitaMensual.php">
-                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-                            </a>
-                        </div>
-                        <div class="d-flex border-bottom col-md-8 mb-3">
-                            <p class="col-6 border-right">DNI Paciente</p>
-                            <p class="col-6 ">Tratamiento</p>
-                        </div>
-                        <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">70849352</p>
-                            <p class="col-6">Rehabilitación Oral</p>
-                        </div>
-                    </div>
-                    <br>
-                    <div>
-                        <div class="border-botom" style="position: relative;">
-                            <p class="text-center"> <strong>Paciente: Pedro Suarez Quintanilla</strong></p>
-                            <a href="agendarCitaMensual.php">
-                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-                            </a>
-                        </div>
-                        <div class="d-flex border-bottom col-md-8 mb-3">
-                            <p class="col-6 border-right">DNI Paciente</p>
-                            <p class="col-6 ">Tratamiento</p>
-                        </div>
-                        <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">78545463</p>
-                            <p class="col-6">Ortodoncia</p>
-                        </div>
-                    </div>
-                    <br>
-                    <div>
-                        <div class="border-botom" style="position: relative;">
-                            <p class="text-center"> <strong>Paciente: Mery Mullisaca Becerra</strong></p>
-                            <a href="agendarCitaMensual.php">
-                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-                            </a>
-                        </div>
-                        <div class="d-flex border-bottom col-md-8 mb-3">
-                            <p class="col-6 border-right">DNI Paciente</p>
-                            <p class="col-6 ">Tratamiento</p>
-                        </div>
-                        <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">79461315</p>
-                            <p class="col-6">Periodoncia/p>
-                        </div>
-                    </div>
-                    <br>
-                    <div>
-                        <div class="border-botom" style="position: relative;">
-                            <p class="text-center"> <strong>Paciente: Mario Garcia Nuñez</strong></p>
-                            <a href="agendarCitaMensual.php">
-                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-                            </a>
-                        </div>
-                        <div class="d-flex border-bottom col-md-8 mb-3">
-                            <p class="col-6 border-right">DNI Paciente</p>
-                            <p class="col-6 ">Tratamiento</p>
-                        </div>
-                        <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">70541265</p>
-                            <p class="col-6">Ortodoncia</p>
-                        </div>
-                    </div>
-                    <br>
-                    <div>
-                        <div class="border-botom" style="position: relative;">
-                            <p class="text-center"> <strong>Paciente: Esteban Rodriguez Quispe</strong></p>
-                            <a href="agendarCitaMensual.php">
-                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-                            </a>
-                        </div>
-                        <div class="d-flex border-bottom col-md-8 mb-3">
-                            <p class="col-6 border-right">DNI Paciente</p>
-                            <p class="col-6 ">Tratamiento</p>
-                        </div>
-                        <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">78451202</p>
-                            <p class="col-6">Rehabilitación Oral</p>
-                        </div>
-                    </div>
-                    <br>
-                    <div>
-                        <div class="border-botom" style="position: relative;">
-                            <p class="text-center"> <strong>Paciente: Juan Carlos Estrada</strong></p>
-                            <a href="agendarCitaMensual.php">
-                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-                            </a>
-                        </div>
-                        <div class="d-flex border-bottom col-md-8 mb-3">
-                            <p class="col-6 border-right">DNI Paciente</p>
-                            <p class="col-6 ">Tratamiento</p>
-                        </div>
-                        <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">73145201</p>
-                            <p class="col-6">Implantes</p>
-                        </div>
-                    </div>
-                    <br>
-                    <div>
-                        <div class="border-botom" style="position: relative;">
-                            <p class="text-center"> <strong>Paciente: Judith Yenpen Garcia</strong></p>
-                            <button [href]="index.php" style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-
-                        </div>
-                        <div class="d-flex border-bottom col-md-8 mb-3">
-                            <p class="col-6 border-right">DNI Paciente</p>
-                            <p class="col-6 ">Tratamiento</p>
-                        </div>
-                        <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">78951420</p>
-                            <p class="col-6">Implantes</p>
-                        </div>
-                    </div>
-                    <br>
-                    <div>
-                        <div class="border-botom" style="position: relative;">
-                            <p class="text-center"> <strong>Paciente: Lucia Amelia Flores</strong></p>
-                            <a href="agendarCitaMensual.php">
-                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-                            </a>
-                        </div>
-                        <div class="d-flex border-bottom col-md-8 mb-3">
-                            <p class="col-6 border-right">DNI Paciente</p>
-                            <p class="col-6 ">Tratamiento</p>
-                        </div>
-                        <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">76784152</p>
-                            <p class="col-6">Implantes</p>
-                        </div>
-                    </div>
+                    <br> -->
+                    
 
                 </div>
             </div>
