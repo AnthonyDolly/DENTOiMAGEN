@@ -126,7 +126,7 @@
                 <div class="table-citas-personal" style="max-width: 900px;">
                     <div class="table-register-treatment">
                         <form action="" method="POST">
-<div style="display: flex;"> <input type="text" class="a" value="<?php error_reporting(E_ALL^E_NOTICE);class Conexion{function __construct() {
+<div>DNI:<input type="text" class="a" value="<?php error_reporting(E_ALL^E_NOTICE);class Conexion{function __construct() {
         $user="root";
         $Password="";
         $server="localhost";
@@ -146,12 +146,12 @@ $campo=$consulta->fetch(PDO::FETCH_ASSOC);
  echo $campo['id']?>" disabled>
     <span style="padding-left: 100px;"> </span></div>
                             <div class="col-md-6 mb-3">
-                                <label class="" for="exampleFormControlInput1">Fecha</label>
+                                <label class="" for="exampleFormControlInput1">Fecha:</label>
                                 <input type="date" class="form-control" id="exampleFormControlInput1" required>
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="validationTooltip01">Precio Sesión</label>
+                                <label for="validationTooltip01">Precio Sesión:</label>
                                 <input type="number" class="form-control" name="sesiones" id="sesiones" required>
                             </div>
 
