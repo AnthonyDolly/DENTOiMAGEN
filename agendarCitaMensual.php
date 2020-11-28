@@ -11,6 +11,7 @@
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,8 +22,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
-    <script src="./DENTOiMAGEN/apps.js"></script>
-    <title>Mis citas</title>
+    <title>Mis Tratamientos</title>
 </head>
 
 <body style="background-color: #fbfbfe; font-family: sans-serif;">
@@ -39,7 +39,7 @@
                     <ul class="d-flex justify-content-end username-list">
                         <li class="px-3 username-list-item">
                             <span>
-                            <?php
+                                <?php
                                     echo $_SESSION['username'];
                                 ?>
                                 <div class="flecha">
@@ -107,79 +107,53 @@
 
         <main>
 
-            <div class="content-register-treatment">
-                <h1>Registrar tratamiento</h1>
-                <div class="table-register-treatment">
-                    <form action="" method="POST">
-                        <div class="col-md-6 mb-3">
-                            <label for="validationCustom01">DNI Paciente</label>
-                            <input type="text" class="form-control" id="dnipaciente" required>
-                        </div>
-                        
-                        <div class="col-md-6 mb-3">
-                            <label class="" for="exampleFormControlInput1">Fecha</label>
-                            <input type="date" class="form-control" id="exampleFormControlInput1" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="treatment">Tratamiento</label>
-                            <select id="treatment" name="treatment" class="form-control" onchange="viewTreatment()">
-                                <!-- <option selected>Selecciona...</option> -->
-                                <option value="1">Ortodoncia</option>
-                                <option value="2">Diseño de sonrisa</option>
-                                <option value="3">Plan dental</option>
-                                <option value="4">Blanqueamiento</option>
-                                <option value="5">Limpieza dental</option>
-                            </select>
-                        </div>
+            <div class="content-citas-personal">
+                <h1>Agendar Cita Mensual</h1>
+                <div class="table-citas-personal" style="max-width: 900px;">
+                    <div class="table-register-treatment">
+                        <form action="" method="POST">
+    
+                            <div class="col-md-6 mb-3">
+                                <label class="" for="exampleFormControlInput1">Fecha</label>
+                                <input type="date" class="form-control" id="exampleFormControlInput1" required>
+                            </div>
 
-                        <div class="col-md-6 mb-3">
-                            <label for="validationTooltip01">Sesiones Tratamiento</label>
-                            <input type="number" class="form-control" name="sesiones" id="sesiones" required>
-                        </div>
-                        <!-- <div class="col-md-6 mb-3">
-                            <label for="validationTooltip01">Sesiones Tratamiento</label>
-                            <input type="number" class="form-control" name="sesiones" id="sesiones" required>
-                        </div> -->
-                        <div class="col-md-6 mb-3 ">
-                            <label class="" for="exampleFormControlTextarea1">Descripción</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" ></textarea>
-                        </div>
-                        <!-- <div class="col-md-6 mb-3">
-                            <label for="precio">Precio</label>
-                            <input type="text" readonly class="form-control" id="precio" name="precio" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="cuota">Cuotas</label>
-                            <input type="text" readonly class="form-control" id="cuota" name="cuota" required>
-                        </div> -->
-                        <div class="d-flex col-md-6 mb-3 justify-content-around">
-                            <div class="form-check ">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                    value="option1" checked>
-                                <label class="form-check-label" for="gridRadios1">
-                                    Activo
-                                </label>
+                            <div class="col-md-6 mb-3">
+                                <label for="validationTooltip01">Precio Sesión</label>
+                                <input type="number" class="form-control" name="sesiones" id="sesiones" required>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                                    value="option2">
-                                <label class="form-check-label" for="gridRadios2">
-                                    Inactivo
-                                </label>
+
+                            <div class="d-block col-md-6 mb-3 ">
+                                <label class="" for="exampleFormControlTextarea1">Estado de Pago</label>
+                                <div class="d-flex col-md-6 mb-3 justify-content-around">
+                                    <div class="form-check ">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                            value="option1" checked>
+                                        <label class="form-check-label" for="gridRadios1">
+                                            Activo
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                            value="option2">
+                                        <label class="form-check-label" for="gridRadios2">
+                                            Inactivo
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 mb-3 btn-save-treatment">
-                            <a href="mis-tratamientos.php">
-                                <button type="submit" onclick="enlace()"  class="btn btn-primary">Guardar</button>
-                            </a>
-                        </div>
-                    </form>
+                            <div class="col-md-6 mb-3 btn-save-treatment">
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+
+
                 </div>
-
             </div>
 
 
-
+            
             <footer class="footer-page skyblue">
                 <div class="image-bg">
                 </div>
@@ -188,7 +162,7 @@
                         <div>
                             <h1>DENTOiMAGEN</h1>
                             <p>C. Los Olivos 62, Los Olivos 15304</p>
-                            <p><span>Horario de atención</span> <br>
+                            <p><span>rio de atención</span> <br>
                                 Lun a Vie. de 8am - 1pm y 3pm-8pm <br>
                                 Sab y Dom. de 9am a 2pm
                             </p>
@@ -238,9 +212,8 @@
 
 
     <!-- jquery, popper, bootstrap     -->
-    <!-- <script src="app.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-    
+    <script src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

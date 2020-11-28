@@ -114,8 +114,9 @@
                     <div>
                         <div class="border-botom" style="position: relative;">
                             <p class="text-center"><strong>Paciente: Rodrigo Pérez Paredes</strong></p>
-
-                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+                            <a href="agendarCitaMensual.php">
+                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+                            </a>                          
                         </div>
                  
                         <div class="d-flex border-bottom col-md-8 mb-3">
@@ -131,15 +132,16 @@
                     <div>
                         <div class="border-botom" style="position: relative;">
                             <p class="text-center"> <strong>Paciente: Adrian Aliaga Pimentel</strong></p>
-                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-
+                            <a href="agendarCitaMensual.php">
+                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+                            </a>
                         </div>
                         <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
                             <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">10/05/2020</p>
+                            <p class="col-6 border-right pt-3">46415385</p>
                             <p class="col-6 pt-3">Ortodoncia</p>
                         </div>
                     </div>
@@ -148,15 +150,16 @@
                     <div>
                         <div class="border-botom" style="position: relative;">
                             <p class="text-center"> <strong>Paciente: Diego Alfaro Camarena</strong></p>
-                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-
+                            <a href="agendarCitaMensual.php">
+                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+                            </a>
                         </div>
                         <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
                             <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">10/05/2020</p>
+                            <p class="col-6 border-right pt-3">55412385</p>
                             <p class="col-6">Rehabilitación Oral</p>
                         </div>
                     </div>
@@ -165,15 +168,16 @@
                     <div>
                         <div class="border-botom" style="position: relative;">
                             <p class="text-center"> <strong>Paciente: Luis Oroya Garcia</strong></p>
-                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-
+                            <a href="agendarCitaMensual.php">
+                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+                            </a>
                         </div>
                         <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
                             <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">10/05/2020</p>
+                            <p class="col-6 border-right pt-3">45610242</p>
                             <p class="col-6">Implantes</p>
                         </div>
                     </div>
@@ -182,15 +186,16 @@
                     <div>
                         <div class="border-botom" style="position: relative;">
                             <p class="text-center"> <strong>Paciente: Anthony Busatamente Flores</strong></p>
-                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-
+                            <a href="agendarCitaMensual.php">
+                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+                            </a>
                         </div>
                         <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
                             <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">11/05/2020</p>
+                            <p class="col-6 border-right pt-3">45610280</p>
                             <p class="col-6">Periodoncia</p>
                         </div>
                     </div>
@@ -198,15 +203,16 @@
                     <div>
                         <div class="border-botom" style="position: relative;">
                             <p class="text-center"> <strong>Paciente: Alejandro Mendoza Mansilla</strong></p>
-                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-
+                            <a href="agendarCitaMensual.php">
+                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+                            </a>
                         </div>
                         <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
                             <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">11/05/2020</p>
+                            <p class="col-6 border-right pt-3">70849352</p>
                             <p class="col-6">Rehabilitación Oral</p>
                         </div>
                     </div>
@@ -214,15 +220,16 @@
                     <div>
                         <div class="border-botom" style="position: relative;">
                             <p class="text-center"> <strong>Paciente: Pedro Suarez Quintanilla</strong></p>
-                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-
+                            <a href="agendarCitaMensual.php">
+                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+                            </a>
                         </div>
                         <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
                             <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">11/05/2020</p>
+                            <p class="col-6 border-right pt-3">78545463</p>
                             <p class="col-6">Ortodoncia</p>
                         </div>
                     </div>
@@ -230,15 +237,16 @@
                     <div>
                         <div class="border-botom" style="position: relative;">
                             <p class="text-center"> <strong>Paciente: Mery Mullisaca Becerra</strong></p>
-                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-
+                            <a href="agendarCitaMensual.php">
+                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+                            </a>
                         </div>
                         <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
                             <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">11/05/2020</p>
+                            <p class="col-6 border-right pt-3">79461315</p>
                             <p class="col-6">Periodoncia/p>
                         </div>
                     </div>
@@ -246,15 +254,16 @@
                     <div>
                         <div class="border-botom" style="position: relative;">
                             <p class="text-center"> <strong>Paciente: Mario Garcia Nuñez</strong></p>
-                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-
+                            <a href="agendarCitaMensual.php">
+                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+                            </a>
                         </div>
                         <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
                             <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">11/05/2020</p>
+                            <p class="col-6 border-right pt-3">70541265</p>
                             <p class="col-6">Ortodoncia</p>
                         </div>
                     </div>
@@ -262,15 +271,16 @@
                     <div>
                         <div class="border-botom" style="position: relative;">
                             <p class="text-center"> <strong>Paciente: Esteban Rodriguez Quispe</strong></p>
-                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-
+                            <a href="agendarCitaMensual.php">
+                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+                            </a>
                         </div>
                         <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
                             <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">12/05/2020</p>
+                            <p class="col-6 border-right pt-3">78451202</p>
                             <p class="col-6">Rehabilitación Oral</p>
                         </div>
                     </div>
@@ -278,15 +288,16 @@
                     <div>
                         <div class="border-botom" style="position: relative;">
                             <p class="text-center"> <strong>Paciente: Juan Carlos Estrada</strong></p>
-                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-
+                            <a href="agendarCitaMensual.php">
+                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+                            </a>
                         </div>
                         <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
                             <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">12/05/2020</p>
+                            <p class="col-6 border-right pt-3">73145201</p>
                             <p class="col-6">Implantes</p>
                         </div>
                     </div>
@@ -294,7 +305,7 @@
                     <div>
                         <div class="border-botom" style="position: relative;">
                             <p class="text-center"> <strong>Paciente: Judith Yenpen Garcia</strong></p>
-                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+                            <button [href]="index.php" style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
 
                         </div>
                         <div class="d-flex border-bottom col-md-8 mb-3">
@@ -302,7 +313,7 @@
                             <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">12/05/2020</p>
+                            <p class="col-6 border-right pt-3">78951420</p>
                             <p class="col-6">Implantes</p>
                         </div>
                     </div>
@@ -310,15 +321,16 @@
                     <div>
                         <div class="border-botom" style="position: relative;">
                             <p class="text-center"> <strong>Paciente: Lucia Amelia Flores</strong></p>
-                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
-
+                            <a href="agendarCitaMensual.php">
+                                <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+                            </a>
                         </div>
                         <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
                             <p class="col-6 ">Tratamiento</p>
                         </div>
                         <div class="d-flex col-md-8 mb-3">
-                            <p class="col-6 border-right pt-3">12/05/2020</p>
+                            <p class="col-6 border-right pt-3">76784152</p>
                             <p class="col-6">Implantes</p>
                         </div>
                     </div>

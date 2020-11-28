@@ -7,7 +7,7 @@
     if (isset($_POST['btningresar'])) {
         $username=$_POST['username'];
         $password=$_POST['password'];
-        //$password = md5($password);
+        $password = md5($password);
 
 
         if ($username == '' || $password == '') {
