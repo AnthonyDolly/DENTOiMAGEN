@@ -112,212 +112,213 @@
                 <div class="table-citas-personal" style="max-width: 900px;">
                     <p style="text-align: end;"><i style="cursor: pointer;" class="fas fa-edit"></i></p>
                     <div>
-                        <div class="border-botom">
-                            <p><strong>Paciente: Rodrigo Pérez Paredes</strong></p>
+                        <div class="border-botom" style="position: relative;">
+                            <p class="text-center"><strong>Paciente: Rodrigo Pérez Paredes</strong></p>
+
+                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
                         </div>
-                        <div class="d-flex border-bottom">
+                 
+                        <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
-                            <!-- <p class="col-6 border-right"></p> -->
                             <p class="col-6 ">Tratamiento</p>
                         </div>
-                        <div class="d-flex">
+                        <div class="d-flex col-md-8 mb-3">
                             <p class="col-6 border-right pt-3">46412385</p>
-                            <!-- <p class="col-6 border-right pt-3">10:00 am</p> -->
                             <p class="col-6 pt-3">Ortodoncia</p>
                         </div>
                     </div>
                     <br>
                     <div>
-                        <div class="border-botom">
-                            <p><strong>Paciente: Adrian Aliaga Pimentel</strong></p>
+                        <div class="border-botom" style="position: relative;">
+                            <p class="text-center"> <strong>Paciente: Adrian Aliaga Pimentel</strong></p>
+                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+
                         </div>
-                        <div class="d-flex border-bottom">
+                        <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
-                            <!-- <p class="col-6 border-right"></p> -->
                             <p class="col-6 ">Tratamiento</p>
                         </div>
-                        <div class="d-flex">
+                        <div class="d-flex col-md-8 mb-3">
                             <p class="col-6 border-right pt-3">10/05/2020</p>
-                            <!-- <p class="col-6 border-right pt-3">11:00 am</p> -->
                             <p class="col-6 pt-3">Ortodoncia</p>
                         </div>
                     </div>
 
                     <br>
                     <div>
-                        <div class="border-botom">
-                            <p><strong>Paciente: Diego Alfaro Camarena</strong></p>
+                        <div class="border-botom" style="position: relative;">
+                            <p class="text-center"> <strong>Paciente: Diego Alfaro Camarena</strong></p>
+                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+
                         </div>
-                        <div class="d-flex border-bottom">
+                        <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
-                            <!-- <p class="col-6 border-right"></p> -->
                             <p class="col-6 ">Tratamiento</p>
                         </div>
-                        <div class="d-flex">
+                        <div class="d-flex col-md-8 mb-3">
                             <p class="col-6 border-right pt-3">10/05/2020</p>
-                            <!-- <p class="col-6 border-right pt-3">2:00 pm</p> -->
                             <p class="col-6">Rehabilitación Oral</p>
                         </div>
                     </div>
 
                     <br>
                     <div>
-                        <div class="border-botom">
-                            <p><strong>Paciente: Luis Oroya Garcia</strong></p>
+                        <div class="border-botom" style="position: relative;">
+                            <p class="text-center"> <strong>Paciente: Luis Oroya Garcia</strong></p>
+                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+
                         </div>
-                        <div class="d-flex border-bottom">
+                        <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
-                            <!-- <p class="col-6 border-right"></p> -->
                             <p class="col-6 ">Tratamiento</p>
                         </div>
-                        <div class="d-flex">
+                        <div class="d-flex col-md-8 mb-3">
                             <p class="col-6 border-right pt-3">10/05/2020</p>
-                            <!-- <p class="col-6 border-right pt-3">4:00 am</p> -->
                             <p class="col-6">Implantes</p>
                         </div>
                     </div>
 
                     <br>
                     <div>
-                        <div class="border-botom">
-                            <p><strong>Paciente: Anthony Busatamente Flores</strong></p>
+                        <div class="border-botom" style="position: relative;">
+                            <p class="text-center"> <strong>Paciente: Anthony Busatamente Flores</strong></p>
+                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+
                         </div>
-                        <div class="d-flex border-bottom">
+                        <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
-                            <!-- <p class="col-6 border-right"></p> -->
                             <p class="col-6 ">Tratamiento</p>
                         </div>
-                        <div class="d-flex">
+                        <div class="d-flex col-md-8 mb-3">
                             <p class="col-6 border-right pt-3">11/05/2020</p>
-                            <!-- <p class="col-6 border-right pt-3">10:00 am</p> -->
                             <p class="col-6">Periodoncia</p>
                         </div>
                     </div>
                     <br>
                     <div>
-                        <div class="border-botom">
-                            <p><strong>Paciente: Alejandro Mendoza Mansilla</strong></p>
+                        <div class="border-botom" style="position: relative;">
+                            <p class="text-center"> <strong>Paciente: Alejandro Mendoza Mansilla</strong></p>
+                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+
                         </div>
-                        <div class="d-flex border-bottom">
+                        <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
-                            <!-- <p class="col-6 border-right"></p> -->
                             <p class="col-6 ">Tratamiento</p>
                         </div>
-                        <div class="d-flex">
+                        <div class="d-flex col-md-8 mb-3">
                             <p class="col-6 border-right pt-3">11/05/2020</p>
-                            <!-- <p class="col-6 border-right pt-3">12:00 pm</p> -->
                             <p class="col-6">Rehabilitación Oral</p>
                         </div>
                     </div>
                     <br>
                     <div>
-                        <div class="border-botom">
-                            <p><strong>Paciente: Pedro Suarez Quintanilla</strong></p>
+                        <div class="border-botom" style="position: relative;">
+                            <p class="text-center"> <strong>Paciente: Pedro Suarez Quintanilla</strong></p>
+                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+
                         </div>
-                        <div class="d-flex border-bottom">
+                        <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
-                            <!-- <p class="col-6 border-right"></p> -->
                             <p class="col-6 ">Tratamiento</p>
                         </div>
-                        <div class="d-flex">
+                        <div class="d-flex col-md-8 mb-3">
                             <p class="col-6 border-right pt-3">11/05/2020</p>
-                            <!-- <p class="col-6 border-right pt-3">2:00 pm</p> -->
                             <p class="col-6">Ortodoncia</p>
                         </div>
                     </div>
                     <br>
                     <div>
-                        <div class="border-botom">
-                            <p><strong>Paciente: Mery Mullisaca Becerra</strong></p>
+                        <div class="border-botom" style="position: relative;">
+                            <p class="text-center"> <strong>Paciente: Mery Mullisaca Becerra</strong></p>
+                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+
                         </div>
-                        <div class="d-flex border-bottom">
+                        <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
-                            <!-- <p class="col-6 border-right"></p> -->
                             <p class="col-6 ">Tratamiento</p>
                         </div>
-                        <div class="d-flex">
+                        <div class="d-flex col-md-8 mb-3">
                             <p class="col-6 border-right pt-3">11/05/2020</p>
-                            <!-- <p class="col-6 border-right pt-3">3:00 pm</p> -->
                             <p class="col-6">Periodoncia/p>
                         </div>
                     </div>
                     <br>
                     <div>
-                        <div class="border-botom">
-                            <p><strong>Paciente: Mario Garcia Nuñez</strong></p>
+                        <div class="border-botom" style="position: relative;">
+                            <p class="text-center"> <strong>Paciente: Mario Garcia Nuñez</strong></p>
+                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+
                         </div>
-                        <div class="d-flex border-bottom">
+                        <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
-                            <!-- <p class="col-6 border-right"></p> -->
                             <p class="col-6 ">Tratamiento</p>
                         </div>
-                        <div class="d-flex">
+                        <div class="d-flex col-md-8 mb-3">
                             <p class="col-6 border-right pt-3">11/05/2020</p>
-                            <!-- <p class="col-6 border-right pt-3">4:00 pm</p> -->
                             <p class="col-6">Ortodoncia</p>
                         </div>
                     </div>
                     <br>
                     <div>
-                        <div class="border-botom">
-                            <p><strong>Paciente: Esteban Rodriguez Quispe</strong></p>
+                        <div class="border-botom" style="position: relative;">
+                            <p class="text-center"> <strong>Paciente: Esteban Rodriguez Quispe</strong></p>
+                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+
                         </div>
-                        <div class="d-flex border-bottom">
+                        <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
-                            <!-- <p class="col-6 border-right"></p> -->
                             <p class="col-6 ">Tratamiento</p>
                         </div>
-                        <div class="d-flex">
+                        <div class="d-flex col-md-8 mb-3">
                             <p class="col-6 border-right pt-3">12/05/2020</p>
-                            <!-- <p class="col-6 border-right pt-3">9:00 am</p> -->
                             <p class="col-6">Rehabilitación Oral</p>
                         </div>
                     </div>
                     <br>
                     <div>
-                        <div class="border-botom">
-                            <p><strong>Paciente: Juan Carlos Estrada</strong></p>
+                        <div class="border-botom" style="position: relative;">
+                            <p class="text-center"> <strong>Paciente: Juan Carlos Estrada</strong></p>
+                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+
                         </div>
-                        <div class="d-flex border-bottom">
+                        <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
-                            <!-- <p class="col-6 border-right"></p> -->
                             <p class="col-6 ">Tratamiento</p>
                         </div>
-                        <div class="d-flex">
+                        <div class="d-flex col-md-8 mb-3">
                             <p class="col-6 border-right pt-3">12/05/2020</p>
-                            <!-- <p class="col-6 border-right pt-3">11:00 am</p> -->
                             <p class="col-6">Implantes</p>
                         </div>
                     </div>
                     <br>
                     <div>
-                        <div class="border-botom">
-                            <p><strong>Paciente: Judith Yenpen Garcia</strong></p>
+                        <div class="border-botom" style="position: relative;">
+                            <p class="text-center"> <strong>Paciente: Judith Yenpen Garcia</strong></p>
+                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+
                         </div>
-                        <div class="d-flex border-bottom">
+                        <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
-                            <!-- <p class="col-6 border-right"></p> -->
                             <p class="col-6 ">Tratamiento</p>
                         </div>
-                        <div class="d-flex">
+                        <div class="d-flex col-md-8 mb-3">
                             <p class="col-6 border-right pt-3">12/05/2020</p>
-                            <!-- <p class="col-6 border-right pt-3">2:00 pm</p> -->
                             <p class="col-6">Implantes</p>
                         </div>
                     </div>
                     <br>
                     <div>
-                        <div class="border-botom">
-                            <p><strong>Paciente: Lucia Amelia Flores</strong></p>
+                        <div class="border-botom" style="position: relative;">
+                            <p class="text-center"> <strong>Paciente: Lucia Amelia Flores</strong></p>
+                            <button style="position: absolute; right: 0;" type="submit" name="boton" class="btn btn-light borderd">+</button>
+
                         </div>
-                        <div class="d-flex border-bottom">
+                        <div class="d-flex border-bottom col-md-8 mb-3">
                             <p class="col-6 border-right">DNI Paciente</p>
-                            <!-- <p class="col-6 border-right"></p> -->
                             <p class="col-6 ">Tratamiento</p>
                         </div>
-                        <div class="d-flex">
+                        <div class="d-flex col-md-8 mb-3">
                             <p class="col-6 border-right pt-3">12/05/2020</p>
-                            <!-- <p class="col-6 border-right pt-3">4:00 pm</p> -->
                             <p class="col-6">Implantes</p>
                         </div>
                     </div>
