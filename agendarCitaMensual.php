@@ -26,7 +26,7 @@
 <style type="text/css">
 .a{
   display: block;
-  width: 10%;
+  width: 9%;
   height: calc(1.5em + 0.75rem + 2px);
   font-weight: 400;
   line-height: 1.5;
