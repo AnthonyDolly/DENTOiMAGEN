@@ -1,7 +1,7 @@
 <?php 
     session_start();
     include("conexion.php");
-    $usuarioQuery = "SELECT concat(c.nombres,' ',c.apellidos) Paciente, c.id, tt.nombre 
+    $usuarioQuery ="SELECT concat(c.nombres,' ',c.apellidos) Paciente, c.id, tt.nombre 
                     from clientes c
                     INNER JOIN clientes_tratamientos ct
                     ON c.id = ct.cliente_id
@@ -39,7 +39,7 @@
     <center>
 
 
-        <main>
+        <main style="margin: 3rem auto;">
 
             <div class="content-citas-personal">
                 <h1>Editar Tratamientos</h1>
@@ -63,15 +63,18 @@
                                         </strong>
                                     </p>
                                     <div class="d-flex justify-content-between align-items-center" >
-                                        <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-secondary borderd d-block">
-                                            <i style="cursor: pointer;" class="fas fa-edit"></i>
-                                        </button>
-                                        <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-danger borderd d-block">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </button>
-                                        <!-- <a href="agendarCitaMensual.php">
-                                            <button style="position: absolute; right: 0;"  type="submit" name="boton" class="btn btn-light borderd d-block">+</button>
-                                        </a> -->
+                                        <a href="actualizar.php?id=<?php echo $row["id"];?>">
+                                            <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-secondary borderd d-block">
+                                                <i style="cursor: pointer;" class="fas fa-edit"></i>
+                                            </button>
+                                        </a>
+                                   
+                                        <a href="eliminar.php?id=<?php echo $row["id"];?>">
+                                            <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-danger borderd d-block">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </a>
+                                     
                                     </div>    
                                 </div>   
                             </div>
