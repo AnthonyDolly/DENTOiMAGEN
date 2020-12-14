@@ -34,7 +34,7 @@ window.addEventListener('load', function () {
 
 
 /*Perfil Dentista */
-function Dentista() {
+function Dentista(fullnameM,idM) {
   ul = document.getElementById('ul1');
   while (ul.firstChild) {
     ul.removeChild(ul.firstChild);
@@ -43,37 +43,37 @@ function Dentista() {
   ul.insertAdjacentHTML('afterbegin', `
     <li class="px-3 username-list-item">
       <span>
-          Laura Sifuentes Lozano
+          ${fullnameM}
           <div class="flecha">
-              <img src="image/flecha-down.svg" alt="flecha">
+              <img src="vista/image/flecha-down.svg" alt="flecha">
           </div>
       </span>
       <ul class="username-sublist">
           <li class="username-subitem">
-              <a href="mi-perfil.php">
+              <a href="index.php?action=perfilM">
                   <div>
-                      <img src="image/perfil-dentista.svg" alt="mi perfil"> Mi Perfil
+                      <img src="vista/image/perfil-dentista.svg" alt="mi perfil"> Mi Perfil
                   </div>
               </a>
           </li>
           <li class="username-subitem">
-              <a href="mis-citas.php">
+              <a href="index.php?action=citas-medicos&dni=${idM}">
                   <div>
-                      <img src="image/cita.svg" alt="cita"> Mis Citas
+                      <img src="vista/image/cita.svg" alt="cita"> Mis Citas
                   </div>
               </a>
           </li>
           <li class="username-subitem">
-              <a href="mis-tratamientos.php">
+              <a href="index.php?action=mis-tratamientos&dni=${idM}">
                   <div>
-                      <img src="image/cita.svg" alt="close-sesion"> Mis Tratamientos
+                      <img src="vista/image/cita.svg" alt="close-sesion"> Mis Tratamientos
                   </div>
               </a>
           </li>
           <li class="username-subitem">
-              <a href="index.php">
+              <a href="index.php?action=cerrar-sesion">
                   <div>
-                      <img src="image/cerrar-sesion.svg" alt="close-sesion"> Cerrar Sesión
+                      <img src="vista/image/cerrar-sesion.svg" alt="close-sesion"> Cerrar Sesión
                   </div>
               </a>
           </li>
@@ -82,7 +82,12 @@ function Dentista() {
 }
 
 
-function Paciente() {
+function test(){
+  let num = 3;
+  console.log(num);
+}
+
+function Paciente(fullName,id) {
   ul = document.getElementById('ul1');
   while (ul.firstChild) {
     ul.removeChild(ul.firstChild);
@@ -91,37 +96,37 @@ function Paciente() {
   ul.insertAdjacentHTML('afterbegin', `
     <li class="px-3 username-list-item">
       <span>
-        Jose Carmona Peralta
+          ${fullName}
           <div class="flecha">
-              <img src="image/flecha-down.svg" alt="flecha">
+              <img src="vista/image/flecha-down.svg" alt="flecha">
           </div>
       </span>
       <ul class="username-sublist">
           <li class="username-subitem">
-              <a href="mi-perfilP.php">
+              <a href="index.php?action=perfil">
                   <div>
-                      <img src="image/perfil-paciente.svg" alt="mi perfil"> Mi Perfil
+                      <img src="vista/image/perfil-paciente.svg" alt="mi perfil"> Mi Perfil
                   </div>
               </a>
           </li>
           <li class="username-subitem">
-              <a href="mis-citasP.php">
+              <a href="index.php?action=controles&dni=${id}">
                   <div>
-                      <img src="image/cita.svg" alt="cita"> Mis Controles
+                      <img src="vista/image/cita.svg" alt="cita"> Mis Controles
                   </div>
               </a>
           </li>
           <li class="username-subitem">
-              <a href="mi-tratamiento.php">
+              <a href="index.php?action=tratamiento&dni=${id}">
                   <div>
-                      <img src="image/cita.svg" alt="close-sesion"> Mi Tratamiento
+                      <img src="vista/image/cita.svg" alt="close-sesion"> Mi Tratamiento
                   </div>
               </a>
           </li>
           <li class="username-subitem">
-              <a href="index.php">
+              <a href="index.php?action=cerrar-sesion">
                   <div>
-                      <img src="image/cerrar-sesion.svg" alt="close-sesion"> Cerrar Sesión
+                      <img src="vista/image/cerrar-sesion.svg" alt="close-sesion"> Cerrar Sesión
                   </div>
               </a>
           </li>
@@ -174,3 +179,9 @@ catch (error) {
   console.log(error);
 }
 
+
+
+function enlace(){
+  window.open('mis.tratamientos.php')
+  // window.location.href('mis.tratamientos.php')
+}

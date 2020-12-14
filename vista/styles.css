@@ -370,6 +370,16 @@ span .flecha {
     font-weight: 600;
 }   
 
+/*class table control*/
+.table-citas-controles{
+    max-width: 900px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 0 5px 2px #ccc;
+    padding: 20px;
+}
+
+/* end class table control*/
 /*end citas-user*/
 
 
