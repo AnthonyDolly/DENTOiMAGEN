@@ -1,0 +1,560 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{
+    margin: 0
+}
+
+/* --colors-- */
+.skyblue{   
+    background: #1089bf;
+}
+.white{
+    background: #fff;
+}
+
+/* --style body-- */
+nav li a{ 
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+        nav li{
+            border-bottom: solid 1px rgba(255,255,255,0.2);
+        }
+        nav > li{
+            float: left;
+        }
+        nav li ul{
+            background-color: white;
+            display:none; 
+            position:absolute;
+            min-width: 140px;
+        }
+        nav li:hover > ul{
+            display: block;
+            }
+ul{
+    list-style: none;
+}
+.header-home{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+.header-home .content-header {
+    width: 80%;
+    margin:  auto;
+}
+.fila-color{
+    width: 100%;
+    height: 20px;
+}
+main{
+    margin-top: 8rem;
+}
+main > section > table {
+    box-shadow: 0 1px 4px rgba(146, 161, 176, 15);
+}
+
+.navigator ul li a{
+    color: #000;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s linear;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 500px  ;
+}
+.navigator ul li a:hover{
+    background: #1089bf;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navigator ul:first-child li button {
+    color: #fff;
+    font-size: .8em;
+    border: 0;
+    background-color: #0394cb;
+}
+
+.navigator ul:first-child li button:focus {
+    box-shadow: none;
+}
+/* --end style body-- */
+
+
+
+
+/* --MODAL Login-- */
+
+.form-group-login > * {
+    padding: .3em;
+}
+
+div > p > input[type = submit]:hover {
+    background-color: red;
+}
+
+/* --Modal Register-- */
+
+.group-submit-Login {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    margin: 1em;
+}
+
+.group-names {
+    width: 100%;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    grid-gap: 1em;
+    margin-bottom: .6em;
+}
+
+.group-correo-username {
+    width: 100%;
+    display: grid;
+    grid-template: 1fr / 2fr 1fr;
+    grid-gap: 1em;
+    margin-bottom: .6em;
+}
+
+.group-password {
+    width: 100%;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    grid-gap: 1em;
+    margin-bottom: .6em;
+}
+
+.group-submit {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr ;
+    margin-bottom: 1em;
+}
+
+
+
+/* --style footer-- */
+.footer-page{
+    position: relative;
+    color: #fff;
+    margin-top: 5rem;
+}
+.footer-page .image-bg{
+    background-image: url(image/dentista2.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.1;
+    transition: opacity 0.5s;
+    background-attachment: fixed;
+
+}
+.footer-page .content-footer{
+    text-align: left;
+    max-width: 1140px;
+    padding: 3em 0 5rem;
+}
+
+/* --end style footer-- */
+
+
+
+
+/* --style carousel-- */
+.people-list{
+    color: #fff;
+    font-weight: 700;
+    margin: 3rem 0 5rem;
+}
+
+.carousel{
+    max-width: 1140px;
+    width: 100%;
+}
+.carousel-content{
+    position: relative;
+}
+.arrow-before, .arrow-after{
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 15px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+}
+.arrow-before{
+    left: -30px ;
+    outline: none;
+    z-index: 10;
+}
+.arrow-after{
+    right: -30px;
+    outline: none;
+    z-index: 10;
+}
+
+
+.carousel-indicators .glider-dot{
+    outline: none;
+}
+
+
+
+/* --end style carousel-- */
+
+
+@media (max-width: 1199.98px) {
+    .arrow-before{
+        left: 0px ;
+        color: #fff;
+        
+    }
+    .arrow-after{
+        right: 0px;
+        color: #fff;
+    }
+}
+
+
+
+
+/* --perfil-personal-- */
+
+.container-perfil-personal, .container-perfil-cliente {
+    width: 100%;
+}
+
+.container-perfil-personal .perfil-paisaje {
+    background-image: url(image/fondo-perfil2.jpg);
+    display: block;
+    width: 100%;
+    height: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container-perfil-cliente .perfil-paisaje {
+    background-image: url(image/fondo-perfil1.jpg);
+    display: block;
+    width: 100%;
+    height: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container-perfil-personal .perfil-article-flex, .container-perfil-cliente .perfil-article-flex {
+    margin-top: -12em;
+    display: flex;
+}
+
+.container-perfil-personal .container-perfil-feature, .container-perfil-cliente .container-perfil-feature {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 3px;
+    justify-content: center;
+    padding: .3em;
+}
+
+.container-perfil-personal .container-perfil-feature .perfil-photo {
+    padding: 1em;
+    background-image: url(image/doctora.jpg);
+    display: block;
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.container-perfil-cliente .container-perfil-feature .perfil-photo {
+    padding: 1em;
+    background-image: url(image/paciente5.jpg);
+    display: block;
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.container-perfil-feature .perfil-feature {
+    padding: .3em 2em;
+}
+
+
+/* --index-personal-- */
+
+
+.username-list-item {
+    position: relative;
+}
+
+.username-list-item > span {
+    font-weight: 600;
+}
+
+span .flecha {
+    width: 10px;
+    display: inline-block;
+}
+
+.username-sublist {
+    text-align: left;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    font-size: 14px;
+    display: none;
+    border-radius: 5px;
+}
+
+.username-list-item:hover .username-sublist {
+    display: block;
+    background-color: white;
+}
+
+.username-subitem {
+    margin-top: .3em;
+    width: 190px;
+}
+
+.username-subitem a {
+    text-decoration: none;
+    color: rgb(83, 87, 90);
+}
+
+.username-subitem a div {
+    display: block;
+}
+
+.username-subitem div > img {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+
+
+/*citas-user*/
+
+.table-citas{
+    max-width: 900px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 0 5px 2px #ccc;
+    padding: 20px;
+}
+.table-citas p{
+    margin: 0;
+    padding: 7px;
+    width: 20%;
+}
+
+.table-citas div div:nth-child(1) p{
+    font-weight: 600;
+}   
+
+/*class table control*/
+.table-citas-controles{
+    max-width: 900px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 0 5px 2px #ccc;
+    padding: 20px;
+}
+
+/* end class table control*/
+/*end citas-user*/
+
+
+
+/*citas-personal*/
+.table-citas-personal{
+    max-width: 900px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 0 5px 2px #ccc;
+    padding: 20px;
+}
+.table-citas-personal p{
+    margin: 0;
+    padding: 7px;
+}
+
+.table-citas-personal div div:nth-child(1) p{
+    font-weight: 600;
+} 
+.table-citas-personal div div:nth-child(2) p{
+    font-weight: 500;
+}
+.table-citas-personal > div{
+    padding-bottom: 30px;
+}
+
+
+/*table register treatment*/
+.table-register-treatment{
+    max-width: 900px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 0 5px 2px #ccc;
+    padding: 20px;
+}
+
+.btn-save-treatment{
+    width: 60%;
+}
+
+
+/*table-my-treatment-user*/
+.table-treatment-user{
+    max-width: 900px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 0 5px 2px #ccc;
+    padding: 20px;
+}
+.table-treatment-user div div:nth-child(1) p{
+    font-weight: 600;
+} 
+.alinear{
+            display: flex;
+            padding-left: 200px;
+            padding-right: 100px;
+        }
+        #cuadro1{
+            width: 600px;
+            padding-top: 18px; 
+        }
+        #cuadro2{
+            width: 840px; 
+            padding-top: 18px; 
+        }
+        .texto{
+            padding-left: 10px;
+            padding-top: 40px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+        .texto2{
+            padding-left: 10px;
+            padding-top: 5px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+
+.alinea{
+            display: flex;
+            padding-left: 200px;
+            padding-right: 100px;
+        }
+        #cuadro3{
+            width: 800px;
+            padding-top: 30px;
+        }
+        #cuadro4{
+            width: 990px;
+        }
+        .texto3{
+            padding-left: 10px;
+            padding-top: 30px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+        .texto4{
+            padding-left: 10px;
+            padding-top: 40px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+
+.alineador{
+            display: flex;
+            padding-left: 200px;
+            padding-right: 100px;
+        }
+        #cuadro5{
+            width: 1500px;
+            padding-top: 30px;
+        }
+        #cuadro6{
+            width: 1400px;
+        }
+        .texto5{
+            padding-left: 10px;
+            padding-top: 50px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+        .texto6{
+            padding-left: 10px;
+            padding-top: 30px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+
+.alineacion{
+            display: flex;
+            padding-left: 200px;
+            padding-right: 100px;
+        }
+        #cuadro7{
+            width: 1300px;
+            padding-top: 30px;
+        }
+        #cuadro8{
+            width: 1400px;
+        }
+        .texto7{
+            padding-left: 10px;
+            padding-top: 35px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+        .texto8{
+            padding-left: 10px;
+            padding-top: 20px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+
+.alineados{
+            display: flex;
+            padding-left: 200px;
+            padding-right: 100px;
+        }
+        #cuadro9{
+            width: 1700px;
+            padding-top: 30px;
+        }
+        #cuadro10{
+            width: 1200px;
+        }
+        .texto9{
+            padding-left: 10px;
+            padding-top: 20px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+        .texto10{
+            padding-left: 10px;
+            padding-top: 10px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
