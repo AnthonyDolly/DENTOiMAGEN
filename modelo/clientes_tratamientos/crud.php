@@ -109,7 +109,21 @@ class DatosClientesTratamientos extends Conexion {
 
         $st->close();
     }
+    #Eliminar estado de cliente_tratamiento
+    #------------------------------------------------
+    public function eliminarClienteTratamientoModelo($datosModelo, $tabla) {
 
+    $st = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE id=$datosModelo;");
+
+        
+        if($st->execute()){
+            return "success";
+        }else{
+            return "error";
+        }
+
+        $st->close();
+    }
 
 }
 

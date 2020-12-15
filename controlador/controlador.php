@@ -186,7 +186,7 @@ class MvcControlador {
                             <i style="cursor: pointer;" class="fas fa-edit"></i>
                         </button>
                         </a>           
-                        <a href="index.php?action=eliminar-tratamiento&dni='.$item["DNI del paciente"]. '&id='.$item["id"].'">
+                        <a href="index.php?action=eliminar-tratamiento&dni='.$item["Medico"]. '&id='.$item["id"].'">
                             <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-danger borderd d-block">
                                 <i class="fas fa-trash-alt"></i>
                             </button>
@@ -349,11 +349,19 @@ class MvcControlador {
                 header('location:index.php?action=mis-tratamientos&dni='.$_GET["idM"].'');
             } else {
                 header("location:index.php");
-            }
-                                        
+            }                              
         }
     }
-}
-
-
+    public function eliminarClienteTratamientoControlador(){
+            $datosControlador = $_GET["id"];
+                                        
+            $respuesta = DatosClientesTratamientos::eliminarClienteTratamientoModelo($datosControlador, "clientes_tratamientos");
+                                        
+            if ($respuesta == "success") {
+                header('location:index.php?action=mis-tratamientos&dni='.$_GET["idM"].'');
+            } else {
+                header("location:index.php");
+            }                                  
+        }
+    }
 ?>
