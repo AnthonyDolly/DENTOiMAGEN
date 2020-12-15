@@ -72,5 +72,20 @@ class DatosControles extends Conexion {
         $st->close();
     }
 
+    #Eliminar control mensual por parte del medico
+    #------------------------------------------------
+    public function eliminarControlMedicoModelo($datosModelo, $tabla) {
+
+        $st = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE cliente_tratamiento_id=$datosModelo;");
+        
+        if($st->execute()){
+            return "success";
+        }else{
+            return "error";
+        }
+
+        $st->close();
+    }
+
 }
 ?>

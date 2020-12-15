@@ -29,10 +29,12 @@ class DatosClientesTratamientos extends Conexion {
     #----------------------------
     public function vistaClienteTratamientoMedicoModelo($datosModelo, $tabla) {
 
-        $st = Conexion::conectar()->prepare("SELECT ct.id AS id,c.id AS 'DNI del paciente', concat(c.nombres, ' ', c.apellidos) AS Paciente, m.id AS Medico, ct.fecha_inicio AS 'Fecha de inicio', tt.nombre AS 'Tratamiento', ct.descripcion AS Descripción, ct.cantSesiones AS 'Cantidad de Sesiones', ct.estado AS Estado
+        $st = Conexion::conectar()->prepare("SELECT ct.id AS id,c.id AS 'DNI del paciente', concat(c.nombres, ' ', c.apellidos) AS Paciente, m.id AS Medico, cm.id AS CMID, ct.fecha_inicio AS 'Fecha de inicio', tt.nombre AS 'Tratamiento', ct.descripcion AS Descripción, ct.cantSesiones AS 'Cantidad de Sesiones', ct.estado AS Estado
         FROM clientes_tratamientos ct
         INNER JOIN clientes c
         ON ct.cliente_id = c.id
+        INNER JOIN controles_mensuales cm
+        ON ct.id = cm.cliente_tratamiento_id
         INNER JOIN tratamientos t
         ON ct.tratamiento_id = t.id
         INNER JOIN medicos m
@@ -40,6 +42,7 @@ class DatosClientesTratamientos extends Conexion {
         INNER JOIN tipos_tratamientos tt
         ON t.tipo_tratamiento_id = tt.id
         WHERE t.medico_id = $datosModelo
+        GROUP BY id
         ;");
 
         $st->execute();
@@ -109,12 +112,12 @@ class DatosClientesTratamientos extends Conexion {
 
         $st->close();
     }
-    #Eliminar estado de cliente_tratamiento
+
+    #Eliminar cliente_tratamiento
     #------------------------------------------------
     public function eliminarClienteTratamientoModelo($datosModelo, $tabla) {
 
-    $st = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE id=$datosModelo;");
-
+        $st = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE id=$datosModelo;");
         
         if($st->execute()){
             return "success";

@@ -181,12 +181,12 @@ class MvcControlador {
                             <strong>Paciente: '.$item["Paciente"].'
                             </strong>
                         </p>
-                        <a href="index.php?action=editar-tratamiento&dni='.$item["DNI del paciente"]. '&id='.$item["id"].'&idM='.$item["Medico"].'">
+                        <a href="index.php?action=editar-tratamiento&dni='.$item["DNI del paciente"].'&id='.$item["id"].'&idM='.$item["Medico"].'">
                         <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-secondary borderd d-block">
                             <i style="cursor: pointer;" class="fas fa-edit"></i>
                         </button>
                         </a>           
-                        <a href="index.php?action=eliminar-tratamiento&dni='.$item["Medico"]. '&id='.$item["id"].'">
+                        <a href="index.php?action=eliminar-tratamiento&dni='.$item["Medico"].'&id='.$item["id"].'&idM='.$item["Medico"].'&idCM='.$item["CMID"].'">
                             <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-danger borderd d-block">
                                 <i class="fas fa-trash-alt"></i>
                             </button>
@@ -336,7 +336,6 @@ class MvcControlador {
     #Actualizar cliente tratamiento
     #----------------------------------------
     public function actualizarClienteTratamientoControlador(){
-        // $datosControlador = $_GET["id"];
         
         if(isset($_POST["idCT"])) {
 
@@ -352,16 +351,21 @@ class MvcControlador {
             }                              
         }
     }
-    public function eliminarClienteTratamientoControlador(){
-            $datosControlador = $_GET["id"];
-                                        
-            $respuesta = DatosClientesTratamientos::eliminarClienteTratamientoModelo($datosControlador, "clientes_tratamientos");
-                                        
-            if ($respuesta == "success") {
-                header('location:index.php?action=mis-tratamientos&dni='.$_GET["idM"].'');
-            } else {
-                header("location:index.php");
-            }                                  
-        }
+
+    #Eliminar cliente tratamiento
+    #----------------------------------------
+    public function eliminarClienteTratamientoControlador() {
+
+        $datosControlador = $_GET["id"];
+                                    
+        $respuesta2 = DatosControles::eliminarControlMedicoModelo($datosControlador, "controles_mensuales");
+        $respuesta = DatosClientesTratamientos::eliminarClienteTratamientoModelo($datosControlador, "clientes_tratamientos");
+                                    
+        if ($respuesta == "success") {
+            header('location:index.php?action=mis-tratamientos&dni='.$_GET["idM"].'');
+        } else {
+            header("location:index.php");
+        }                                  
     }
+}
 ?>
