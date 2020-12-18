@@ -5,6 +5,11 @@ class EnlacesPaginas {
     public function enlacesPaginasModelo($enlacesModelo) {
         
         if ($enlacesModelo == "servicios" ||
+            $enlacesModelo == "diseno-sonrisa" ||
+            $enlacesModelo == "plan-dental" ||
+            $enlacesModelo == "blanqueamiento" ||
+            $enlacesModelo == "limpieza-dental" ||
+            $enlacesModelo == "ortodoncia" ||
             $enlacesModelo == "sedes" ||
             $enlacesModelo == "nosotros" ||
             $enlacesModelo == "perfil" ||
