@@ -19,7 +19,10 @@ class EnlacesPaginas {
             $enlacesModelo == "registrar-incidencia" ||
             $enlacesModelo == "agendar-cita" ||
             $enlacesModelo == "editar-tratamiento" ||
-            $enlacesModelo == "eliminar-tratamiento") {
+            $enlacesModelo == "eliminar-tratamiento" ||
+            $enlacesModelo == "editar-cita" ||
+            $enlacesModelo == "eliminar-cita"
+            ) {
 
                 $modulo = "vista/modulos/".$enlacesModelo.".php";
 

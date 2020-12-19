@@ -21,7 +21,10 @@ if (!$_SESSION["validarM"]) {
                     <td class="font-weight-bold px-3 border-right ">Sede</td>
                     <td class="font-weight-bold px-3 border-right ">Precio de control</td>
                     <td class="font-weight-bold px-3 border-right ">Estado de Pago</td>
-                    <td class="font-weight-bold px-3 ">Asistencia</td>
+                    <td class="font-weight-bold px-3 border-right ">Asistencia</td>
+                    <td class="font-weight-bold px-3 border-right ">Editar</td>
+                    <td class="font-weight-bold px-3 ">Eliminar</td>
+               
                 </tr>
                 <tr class="">
                     <?php
