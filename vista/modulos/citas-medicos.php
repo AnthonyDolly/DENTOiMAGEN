@@ -12,7 +12,7 @@ if (!$_SESSION["validarM"]) {
     <div class="content-citas-personal">
         <h1>Citas</h1>
         <div class="table-citas-personal" style="max-width: 900px;">
-            <p style="text-align: end;"><i style="cursor: pointer;" class="fas fa-edit"></i></p>
+            <!-- <p style="text-align: end;"><i style="cursor: pointer;" class="fas fa-edit"></i></p> -->
             <table class="text-center" >
                 <tr class="border-bottom">
                     <td class="font-weight-bold px-3 border-right ">Fecha</td>
