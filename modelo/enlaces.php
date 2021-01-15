@@ -5,6 +5,11 @@ class EnlacesPaginas {
     public function enlacesPaginasModelo($enlacesModelo) {
         
         if ($enlacesModelo == "servicios" ||
+            $enlacesModelo == "diseno-sonrisa" ||
+            $enlacesModelo == "plan-dental" ||
+            $enlacesModelo == "blanqueamiento" ||
+            $enlacesModelo == "limpieza-dental" ||
+            $enlacesModelo == "ortodoncia" ||
             $enlacesModelo == "sedes" ||
             $enlacesModelo == "nosotros" ||
             $enlacesModelo == "perfil" ||
@@ -19,7 +24,10 @@ class EnlacesPaginas {
             $enlacesModelo == "registrar-incidencia" ||
             $enlacesModelo == "agendar-cita" ||
             $enlacesModelo == "editar-tratamiento" ||
-            $enlacesModelo == "eliminar-tratamiento") {
+            $enlacesModelo == "eliminar-tratamiento" ||
+            $enlacesModelo == "editar-cita" ||
+            $enlacesModelo == "eliminar-cita"
+            ) {
 
                 $modulo = "vista/modulos/".$enlacesModelo.".php";
 

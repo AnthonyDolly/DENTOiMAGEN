@@ -57,11 +57,11 @@ session_start();
                     <a href="index.php?action=servicios"><i class="fa fa-stethoscope fa-fw">
                             </i> Servicios</a>
                             <ul>
-                            <li><a href="">Diseño de Sonrisa</a></li>
-                            <li><a href="">Plan Dental</a></li>
-                            <li><a href="">Blanqueamiento</a></li>
-                            <li><a href="">Limpieza Dental</a></li>
-                            <li><a href="">Ortodoncia</a></li>
+                            <li><a href="index.php?action=diseno-sonrisa">Diseño de Sonrisa</a></li>
+                            <li><a href="index.php?action=plan-dental">Plan Dental</a></li>
+                            <li><a href="index.php?action=blanqueamiento">Blanqueamiento</a></li>
+                            <li><a href="index.php?action=limpieza-dental">Limpieza Dental</a></li>
+                            <li><a href="index.php?action=ortodoncia">Ortodoncia</a></li>
                         </ul>
                 </li>
                 <li>

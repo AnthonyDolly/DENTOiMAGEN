@@ -12,7 +12,7 @@ if (!$_SESSION["validarM"]) {
     <div class="content-citas-personal">
         <h1>Citas</h1>
         <div class="table-citas-personal" style="max-width: 900px;">
-            <p style="text-align: end;"><i style="cursor: pointer;" class="fas fa-edit"></i></p>
+            <!-- <p style="text-align: end;"><i style="cursor: pointer;" class="fas fa-edit"></i></p> -->
             <table class="text-center" >
                 <tr class="border-bottom">
                     <td class="font-weight-bold px-3 border-right ">Fecha</td>
@@ -21,7 +21,10 @@ if (!$_SESSION["validarM"]) {
                     <td class="font-weight-bold px-3 border-right ">Sede</td>
                     <td class="font-weight-bold px-3 border-right ">Precio de control</td>
                     <td class="font-weight-bold px-3 border-right ">Estado de Pago</td>
-                    <td class="font-weight-bold px-3 ">Asistencia</td>
+                    <td class="font-weight-bold px-3 border-right ">Asistencia</td>
+                    <td class="font-weight-bold px-3 border-right ">Editar</td>
+                    <td class="font-weight-bold px-3 ">Eliminar</td>
+               
                 </tr>
                 <tr class="">
                     <?php
