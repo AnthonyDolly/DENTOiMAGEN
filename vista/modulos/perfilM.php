@@ -16,15 +16,15 @@ if (!$_SESSION["validarM"]) {
                     <div class="perfil-photo"></div>
                     <div class="perfil-feature">
                         <h2>
-                        <?php
+                            <?php
                             echo $_SESSION['usernameM'];
-                        ?>
+                            ?>
                         </h2>
                         <h5>Cirujana Dentista</h>
-                            <p> 
-                            <?php
+                            <p>
+                                <?php
                                 echo $_SESSION['correo'];
-                            ?>
+                                ?>
                             </p>
                             <a href="index.php?action=citas-medicos&dni=<?php echo $_SESSION['id']; ?>">Mis citas</a>
                             <a href="index.php?action=horario-medicos" style="margin-left: 1em;">Horario de trabajo</a>
@@ -37,3 +37,4 @@ if (!$_SESSION["validarM"]) {
             </article>
         </div>
     </section>
+</main>

@@ -4,6 +4,7 @@ ob_start();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,105 +15,104 @@ ob_start();
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
     <title>Dento Imagen</title>
 </head>
+
 <body style="background-color: #fbfbfe; font-family: sans-serif;">
-<center>
-    <?php
-        include "modulos/header.php";
-    ?>
+    <center>
+        <?php
+        include "includes/header.php";
+        ?>
 
-    <?php
+        <?php
         $mvc = new MvcControlador();
-        $mvc -> enlacesPaginasControlador();
-    ?>
+        $mvc->enlacesPaginasControlador();
+        ?>
+
+        <?php
+        include "includes/footer.php";
+        ?>
+    </center>
+
 
     <?php
-        include "modulos/footer.php";
+    include "includes/modalLoginRegister.php";
     ?>
-</center>
-
-
-<?php
-    include "modulos/modalLoginRegister.php";
-?>
 
 
 
 
 
-<!-- jquery, popper, bootstrap     -->
-<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <!-- jquery, popper, bootstrap     -->
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
     <!-- <script src="apps.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="vista/bootstrap/js/bootstrap.min.js"></script>
 
 
 
 
-<?php
+    <?php
 
-$registro = new MvcControlador();
-$registro -> registroClienteControlador();
+    $registro = new clienteControlador();
+    $registro->registroClienteControlador();
 
 
-if (isset($_GET["action"])) {
-    if ($_GET["action"] == "ok") {
-        echo "Registro exitoso";
+    if (isset($_GET["action"])) {
+        if ($_GET["action"] == "ok") {
+            echo "Registro exitoso";
+        }
     }
-}
-?>
+    ?>
 
 
-<?php
+    <?php
 
-$ingreso = new MvcControlador();
-$ingreso ->ingresoClienteControlador();
-$ingreso ->ingresoMedicoControlador();
+    $ingreso = new clienteControlador();
+    $ingreso->ingresoClienteControlador();
+    $ingresoM = new medicoControlador();
+    $ingresoM->ingresoMedicoControlador();
 
-if (isset($_GET["action"])) {
-    if ($_GET["action"] == "fallo") {
-        echo "Fallo al ingresar";
+    if (isset($_GET["action"])) {
+        if ($_GET["action"] == "fallo") {
+            echo "Fallo al ingresar";
+        }
     }
-}
-?>
+    ?>
 
 
-<?php
+    <?php
 
-$registroTratamiento = new MvcControlador();
-$registroTratamiento -> RegistroClienteTratamientoControlador();
+    $registroTratamiento = new clientes_tratamientosControlador();
+    $registroTratamiento->RegistroClienteTratamientoControlador();
 
 
-if (isset($_GET["action"])) {
-    if ($_GET["action"] == "ok") {
-        echo "Registro exitoso";
+    if (isset($_GET["action"])) {
+        if ($_GET["action"] == "ok") {
+            echo "Registro exitoso";
+        }
     }
-}
 
-?>
-
-
-<?php
-
-$registroControlMensual = new MvcControlador();
-$registroControlMensual -> registroControlControlador();
+    ?>
 
 
-if (isset($_GET["action"])) {
-    if ($_GET["action"] == "ok") {
-        echo "Registro exitoso";
+    <?php
+
+    $registroControlMensual = new controlesControlador();
+    $registroControlMensual->registroControlControlador();
+
+
+    if (isset($_GET["action"])) {
+        if ($_GET["action"] == "ok") {
+            echo "Registro exitoso";
+        }
     }
-}
 
-?>
+    ?>
 
 
 
 </body>
+
 </html>
 
 <?php

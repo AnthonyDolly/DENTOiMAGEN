@@ -1,5 +1,4 @@
 <?php
     
-    $eliminar= new MvcControlador();
+    $eliminar= new controlesControlador();
     $eliminar -> eliminarCitaControlMensualControlador();
-?>

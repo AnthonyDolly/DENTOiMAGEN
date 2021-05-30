@@ -7,9 +7,9 @@
             <form method="POST">
                 <div>
                     <?php
-                        $editar = new MvcControlador();
-                        $editar -> editarCitaControlMensualControlador();
-                        $editar -> actualizarCitaControlMensualControlador();
+                    $editar = new controlesControlador();
+                    $editar->editarCitaControlMensualControlador();
+                    $editar->actualizarCitaControlMensualControlador();
                     ?>
                 </div>
 

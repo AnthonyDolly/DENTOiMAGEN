@@ -100,8 +100,7 @@
                 </td>
             </tr>
             <tr>
-                <td align="center"> <img width="550px" src="vista/image/dentista2.jpg" alt=""
-                        style="padding-top:60px"></td>
+                <td align="center"> <img width="550px" src="vista/image/dentista2.jpg" alt="" style="padding-top:60px"></td>
             </tr>
         </table>
         <br>

@@ -13,7 +13,7 @@ if (!$_SESSION["validarM"]) {
         <h1>Citas</h1>
         <div class="table-citas-personal" style="max-width: 900px;">
             <!-- <p style="text-align: end;"><i style="cursor: pointer;" class="fas fa-edit"></i></p> -->
-            <table class="text-center" >
+            <table class="text-center">
                 <tr class="border-bottom">
                     <td class="font-weight-bold px-3 border-right ">Fecha</td>
                     <td class="font-weight-bold px-3 border-right ">Hora</td>
@@ -24,12 +24,12 @@ if (!$_SESSION["validarM"]) {
                     <td class="font-weight-bold px-3 border-right ">Asistencia</td>
                     <td class="font-weight-bold px-3 border-right ">Editar</td>
                     <td class="font-weight-bold px-3 ">Eliminar</td>
-               
+
                 </tr>
                 <tr class="">
                     <?php
-                    $ingreso = new MvcControlador();
-                    $ingreso -> vistaControlMedicoControlador();
+                    $ingreso = new controlesControlador();
+                    $ingreso->vistaControlMedicoControlador();
                     ?>
                 </tr>
             </table>

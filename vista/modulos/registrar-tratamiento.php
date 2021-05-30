@@ -30,15 +30,13 @@
 
                 <div class="d-flex col-md-6 mb-3 justify-content-around">
                     <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                            value="1" checked>
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1" checked>
                         <label class="form-check-label" for="gridRadios1">
                             Activo
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                            value="0">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="0">
                         <label class="form-check-label" for="gridRadios2">
                             Inactivo
                         </label>

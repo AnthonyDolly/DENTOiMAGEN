@@ -5,11 +5,11 @@
             <div class="table-register-treatment">
                 <form method="POST">
                     <div class="col-md-6 mb-3">
-                        <input type="text" class="form-control" id="exampleFormControlInput1" name="idCT" value = '<?php echo $_GET["id"]; ?>' required hidden>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="idCT" value='<?php echo $_GET["id"]; ?>' required hidden>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label class="" for="exampleFormControlInput1">DNI Paciente</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" name="DNIC" value = '<?php echo $_GET["dni"]; ?>' required readonly>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="DNIC" value='<?php echo $_GET["dni"]; ?>' required readonly>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label class="" for="exampleFormControlInput1">Fecha</label>
@@ -25,15 +25,13 @@
                         <label class="" for="exampleFormControlTextarea1">Estado de Pago</label>
                         <div class="d-flex col-md-6 mb-3 justify-content-around">
                             <div class="form-check ">
-                                <input class="form-check-input" type="radio" name="rbEstadoPago" id="gridRadios1"
-                                    value="1" checked>
+                                <input class="form-check-input" type="radio" name="rbEstadoPago" id="gridRadios1" value="1" checked>
                                 <label class="form-check-label" for="gridRadios1">
                                     Pagado
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="rbEstadoPago" id="gridRadios2"
-                                    value="0">
+                                <input class="form-check-input" type="radio" name="rbEstadoPago" id="gridRadios2" value="0">
                                 <label class="form-check-label" for="gridRadios2">
                                     Pendiente
                                 </label>
@@ -44,15 +42,13 @@
                         <label class="" for="exampleFormControlTextarea1">Asistencia</label>
                         <div class="d-flex col-md-6 mb-3 justify-content-around">
                             <div class="form-check ">
-                                <input class="form-check-input" type="radio" name="rbAsistencia" id="gridRadios1"
-                                    value="1" checked>
+                                <input class="form-check-input" type="radio" name="rbAsistencia" id="gridRadios1" value="1" checked>
                                 <label class="form-check-label" for="gridRadios1">
                                     Si
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="rbAsistencia" id="gridRadios2"
-                                    value="0">
+                                <input class="form-check-input" type="radio" name="rbAsistencia" id="gridRadios2" value="0">
                                 <label class="form-check-label" for="gridRadios2">
                                     No
                                 </label>
@@ -66,3 +62,4 @@
             </div>
         </div>
     </div>
+</main>

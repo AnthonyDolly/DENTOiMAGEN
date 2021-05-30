@@ -9,8 +9,8 @@
             </p>
             <div>
                 <?php
-                    $ingreso = new MvcControlador();
-                    $ingreso -> vistaClienteTratamientoMedicoControlador();
+                $ingreso = new clientes_tratamientosControlador();
+                $ingreso->vistaClienteTratamientoMedicoControlador();
                 ?>
             </div>
         </div>

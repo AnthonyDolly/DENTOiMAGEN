@@ -15,8 +15,8 @@
                 </p>
             </div>
         </div>
-            <br>
-            <br>
+        <br>
+        <br>
         <div class="alinea">
             <div id="cuadro4">
                 <img src="vista/image/smile2.jpg" width="100%">
