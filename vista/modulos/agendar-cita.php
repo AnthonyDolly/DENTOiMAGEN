@@ -27,13 +27,13 @@
                             <div class="form-check ">
                                 <input class="form-check-input" type="radio" name="rbEstadoPago" id="gridRadios1" value="1" checked>
                                 <label class="form-check-label" for="gridRadios1">
-                                    Pagado
+                                    Pendiente
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="rbEstadoPago" id="gridRadios2" value="0">
+                                <input class="form-check-input" type="radio" name="rbEstadoPago" id="gridRadios2" value="2">
                                 <label class="form-check-label" for="gridRadios2">
-                                    Pendiente
+                                    Pagado
                                 </label>
                             </div>
                         </div>
@@ -44,13 +44,13 @@
                             <div class="form-check ">
                                 <input class="form-check-input" type="radio" name="rbAsistencia" id="gridRadios1" value="1" checked>
                                 <label class="form-check-label" for="gridRadios1">
-                                    Si
+                                    Pediente
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="rbAsistencia" id="gridRadios2" value="0">
+                                <input class="form-check-input" type="radio" name="rbAsistencia" id="gridRadios2" value="2">
                                 <label class="form-check-label" for="gridRadios2">
-                                    No
+                                    Asistió
                                 </label>
                             </div>
                         </div>

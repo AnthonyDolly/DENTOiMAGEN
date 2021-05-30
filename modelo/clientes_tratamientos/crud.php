@@ -29,12 +29,10 @@ class DatosClientesTratamientos extends Conexion {
     #----------------------------
     public function vistaClienteTratamientoMedicoModelo($datosModelo, $tabla) {
 
-        $st = Conexion::conectar()->prepare("SELECT ct.id AS id,c.id AS 'DNI del paciente', concat(c.nombres, ' ', c.apellidos) AS Paciente, m.id AS Medico, cm.id AS CMID, ct.fecha_inicio AS 'Fecha de inicio', tt.nombre AS 'Tratamiento', ct.descripcion AS Descripción, ct.cantSesiones AS 'Cantidad de Sesiones', ct.estado AS Estado
+        $st = Conexion::conectar()->prepare("SELECT ct.id AS id,c.id AS 'DNI del paciente', concat(c.nombres, ' ', c.apellidos) AS Paciente, m.id AS Medico, ct.fecha_inicio AS 'Fecha de inicio', tt.nombre AS 'Tratamiento', ct.descripcion AS Descripción, ct.cantSesiones AS 'Cantidad de Sesiones', ct.estado AS Estado
         FROM clientes_tratamientos ct
         INNER JOIN clientes c
         ON ct.cliente_id = c.id
-        INNER JOIN controles_mensuales cm
-        ON ct.id = cm.cliente_tratamiento_id
         INNER JOIN tratamientos t
         ON ct.tratamiento_id = t.id
         INNER JOIN medicos m

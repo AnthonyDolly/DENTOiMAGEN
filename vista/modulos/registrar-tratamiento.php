@@ -36,7 +36,7 @@
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="0">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="2">
                         <label class="form-check-label" for="gridRadios2">
                             Inactivo
                         </label>
