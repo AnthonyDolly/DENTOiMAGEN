@@ -201,7 +201,7 @@ class MvcControlador {
                             <i style="cursor: pointer;" class="fas fa-edit"></i>
                         </button>
                         </a>           
-                        <a href="index.php?action=eliminar-tratamiento&dni='.$item["Medico"].'&id='.$item["id"].'&idM='.$item["Medico"].'&idCM='.$item["CMID"].'">
+                        <a href="index.php?action=eliminar-tratamiento&dni='.$item["Medico"].'&id='.$item["id"].'&idM='.$item["Medico"].'">
                             <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-danger borderd d-block">
                                 <i class="fas fa-trash-alt"></i>
                             </button>
@@ -450,7 +450,7 @@ class MvcControlador {
 
 
     
-    #Actualizar cliente tratamiento
+    #Actualizar Cita 
     #----------------------------------------
     public function actualizarCitaControlMensualControlador(){
         
