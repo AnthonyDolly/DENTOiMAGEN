@@ -149,7 +149,7 @@ class clientes_tratamientosControlador
                 <td class="font-weight-bold px-3 border-right ">
                     <select name="selectEstado" class="form-control">
                         <option value="1">ACTIVO</option>
-                        <option value="0">INACTIVO</option>
+                        <option value="2">INACTIVO</option>
                     </select>
                 </td>
                 <td class="font-weight-bold px-3 border-right ">
