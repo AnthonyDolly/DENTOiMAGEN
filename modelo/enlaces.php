@@ -21,6 +21,7 @@ class EnlacesPaginas {
             $enlacesModelo == "mis-tratamientos" ||
             $enlacesModelo == "horario-medicos" ||
             $enlacesModelo == "registrar-tratamiento" ||
+            $enlacesModelo == "horario-medicos" ||
             $enlacesModelo == "registrar-incidencia" ||
             $enlacesModelo == "agendar-cita" ||
             $enlacesModelo == "editar-tratamiento" ||

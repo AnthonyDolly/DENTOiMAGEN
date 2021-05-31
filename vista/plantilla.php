@@ -10,7 +10,9 @@ ob_start();
     <link rel="stylesheet" href="vista/styles.css">
     <link rel="stylesheet" href="vista/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.css">
     <script src="vista/apps.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.js"></script>
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
     <title>Dento Imagen</title>
 </head>

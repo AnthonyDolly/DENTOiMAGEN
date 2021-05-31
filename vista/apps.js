@@ -185,3 +185,12 @@ function enlace(){
   window.open('mis.tratamientos.php')
   // window.location.href('mis.tratamientos.php')
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth'
+  });
+  calendar.render();
+});
