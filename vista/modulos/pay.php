@@ -124,43 +124,17 @@
 
   </script>
 
-  
-
-  <?php 
-    if( isset($_POST["idtoken"]) ){
-      echo '<script> console.log('.$_POST["idtoken"].')  </script>';
-      echo '<script> console.log("hola") </script>';
-      // $charge = $culqi->Charges->create(
-      //   array(
-      //       "amount" => "1000",
-      //       "currency_code" => "PEN",
-      //       "email" => $_POST["idemail"],
-      //       "source_id" =>$_POST["idtoken"]
-      //     )
-      //  );
-      //  $culqi->Customers->create(
-      //   array(
-      //     "address" => "av lima 123",
-      //     "address_city" => "lima",
-      //     "country_code" => "PE",
-      //     "email" => "www@me.com",
-      //     "first_name" => "Will",
-      //     "last_name" => "Muro",
-      //     "metadata" => array("test"=>"test"),
-      //     "phone_number" => 899898999
-      //   )
-      // );
-      // //Crear Tarjeta
-      // $culqi->Cards->create(
-      //   array(
-      //     "customer_id" => "customer_id",
-      //     "token_id" => "token_id"
-      //   )
-      // );
-    }
+  <?php
+  echo '
+        var email = axaxax@gmail.com;
+        $TokenMail = email;
+        console.log(email);
+      ';
   ?>
 
-<!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+
+
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
   
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
