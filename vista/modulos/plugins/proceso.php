@@ -1,17 +1,10 @@
-
-
-<?php
-  $valor = $_POST["idtoken"];
-  echo '<script> console.log( '. $valor .' ) </script>'; 
-
-?>
-
 <?php
 	// Cargamos Requests y Culqi PHP
-	require '/library/Requests.php';
+	require 'requests/library/Requests.php';
 	Requests::register_autoloader();
 	require 'culqi/lib/culqi.php';
-
+	echo '<script> console.log("entrando a proceso") </script>';
+	echo '<script> console.log("entrando a proceso") </script>';
 	// Configurar tu API Key y autenticación
 	$SECRET_KEY = "pk_test_d56ceb832f281cf3";
 	$culqi = new Culqi\Culqi(array('api_key' => $SECRET_KEY));

@@ -27,7 +27,9 @@ class EnlacesPaginas {
             $enlacesModelo == "eliminar-tratamiento" ||
             $enlacesModelo == "editar-cita" ||
             $enlacesModelo == "eliminar-cita" ||
-            $enlacesModelo == "pay"
+            $enlacesModelo == "pay" ||
+            $enlacesModelo == "procesoCulqi" ||
+            $enlacesModelo == "proceso"
             ) {
 
                 $modulo = "vista/modulos/".$enlacesModelo.".php";
