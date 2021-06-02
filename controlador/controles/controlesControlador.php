@@ -19,7 +19,16 @@ class controlesControlador
                     <td class="border-right pt-3 px-3">' . $item["Sede"] . '</td>
                     <td class="border-right pt-3 px-3">' . $item["Precio de control"] . '</td>
                     <td class="border-right pt-3 px-3">' . $item["Estado de pago"] . '</td>
-                    <td class="pt-3 px-3">' . $item["Asistencia"] . '</td>
+                    <td class="border-right pt-3 px-3">' . $item["Asistencia"] . '</td>
+                    <td class="px-3 border-right pt-3">
+                        <a href="index.php?action=pay&nameDoc=' . $item["Doctor"] . '&pay=' .$item["Precio de control"]. '">
+                            <button  style="height: 40px; margin-right: 10px;" type="submit" id="buyButton" name="prePago"  class="btn btn-secondary borderd d-block">
+                                <i style="cursor: pointer;" class="fas fa-credit-card"></i>
+                            </button>
+                        </a>
+                    </td>
+               
+
                 </tr>';
         }
     }

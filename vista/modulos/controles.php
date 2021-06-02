@@ -13,9 +13,10 @@
                         <td class="px-3 font-weight-bold border-right">Sede</td>
                         <td class="px-3 font-weight-bold border-right">Precio de control</td>
                         <td class="px-3 font-weight-bold border-right">Estado de Pago</td>
-                        <td class="px-3 font-weight-bold ">Asistencia
+                        <td class="px-3 font-weight-bold border-right">Asistencia</td>
+                        <td class="px-3 font-weight-bold ">Pagar</td>
+                    </tr>
                 </p>
-                </tr>
                 </p>
 
                 <p class="">
