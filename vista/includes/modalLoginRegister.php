@@ -9,14 +9,14 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div style="text-align: center;">
+                <div style="text-align: center;" class="mx-auto">
                     <div class="form-group-login">
                         <label style="display: block; font-size: .8em;">Username</label>
-                        <input type="text" name="usernameI" required="" size="30">
+                        <input class="form-control w-75 mx-auto" type="text" name="usernameI" required="" size="30">
                     </div>
                     <div class="form-group-login">
                         <label style="display: block; font-size: .8em;">Password</label>
-                        <input type="Password" name="passwordI" required="" size="30">
+                        <input class="form-control w-75 mx-auto" type="Password" name="passwordI" required="" size="30">
                     </div>
                     <div class="group-submit-Login">
                         <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
@@ -45,20 +45,20 @@
                     </button>
                 </div>
                 <div style="margin-left: .2em; margin-right: .2em;">
-                    <div class="form-group-register">
+                    <div class="form-group-register w-75 mx-auto py-4 ">
                         <div class="group-names">
-                            <input type="text" name="dni" placeholder="DNI" required>
-                            <input type="text" name="nombres" placeholder="Nombres" required>
-                            <input type="text" name="apellidos" placeholder="Apellidos" required>
-                            <input type="text" name="telefono" placeholder="Telefono" required>
+                            <input type="text" class="form-control w-100 d-block" name="dni" placeholder="DNI" required>
+                            <input type="text" class="form-control w-100 d-block" name="nombres" placeholder="Nombres" required>
+                            <input type="text" class="form-control w-100 d-block" name="apellidos" placeholder="Apellidos" required>
+                            <input type="text" class="form-control w-100 d-block" name="telefono" placeholder="Telefono" required>
                         </div>
                         <div class="group-correo-username">
-                            <input type="email" name="correo" placeholder="Correo Electrónico" class="email"
+                            <input type="email" class="form-control w-100 d-block" name="correo" placeholder="Correo Electrónico" class="email"
                                 required>
                         </div>
                         <div class="group-password">
-                            <input type="password" name="password" placeholder="Contraseña" required>
-                            <input type="password" name="r-password" placeholder="Repetir contraseña" required>
+                            <input type="password" class="form-control w-100 d-block" name="password" placeholder="Contraseña" required>
+                            <input type="password" class="form-control w-100 d-block" name="r-password" placeholder="Repetir contraseña" required>
                         </div>
                         <div class="group-submit">
                             <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
