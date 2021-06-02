@@ -14,6 +14,7 @@ ob_start();
     <script src="vista/apps.js"></script>
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
     <title>Dento Imagen</title>
+    <script type="text/javascript" src="https://checkout.culqi.com/js/v3"></script>
 </head>
 
 <body style="background-color: #fbfbfe; font-family: sans-serif;">

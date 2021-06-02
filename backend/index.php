@@ -4,6 +4,12 @@
 
 require_once "../backend/controlador/enlaces.php";
 require_once "../backend/modelo/enlaces.php";
+require_once "../backend/controlador/clientes_tratamientos/clientes_tratamientosControlador.php";
+require_once "../backend/modelo/clientes_tratamientos/crud.php";
+require_once "../backend/controlador/clientes/clientesControlador.php";
+require_once "../backend/modelo/clientes/crud.php";
+require_once "../backend/controlador/medicos/medicosControlador.php";
+require_once "../backend/modelo/medico/crud.php";
 
 $mvc = new MvcControladorB();
 $mvc->plantilla();
