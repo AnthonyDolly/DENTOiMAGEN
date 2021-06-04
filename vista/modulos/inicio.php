@@ -12,8 +12,7 @@
                         <tr>
                             <td>
                                 <a href="servicios.php">
-                                    <h1>Serviciossssssasd</h1>
-                                    <h1>Servicios hice cambio</h1>
+                                    <h1>Servicios</h1>
                                 </a>
                                 <p>
                                     <font size="5">Tenemos los más altos estandares de calidad. ¡Ven y
