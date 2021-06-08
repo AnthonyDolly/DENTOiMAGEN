@@ -34,9 +34,13 @@
                                             <p>Clientes</p>
                                         </div>
                                         <div class="col s5 m5 right-align">
-                                            <h5 class="mb-0">1885</h5>
+                                            <?php $nuevosC = new clienteControladorB();
+                                            $nuevosC->numNuevosClientesControlador();
+                                            ?>
                                             <p class="no-margin">Nuevos</p>
-                                            <p>1,12,900</p>
+                                            <?php $totalC = new clienteControladorB();
+                                            $totalC->numClientesControlador();
+                                            ?>
                                         </div>
                                     </div>
                                 </div>
