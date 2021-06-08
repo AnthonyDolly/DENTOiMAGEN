@@ -21,7 +21,8 @@ class asistenteControlador
                 $_SESSION["username"] = $respuesta["Asistente"];
                 $_SESSION["correo"] = $respuesta["Correo"];
                 $_SESSION["id"] = $respuesta["id"];
-                $_SESSION["validar"] = true;
+                $_SESSION["validarA"] = true;
+                $_SESSION["rol"] = "Asistente";
                 header("location:/dentoimagen/backend/");
             } else {
                 header("location:index.php?action=fallo");
