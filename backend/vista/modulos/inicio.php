@@ -12,9 +12,13 @@
                                         <p>Tratamientos</p>
                                     </div>
                                     <div class="col s5 m5 right-align">
-                                        <h5 class="mb-0">690</h5>
+                                        <?php $nuevos = new clientes_tratamientosControladorB();
+                                        $nuevos->numNuevosClienteTratamientosControlador();
+                                        ?>
                                         <p class="no-margin">Nuevos</p>
-                                        <p>6,00,00</p>
+                                        <?php $total = new clientes_tratamientosControladorB();
+                                        $total->numClienteTratamientosControlador();
+                                        ?>
                                     </div>
                                 </div>
                             </div>
