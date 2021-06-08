@@ -20,4 +20,28 @@ class DatosControlesB extends ConexionB
 
         return $st->fetchAll();
     }
+
+    #Total (en numero) de controles que hay en el sistema
+    #-----------------------------------------
+    public function numControlesModelo()
+    {
+        $st = ConexionB::conectar()->prepare("SELECT COUNT(*) AS 'Total' FROM controles_mensuales;");
+
+        $st->execute();
+
+        return $st->fetch();
+    }
+
+    #Total (en numero) de los nuevos controles que hay en el sistema (por mes)
+    #-------------------------------------------------------------------
+    public function numNuevosControlesModelo()
+    {
+        $st = ConexionB::conectar()->prepare("SELECT COUNT(*) AS 'Nuevos'
+        FROM controles_mensuales
+        WHERE TIMESTAMPDIFF(MONTH, fecha_creacion, now()) < 1");
+
+        $st->execute();
+
+        return $st->fetch();
+    }
 }

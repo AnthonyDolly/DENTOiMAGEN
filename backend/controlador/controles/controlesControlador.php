@@ -47,4 +47,28 @@ class controlesControladorB
             </tr>';
         }
     }
+
+    #Total (en numero) de controles que hay en el sistema
+    #------------------------------------
+    public function numControlesControlador()
+    {
+        // $datosControlador = $_GET["dni"];
+        $respuesta = DatosControlesB::numControlesModelo();
+
+        echo '<p>
+                ' . $respuesta["Total"] . '
+            </p>';
+    }
+
+    #Total (en numero) de los nuevos controles que hay en el sistema (por mes)
+    #-------------------------------------------------------------------
+    public function numNuevosControlesControlador()
+    {
+        // $datosControlador = $_GET["dni"];
+        $respuesta = DatosControlesB::numNuevosControlesModelo();
+
+        echo '<h5 class="mb-0">
+                ' . $respuesta["Nuevos"] . '
+            </h5>';
+    }
 }

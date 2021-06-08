@@ -55,9 +55,13 @@
                                             <p>Controles</p>
                                         </div>
                                         <div class="col s5 m5 right-align">
-                                            <h5 class="mb-0">100</h5>
+                                            <?php $nuevosCM = new controlesControladorB();
+                                            $nuevosCM->numNuevosControlesControlador();
+                                            ?>
                                             <p class="no-margin">Nuevos</p>
-                                            <p>3,42,230</p>
+                                            <?php $totalCM = new controlesControladorB();
+                                            $totalCM->numControlesControlador();
+                                            ?>
                                         </div>
                                     </div>
                                 </div>
