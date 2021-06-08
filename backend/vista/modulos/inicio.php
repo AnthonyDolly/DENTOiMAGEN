@@ -76,9 +76,13 @@
                                             <p>Dentistas</p>
                                         </div>
                                         <div class="col s5 m5 right-align">
-                                            <h5 class="mb-0">2</h5>
+                                            <?php $nuevosD = new medicosControladorB();
+                                            $nuevosD->numNuevosMedicosControlador();
+                                            ?>
                                             <p class="no-margin">Nuevos</p>
-                                            <p>5</p>
+                                            <?php $totalD = new medicosControladorB();
+                                            $totalD->numMedicosControlador();
+                                            ?>
                                         </div>
                                     </div>
                                 </div>
