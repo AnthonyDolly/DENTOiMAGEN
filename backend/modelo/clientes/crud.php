@@ -26,7 +26,7 @@ class DatosClientesB extends ConexionB
         return $st->fetch();
     }
 
-    #Total (en numero) de los nuevos tratamientos que hay en el sistema (por mes)
+    #Total (en numero) de los nuevos clientes que hay en el sistema (por mes)
     #-------------------------------------------------------------------
     public function numNuevosClientesModelo()
     {
