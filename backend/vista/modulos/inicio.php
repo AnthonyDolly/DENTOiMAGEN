@@ -72,7 +72,28 @@
                             <ul id="task-card" class="collection with-header">
                                 <li class="collection-header teal accent-4">
                                     <h4 class="task-card-title">Citas del día</h4>
-                                    <p class="task-card-date">Mayo 30, 2021</p>
+                                    <p class="task-card-date">
+                                        <script type="text/javascript">
+                                            var dia = new Date().toLocaleString('default', {
+                                                weekday: 'long'
+                                            });
+                                            diaM = dia.charAt(0).toUpperCase() + dia.slice(1);
+                                            document.write(diaM);
+                                            document.write(' ');
+
+                                            document.write(new Date().getDate());
+                                            document.write(' de ');
+
+                                            mes = new Date().toLocaleString('default', {
+                                                month: 'long'
+                                            });
+                                            mesM = mes.charAt(0).toUpperCase() + mes.slice(1);
+                                            document.write(mesM);
+
+                                            document.write(' del ');
+                                            document.write(new Date().getFullYear());
+                                        </script>
+                                    </p>
                                 </li>
                                 <table class="highlight responsive-table">
                                     <thead>
@@ -87,102 +108,10 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>10203040</td>
-                                            <td>Anthony Luiggy Dolly Oscategui</td>
-                                            <td>30-05-2021 18:31</td>
-                                            <td>S/.120</td>
-                                            <td>
-                                                <select name="pago">
-                                                    <option value="1" selected>Pendiente</option>
-                                                    <option value="2">Pagado</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <select name="asistencia">
-                                                    <option value="1" selected>Pendiente</option>
-                                                    <option value="2">Asistió</option>
-                                                    <option value="3">Faltó</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <button class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" type="submit" name="action">Enviar
-                                                    <i class="material-icons right">send</i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>10203041</td>
-                                            <td>Alejandro Dwight Alfaro</td>
-                                            <td>30-05-2021 19:00</td>
-                                            <td>S/.150</td>
-                                            <td>
-                                                <select name="pago">
-                                                    <option value="1" selected>Pendiente</option>
-                                                    <option value="2">Pagado</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <select name="asistencia">
-                                                    <option value="1" selected>Pendiente</option>
-                                                    <option value="2">Asistió</option>
-                                                    <option value="3">Faltó</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <button class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" type="submit" name="action">Enviar
-                                                    <i class="material-icons right">send</i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>10203042</td>
-                                            <td>Claudia Sheinon Huaranga</td>
-                                            <td>30-05-2021 19:20</td>
-                                            <td>S/.120</td>
-                                            <td>
-                                                <select name="pago">
-                                                    <option value="1" selected>Pendiente</option>
-                                                    <option value="2">Pagado</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <select name="asistencia">
-                                                    <option value="1" selected>Pendiente</option>
-                                                    <option value="2">Asistió</option>
-                                                    <option value="3">Faltó</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <button class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" type="submit" name="action">Enviar
-                                                    <i class="material-icons right">send</i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>10203043</td>
-                                            <td>James Contreras Rodriguez</td>
-                                            <td>30-05-2021 20:00</td>
-                                            <td>S/.150</td>
-                                            <td>
-                                                <select name="pago">
-                                                    <option value="1" selected>Pendiente</option>
-                                                    <option value="2">Pagado</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <select name="asistencia">
-                                                    <option value="1" selected>Pendiente</option>
-                                                    <option value="2">Asistió</option>
-                                                    <option value="3">Faltó</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <button class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" type="submit" name="action">Enviar
-                                                    <i class="material-icons right">send</i>
-                                                </button>
-                                            </td>
-                                        </tr>
+                                        <?php
+                                        $vista = new controlesControladorB();
+                                        $vista->vistaControlesControlador();
+                                        ?>
                                     </tbody>
                                 </table>
                             </ul>
