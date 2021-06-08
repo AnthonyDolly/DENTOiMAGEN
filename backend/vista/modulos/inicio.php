@@ -4,70 +4,78 @@
             <div class="container">
                 <div id="card-stats">
                     <div class="row mt-1">
-                        <div class="col s12 m6 l3">
-                            <div class="card gradient-45deg-light-blue-cyan gradient-shadow min-height-100 white-text">
-                                <div class="padding-4">
-                                    <div class="col s7 m7">
-                                        <i class="material-icons background-round mt-5">assignment_ind</i>
-                                        <p>Tratamientos</p>
-                                    </div>
-                                    <div class="col s5 m5 right-align">
-                                        <?php $nuevos = new clientes_tratamientosControladorB();
-                                        $nuevos->numNuevosClienteTratamientosControlador();
-                                        ?>
-                                        <p class="no-margin">Nuevos</p>
-                                        <?php $total = new clientes_tratamientosControladorB();
-                                        $total->numClienteTratamientosControlador();
-                                        ?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s12 m6 l3">
-                            <div class="card gradient-45deg-red-pink gradient-shadow min-height-100 white-text">
-                                <div class="padding-4">
-                                    <div class="col s7 m7">
-                                        <i class="material-icons background-round mt-5">perm_identity</i>
-                                        <p>Clientes</p>
-                                    </div>
-                                    <div class="col s5 m5 right-align">
-                                        <h5 class="mb-0">1885</h5>
-                                        <p class="no-margin">Nuevos</p>
-                                        <p>1,12,900</p>
+                        <a href="index.php?action=tratamientos">
+                            <div class="col s12 m6 l3">
+                                <div class="card gradient-45deg-light-blue-cyan gradient-shadow min-height-100 white-text">
+                                    <div class="padding-4">
+                                        <div class="col s7 m7">
+                                            <i class="material-icons background-round mt-5">assignment_ind</i>
+                                            <p>Tratamientos</p>
+                                        </div>
+                                        <div class="col s5 m5 right-align">
+                                            <?php $nuevos = new clientes_tratamientosControladorB();
+                                            $nuevos->numNuevosClienteTratamientosControlador();
+                                            ?>
+                                            <p class="no-margin">Nuevos</p>
+                                            <?php $total = new clientes_tratamientosControladorB();
+                                            $total->numClienteTratamientosControlador();
+                                            ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col s12 m6 l3">
-                            <div class="card gradient-45deg-amber-amber gradient-shadow min-height-100 white-text">
-                                <div class="padding-4">
-                                    <div class="col s7 m7">
-                                        <i class="material-icons background-round mt-5">event</i>
-                                        <p>Controles</p>
-                                    </div>
-                                    <div class="col s5 m5 right-align">
-                                        <h5 class="mb-0">100</h5>
-                                        <p class="no-margin">Nuevos</p>
-                                        <p>3,42,230</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s12 m6 l3">
-                            <div class="card gradient-45deg-green-teal gradient-shadow min-height-100 white-text">
-                                <div class="padding-4">
-                                    <div class="col s7 m7">
-                                        <i class="material-icons background-round mt-5">person</i>
-                                        <p>Dentistas</p>
-                                    </div>
-                                    <div class="col s5 m5 right-align">
-                                        <h5 class="mb-0">2</h5>
-                                        <p class="no-margin">Nuevos</p>
-                                        <p>5</p>
+                        </a>
+                        <a href="index.php?action=clientes">
+                            <div class="col s12 m6 l3">
+                                <div class="card gradient-45deg-red-pink gradient-shadow min-height-100 white-text">
+                                    <div class="padding-4">
+                                        <div class="col s7 m7">
+                                            <i class="material-icons background-round mt-5">perm_identity</i>
+                                            <p>Clientes</p>
+                                        </div>
+                                        <div class="col s5 m5 right-align">
+                                            <h5 class="mb-0">1885</h5>
+                                            <p class="no-margin">Nuevos</p>
+                                            <p>1,12,900</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
+                        <a href="index.php?action=controles">
+                            <div class="col s12 m6 l3">
+                                <div class="card gradient-45deg-amber-amber gradient-shadow min-height-100 white-text">
+                                    <div class="padding-4">
+                                        <div class="col s7 m7">
+                                            <i class="material-icons background-round mt-5">event</i>
+                                            <p>Controles</p>
+                                        </div>
+                                        <div class="col s5 m5 right-align">
+                                            <h5 class="mb-0">100</h5>
+                                            <p class="no-margin">Nuevos</p>
+                                            <p>3,42,230</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="index.php?action=dentistas">
+                            <div class="col s12 m6 l3">
+                                <div class="card gradient-45deg-green-teal gradient-shadow min-height-100 white-text">
+                                    <div class="padding-4">
+                                        <div class="col s7 m7">
+                                            <i class="material-icons background-round mt-5">person</i>
+                                            <p>Dentistas</p>
+                                        </div>
+                                        <div class="col s5 m5 right-align">
+                                            <h5 class="mb-0">2</h5>
+                                            <p class="no-margin">Nuevos</p>
+                                            <p>5</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div id="card-widgets">
