@@ -8,6 +8,28 @@ class DatosControlesB extends ConexionB
     #----------------------------
     public function vistaControlesModelo()
     {
+        $st = ConexionB::conectar()->prepare("SELECT cm.id AS ID, c.id AS DNI, concat(c.nombres, ' ', c.apellidos) AS Paciente, concat(m.nombres, ' ', m.apellidos) AS 'Dentista', DATE_FORMAT(cm.fecha, '%d/%m/%Y %H:%i') AS Fecha, cm.precioSesion AS 'Importe', cm.estadoPago AS 'Estado de Pago', cm.asistencia AS 'Asistencia'
+        FROM controles_mensuales cm 
+        INNER JOIN clientes_tratamientos ct 
+        ON cm.cliente_tratamiento_id = ct.id 
+        INNER JOIN clientes c 
+        ON ct.cliente_id = c.id
+        INNER JOIN tratamientos t
+        ON ct.tratamiento_id = t.id
+        INNER JOIN medicos m 
+        ON t.medico_id = m.id
+        ORDER BY cm.id;
+        ");
+
+        $st->execute();
+
+        return $st->fetchAll();
+    }
+
+    #Vista de todos los controles que hay para el día de hoy
+    #----------------------------
+    public function vistaControlesHoyModelo()
+    {
         $st = ConexionB::conectar()->prepare("SELECT c.id AS DNI, concat(c.nombres, ' ', c.apellidos) AS Paciente, DATE_FORMAT(cm.fecha, '%d/%m/%Y %H:%i') AS Fecha, cm.precioSesion AS 'Importe', cm.estadoPago AS 'Estado de Pago', cm.asistencia AS 'Asistencia'
         FROM controles_mensuales cm 
         INNER JOIN clientes_tratamientos ct 

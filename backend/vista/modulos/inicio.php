@@ -134,7 +134,7 @@
                                     <tbody>
                                         <?php
                                         $vista = new controlesControladorB();
-                                        $vista->vistaControlesControlador();
+                                        $vista->vistaControlesHoyControlador();
                                         ?>
                                     </tbody>
                                 </table>

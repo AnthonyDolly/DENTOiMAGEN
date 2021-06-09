@@ -2,12 +2,33 @@
 
 class controlesControladorB
 {
-    #Vista de todos los controles del sistema
-    #----------------------------------------
-    public function vistaControlesControlador()
+    #Vista de todos los controles que hay en el sistema
+    #----------------------------
+    public function vistaControlesModelo()
     {
         // $datosControlador = $_GET["dni"];
         $respuesta = DatosControlesB::vistaControlesModelo();
+
+        foreach ($respuesta as $key => $item) {
+            echo '<tr>
+                    <td>' . $item["ID"] . '</td>
+                    <td>' . $item["DNI"] . '</td>
+                    <td>' . $item["Paciente"] . '</td>
+                    <td>' . $item["Dentista"] . '</td>
+                    <td>' . $item["Fecha"] . '</td>
+                    <td>' . $item["Importe"] . '</td>
+                    <td>' . $item["Estado de Pago"] . '</td>
+                    <td>' . $item["Asistencia"] . '</td>
+                </tr>';
+        }
+    }
+
+    #Vista de todos los controles que hay para el día de hoy
+    #----------------------------------------
+    public function vistaControlesHoyControlador()
+    {
+        // $datosControlador = $_GET["dni"];
+        $respuesta = DatosControlesB::vistaControlesHoyModelo();
 
         foreach ($respuesta as $key => $item) {
             echo '<tr>
