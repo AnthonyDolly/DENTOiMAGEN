@@ -55,15 +55,14 @@ class controlesControladorB
                         </select>
                     </td>';
             }
-            if ($item["Asistencia"] == "Pendiente") {
-                echo '<td>
+            echo '<td>
                         <select name="asistencia">
                             <option value="1" selected>Pendiente</option>
                             <option value="2">Asistió</option>
                             <option value="3">Faltó</option>
                         </select>
                     </td>';
-            }
+
             echo '<td>
                     <button class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" type="submit" name="action">Enviar
                         <i class="material-icons right">send</i>

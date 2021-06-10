@@ -36,7 +36,7 @@ class DatosControlesB extends ConexionB
         ON cm.cliente_tratamiento_id = ct.id 
         INNER JOIN clientes c 
         ON ct.cliente_id = c.id
-        WHERE DATE_FORMAT(cm.fecha, '%Y/%m/%d') = DATE_FORMAT(now(), '%Y/%m/%d');");
+        WHERE DATE_FORMAT(cm.fecha, '%Y/%m/%d') = DATE_FORMAT(now(), '%Y/%m/%d') AND cm.asistencia = 'Pendiente'");
 
         $st->execute();
 
