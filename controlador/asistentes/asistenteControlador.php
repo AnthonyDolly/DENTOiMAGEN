@@ -23,7 +23,7 @@ class asistenteControlador
                 $_SESSION["id"] = $respuesta["id"];
                 $_SESSION["validarA"] = true;
                 $_SESSION["rol"] = "Asistente";
-                header("location:/dentoimagen/backend/");
+                header("location:./backend/");
             } else {
                 header("location:index.php?action=fallo");
             }
