@@ -118,4 +118,55 @@ class controlesControladorB
                 ' . $respuesta["Nuevos"] . '
             </h5>';
     }
+
+    public function buscarClienteControlador()
+    {
+        if(isset($_POST["dniB"])){
+            $datosControlador=$_POST["dniB"];
+            $respuesta = DatosControlesB::buscarClienteModelo($datosControlador);
+            
+            if(isset($respuesta)){
+                foreach ($respuesta as $key => $item) {
+                    echo '<tr>
+                            <td style="display: none;">
+                                <input type="text" class="form-control "  
+                                name="idCM" value =' . $item["ID"] . '>
+                            </td>
+                            <td>' . $item["DNI"] . '</td>
+                            <td>' . $item["Paciente"] . '</td>
+                            <td>' . $item["Fecha"] . '</td>
+                            <td>' . $item["Importe"] . '</td>';
+                    if ($item["Estado de Pago"] == 'Pendiente') {
+                        echo '<td>
+                                <select name="pago">
+                                    <option value="1" selected>Pendiente</option>
+                                    <option value="2">Pagado</option>
+                                </select>
+                            </td>';
+                    } else if ($item["Estado de Pago"] == 'Pagado') {
+                        echo '<td>
+                                <select name="pago">
+                                    <option value="1">Pendiente</option>
+                                    <option value="2" selected>Pagado</option>
+                                </select>
+                            </td>';
+                    }
+                    echo '<td>
+                                <select name="asistencia">
+                                    <option value="1" selected>Pendiente</option>
+                                    <option value="2">Asistió</option>
+                                    <option value="3">Faltó</option>
+                                </select>
+                            </td>';
+        
+                    echo '<td>
+                            <button class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" type="submit" name="action">Enviar
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </td>
+                    </tr>';
+                }
+            }
+        }
+    }
 }

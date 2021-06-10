@@ -118,6 +118,20 @@
                                             document.write(new Date().getFullYear());
                                         </script>
                                     </p>
+                                    <form method="POST">
+                                        <nav>
+                                            <div class="nav-wrapper">
+                                                <form>
+                                                    <div class="input-field teal accent-4">
+                                                        <input id="search" type="search" name="dniB" required>
+                                                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                                        <i class="material-icons">close</i>
+                                                        <button type="submit">Buscar</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </nav>
+                                    </form>
                                 </li>
                                 <form method="POST">
                                     <table class="highlight responsive-table">
@@ -135,8 +149,12 @@
                                         </thead>
                                         <tbody>
                                             <?php
-                                            $vista = new controlesControladorB();
-                                            $vista->vistaControlesHoyControlador();
+                                            // $vista = new controlesControladorB();
+                                            // $vista->vistaControlesHoyControlador();
+                                            ?> 
+                                            <?php 
+                                            $vistaB = new controlesControladorB();
+                                            $vistaB->buscarClienteControlador();
                                             ?>
                                             <?php
                                             $actualizarECM = new controlesControladorB();

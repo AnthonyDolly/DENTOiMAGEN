@@ -146,7 +146,13 @@ class DatosControles extends Conexion {
         $st->close();
     }
 
+    public function buscarClienteModelo($datosModelo){
+        $st = Conexion::conectar()->prepare("call buscarCliente($datosModelo)");
 
+        $st->execute();
+
+        return $st->fetchAll();
+    }
 
 
 
