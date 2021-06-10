@@ -13,9 +13,12 @@
                     </div>
                     <div class="col-md-6 mb-3">
                         <label class="" for="exampleFormControlInput1">Fecha</label>
-                        <input type="datetime-local" class="form-control" id="exampleFormControlInput1" name="fecha" required>
+                        <input type="datetime-local" class="datepicker" id="exampleFormControlInput1" name="fecha" required>
                     </div>
-
+                    <div class="col-md-6 mb-3">
+                        <label class="" for="exampleFormControlInput1">Hora</label>
+                        <input type="datetime-local" class="timepicker" id="exampleFormControlInput1" name="hora" required>
+                    </div>
                     <div class="col-md-6 mb-3">
                         <label for="validationTooltip01">Precio Sesión</label>
                         <input type="number" class="form-control" name="preciosesion" id="sesiones" required>
@@ -63,3 +66,23 @@
         </div>
     </div>
 </main>
+
+<!-- Date picker -->
+<script src="vista/plugins/pickadate/picker.js"></script>
+<script src="vista/plugins/pickadate/picker.date.js"></script>
+<script src="vista/plugins/pickadate/picker.time.js"></script>
+<script src="vista/plugins/pickadate/legacy.js"></script>
+<script type="text/javascript">
+    var input_date = $('.datepicker').pickadate({
+        min: true,
+        formatSubmit: 'yyyy-m-d'
+    });
+    var date_picker = input_date.pickadate('picker');
+
+    var input_time = $('.timepicker').pickatime({
+        min: [7, 30],
+        max: [21, 0],
+        formatSubmit: 'HH:i'
+    });
+    var time_picker = input_time.pickatime('picker');
+</script>
