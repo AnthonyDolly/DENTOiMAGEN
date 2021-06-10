@@ -24,6 +24,17 @@
                     $ingreso = new controlesControlador();
                     $ingreso->vistaControlControlador();
                     ?>
+
+                    <?php
+                    if( isset($_GET['pagado'])){
+                        $actualizarCM = new controlesControlador();
+                        $actualizarCM -> actualizarEstadoPagoControlMensualControlador();
+                           
+                    }
+              
+                    ?>
+
+
                 </p>
             </table>
         </div>

@@ -73,6 +73,8 @@ ob_start();
     $ingreso->ingresoClienteControlador();
     $ingresoM = new medicoControlador();
     $ingresoM->ingresoMedicoControlador();
+    $ingresoA = new asistenteControlador();
+    $ingresoA->ingresoAsistenteControlador();
 
     if (isset($_GET["action"])) {
         if ($_GET["action"] == "fallo") {
@@ -110,6 +112,9 @@ ob_start();
     }
 
     ?>
+
+
+
 
 
 

@@ -20,4 +20,28 @@ class DatosMedicosB extends ConexionB
 
         return $st->fetchAll();
     }
+
+    #Total (en numero) de dentistas que hay en el sistema
+    #-----------------------------------------
+    public function numMedicosModelo()
+    {
+        $st = ConexionB::conectar()->prepare("SELECT COUNT(*) AS 'Total' FROM medicos;");
+
+        $st->execute();
+
+        return $st->fetch();
+    }
+
+    #Total (en numero) de los nuevos dentistas que hay en el sistema (por mes)
+    #-------------------------------------------------------------------
+    public function numNuevosMedicosModelo()
+    {
+        $st = ConexionB::conectar()->prepare("SELECT COUNT(*) AS 'Nuevos'
+        FROM medicos
+        WHERE TIMESTAMPDIFF(MONTH, fecha_registro, now()) < 1");
+
+        $st->execute();
+
+        return $st->fetch();
+    }
 }

@@ -25,4 +25,28 @@ class DatosClientesTratamientosB extends ConexionB
 
         return $st->fetchAll();
     }
+
+    #Total (en numero) de tratamientos que hay en el sistema
+    #-----------------------------------------
+    public function numClienteTratamientosModelo()
+    {
+        $st = ConexionB::conectar()->prepare("SELECT COUNT(*) AS 'Total' FROM clientes_tratamientos;");
+
+        $st->execute();
+
+        return $st->fetch();
+    }
+
+    #Total (en numero) de los nuevos tratamientos que hay en el sistema (por mes)
+    #-------------------------------------------------------------------
+    public function numNuevosClienteTratamientosModelo()
+    {
+        $st = ConexionB::conectar()->prepare("SELECT COUNT(*) AS 'Nuevos'
+        FROM clientes_tratamientos
+        WHERE TIMESTAMPDIFF(MONTH, fecha_inicio, now()) < 1");
+
+        $st->execute();
+
+        return $st->fetch();
+    }
 }

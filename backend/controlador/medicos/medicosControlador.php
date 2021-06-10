@@ -21,4 +21,28 @@ class medicosControladorB
                 </tr>';
         }
     }
+
+    #Total (en numero) de dentistas que hay en el sistema
+    #------------------------------------
+    public function numMedicosControlador()
+    {
+        // $datosControlador = $_GET["dni"];
+        $respuesta = DatosMedicosB::numMedicosModelo();
+
+        echo '<p>
+                ' . $respuesta["Total"] . '
+            </p>';
+    }
+
+    #Total (en numero) de los nuevos dentistas que hay en el sistema (por mes)
+    #-------------------------------------------------------------------
+    public function numNuevosMedicosControlador()
+    {
+        // $datosControlador = $_GET["dni"];
+        $respuesta = DatosMedicosB::numNuevosMedicosModelo();
+
+        echo '<h5 class="mb-0">
+                ' . $respuesta["Nuevos"] . '
+            </h5>';
+    }
 }

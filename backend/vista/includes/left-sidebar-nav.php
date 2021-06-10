@@ -25,12 +25,12 @@
                                 <i class="material-icons">lock_outline</i> Lock</a>
                         </li>
                         <li>
-                            <a href="#" class="grey-text text-darken-1">
+                            <a href="index.php?action=cerrar-sesion" class="grey-text text-darken-1">
                                 <i class="material-icons">keyboard_tab</i> Logout</a>
                         </li>
                     </ul>
-                    <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown-nav">Anthony Dolly<i class="mdi-navigation-arrow-drop-down right"></i></a>
-                    <p class="user-roal">Administrator</p>
+                    <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown-nav"><?php echo $_SESSION["username"] ?><i class="mdi-navigation-arrow-drop-down right"></i></a>
+                    <p class="user-roal"><?php echo $_SESSION["rol"] ?></p>
                 </div>
             </div>
         </li>

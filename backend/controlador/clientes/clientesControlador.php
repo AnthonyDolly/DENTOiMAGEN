@@ -18,4 +18,28 @@ class clienteControladorB
                 </tr>';
         }
     }
+
+    #Total (en numero) de clientes que hay en el sistema
+    #------------------------------------
+    public function numClientesControlador()
+    {
+        // $datosControlador = $_GET["dni"];
+        $respuesta = DatosClientesB::numClientesModelo();
+
+        echo '<p>
+                ' . $respuesta["Total"] . '
+            </p>';
+    }
+
+    #Total (en numero) de los nuevos clientes que hay en el sistema (por mes)
+    #-------------------------------------------------------------------
+    public function numNuevosClientesControlador()
+    {
+        // $datosControlador = $_GET["dni"];
+        $respuesta = DatosClientesB::numNuevosClientesModelo();
+
+        echo '<h5 class="mb-0">
+                ' . $respuesta["Nuevos"] . '
+            </h5>';
+    }
 }
