@@ -79,10 +79,9 @@ class controlesControlador
     {
 
         if (isset($_POST["DNIC"])) {
-
             $datosControlador = array(
                 "id" => $_POST["idCT"],
-                "fecha" => $_POST["fecha"],
+                "fecha" => $_POST["fecha"] . ' ' . $_POST["hora"],
                 "precio" => $_POST["preciosesion"],
                 "estado" => $_POST["rbEstadoPago"],
                 "asistencia" => $_POST["rbAsistencia"]
@@ -210,7 +209,7 @@ class controlesControlador
 
             $respuesta = DatosControles::actualizarEstadoPagoControlMensualModelo($datosControlador, "controles_mensuales");
         }
-   
+
         if ($respuesta == "success") {
 
             header('location:index.php?action=controles&dni=' . $_GET["dni"] . '');

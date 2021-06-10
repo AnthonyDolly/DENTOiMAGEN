@@ -13,11 +13,11 @@
                     </div>
                     <div class="col-md-6 mb-3">
                         <label class="" for="exampleFormControlInput1">Fecha</label>
-                        <input type="datetime-local" class="datepicker" id="exampleFormControlInput1" name="fecha" required>
+                        <input type="text" class="datepicker" id="datepicker" name="fecha" required value="">
                     </div>
                     <div class="col-md-6 mb-3">
                         <label class="" for="exampleFormControlInput1">Hora</label>
-                        <input type="datetime-local" class="timepicker" id="exampleFormControlInput1" name="hora" required>
+                        <input type="text" class="timepicker" id="timepicker" name="hora" required value="">
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="validationTooltip01">Precio Sesión</label>
@@ -75,6 +75,7 @@
 <script type="text/javascript">
     var input_date = $('.datepicker').pickadate({
         min: true,
+        format: 'yyyy-m-d',
         formatSubmit: 'yyyy-m-d'
     });
     var date_picker = input_date.pickadate('picker');
@@ -82,6 +83,7 @@
     var input_time = $('.timepicker').pickatime({
         min: [7, 30],
         max: [21, 0],
+        format: 'HH:i',
         formatSubmit: 'HH:i'
     });
     var time_picker = input_time.pickatime('picker');
