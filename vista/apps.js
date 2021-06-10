@@ -185,3 +185,9 @@ function enlace(){
   window.open('mis.tratamientos.php')
   // window.location.href('mis.tratamientos.php')
 }
+
+
+function redirect(){
+  console.log('entrando');
+  window.location.href = "./index.php?action=perfil";
+}

@@ -20,16 +20,21 @@ class controlesControlador
                     <td class="border-right pt-3 px-3">' . $item["Precio de control"] . '</td>
                     <td class="border-right pt-3 px-3">' . $item["Estado de pago"] . '</td>
                     <td class="border-right pt-3 px-3">' . $item["Asistencia"] . '</td>
-                    <td class="px-3 border-right pt-3">
-                        <a href="index.php?action=pay&nameDoc=' . $item["Doctor"] . '&pay=' .$item["Precio de control"]. '">
-                            <button  style="height: 40px; margin-right: 10px;" type="submit" id="buyButton" name="prePago"  class="btn btn-secondary borderd d-block">
-                                <i style="cursor: pointer;" class="fas fa-credit-card"></i>
-                            </button>
-                        </a>
-                    </td>
-               
+                    ';
 
-                </tr>';
+            if ($item["Estado de pago"] == "Pendiente") {
+                echo '
+                        <td class="px-3 border-right pt-3">
+                            <a href="index.php?action=pay&nameDoc=' . $item["Doctor"] . '&pay=' . $item["Precio de control"] . '&idCM=' . $item["idCM"] . '&dni=' . $_GET['dni'] . '">
+                                <button  style="height: 40px; margin-right: 10px;" type="submit" id="buyButton" name="prePago"  class="btn btn-secondary borderd d-block">
+                                    <i style="cursor: pointer;" class="fas fa-credit-card"></i>
+                                </button>
+                            </a>
+                        </td>
+                        
+                         </tr>
+                        ';
+            }
         }
     }
 
@@ -186,6 +191,29 @@ class controlesControlador
 
         if ($respuesta == "success") {
             header('location:index.php?action=citas-medicos&dni=' . $_GET["dni"] . '');
+        } else {
+            header("location:index.php");
+        }
+    }
+
+
+
+    #Actualizar estado de pago 
+    #----------------------------------------
+    public function actualizarEstadoPagoControlMensualControlador()
+    {
+        if (isset($_GET["pagado"])) {
+            $datosControlador = array(
+                "idCM" => $_GET["idCM"],
+                "estadoPago" => "Pagado",
+            );
+
+            $respuesta = DatosControles::actualizarEstadoPagoControlMensualModelo($datosControlador, "controles_mensuales");
+        }
+   
+        if ($respuesta == "success") {
+
+            header('location:index.php?action=controles&dni=' . $_GET["dni"] . '');
         } else {
             header("location:index.php");
         }
