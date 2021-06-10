@@ -8,7 +8,7 @@ class DatosControlesB extends ConexionB
     #----------------------------
     public function vistaControlesModelo()
     {
-        $st = ConexionB::conectar()->prepare("call vistaControlModelo()");
+        $st = ConexionB::conectar()->prepare("call vistaControlB()");
 
         $st->execute();
 
@@ -19,13 +19,7 @@ class DatosControlesB extends ConexionB
     #----------------------------
     public function vistaControlesHoyModelo()
     {
-        $st = ConexionB::conectar()->prepare("SELECT cm.id AS 'ID', c.id AS DNI, concat(c.nombres, ' ', c.apellidos) AS Paciente, DATE_FORMAT(cm.fecha, '%d/%m/%Y %H:%i') AS Fecha, cm.precioSesion AS 'Importe', cm.estadoPago AS 'Estado de Pago', cm.asistencia AS 'Asistencia'
-        FROM controles_mensuales cm 
-        INNER JOIN clientes_tratamientos ct 
-        ON cm.cliente_tratamiento_id = ct.id 
-        INNER JOIN clientes c 
-        ON ct.cliente_id = c.id
-        WHERE DATE_FORMAT(cm.fecha, '%Y/%m/%d') = DATE_FORMAT(now(), '%Y/%m/%d') AND cm.asistencia = 'Pendiente'");
+        $st = ConexionB::conectar()->prepare("call vistaControlesHoyB()");
 
         $st->execute();
 
@@ -53,7 +47,7 @@ class DatosControlesB extends ConexionB
     #-----------------------------------------
     public function numControlesModelo()
     {
-        $st = ConexionB::conectar()->prepare("SELECT COUNT(*) AS 'Total' FROM controles_mensuales;");
+        $st = ConexionB::conectar()->prepare("call numControlesB;");
 
         $st->execute();
 
@@ -64,9 +58,7 @@ class DatosControlesB extends ConexionB
     #-------------------------------------------------------------------
     public function numNuevosControlesModelo()
     {
-        $st = ConexionB::conectar()->prepare("SELECT COUNT(*) AS 'Nuevos'
-        FROM controles_mensuales
-        WHERE TIMESTAMPDIFF(MONTH, fecha_creacion, now()) < 1");
+        $st = ConexionB::conectar()->prepare("CALL numNuevosControlesB;");
 
         $st->execute();
 
