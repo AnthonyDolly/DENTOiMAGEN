@@ -32,6 +32,10 @@ if (!$_SESSION["validarM"]) {
                             <a href="index.php?action=registrar-tratamiento" style="display: block; margin-top: .5em;">Registrar Tramiento</a>
                             <a href="index.php?action=mis-tratamientos&dni=<?php echo $_SESSION['id']; ?>" style="display: block; margin-top: .5em;">Ver mis
                                 Tratamientos</a>
+                                <br>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#RegisterModal">
+                                <i class="fas fa-user"></i> Regístrar Nuevo Paciente
+                            </button>
                     </div>
                 </div>
             </article>

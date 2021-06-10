@@ -23,4 +23,28 @@ class clientes_tratamientosControladorB
                 </tr>';
         }
     }
+
+    #Total (en numero) de tratamientos que hay en el sistema
+    #------------------------------------
+    public function numClienteTratamientosControlador()
+    {
+        // $datosControlador = $_GET["dni"];
+        $respuesta = DatosClientesTratamientosB::numClienteTratamientosModelo();
+
+        echo '<p>
+                ' . $respuesta["Total"] . '
+            </p>';
+    }
+
+    #Total (en numero) de los nuevos tratamientos que hay en el sistema (por mes)
+    #-------------------------------------------------------------------
+    public function numNuevosClienteTratamientosControlador()
+    {
+        // $datosControlador = $_GET["dni"];
+        $respuesta = DatosClientesTratamientosB::numNuevosClienteTratamientosModelo();
+
+        echo '<h5 class="mb-0">
+                ' . $respuesta["Nuevos"] . '
+            </h5>';
+    }
 }

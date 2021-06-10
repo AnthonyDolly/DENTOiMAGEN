@@ -10,6 +10,8 @@ require_once "../backend/controlador/clientes/clientesControlador.php";
 require_once "../backend/modelo/clientes/crud.php";
 require_once "../backend/controlador/medicos/medicosControlador.php";
 require_once "../backend/modelo/medico/crud.php";
+require_once "../backend/controlador/controles/controlesControlador.php";
+require_once "../backend/modelo/controles/crud.php";
 
 $mvc = new MvcControladorB();
 $mvc->plantilla();

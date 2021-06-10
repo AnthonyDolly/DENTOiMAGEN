@@ -40,9 +40,7 @@ session_start();
                         <button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">
                             <i class="fas fa-sign-in-alt"></i> Iniciar sesión
                         </button>
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#RegisterModal">
-                            <i class="fas fa-user"></i> Regístrate 
-                        </button>
+                        
                         <?php
                     }
                     ?>

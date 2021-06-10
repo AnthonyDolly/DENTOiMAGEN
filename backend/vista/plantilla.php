@@ -1,6 +1,16 @@
 <?php
 ob_start();
 ?>
+
+<?php
+session_start();
+
+if (!$_SESSION["validarA"]) {
+    header("location:/dentoimagen/index.php?action=inicio");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
