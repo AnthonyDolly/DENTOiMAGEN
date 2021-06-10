@@ -32,6 +32,10 @@ class controlesControladorB
 
         foreach ($respuesta as $key => $item) {
             echo '<tr>
+                    <td style="display: none;">
+                        <input type="text" class="form-control "  
+                        name="idCM" value =' . $item["ID"] . '>
+                    </td>
                     <td>' . $item["DNI"] . '</td>
                     <td>' . $item["Paciente"] . '</td>
                     <td>' . $item["Fecha"] . '</td>
@@ -53,9 +57,9 @@ class controlesControladorB
             }
             if ($item["Asistencia"] == "Pendiente") {
                 echo '<td>
-                        <select name="pago">
+                        <select name="asistencia">
                             <option value="1" selected>Pendiente</option>
-                            <option value="2">Pagado</option>
+                            <option value="2">Asistió</option>
                             <option value="3">Faltó</option>
                         </select>
                     </td>';
@@ -66,6 +70,29 @@ class controlesControladorB
                     </button>
                 </td>
             </tr>';
+        }
+    }
+
+    #Actualizar estados del control
+    #----------------------------------------
+    public function actualizarEstadosControlControlador()
+    {
+
+        if (isset($_POST["idCM"])) {
+
+            $datosControlador = array(
+                "idCM" => $_POST["idCM"],
+                "estadoPago" => $_POST["pago"],
+                "estadoAsistencia" => $_POST["asistencia"]
+            );
+
+            $respuesta = DatosControlesB::actualizarEstadosControlModelo($datosControlador, "controles_mensuales");
+
+            if ($respuesta == "success") {
+                header('location:index.php?action=inicio');
+            } else {
+                header("location:index.php");
+            }
         }
     }
 

@@ -119,25 +119,32 @@
                                         </script>
                                     </p>
                                 </li>
-                                <table class="highlight responsive-table">
-                                    <thead>
-                                        <tr>
-                                            <th>DNI</th>
-                                            <th>Paciente</th>
-                                            <th>Fecha y Hora</th>
-                                            <th>Importe</th>
-                                            <th style="margin: 10px 0 0 0;">Estado de Pago</th>
-                                            <th style="margin: 43px 0 0 0;">Asistencia</th>
-                                            <th style="margin: 38px 0 0 0;">Acción</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                        $vista = new controlesControladorB();
-                                        $vista->vistaControlesHoyControlador();
-                                        ?>
-                                    </tbody>
-                                </table>
+                                <form method="POST">
+                                    <table class="highlight responsive-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="display: none;">ID</th>
+                                                <th>DNI</th>
+                                                <th>Paciente</th>
+                                                <th>Fecha y Hora</th>
+                                                <th>Importe</th>
+                                                <th style="margin: 10px 0 0 0;">Estado de Pago</th>
+                                                <th style="margin: 43px 0 0 0;">Asistencia</th>
+                                                <th style="margin: 38px 0 0 0;">Acción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $vista = new controlesControladorB();
+                                            $vista->vistaControlesHoyControlador();
+                                            ?>
+                                            <?php
+                                            $actualizarECM = new controlesControladorB();
+                                            $actualizarECM->actualizarEstadosControlControlador();
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                </form>
                             </ul>
                         </div>
                         <div class="col s12 m4 l4">

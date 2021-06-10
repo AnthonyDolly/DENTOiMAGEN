@@ -30,7 +30,7 @@ class DatosControlesB extends ConexionB
     #----------------------------
     public function vistaControlesHoyModelo()
     {
-        $st = ConexionB::conectar()->prepare("SELECT c.id AS DNI, concat(c.nombres, ' ', c.apellidos) AS Paciente, DATE_FORMAT(cm.fecha, '%d/%m/%Y %H:%i') AS Fecha, cm.precioSesion AS 'Importe', cm.estadoPago AS 'Estado de Pago', cm.asistencia AS 'Asistencia'
+        $st = ConexionB::conectar()->prepare("SELECT cm.id AS 'ID', c.id AS DNI, concat(c.nombres, ' ', c.apellidos) AS Paciente, DATE_FORMAT(cm.fecha, '%d/%m/%Y %H:%i') AS Fecha, cm.precioSesion AS 'Importe', cm.estadoPago AS 'Estado de Pago', cm.asistencia AS 'Asistencia'
         FROM controles_mensuales cm 
         INNER JOIN clientes_tratamientos ct 
         ON cm.cliente_tratamiento_id = ct.id 
@@ -41,6 +41,23 @@ class DatosControlesB extends ConexionB
         $st->execute();
 
         return $st->fetchAll();
+    }
+
+    public function actualizarEstadosControlModelo($datosModelo, $tabla)
+    {
+        $st = ConexionB::conectar()->prepare("UPDATE $tabla 
+        SET estadoPago = :estadoPago, asistencia = :estadoAsistencia 
+        WHERE id = :idCM;");
+
+        $st->bindParam(":idCM", $datosModelo["idCM"], PDO::PARAM_STR);
+        $st->bindParam(":estadoPago", $datosModelo["estadoPago"], PDO::PARAM_STR);
+        $st->bindParam(":estadoAsistencia", $datosModelo["estadoAsistencia"], PDO::PARAM_STR);
+
+        if ($st->execute()) {
+            return "success";
+        } else {
+            return "error";
+        }
     }
 
     #Total (en numero) de controles que hay en el sistema
