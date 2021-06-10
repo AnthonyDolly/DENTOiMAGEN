@@ -8,7 +8,7 @@ class DatosClientesB extends ConexionB
     #----------------------------
     public function vistaClientesModelo()
     {
-        $st = ConexionB::conectar()->prepare("SELECT id,nombres,apellidos,correo,telefono FROM clientes;");
+        $st = ConexionB::conectar()->prepare("call vistaClientesB()");
 
         $st->execute();
 
@@ -19,7 +19,7 @@ class DatosClientesB extends ConexionB
     #-----------------------------------------
     public function numClientesModelo()
     {
-        $st = ConexionB::conectar()->prepare("SELECT COUNT(*) AS 'Total' FROM clientes;");
+        $st = ConexionB::conectar()->prepare("CALL numCLientesB()");
 
         $st->execute();
 
@@ -30,9 +30,7 @@ class DatosClientesB extends ConexionB
     #-------------------------------------------------------------------
     public function numNuevosClientesModelo()
     {
-        $st = ConexionB::conectar()->prepare("SELECT COUNT(*) AS 'Nuevos'
-        FROM clientes
-        WHERE TIMESTAMPDIFF(MONTH, fecha_registro, now()) < 1");
+        $st = ConexionB::conectar()->prepare("call numNuevosClientesB()");
 
         $st->execute();
 
