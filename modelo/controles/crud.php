@@ -120,7 +120,7 @@ class DatosControles extends Conexion {
     #------------------------------------------------
     public function actualizarEstadoPagoControlMensualModelo($datosModelo, $tabla) {
 
-        $st = Conexion::conectar()->prepare("UPDATE $tabla set estadoPago=:estadoPago WHERE id=:idCM");
+        $st = Conexion::conectar()->prepare("call actualizarEstadoPagoControlMensual(:idCM,:estadoPago)");
 
         $st->bindParam(":idCM", $datosModelo["idCM"], PDO::PARAM_STR);
         $st->bindParam(":estadoPago", $datosModelo["estadoPago"], PDO::PARAM_STR);
@@ -139,4 +139,3 @@ class DatosControles extends Conexion {
 
 
 }
-?>
