@@ -28,9 +28,7 @@ class DatosControlesB extends ConexionB
 
     public function actualizarEstadosControlModelo($datosModelo, $tabla)
     {
-        $st = ConexionB::conectar()->prepare("UPDATE $tabla 
-        SET estadoPago = :estadoPago, asistencia = :estadoAsistencia 
-        WHERE id = :idCM;");
+        $st = ConexionB::conectar()->prepare("call actualizarEstadosControl(:idCM,:estadoPago,:estadoAsistencia)");
 
         $st->bindParam(":idCM", $datosModelo["idCM"], PDO::PARAM_STR);
         $st->bindParam(":estadoPago", $datosModelo["estadoPago"], PDO::PARAM_STR);
@@ -65,7 +63,8 @@ class DatosControlesB extends ConexionB
         return $st->fetch();
     }
 
-    public function buscarClienteModelo($datosModelo){
+    public function buscarClienteModelo($datosModelo)
+    {
         $st = ConexionB::conectar()->prepare("call buscarCliente($datosModelo)");
 
         $st->execute();
