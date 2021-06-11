@@ -76,15 +76,23 @@
     var input_date = $('.datepicker').pickadate({
         min: true,
         format: 'yyyy-m-d',
-        formatSubmit: 'yyyy-m-d'
+        formatSubmit: 'yyyy-m-d',
+        monthsFull: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+        weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+        disable: [
+            1
+        ]
     });
     var date_picker = input_date.pickadate('picker');
 
     var input_time = $('.timepicker').pickatime({
-        min: [7, 30],
-        max: [21, 0],
+        min: [8, 0],
+        max: [20, 0],
         format: 'HH:i',
-        formatSubmit: 'HH:i'
+        formatSubmit: 'HH:i',
+        disable: [
+            13
+        ]
     });
     var time_picker = input_time.pickatime('picker');
 </script>

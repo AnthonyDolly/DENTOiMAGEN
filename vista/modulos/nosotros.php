@@ -145,7 +145,7 @@
                                     </div>
                                     <div class="col-12 mb-3 d-flex">
                                         <label class="w-50" for="exampleFormControlInput1">Fecha</label>
-                                        <input type="date" class="form-control" id="exampleFormControlInput1" required>
+                                        <input type="text" class="datepicker form-control" id="datepicker" name="fecha" required value="">
                                     </div>
                                     <div class="col-12 mb-3 d-flex">
                                         <label class="w-50" for="validationTooltip04">Servicios</label>
@@ -183,3 +183,22 @@
         </table>
     </section>
 </main>
+
+<!-- Date picker -->
+<script src="vista/plugins/pickadate/picker.js"></script>
+<script src="vista/plugins/pickadate/picker.date.js"></script>
+<script src="vista/plugins/pickadate/picker.time.js"></script>
+<script src="vista/plugins/pickadate/legacy.js"></script>
+<script type="text/javascript">
+    var input_date = $('.datepicker').pickadate({
+        min: true,
+        format: 'yyyy-m-d',
+        formatSubmit: 'yyyy-m-d',
+        monthsFull: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+        weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+        disable: [
+            1
+        ]
+    });
+    var date_picker = input_date.pickadate('picker');
+</script>
