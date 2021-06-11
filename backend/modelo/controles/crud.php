@@ -26,6 +26,8 @@ class DatosControlesB extends ConexionB
         return $st->fetchAll();
     }
 
+    #Actualizar estado de pago y estado de asistencia del control mensual del día de hoy.
+    #-----------------------------------------------------------------------
     public function actualizarEstadosControlModelo($datosModelo, $tabla)
     {
         $st = ConexionB::conectar()->prepare("call actualizarEstadosControl(:idCM,:estadoPago,:estadoAsistencia)");
@@ -63,6 +65,8 @@ class DatosControlesB extends ConexionB
         return $st->fetch();
     }
 
+    #Bucar una cita del día con el nro de DNI del paciente.
+    #---------------------------------------------------
     public function buscarClienteModelo($datosModelo)
     {
         $st = ConexionB::conectar()->prepare("call buscarCliente($datosModelo)");

@@ -119,6 +119,8 @@ class controlesControladorB
             </h5>';
     }
 
+    #Bucar una cita del día con el nro de DNI del paciente.
+    #---------------------------------------------------
     public function buscarClienteControlador()
     {
         if(isset($_POST["dniB"])){

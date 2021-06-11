@@ -8,18 +8,6 @@ class DatosControles extends Conexion {
     public function vistaControlModelo($datosModelo, $tabla) {
 
         $st = Conexion::conectar()->prepare("CALL vistaControl($datosModelo)");
-        // $st = Conexion::conectar()->prepare("SELECT DATE_FORMAT(cm.fecha,'%d/%m/%Y') AS Fecha, cm.id AS idCM,  DATE_FORMAT(cm.fecha,'%H:%i') as Hora, concat(m.nombres, ' ', m.apellidos) AS Doctor, s.nombre AS Sede, cm.precioSesion 'Precio de control', cm.estadoPago AS 'Estado de pago', cm.asistencia AS Asistencia
-        // FROM controles_mensuales cm
-        // INNER JOIN clientes_tratamientos ct
-        // ON cm.cliente_tratamiento_id = ct.id
-        // INNER JOIN tratamientos t
-        // ON ct.tratamiento_id = t.id
-        // INNER JOIN medicos m
-        // ON t.medico_id = m.id
-        // INNER JOIN sedes s
-        // ON t.sede_id = s.id
-        // WHERE ct.cliente_id = $datosModelo
-        // ;");
 
         $st->execute();
 
@@ -91,7 +79,7 @@ class DatosControles extends Conexion {
     }
 
 
-        #Actualizar fecha de control mensual
+    #Actualizar fecha de control mensual
     #------------------------------------------------
     public function actualizarCitaControlMensualModelo($datosModelo, $tabla) {
 
@@ -128,7 +116,7 @@ class DatosControles extends Conexion {
 
 
 
-     #Actualizar estado pago control mensual
+    #Actualizar estado pago control mensual
     #------------------------------------------------
     public function actualizarEstadoPagoControlMensualModelo($datosModelo, $tabla) {
 
