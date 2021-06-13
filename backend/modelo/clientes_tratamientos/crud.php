@@ -8,18 +8,7 @@ class DatosClientesTratamientosB extends ConexionB
     #----------------------------
     public function vistaClienteTratamientosModelo()
     {
-        $st = ConexionB::conectar()->prepare("SELECT ct.id AS ID, ct.descripcion AS Descripción, ct.cantSesiones AS 'Sesiones', ct.fecha_inicio AS 'Fecha de inicio', ct.estado AS Estado, c.id AS 'DNI', concat(c.nombres,' ',c.apellidos) AS 'Paciente', concat(m.nombres,' ',m.apellidos) AS 'Dentista', tt.nombre AS 'Tratamiento'
-        FROM clientes_tratamientos ct
-        INNER JOIN clientes c 
-        ON ct.cliente_id = c.id
-        INNER JOIN tratamientos t 
-        ON ct.tratamiento_id = t.id
-        INNER JOIN medicos m 
-        ON t.medico_id = m.id
-        INNER JOIN tipos_tratamientos tt
-        ON t.tipo_tratamiento_id = tt.id
-        GROUP BY ct.id
-        ORDER BY ct.id;");
+        $st = ConexionB::conectar()->prepare("call vistaClienteTratamientoB()");
 
         $st->execute();
 
@@ -30,7 +19,7 @@ class DatosClientesTratamientosB extends ConexionB
     #-----------------------------------------
     public function numClienteTratamientosModelo()
     {
-        $st = ConexionB::conectar()->prepare("SELECT COUNT(*) AS 'Total' FROM clientes_tratamientos;");
+        $st = ConexionB::conectar()->prepare("call numClienteTratamientosB()");
 
         $st->execute();
 
@@ -41,9 +30,7 @@ class DatosClientesTratamientosB extends ConexionB
     #-------------------------------------------------------------------
     public function numNuevosClienteTratamientosModelo()
     {
-        $st = ConexionB::conectar()->prepare("SELECT COUNT(*) AS 'Nuevos'
-        FROM clientes_tratamientos
-        WHERE TIMESTAMPDIFF(MONTH, fecha_inicio, now()) < 1");
+        $st = ConexionB::conectar()->prepare("call numNuevosClienteTratamientosB()");
 
         $st->execute();
 

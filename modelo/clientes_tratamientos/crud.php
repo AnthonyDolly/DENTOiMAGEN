@@ -7,18 +7,7 @@ class DatosClientesTratamientos extends Conexion {
     #----------------------------
     public function vistaClienteTratamientoModelo($datosModelo, $tabla) {
 
-        $st = Conexion::conectar()->prepare("SELECT c.id AS 'DNI del paciente', concat(m.nombres, ' ', m.apellidos) AS Doctor, ct.fecha_inicio AS 'Fecha de inicio', tt.nombre AS 'Tratamiento', ct.descripcion AS Descripción, ct.cantSesiones AS 'Cantidad de Sesiones', ct.estado AS Estado
-        FROM clientes_tratamientos ct
-        INNER JOIN clientes c
-        ON ct.cliente_id = c.id
-        INNER JOIN tratamientos t
-        ON ct.tratamiento_id = t.id
-        INNER JOIN medicos m
-        ON t.medico_id = m.id
-        INNER JOIN tipos_tratamientos tt
-        ON t.tipo_tratamiento_id = tt.id
-        WHERE ct.cliente_id = $datosModelo
-        ;");
+        $st = Conexion::conectar()->prepare("CALL vistaClienteTratamiento($datosModelo)");
 
         $st->execute();
 
@@ -29,19 +18,7 @@ class DatosClientesTratamientos extends Conexion {
     #----------------------------
     public function vistaClienteTratamientoMedicoModelo($datosModelo, $tabla) {
 
-        $st = Conexion::conectar()->prepare("SELECT ct.id AS id,c.id AS 'DNI del paciente', concat(c.nombres, ' ', c.apellidos) AS Paciente, m.id AS Medico, ct.fecha_inicio AS 'Fecha de inicio', tt.nombre AS 'Tratamiento', ct.descripcion AS Descripción, ct.cantSesiones AS 'Cantidad de Sesiones', ct.estado AS Estado
-        FROM clientes_tratamientos ct
-        INNER JOIN clientes c
-        ON ct.cliente_id = c.id
-        INNER JOIN tratamientos t
-        ON ct.tratamiento_id = t.id
-        INNER JOIN medicos m
-        ON t.medico_id = m.id
-        INNER JOIN tipos_tratamientos tt
-        ON t.tipo_tratamiento_id = tt.id
-        WHERE t.medico_id = $datosModelo
-        GROUP BY id
-        ;");
+        $st = Conexion::conectar()->prepare("call vistaClienteTratamientoMedico($datosModelo);");
 
         $st->execute();
 
@@ -51,7 +28,7 @@ class DatosClientesTratamientos extends Conexion {
     #Registro de un nuevo tratamiento
     #-----------------------------------------------
     public function RegistroClienteTratamientoModelo($datosModelo, $tabla) {
-        $st = Conexion::conectar()->prepare("INSERT INTO $tabla (descripcion,cantSesiones,fecha_inicio,estado,cliente_id,tratamiento_id) VALUES (:descripcion, :cantsesiones, now(), :estado, :DNIPaciente, :tratamiento)");
+        $st = Conexion::conectar()->prepare("CALL RegistroClienteTratamiento(:descripcion,:cantsesiones,:estado,:DNIPaciente,:tratamiento)");
 
         $st->bindParam(":descripcion", $datosModelo["descripcion"], PDO::PARAM_STR);
         $st->bindParam(":cantsesiones", $datosModelo["cantsesiones"], PDO::PARAM_STR);
@@ -75,18 +52,7 @@ class DatosClientesTratamientos extends Conexion {
     #------------------------------------------------
     public function editarClienteTratamientoModelo($datosModelo){
         
-        $st = Conexion::conectar()->prepare("SELECT ct.id AS id,c.id AS 'DNI del paciente', concat(c.nombres, ' ', c.apellidos) AS Paciente, m.id AS Medico, ct.fecha_inicio AS 'Fecha de inicio', tt.nombre AS 'Tratamiento', ct.descripcion AS Descripción, ct.cantSesiones AS 'Cantidad de Sesiones', ct.estado AS Estado, ct.tratamiento_id AS 'ID Tratamiento'
-        FROM clientes_tratamientos ct
-        INNER JOIN clientes c
-        ON ct.cliente_id = c.id
-        INNER JOIN tratamientos t
-        ON ct.tratamiento_id = t.id
-        INNER JOIN medicos m
-        ON t.medico_id = m.id
-        INNER JOIN tipos_tratamientos tt
-        ON t.tipo_tratamiento_id = tt.id
-        WHERE ct.id = $datosModelo
-        ;");
+        $st = Conexion::conectar()->prepare("CALL editarClienteTratamiento($datosModelo)");
 
         $st->execute();
 
@@ -97,7 +63,7 @@ class DatosClientesTratamientos extends Conexion {
     #------------------------------------------------
     public function actualizarClienteTratamientoModelo($datosModelo, $tabla) {
 
-        $st = Conexion::conectar()->prepare("UPDATE $tabla set estado=:estado WHERE id=:idCT");
+        $st = Conexion::conectar()->prepare("CALL actualizarClienteTratamiento(:idCT,:estado)");
 
         $st->bindParam(":idCT", $datosModelo["idCT"], PDO::PARAM_STR);
         $st->bindParam(":estado", $datosModelo["estado"], PDO::PARAM_STR);
@@ -115,7 +81,7 @@ class DatosClientesTratamientos extends Conexion {
     #------------------------------------------------
     public function eliminarClienteTratamientoModelo($datosModelo, $tabla) {
 
-        $st = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE id=$datosModelo;");
+        $st = Conexion::conectar()->prepare("CALL eliminarClienteTratamiento($datosModelo);");
         
         if($st->execute()){
             return "success";

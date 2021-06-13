@@ -95,7 +95,7 @@
                         <div class="col s12 m4 l12">
                             <ul id="task-card" class="collection with-header">
                                 <li class="collection-header teal accent-4">
-                                    <h4 class="task-card-title">Citas del día</h4>
+                                    <a href="index.php?action=inicio"><h4 class="task-card-title">Citas del día</h4></a>
                                     <p class="task-card-date">
                                         <script type="text/javascript">
                                             var dia = new Date().toLocaleString('default', {
@@ -118,6 +118,19 @@
                                             document.write(new Date().getFullYear());
                                         </script>
                                     </p>
+                                    <form method="POST">
+                                        <nav>
+                                            <div class="nav-wrapper">
+                                                <form>
+                                                    <div class="input-field teal accent-4">
+                                                        <input id="search" type="search" name="dniB" required>
+                                                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                                        <i class="material-icons">close</i>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </nav>
+                                    </form>
                                 </li>
                                 <form method="POST">
                                     <table class="highlight responsive-table">
@@ -135,8 +148,14 @@
                                         </thead>
                                         <tbody>
                                             <?php
+                                            if(!isset($_POST["dniB"])){
                                             $vista = new controlesControladorB();
                                             $vista->vistaControlesHoyControlador();
+                                            }
+                                            ?> 
+                                            <?php 
+                                            $vistaB = new controlesControladorB();
+                                            $vistaB->buscarClienteControlador();
                                             ?>
                                             <?php
                                             $actualizarECM = new controlesControladorB();

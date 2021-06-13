@@ -16,6 +16,9 @@ ob_start();
     <title>Dento Imagen</title>
     <script type="text/javascript" src="https://checkout.culqi.com/js/v3"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="vista/plugins/pickadate/themes/default.css">
+    <link rel="stylesheet" href="vista/plugins/pickadate/themes/default.date.css">
+    <link rel="stylesheet" href="vista/plugins/pickadate/themes/default.time.css">
 </head>
 
 <body style="background-color: #fbfbfe; font-family: sans-serif;">
@@ -53,6 +56,9 @@ ob_start();
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
     <!-- Compiled and minified JavaScript -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+
+
+
 
 
 

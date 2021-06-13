@@ -8,18 +8,7 @@ class DatosControlesB extends ConexionB
     #----------------------------
     public function vistaControlesModelo()
     {
-        $st = ConexionB::conectar()->prepare("SELECT cm.id AS ID, c.id AS DNI, concat(c.nombres, ' ', c.apellidos) AS Paciente, concat(m.nombres, ' ', m.apellidos) AS 'Dentista', DATE_FORMAT(cm.fecha, '%d/%m/%Y %H:%i') AS Fecha, cm.precioSesion AS 'Importe', cm.estadoPago AS 'Estado de Pago', cm.asistencia AS 'Asistencia'
-        FROM controles_mensuales cm 
-        INNER JOIN clientes_tratamientos ct 
-        ON cm.cliente_tratamiento_id = ct.id 
-        INNER JOIN clientes c 
-        ON ct.cliente_id = c.id
-        INNER JOIN tratamientos t
-        ON ct.tratamiento_id = t.id
-        INNER JOIN medicos m 
-        ON t.medico_id = m.id
-        ORDER BY cm.id;
-        ");
+        $st = ConexionB::conectar()->prepare("call vistaControlB()");
 
         $st->execute();
 
@@ -30,24 +19,18 @@ class DatosControlesB extends ConexionB
     #----------------------------
     public function vistaControlesHoyModelo()
     {
-        $st = ConexionB::conectar()->prepare("SELECT cm.id AS 'ID', c.id AS DNI, concat(c.nombres, ' ', c.apellidos) AS Paciente, DATE_FORMAT(cm.fecha, '%d/%m/%Y %H:%i') AS Fecha, cm.precioSesion AS 'Importe', cm.estadoPago AS 'Estado de Pago', cm.asistencia AS 'Asistencia'
-        FROM controles_mensuales cm 
-        INNER JOIN clientes_tratamientos ct 
-        ON cm.cliente_tratamiento_id = ct.id 
-        INNER JOIN clientes c 
-        ON ct.cliente_id = c.id
-        WHERE DATE_FORMAT(cm.fecha, '%Y/%m/%d') = DATE_FORMAT(now(), '%Y/%m/%d') AND cm.asistencia = 'Pendiente'");
+        $st = ConexionB::conectar()->prepare("call vistaControlesHoyB()");
 
         $st->execute();
 
         return $st->fetchAll();
     }
 
+    #Actualizar estado de pago y estado de asistencia del control mensual del día de hoy.
+    #-----------------------------------------------------------------------
     public function actualizarEstadosControlModelo($datosModelo, $tabla)
     {
-        $st = ConexionB::conectar()->prepare("UPDATE $tabla 
-        SET estadoPago = :estadoPago, asistencia = :estadoAsistencia 
-        WHERE id = :idCM;");
+        $st = ConexionB::conectar()->prepare("call actualizarEstadosControl(:idCM,:estadoPago,:estadoAsistencia)");
 
         $st->bindParam(":idCM", $datosModelo["idCM"], PDO::PARAM_STR);
         $st->bindParam(":estadoPago", $datosModelo["estadoPago"], PDO::PARAM_STR);
@@ -64,7 +47,7 @@ class DatosControlesB extends ConexionB
     #-----------------------------------------
     public function numControlesModelo()
     {
-        $st = ConexionB::conectar()->prepare("SELECT COUNT(*) AS 'Total' FROM controles_mensuales;");
+        $st = ConexionB::conectar()->prepare("call numControlesB;");
 
         $st->execute();
 
@@ -75,12 +58,21 @@ class DatosControlesB extends ConexionB
     #-------------------------------------------------------------------
     public function numNuevosControlesModelo()
     {
-        $st = ConexionB::conectar()->prepare("SELECT COUNT(*) AS 'Nuevos'
-        FROM controles_mensuales
-        WHERE TIMESTAMPDIFF(MONTH, fecha_creacion, now()) < 1");
+        $st = ConexionB::conectar()->prepare("CALL numNuevosControlesB;");
 
         $st->execute();
 
         return $st->fetch();
+    }
+
+    #Bucar una cita del día con el nro de DNI del paciente.
+    #---------------------------------------------------
+    public function buscarClienteModelo($datosModelo)
+    {
+        $st = ConexionB::conectar()->prepare("call buscarCliente($datosModelo)");
+
+        $st->execute();
+
+        return $st->fetchAll();
     }
 }

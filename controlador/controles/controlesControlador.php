@@ -146,10 +146,9 @@ class controlesControlador
     {
 
         if (isset($_POST["DNIC"])) {
-
             $datosControlador = array(
                 "id" => $_POST["idCT"],
-                "fecha" => $_POST["fecha"],
+                "fecha" => $_POST["fecha"] . ' ' . $_POST["hora"],
                 "precio" => $_POST["preciosesion"],
                 "estado" => $_POST["rbEstadoPago"],
                 "asistencia" => $_POST["rbAsistencia"]
