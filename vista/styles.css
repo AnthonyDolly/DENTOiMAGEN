@@ -386,7 +386,7 @@ span .flecha {
 
 /*citas-personal*/
 .table-citas-personal{
-    max-width: 900px;
+    max-width: 1000px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 1px 0 5px 2px #ccc;
@@ -406,6 +406,30 @@ span .flecha {
 .table-citas-personal > div{
     padding-bottom: 30px;
 }
+
+
+/*historial-clinico*/
+.historial-clinico{
+    max-width: 1000px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 0 5px 2px #ccc;
+    padding: 20px;
+}
+/* .historial-clinico p{
+    margin: 0;
+    padding: 7px;
+} */
+
+/* .historial-clinico div div:nth-child(1) p{
+    font-weight: 600;
+} 
+.historial-clinico div div:nth-child(2) p{
+    font-weight: 500;
+}
+.historial-clinico > div{
+    padding-bottom: 30px;
+} */
 
 
 /*table register treatment*/
