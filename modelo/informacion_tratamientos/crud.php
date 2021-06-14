@@ -15,7 +15,7 @@ class InformacionTramientos extends Conexion
         INNER JOIN clientes_tratamientos ct
         ON cm.cliente_tratamiento_id = ct.id
         INNER JOIN clientes c
-        ON ct.cliente_id = c.id
+        ON ic.cliente_id = c.id
         INNER JOIN tratamientos t
         ON ct.tratamiento_id = t.id
         INNER JOIN tipos_tratamientos tt
@@ -24,7 +24,7 @@ class InformacionTramientos extends Conexion
         ON t.medico_id = m.id
         WHERE ic.cliente_id = $datosModelo
         GROUP BY cm.id;");
-
+        
         $st->execute();
 
         return $st->fetchAll();
