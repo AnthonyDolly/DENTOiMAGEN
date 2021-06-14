@@ -61,6 +61,8 @@ class controlesControlador
                     <td class="px-3 border-right pt-3">' . $item["Precio de control"] . '</td>
                     <td class="px-3 border-right pt-3">' . $item["Estado de pago"] . '</td>
                     <td class="px-3 border-right pt-3">' . $item["Asistencia"] . '</td>
+                    <td class="px-3 border-right pt-3">' . $item["EstadoInfo"] . '</td>
+            
                     <td class="px-3 border-right pt-3">
                         <a href="index.php?action=editar-cita&idCM=' . $item["ID CM"] . '&idM=' . $item["Medico"] . '">
                             <button  style="height: 40px;" type="submit" name="boton" class="btn btn-secondary mx-auto borderd d-block">
@@ -75,14 +77,7 @@ class controlesControlador
                             </button>
                         </a>
                     </td>
-                    <script>
-                    var paciente' . $i . ' = "' . $item["Paciente"] . ' ";
-                    var precio' . $i . ' = "' . $item["Precio de control"] . ' ";
-                    var sede' . $i . ' = "' . $item["Sede"] . ' ";
-                    var dni' . $i . ' = "' . $item["ID CM"] . ' ";
-
-                    
-                    </script>
+            
                     <td class="px-3 pt-3">
                         <button  style="height: 40px;" 
                             type="submit" 
@@ -93,16 +88,25 @@ class controlesControlador
                             data-paciente= "' . $item["Paciente"] . '"
                             data-sede= "' . $item["Sede"] . '"
                             data-precio= "' . $item["Precio de control"] . '"
-                            data-target="#exampleModal' . $i . '"
-                            onclick="abrirInfo(paciente' . $i . ',  precio' . $i . ', sede' . $i . ', dni'.$i.')">
+                            data-target="#modalInfo' . $i . '"
+                            >
                             
                             <i class="fas fa-share-square"></i>
                         </button>
                     </td>
                 </tr>';
+        }
+    }
 
+    public function modalInformacion()
+    {
+        $datosControlador = $_GET['dni'];
+        $respuesta = DatosControles::vistaControlMedicoModelo($datosControlador, "controles_mensuales");
+        $i = 0;
+        foreach ($respuesta as $key => $item) {
+            $i++;
             echo '
-                <div class="modal fade" id="exampleModal' . $i . '" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="modalInfo' . $i . '" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -112,23 +116,23 @@ class controlesControlador
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form method="POST">
-
-                                <p class= ""><strong> Número de Control: </strong> <input class="form-control" type="text" readonly value="' . $item["ID CM"] . '" /> </p>
-                                <p class= "d-none"><strong> Id Control Mensual: </strong> <input class="form-control" type="text" readonly value="' . $item["ID CM"] . '" /> </p>
-                                <p><strong> Fecha: </strong> <input class="form-control" readonly type="text" value="' . $item["Fecha"] . '" /> </p>
-                                <p><strong> Sede: </strong> <input class="form-control" readonly type="text" value="' . $item["Sede"] . '"/>  </p>
-                                <p class= "d-none"><strong> Doctor(a): </strong> <input  class="form-control" readonly type="text" value="' . $_SESSION['usernameM'] . '" /> </p>
-                                <p class= "d-none"><strong> Dni Dentista: </strong> <input class="form-control" readonly value="' . $_GET["dni"] . '" /> </p>
-                                <p><strong> Precio de control: </strong> <input class="form-control" readonly value="' . $item["Precio de control"] . '" /> </p>
-                                <p class= ""><strong> Paciente: </strong> <input class="form-control" readonly value="' . $item["Paciente"] . '" /> </p>
-                                <p class= "d-none"><strong> Dni Paciente: </strong> <input class="form-control" readonly value="' . $item["Paciente"] . '" /> </p>
-                               
+                            <form method="POST">  
+                                <p class= "d-none"><strong> Id Control Mensual: </strong> <input name="idCM" class="form-control" type="text" readonly value="' . $item["ID CM"] . '" /> </p>
+                                <p><strong> Fecha: </strong> <input class="form-control" name="fecha" readonly type="text" value="' . $item["Fecha"] . '" /> </p>
+                                <p><strong> Sede: </strong> <input class="form-control" name="sede" readonly type="text" value="' . $item["Sede"] . '"/>  </p>
+                                <p class= ""><strong> Doctor(a): </strong> <input name="medico"  class="form-control" readonly type="text" value="' . $_SESSION['usernameM'] . '" /> </p>
+                                <p class= ""><strong> Dni Dentista: </strong> <input name="dni_medico" class="form-control" readonly value="' . $_GET["dni"] . '" /> </p>
+                                <p><strong> Precio de control: </strong> <input name="precio" class="form-control" readonly value="' . $item["Precio de control"] . '" /> </p>
+                                <p class= "d-none"><strong> Paciente: </strong> <input name="paciente" class="form-control" readonly value="' . $item["Paciente"] . '" /> </p>
+                                <p class= "d-none"><strong> Dni Paciente: </strong> <input name="dni_paciente" class="form-control" readonly value="' . $item["DNIPaciente"] . '" /> </p>
+                                <p class= "d-none"><strong> Estado de Pago: </strong> <input name="estado_pago" class="form-control" readonly value="' . $item["Estado de pago"] . '" /> </p>
+                                <p class= "d-none"><strong> Asistencia: </strong> <input name="asistencia" class="form-control" readonly value="' . $item["Asistencia"] . '" /> </p>
+                            
                                 <p><strong> Mensaje </strong>
-                                <textarea height="200"required  class="form-control"></textarea>                             
+                                    <input name="descripcioncontrol" type="text" value="" class="form-control" />                             
                                 </p>
-                                <button type="submit" class=" my-4 btn btn-primary">Confirmar</button>
-                            <form>
+                                <input type="submit" value="Confirmar" class="my-4 btn btn-primary" />
+                            </form>
                         </div>
                         
                     </div>
@@ -136,6 +140,9 @@ class controlesControlador
             </div>';
         }
     }
+
+
+
 
     // <a href="index.php?action=eliminar-cita&idCM=' . $item["ID CM"] . '&dni=' . $item["Medico"] . '">
     // </a>
@@ -285,54 +292,3 @@ class controlesControlador
         }
     }
 }
-
-
-// echo ('<script src="vista/apps.js"></script>');
-// ?>
-
-
-
-
-<!-- <script>
-    function abrirInfo(paciente2, sede2, precio2, dni2) {
-
-        // $('#botonModal').on('click', function() {
-        console.log('abriendo info');
-        var dataModal = {
-            paciente: paciente2,
-            precio: precio2,
-            sede: sede2,
-
-            // sede: $(this).attr('data-sede'),
-            // precio: $(this).attr('data-precio'),
-            // paciente: "juan",
-            // sede: "olivos",
-            // precio: "hola"
-        };
-
-        console.log(dataModal.paciente);
-        console.log(dataModal.sede);
-        console.log(dataModal.precio);
-
-
-        // var url = "./action=citas-medicos";
-        // $.post(url, dataModal, function(res) {
-        //     // alert( ' Tu pago se Realizó con ' + res + '. Agradecemos tu preferencia.');
-        //     if (res == "exito") {
-        //         alert(res);
-        //         alert('Si entró' + res);
-        //         console.log(res);
-
-        //     } else {
-        //         alert("No entró.");
-        //         alert(res);
-        //         console.log(res);
-
-        //     }
-        // });
-
-
-
-        // 
-    }
-</script> -->

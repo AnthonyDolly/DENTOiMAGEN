@@ -14,6 +14,9 @@ require_once "modelo/medicos/crud.php";
 require_once "modelo/controles/crud.php";
 require_once "modelo/clientes_tratamientos/crud.php";
 require_once "modelo/asistentes/crud.php";
-
+require_once "modelo/informacion_controles/crud.php";
+require_once "controlador/informacion_controles/informacion_controlesControlador.php";
+require_once "controlador/informacion_tratamientos/informacion_tramientosControlador.php";
+require_once "modelo/informacion_tratamientos/crud.php";
 $mvc = new MvcControlador();
 $mvc -> plantilla();
