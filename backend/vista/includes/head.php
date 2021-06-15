@@ -5,14 +5,14 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
     <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-    <title>Materialize - Material Design Admin Template</title>
+    <title>DENTOiMAGEN - Panel de Administración</title>
     <!-- Favicons-->
-    <link rel="icon" href="vista/images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="vista/images/favicon/logo144x68.png" sizes="32x32">
     <!-- Favicons-->
-    <link rel="apple-touch-icon-precomposed" href="vista/images/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon-precomposed" href="vista/images/favicon/logo152x72.png">
     <!-- For iPhone -->
     <meta name="msapplication-TileColor" content="#00bcd4">
-    <meta name="msapplication-TileImage" content="vista/images/favicon/mstile-144x144.png">
+    <meta name="msapplication-TileImage" content="vista/images/favicon/logo144x68.png">
     <!-- For Windows Phone -->
     <!-- CORE CSS-->
     <link href="vista/css//materialize.css" type="text/css" rel="stylesheet">

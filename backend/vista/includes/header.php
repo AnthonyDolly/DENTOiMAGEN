@@ -6,7 +6,7 @@
                 <ul class="left">
                     <li>
                         <h1 class="logo-wrapper">
-                            <a href="index.html" class="brand-logo darken-1">
+                            <a href="index.php" class="brand-logo darken-1">
                                 <img src="vista/images/logo/logo-clinica.svg" alt="logo">
                                 <span class="logo-text hide-on-med-and-down">Panel</span>
                             </a>
@@ -18,11 +18,6 @@
                     <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Buscar" />
                 </div>
                 <ul class="right hide-on-med-and-down">
-                    <li>
-                        <a href="javascript:void(0);" class="waves-effect waves-block waves-light translation-button" data-activates="translation-dropdown">
-                            <span class="flag-icon flag-icon-gb"></span>
-                        </a>
-                    </li>
                     <li>
                         <a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen">
                             <i class="material-icons">settings_overscan</i>
@@ -44,30 +39,17 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse">
-                            <i class="material-icons">format_indent_increase</i>
-                        </a>
+                        <?php
+                        if ($_SESSION["rol"] == "Administrador") { ?>
+                            <a href="#" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse">
+                                <i class="material-icons">format_indent_increase</i>
+                            </a>
+                        <?php
+                        }
+                        ?>
                     </li>
                 </ul>
-                <!-- translation-button -->
-                <ul id="translation-dropdown" class="dropdown-content">
-                    <li>
-                        <a href="#!" class="grey-text text-darken-1">
-                            <i class="flag-icon flag-icon-gb"></i> English</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="grey-text text-darken-1">
-                            <i class="flag-icon flag-icon-fr"></i> French</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="grey-text text-darken-1">
-                            <i class="flag-icon flag-icon-cn"></i> Chinese</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="grey-text text-darken-1">
-                            <i class="flag-icon flag-icon-de"></i> German</a>
-                    </li>
-                </ul>
+
                 <!-- notifications-dropdown -->
                 <ul id="notifications-dropdown" class="dropdown-content">
                     <li>

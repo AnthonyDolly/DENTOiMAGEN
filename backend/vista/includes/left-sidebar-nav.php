@@ -68,44 +68,8 @@
                 </li>
                 <li class="bold">
                     <a href="cards-basic.html" class="waves-effect waves-cyan">
-                        <i class="material-icons">cast</i>
-                        <span class="nav-text">Cards</span>
-                    </a>
-                </li>
-                <li class="bold">
-                    <a href="ui-basic-buttons.html" class="waves-effect waves-cyan">
-                        <i class="material-icons">insert_link</i>
-                        <span class="nav-text">Buttons</span>
-                    </a>
-                </li>
-                <li class="bold">
-                    <a href="form-layouts.html" class="waves-effect waves-cyan">
-                        <i class="material-icons">format_color_text</i>
-                        <span class="nav-text">Forms</span>
-                    </a>
-                </li>
-                <li class="bold">
-                    <a href="css-typography.html" class="waves-effect waves-cyan">
-                        <i class="material-icons">format_size</i>
-                        <span class="nav-text">Typography</span>
-                    </a>
-                </li>
-                <li class="bold">
-                    <a href="css-color.html" class="waves-effect waves-cyan">
-                        <i class="material-icons">invert_colors</i>
-                        <span class="nav-text">Color</span>
-                    </a>
-                </li>
-                <li class="bold">
-                    <a href="table-basic.html" class="waves-effect waves-cyan">
-                        <i class="material-icons">border_all</i>
-                        <span class="nav-text">Table</span>
-                    </a>
-                </li>
-                <li class="bold">
-                    <a href="ui-icons.html" class="waves-effect waves-cyan">
-                        <i class="material-icons">lightbulb_outline</i>
-                        <span class="nav-text">Icons</span>
+                        <i class="material-icons">event_note</i>
+                        <span class="nav-text">Consultas</span>
                     </a>
                 </li>
             </ul>
