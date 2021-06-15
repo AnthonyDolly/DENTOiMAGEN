@@ -124,43 +124,36 @@
                     <table>
                         <tr>
                             <td>
-                                <form action="confirmacionNosotros.html" method="post">
+                                <form method="post">
                                     <h1 class="text-center mb-3 mt-2">Envíanos tu datos</h1>
                                     <div class="col-12 mb-3 d-flex">
+                                        <label class="w-50" for="validationTooltip01">DNI</label>
+                                        <input type="text" class="form-control" name="dniR" id="validationTooltip01" required>
+                                    </div>
+                                    <div class="col-12 mb-3 d-flex">
                                         <label class="w-50" for="validationTooltip01">Nombres</label>
-                                        <input type="text" class="form-control" name="nombres" id="validationTooltip01" required>
+                                        <input type="text" class="form-control" name="nombresR" id="validationTooltip01" required>
                                     </div>
 
                                     <div class="col-12 mb-3 d-flex">
                                         <label class="w-50" for="validationTooltip01">Apellidos</label>
-                                        <input type="text" class="form-control" name="apellidos" id="validationTooltip01" required>
+                                        <input type="text" class="form-control" name="apellidosR" id="validationTooltip01" required>
                                     </div>
                                     <div class="col-12 mb-3 d-flex">
                                         <label class="w-50" for="validationTooltip01">Telefono</label>
-                                        <input type="text" class="form-control" name="telefono" id="validationTooltip01" required>
+                                        <input type="text" class="form-control" name="telefonoR" id="validationTooltip01" required>
                                     </div>
                                     <div class="col-12 mb-3 d-flex">
                                         <label class="w-50" for="exampleFormControlInput1">Correo</label>
-                                        <input type="email" class="form-control" id="exampleFormControlInput1" required>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" name="correoR" required>
                                     </div>
                                     <div class="col-12 mb-3 d-flex">
                                         <label class="w-50" for="exampleFormControlInput1">Fecha</label>
-                                        <input type="text" class="datepicker form-control" id="datepicker" name="fecha" required value="">
-                                    </div>
-                                    <div class="col-12 mb-3 d-flex">
-                                        <label class="w-50" for="validationTooltip04">Servicios</label>
-                                        <select name="servicios" class="custom-select" id="validationTooltip04" required>
-                                            <option selected disabled value="">Seleccione...</option>
-                                            <option value="1">Diseño de sonrisa</option>
-                                            <option value="2">Plan Dental</option>
-                                            <option value="3">Blanqueamiento</option>
-                                            <option value="4">Limpieza dental</option>
-                                            <option value="5">Brackets</option>
-                                        </select>
+                                        <input type="text" class="datepicker form-control" id="datepicker" name="fechaR" required value="">
                                     </div>
                                     <div class="col-12 mb-3 d-flex">
                                         <label class="w-50" for="validationTooltip05">Sedes</label>
-                                        <select name="sedes" class="custom-select" id="validationTooltip05" required>
+                                        <select name="sedesR" class="custom-select" id="validationTooltip05" required>
                                             <option selected disabled value="">Seleccione...</option>
                                             <option value="1">Los Olivos</option>
                                             <option value="2">Cercado de Lima</option>
@@ -169,12 +162,16 @@
                                     </div>
                                     <div class="col-12 mb-3 ">
                                         <label class="w-50" for="exampleFormControlTextarea1">Mensaje</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descripcionR"></textarea>
                                     </div>
                                     <div class="col-12 mb-3 text-center">
                                         <button type="submit" name="boton" class="btn btn-primary mt-3 w-50">Enviar</button>
                                     </div>
                                 </form>
+                                <?php
+                                $registroC = new consultaControlador();
+                                $registroC->registroConsultaControlador();
+                                ?>
                             </td>
                         </tr>
                     </table>
