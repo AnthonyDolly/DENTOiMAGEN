@@ -67,7 +67,7 @@
                     </a>
                 </li>
                 <li class="bold">
-                    <a href="cards-basic.html" class="waves-effect waves-cyan">
+                    <a href="index.php?action=consultas" class="waves-effect waves-cyan">
                         <i class="material-icons">event_note</i>
                         <span class="nav-text">Consultas</span>
                     </a>
