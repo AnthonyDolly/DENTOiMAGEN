@@ -4,7 +4,7 @@ class controlesControladorB
 {
     #Vista de todos los controles que hay en el sistema
     #----------------------------
-    public function vistaControlesModelo()
+    public function vistaControlesControlador()
     {
         // $datosControlador = $_GET["dni"];
         $respuesta = DatosControlesB::vistaControlesModelo();

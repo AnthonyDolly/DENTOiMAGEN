@@ -25,7 +25,7 @@
                                     <tbody>
                                         <?php
                                         $vista = new controlesControladorB();
-                                        $vista->vistaControlesModelo();
+                                        $vista->vistaControlesControlador();
                                         ?>
                                     </tbody>
                                 </table>
