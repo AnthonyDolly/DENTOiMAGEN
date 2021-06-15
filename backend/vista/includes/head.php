@@ -22,4 +22,7 @@
     <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
     <link href="vista/vendors/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet">
     <link href="vista/vendors/flag-icon/css/flag-icon.min.css" type="text/css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="vista/plugins/swal/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="vista/plugins/swal/sweetalert2.min.css">
 </head>

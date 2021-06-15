@@ -1,3 +1,17 @@
+<?php
+if (isset($_GET["action"])) {
+?>
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Actualizado',
+            showConfirmButton: false,
+            timer: 2000
+        })
+    </script>
+<?php
+}
+?>
 <div id="main">
     <div class="wrapper">
         <section id="content">
@@ -95,7 +109,9 @@
                         <div class="col s12 m4 l12">
                             <ul id="task-card" class="collection with-header">
                                 <li class="collection-header teal accent-4">
-                                    <a href="index.php?action=inicio"><h4 class="task-card-title">Citas del día</h4></a>
+                                    <a href="index.php?action=inicio">
+                                        <h4 class="task-card-title">Citas del día</h4>
+                                    </a>
                                     <p class="task-card-date">
                                         <script type="text/javascript">
                                             var dia = new Date().toLocaleString('default', {
@@ -132,7 +148,7 @@
                                         </nav>
                                     </form>
                                 </li>
-                                <form method="POST">
+                                <form method="POST" id="form">
                                     <table class="highlight responsive-table">
                                         <thead>
                                             <tr>
@@ -148,19 +164,43 @@
                                         </thead>
                                         <tbody>
                                             <?php
-                                            if(!isset($_POST["dniB"])){
-                                            $vista = new controlesControladorB();
-                                            $vista->vistaControlesHoyControlador();
+                                            if (!isset($_POST["dniB"])) {
+                                                $vista = new controlesControladorB();
+                                                $vista->vistaControlesHoyControlador();
                                             }
-                                            ?> 
-                                            <?php 
-                                            $vistaB = new controlesControladorB();
-                                            $vistaB->buscarClienteControlador();
                                             ?>
                                             <?php
-                                            $actualizarECM = new controlesControladorB();
-                                            $actualizarECM->actualizarEstadosControlControlador();
+                                            if (isset($_POST["dniB"])) {
+                                                $vistaB = new controlesControladorB();
+                                                $vistaB->buscarClienteControlador();
+                                            }
+
                                             ?>
+                                            <script>
+                                                function btnswal() {
+                                                    Swal.fire({
+                                                        title: '¿Seguro que quieres actualizar los estados?',
+                                                        showDenyButton: true,
+                                                        showCancelButton: true,
+                                                        confirmButtonText: `Actualizar`,
+                                                        denyButtonText: `No`,
+                                                    }).then((result) => {
+                                                        /* Read more about isConfirmed, isDenied below */
+                                                        if (result.isConfirmed) {
+                                                            form = document.getElementById('form');
+                                                            form.submit();
+                                                            
+                                                            <?php
+                                                            $actualizarECM = new controlesControladorB();
+                                                            $actualizarECM->actualizarEstadosControlControlador();
+                                                            ?>
+                                                        } else if (result.isDenied) {
+                                                            Swal.fire('Cancelado', '', 'error')
+                                                        }
+                                                    })
+                                                }
+                                            </script>
+
                                         </tbody>
                                     </table>
                                 </form>

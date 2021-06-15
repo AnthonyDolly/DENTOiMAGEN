@@ -64,9 +64,7 @@ class controlesControladorB
                     </td>';
 
             echo '<td>
-                    <button class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" type="submit" name="action">Enviar
-                        <i class="material-icons right">send</i>
-                    </button>
+                    <input type="button" class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" name="action" id="enviar" value="Enviar" onclick="btnswal()">
                 </td>
             </tr>';
         }
@@ -123,11 +121,11 @@ class controlesControladorB
     #---------------------------------------------------
     public function buscarClienteControlador()
     {
-        if(isset($_POST["dniB"])){
-            $datosControlador=$_POST["dniB"];
+        if (isset($_POST["dniB"])) {
+            $datosControlador = $_POST["dniB"];
             $respuesta = DatosControlesB::buscarClienteModelo($datosControlador);
-            
-            if(isset($respuesta)){
+
+            if (isset($respuesta)) {
                 foreach ($respuesta as $key => $item) {
                     echo '<tr>
                             <td style="display: none;">
@@ -160,17 +158,13 @@ class controlesControladorB
                                     <option value="3">Faltó</option>
                                 </select>
                             </td>';
-        
+
                     echo '<td>
-                            <button class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" type="submit" name="action">Enviar
-                                <i class="material-icons right">send</i>
-                            </button>
+                            <input type="button" class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" name="action" id="enviar" value="Enviar" onclick="btnswal()">
                         </td>
                     </tr>';
                 }
-            }
-            else{
-                
+            } else {
             }
         }
     }
