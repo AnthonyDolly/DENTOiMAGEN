@@ -35,7 +35,7 @@ class DatosClientesTratamientos extends Conexion {
         $st->bindParam(":estado", $datosModelo["estado"], PDO::PARAM_STR);
         $st->bindParam(":DNIPaciente", $datosModelo["dni"], PDO::PARAM_STR);
         $st->bindParam(":tratamiento", $datosModelo["tratamiento"], PDO::PARAM_STR);
-
+        var_dump($datosModelo);
         if ($st->execute()) {
 
             return "success";

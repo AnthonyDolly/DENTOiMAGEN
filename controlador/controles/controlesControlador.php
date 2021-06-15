@@ -45,8 +45,14 @@ class controlesControlador
 
         $datosControlador = $_GET['dni'];
         $respuesta = DatosControles::vistaControlMedicoModelo($datosControlador, "controles_mensuales");
+        $i = 0;
+        //session_start();
+        $_SESSION["paciente"] = "hola";
+        // respuesta
 
         foreach ($respuesta as $row => $item) {
+            $i++;
+
             echo '<tr>
                     <td class="px-3 border-right pt-3">' . $item["Fecha"] . '</td>
                     <td class="px-3 border-right pt-3">' . $item["Hora"] . '</td>
@@ -55,23 +61,91 @@ class controlesControlador
                     <td class="px-3 border-right pt-3">' . $item["Precio de control"] . '</td>
                     <td class="px-3 border-right pt-3">' . $item["Estado de pago"] . '</td>
                     <td class="px-3 border-right pt-3">' . $item["Asistencia"] . '</td>
+                    <td class="px-3 border-right pt-3">' . $item["EstadoInfo"] . '</td>
+            
                     <td class="px-3 border-right pt-3">
                         <a href="index.php?action=editar-cita&idCM=' . $item["ID CM"] . '&idM=' . $item["Medico"] . '">
-                            <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-secondary borderd d-block">
+                            <button  style="height: 40px;" type="submit" name="boton" class="btn btn-secondary mx-auto borderd d-block">
                                 <i style="cursor: pointer;" class="fas fa-edit"></i>
                             </button>
                         </a>
                     </td>
                     <td class="px-3 border-right pt-3">
                         <a href="index.php?action=eliminar-cita&idCM=' . $item["ID CM"] . '&dni=' . $item["Medico"] . '">
-                            <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-danger borderd d-block">
+                            <button  style="height: 40px;" type="submit" name="boton" class="btn btn-danger  mx-auto borderd d-block">
                                 <i class="fas fa-trash-alt"></i>
                             </button>
                         </a>
                     </td>
+            
+                    <td class="px-3 pt-3">
+                        <button  style="height: 40px;" 
+                            type="submit" 
+                            name="boton" 
+                            id="botonModal"
+                            class="btn btn-primary mx-auto borderd d-block"
+                            data-toggle="modal"
+                            data-paciente= "' . $item["Paciente"] . '"
+                            data-sede= "' . $item["Sede"] . '"
+                            data-precio= "' . $item["Precio de control"] . '"
+                            data-target="#modalInfo' . $i . '"
+                            >
+                            
+                            <i class="fas fa-share-square"></i>
+                        </button>
+                    </td>
                 </tr>';
         }
     }
+
+    public function modalInformacion()
+    {
+        $datosControlador = $_GET['dni'];
+        $respuesta = DatosControles::vistaControlMedicoModelo($datosControlador, "controles_mensuales");
+        $i = 0;
+        foreach ($respuesta as $key => $item) {
+            $i++;
+            echo '
+            <div class="modal fade" id="modalInfo' . $i . '" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Informacion</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST">  
+                                <p class= "d-none"><strong> Id Control Mensual: </strong> <input name="idCM" class="form-control" type="text" readonly value="' . $item["ID CM"] . '" /> </p>
+                                <p><strong> Fecha: </strong> <input class="form-control" name="fecha" readonly type="text" value="' . $item["Fecha"] . '" /> </p>
+                                <p><strong> Sede: </strong> <input class="form-control" name="sede" readonly type="text" value="' . $item["Sede"] . '"/>  </p>
+                                <p class= ""><strong> Doctor(a): </strong> <input name="medico"  class="form-control" readonly type="text" value="' . $_SESSION['usernameM'] . '" /> </p>
+                                <p class= ""><strong> Dni Dentista: </strong> <input name="dni_medico" class="form-control" readonly value="' . $_GET["dni"] . '" /> </p>
+                                <p><strong> Precio de control: </strong> <input name="precio" class="form-control" readonly value="' . $item["Precio de control"] . '" /> </p>
+                                <p class= "d-none"><strong> Paciente: </strong> <input name="paciente" class="form-control" readonly value="' . $item["Paciente"] . '" /> </p>
+                                <p class= "d-none"><strong> Dni Paciente: </strong> <input name="dni_paciente" class="form-control" readonly value="' . $item["DNIPaciente"] . '" /> </p>
+                                <p class= "d-none"><strong> Estado de Pago: </strong> <input name="estado_pago" class="form-control" readonly value="' . $item["Estado de pago"] . '" /> </p>
+                                <p class= "d-none"><strong> Asistencia: </strong> <input name="asistencia" class="form-control" readonly value="' . $item["Asistencia"] . '" /> </p>
+                            
+                                <p><strong> Mensaje </strong>
+                                    <input name="descripcioncontrol" type="text" value="" class="form-control" />                             
+                                </p>
+                                <input type="submit" value="Confirmar" class="my-4 btn btn-primary" />
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>';
+        }
+    }
+
+
+
+
+    // <a href="index.php?action=eliminar-cita&idCM=' . $item["ID CM"] . '&dni=' . $item["Medico"] . '">
+    // </a>
 
     #Registro de un control mensual
     #----------------------------------------

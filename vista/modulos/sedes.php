@@ -22,7 +22,6 @@
                 </td>
             </tr>
         </table>
-
         <!-- segundo bloque -->
         <table width="80%" style="margin-top: 1.5em;">
             <tr>

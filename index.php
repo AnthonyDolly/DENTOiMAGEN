@@ -9,6 +9,8 @@ require_once "controlador/controles/controlesControlador.php";
 require_once "controlador/medicos/medicoControlador.php";
 require_once "controlador/asistentes/asistenteControlador.php";
 require_once "controlador/consultas/consultasControlador.php";
+require_once "controlador/informacion_controles/informacion_controlesControlador.php";
+require_once "controlador/informacion_tratamientos/informacion_tramientosControlador.php";
 require_once "modelo/enlaces.php";
 require_once "modelo/clientes/crud.php";
 require_once "modelo/medicos/crud.php";
@@ -16,6 +18,7 @@ require_once "modelo/controles/crud.php";
 require_once "modelo/clientes_tratamientos/crud.php";
 require_once "modelo/asistentes/crud.php";
 require_once "modelo/consultas/crud.php";
-
+require_once "modelo/informacion_controles/crud.php";
+require_once "modelo/informacion_tratamientos/crud.php";
 $mvc = new MvcControlador();
-$mvc -> plantilla();
+$mvc->plantilla();
