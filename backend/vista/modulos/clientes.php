@@ -6,7 +6,7 @@
                     <div class="row">
                         <div class="col s12 m4 l12">
                             <ul id="task-card" class="collection with-header">
-                                <li class="collection-header teal accent-4">
+                                <li class="collection-header gradient-45deg-red-pink">
                                     <h4 class="task-card-title">Clientes del sistema</h4>
                                 </li>
                                 <table class="highlight responsive-table">

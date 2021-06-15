@@ -62,7 +62,7 @@ if (isset($_GET["action"])) {
                         </a>
                         <a href="index.php?action=controles">
                             <div class="col s12 m6 l3">
-                                <div class="card gradient-45deg-amber-amber gradient-shadow min-height-100 white-text">
+                                <div class="card teal accent-4 gradient-shadow min-height-100 white-text">
                                     <div class="padding-4">
                                         <div class="col s7 m7">
                                             <i class="material-icons background-round mt-5">event</i>
@@ -83,7 +83,7 @@ if (isset($_GET["action"])) {
                         </a>
                         <a href="index.php?action=dentistas">
                             <div class="col s12 m6 l3">
-                                <div class="card gradient-45deg-green-teal gradient-shadow min-height-100 white-text">
+                                <div class="card gradient-45deg-amber-amber gradient-shadow min-height-100 white-text">
                                     <div class="padding-4">
                                         <div class="col s7 m7">
                                             <i class="material-icons background-round mt-5">person</i>
