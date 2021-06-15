@@ -22,7 +22,7 @@ class consultaControlador
                 "correo" => $_POST["correoR"],
                 "fecha" => $_POST["fechaR"],
                 "precio" => 60,
-                "descripcion" => "descripcionR",
+                "descripcion" => $_POST["descripcionR"],
                 "sede" => $_POST["sedesR"],
                 "medico" => $medico
             );
