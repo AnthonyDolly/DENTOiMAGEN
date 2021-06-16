@@ -40,6 +40,21 @@ class DatosConsultasB extends ConexionB
         }
     }
 
+    #Eliminar consultas basuras por parte del asistente
+    #---------------------------------------------
+    public function eliminarConsultasBasuraModelo($datosModelo)
+    {
+        $st = ConexionB::conectar()->prepare("DELETE FROM consultas WHERE id = $datosModelo;");
+
+        if ($st->execute()) {
+            return "success";
+        } else {
+            return "error";
+        }
+
+        $st->close();
+    }
+
 
     #Vista de todas las consultas que hay en el sistema
     #----------------------------

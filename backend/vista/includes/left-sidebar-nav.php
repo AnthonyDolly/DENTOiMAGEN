@@ -39,7 +39,7 @@
                 <li class="bold">
                     <a href="index.php" class="waves-effect waves-cyan">
                         <i class="material-icons">pie_chart_outlined</i>
-                        <span class="nav-text">Dashboard</span>
+                        <span class="nav-text">Tablero</span>
                     </a>
                 </li>
                 <li class="bold">

@@ -32,6 +32,9 @@ class consultasControladorB
                     <td>
                         <input type="button" class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" name="action" id="enviar" value="Enviar" onclick="btnswalC()">
                     </td>
+                    <td>
+                        <input type="button" class="btn waves-effect waves-light gradient-45deg-red-pink" name="eliminar" id="eliminar" value="Eliminar" onclick="btnswalCE()">
+                    </td>
                 <tr>';
         }
     }
@@ -48,6 +51,24 @@ class consultasControladorB
             );
 
             $respuesta = DatosConsultasB::actualizarFechaConsultaModelo($datosControlador, "consultas");
+
+            if ($respuesta == "success") {
+                header('location:index.php?action=consultas-solicitadas');
+            } else {
+                header("location:index.php");
+            }
+        }
+    }
+
+    #Eliminar consultas basuras por parte del asistente
+    #---------------------------------------------
+    public function eliminarConsultasBasuraControlador()
+    {
+        if (isset($_POST["idC"])) {
+
+            $datosControlador = $_POST["idC"];
+
+            $respuesta = DatosConsultasB::eliminarConsultasBasuraModelo($datosControlador, "consultas");
 
             if ($respuesta == "success") {
                 header('location:index.php?action=consultas-solicitadas');

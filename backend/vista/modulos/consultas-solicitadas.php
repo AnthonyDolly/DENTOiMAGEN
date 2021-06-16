@@ -48,11 +48,33 @@
                                                             form.submit();
 
                                                             <?php
-                                                            $actualizarECM = new consultasControladorB();
-                                                            $actualizarECM->actualizarFechaConsultaControlador();
+                                                            $actualizarFC = new consultasControladorB();
+                                                            $actualizarFC->actualizarFechaConsultaControlador();
                                                             ?>
                                                         } else if (result.isDenied) {
                                                             Swal.fire('Cancelado', '', 'error')
+                                                        }
+                                                    })
+                                                }
+
+                                                function btnswalCE() {
+                                                    Swal.fire({
+                                                        title: '¿Estas seguro?',
+                                                        text: "¡No se podrá revertir!",
+                                                        icon: 'warning',
+                                                        showCancelButton: true,
+                                                        confirmButtonColor: '#3085d6',
+                                                        cancelButtonColor: '#d33',
+                                                        confirmButtonText: '¡Sí, Eliminar!'
+                                                    }).then((result) => {
+                                                        if (result.isConfirmed) {
+                                                            form = document.getElementById('formC');
+                                                            form.submit();
+
+                                                            <?php
+                                                            $eliminarCB = new consultasControladorB();
+                                                            $eliminarCB->eliminarConsultasBasuraControlador();
+                                                            ?>
                                                         }
                                                     })
                                                 }
