@@ -10,7 +10,8 @@ class EnlacesPagina
             $enlacesModelo == "controles" ||
             $enlacesModelo == "dentistas" ||
             $enlacesModelo == "cerrar-sesion" ||
-            $enlacesModelo == "consultas"
+            $enlacesModelo == "consultas" ||
+            $enlacesModelo == "consultas-solicitadas"
         ) {
             $modulo = "vista/modulos/" . $enlacesModelo . ".php";
         } elseif ($enlacesModelo == "index") {

@@ -72,6 +72,13 @@
                         <span class="nav-text">Consultas</span>
                     </a>
                 </li>
+                <div class="divider"></div>
+                <li class="bold">
+                    <a href="index.php?action=consultas-solicitadas" class="waves-effect waves-cyan">
+                        <i class="material-icons">assignment</i>
+                        <span class="nav-text">Solicitudes de consultas</span>
+                    </a>
+                </li>
             </ul>
         </li>
     </ul>

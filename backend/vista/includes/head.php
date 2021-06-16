@@ -25,4 +25,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="vista/plugins/swal/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="vista/plugins/swal/sweetalert2.min.css">
+    <link rel="stylesheet" href="vista/plugins/pickadate/themes/default.css">
+    <link rel="stylesheet" href="vista/plugins/pickadate/themes/default.date.css">
+    <link rel="stylesheet" href="vista/plugins/pickadate/themes/default.time.css">
 </head>

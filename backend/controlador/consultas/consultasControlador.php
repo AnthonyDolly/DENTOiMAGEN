@@ -2,6 +2,61 @@
 
 class consultasControladorB
 {
+    #Vista de todas las solicitudes de consultas que requieren confirmacion
+    #-----------------------------------------------------------
+    public function vistaSolicitudesConsultasControlador()
+    {
+        $respuesta = DatosConsultasB::vistaSolicitudesConsultasModelo();
+
+        foreach ($respuesta as $key => $item) {
+            echo '<tr>
+                    <td style="display: none;">
+                        <input type="text" class="form-control "  
+                        name="idC" value =' . $item["ID"] . '>
+                    </td>
+                    <td>' . $item["DNI"] . '</td>
+                    <td>' . $item["Nombre"] . '</td>
+                    <td>' . $item["Telefono"] . '</td>
+                    <td>' . $item["Correo"] . '</td>
+                    <td>' . $item["Fecha"] . '</td>
+                    <td>
+                        <input type="text" class="datepicker form-control" id="datepicker" name="fechaC" required value="">
+                    </td>
+                    <td>
+                        <input type="text" class="timepicker" id="timepicker" name="horaC" required value="">
+                    </td>
+                    <td>' . $item["Importe"] . '</td>
+                    <td>' . $item["Descripcion"] . '</td>
+                    <td>' . $item["Sede"] . '</td>
+                    <td>' . $item["Medico"] . '</td>
+                    <td>
+                        <input type="button" class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" name="action" id="enviar" value="Enviar" onclick="btnswalC()">
+                    </td>
+                <tr>';
+        }
+    }
+
+    #Actualizar fecha de la consulta por parte del asistente
+    #---------------------------------------------
+    public function actualizarFechaConsultaControlador()
+    {
+        if (isset($_POST["idC"])) {
+
+            $datosControlador = array(
+                "idC" => $_POST["idC"],
+                "fecha" => $_POST["fechaC"] . ' ' . $_POST["horaC"],
+            );
+
+            $respuesta = DatosConsultasB::actualizarFechaConsultaModelo($datosControlador, "consultas");
+
+            if ($respuesta == "success") {
+                header('location:index.php?action=consultas-solicitadas');
+            } else {
+                header("location:index.php");
+            }
+        }
+    }
+
     #Vista de todas las consultas que hay en el sistema
     #----------------------------
     public function vistaConsultasControlador()
@@ -104,7 +159,6 @@ class consultasControladorB
     #----------------------------------------
     public function actualizarEstadoConsultaControlador()
     {
-
         if (isset($_POST["idC"])) {
 
             $datosControlador = array(
