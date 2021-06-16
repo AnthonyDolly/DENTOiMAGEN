@@ -108,7 +108,7 @@ if (isset($_GET["action"])) {
                     <div class="row">
                         <div class="col s12 m4 l12">
                             <ul id="task-card" class="collection with-header">
-                                <li class="collection-header teal accent-4">
+                                <li class="collection-header gradient-45deg-green-teal">
                                     <a href="index.php?action=inicio">
                                         <h4 class="task-card-title">Citas del día</h4>
                                     </a>
@@ -138,7 +138,7 @@ if (isset($_GET["action"])) {
                                         <nav>
                                             <div class="nav-wrapper">
                                                 <form>
-                                                    <div class="input-field teal accent-4">
+                                                    <div class="input-field gradient-45deg-green-teal">
                                                         <input id="search" type="search" name="dniB" required>
                                                         <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                                                         <i class="material-icons">close</i>
@@ -189,10 +189,112 @@ if (isset($_GET["action"])) {
                                                         if (result.isConfirmed) {
                                                             form = document.getElementById('form');
                                                             form.submit();
-                                                            
+
                                                             <?php
                                                             $actualizarECM = new controlesControladorB();
                                                             $actualizarECM->actualizarEstadosControlControlador();
+                                                            ?>
+                                                        } else if (result.isDenied) {
+                                                            Swal.fire('Cancelado', '', 'error')
+                                                        }
+                                                    })
+                                                }
+                                            </script>
+
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </ul>
+                        </div>
+                        <div class="col s12 m4 l12">
+                            <ul id="task-card" class="collection with-header">
+                                <li class="collection-header gradient-45deg-blue-grey-blue">
+                                    <a href="index.php?action=inicio">
+                                        <h4 class="task-card-title">Consultas del día</h4>
+                                    </a>
+                                    <p class="task-card-date">
+                                        <script type="text/javascript">
+                                            var dia = new Date().toLocaleString('default', {
+                                                weekday: 'long'
+                                            });
+                                            diaM = dia.charAt(0).toUpperCase() + dia.slice(1);
+                                            document.write(diaM);
+                                            document.write(' ');
+
+                                            document.write(new Date().getDate());
+                                            document.write(' de ');
+
+                                            mes = new Date().toLocaleString('default', {
+                                                month: 'long'
+                                            });
+                                            mesM = mes.charAt(0).toUpperCase() + mes.slice(1);
+                                            document.write(mesM);
+
+                                            document.write(' del ');
+                                            document.write(new Date().getFullYear());
+                                        </script>
+                                    </p>
+                                    <form method="POST">
+                                        <nav>
+                                            <div class="nav-wrapper">
+                                                <form>
+                                                    <div class="input-field gradient-45deg-blue-grey-blue">
+                                                        <input id="search" type="search" name="dniBC" required>
+                                                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                                        <i class="material-icons">close</i>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </nav>
+                                    </form>
+                                </li>
+                                <form method="POST" id="formC">
+                                    <table class="highlight responsive-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="display: none;">ID</th>
+                                                <th>DNI</th>
+                                                <th>Nombre</th>
+                                                <th>Telefono</th>
+                                                <th>Correo</th>
+                                                <th>Fecha</th>
+                                                <th>Importe</th>
+                                                <th>Dentista</th>
+                                                <th style="margin: 43px 0 0 0;">Asistencia</th>
+                                                <th style="margin: 43px 0 0 0;">Acción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            if (!isset($_POST["dniBC"])) {
+                                                $vistaCG = new consultasControladorB();
+                                                $vistaCG->vistaConsultaHoyControlador();
+                                            }
+                                            ?>
+                                            <?php
+                                            if (isset($_POST["dniBC"])) {
+                                                $vistaB = new consultasControladorB();
+                                                $vistaB->buscarConsultaControlador();
+                                            }
+
+                                            ?>
+                                            <script>
+                                                function btnswalC() {
+                                                    Swal.fire({
+                                                        title: '¿Seguro que quieres actualizar los estados?',
+                                                        showDenyButton: true,
+                                                        showCancelButton: true,
+                                                        confirmButtonText: `Actualizar`,
+                                                        denyButtonText: `No`,
+                                                    }).then((result) => {
+                                                        /* Read more about isConfirmed, isDenied below */
+                                                        if (result.isConfirmed) {
+                                                            form = document.getElementById('formC');
+                                                            form.submit();
+
+                                                            <?php
+                                                            $actualizarECM = new consultasControladorB();
+                                                            $actualizarECM->actualizarEstadoConsultaControlador();
                                                             ?>
                                                         } else if (result.isDenied) {
                                                             Swal.fire('Cancelado', '', 'error')
