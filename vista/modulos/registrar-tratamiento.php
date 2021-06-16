@@ -2,7 +2,7 @@
     <div class="content-register-treatment">
         <h1>Registrar tratamiento</h1>
         <div class="table-register-treatment">
-            <form method="POST">
+            <form method="POST" id="formCT">
                 <div class="col-md-6 mb-3">
                     <label for="validationCustom01">DNI Paciente</label>
                     <input type="text" class="form-control" id="dnipaciente" name="DNIPaciente" required>
@@ -27,24 +27,26 @@
                     <label class="" for="exampleFormControlTextarea1">Descripción</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" name="descripcion"></textarea>
                 </div>
-
-                <div class="d-flex col-md-6 mb-3 justify-content-around">
-                    <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1" checked>
-                        <label class="form-check-label" for="gridRadios1">
-                            Activo
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="2">
-                        <label class="form-check-label" for="gridRadios2">
-                            Inactivo
-                        </label>
-                    </div>
-                </div>
                 <div class="col-md-6 mb-3 btn-save-treatment">
-                    <button type="submit" class="btn btn-primary" name="btnGuardar">Guardar</button>
+                    <input type="button" class="btn btn-primary" name="btnGuardar" value="Guardar" onclick="btnswalCT()">
                 </div>
+                <script>
+                    function btnswalCT() {
+                        Swal.fire({
+                            icon: 'success',
+                            title: '¡Tratamiento Registrado!',
+                            showConfirmButton: false,
+                        })
+                        setTimeout(() => {
+                            form = document.getElementById('formCT');
+                            form.submit();
+                            <?php
+                            $registroTratamiento = new clientes_tratamientosControlador();
+                            $registroTratamiento->RegistroClienteTratamientoControlador();
+                            ?>
+                        }, 3000);
+                    }
+                </script>
             </form>
         </div>
     </div>

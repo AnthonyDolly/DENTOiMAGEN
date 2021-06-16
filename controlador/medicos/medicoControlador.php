@@ -25,7 +25,7 @@ class medicoControlador
                 $_SESSION["validarM"] = true;
                 header("location:index.php?action=perfilM");
             } else {
-                header("location:index.php?action=fallo");
+                header("location:index.php");
             }
         }
     }

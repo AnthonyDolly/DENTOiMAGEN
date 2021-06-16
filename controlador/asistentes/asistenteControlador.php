@@ -25,7 +25,7 @@ class asistenteControlador
                 $_SESSION["rol"] = "Asistente";
                 header("location:./backend/");
             } else {
-                header("location:index.php?action=fallo");
+                header("location:index.php");
             }
         }
     }

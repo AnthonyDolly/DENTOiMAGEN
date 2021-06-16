@@ -19,6 +19,9 @@ ob_start();
     <link rel="stylesheet" href="vista/plugins/pickadate/themes/default.css">
     <link rel="stylesheet" href="vista/plugins/pickadate/themes/default.date.css">
     <link rel="stylesheet" href="vista/plugins/pickadate/themes/default.time.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="vista/plugins/swal/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="vista/plugins/swal/sweetalert2.min.css">
 </head>
 
 <body style="background-color: #fbfbfe; font-family: sans-serif;">
@@ -92,38 +95,10 @@ ob_start();
     }
     ?>
 
-
-    <?php
-
-    $registroTratamiento = new clientes_tratamientosControlador();
-    $registroTratamiento->RegistroClienteTratamientoControlador();
-
-
-    if (isset($_GET["action"])) {
-        if ($_GET["action"] == "ok") {
-            echo "Registro exitoso";
-        }
-    }
-
-    ?>
-
-
-    <?php
-
-    $registroControlMensual = new controlesControlador();
-    $registroControlMensual->registroControlControlador();
-
-
-    if (isset($_GET["action"])) {
-        if ($_GET["action"] == "ok") {
-            echo "Registro exitoso";
-        }
-    }
-
-    ?>
-
-
     
+
+
+
 
 
 

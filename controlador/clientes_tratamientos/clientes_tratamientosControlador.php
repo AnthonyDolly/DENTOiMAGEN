@@ -85,7 +85,7 @@ class clientes_tratamientosControlador
                 "descripcion" => $_POST["descripcion"],
                 "cantsesiones" => $_POST["sesiones"],
                 "estado" => $_POST["gridRadios"],
-                "tratamiento" => $_POST["tratamiento"]
+                "tratamiento" => 1
             );
 
             $respuesta = DatosClientesTratamientos::RegistroClienteTratamientoModelo($datosControlador, "clientes_tratamientos");
@@ -200,7 +200,7 @@ class clientes_tratamientosControlador
 
         $datosControlador = $_GET["id"];
 
-        $respuesta2 = DatosControles::eliminarControlMedicoModelo($datosControlador, "controles_mensuales");
+        // $respuesta2 = DatosControles::eliminarControlMedicoModelo($datosControlador, "controles_mensuales");
         $respuesta = DatosClientesTratamientos::eliminarClienteTratamientoModelo($datosControlador, "clientes_tratamientos");
 
         if ($respuesta == "success") {

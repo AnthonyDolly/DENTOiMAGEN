@@ -3,7 +3,7 @@
         <h1>Agendar Cita Mensual</h1>
         <div class="table-citas-personal" style="max-width: 900px;">
             <div class="table-register-treatment">
-                <form method="POST">
+                <form method="POST" id="formCM">
                     <div class="col-md-6 mb-3">
                         <input type="text" class="form-control" id="exampleFormControlInput1" name="idCT" value='<?php echo $_GET["id"]; ?>' required hidden>
                     </div>
@@ -59,8 +59,25 @@
                         </div>
                     </div>
                     <div class="col-md-6 mb-3 btn-save-treatment">
-                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <input type="button" class="btn btn-primary" name="btnAgendar" value="Agendar" onclick="btnswalCM()">
                     </div>
+                    <script>
+                        function btnswalCM() {
+                            Swal.fire({
+                                icon: 'success',
+                                title: '¡Cita Registrada!',
+                                showConfirmButton: false,
+                            })
+                            setTimeout(() => {
+                                form = document.getElementById('formCM');
+                                form.submit();
+                                <?php
+                                $registroControlMensual = new controlesControlador();
+                                $registroControlMensual->registroControlControlador();
+                                ?>
+                            }, 3000);
+                        }
+                    </script>
                 </form>
             </div>
         </div>

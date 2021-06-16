@@ -52,7 +52,7 @@ class clienteControlador
                 $_SESSION["validar"] = true;
                 header("location:index.php?action=perfil");
             } else {
-                header("location:index.php?action=fallo");
+                header("location:index.php");
             }
         }
     }

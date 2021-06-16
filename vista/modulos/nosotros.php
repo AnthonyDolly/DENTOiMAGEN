@@ -124,7 +124,7 @@
                     <table>
                         <tr>
                             <td>
-                                <form method="post">
+                                <form method="post" id="formN">
                                     <h1 class="text-center mb-3 mt-2">Envíanos tu datos</h1>
                                     <div class="col-12 mb-3 d-flex">
                                         <label class="w-50" for="validationTooltip01">DNI</label>
@@ -165,13 +165,28 @@
                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descripcionR"></textarea>
                                     </div>
                                     <div class="col-12 mb-3 text-center">
-                                        <button type="submit" name="boton" class="btn btn-primary mt-3 w-50">Enviar</button>
+                                        <input type="button" class="btn btn-primary mt-3 w-50" name="boton" id="enviar" value="Enviar" onclick="btnswalN()">
                                     </div>
+                                    <script>
+                                        function btnswalN() {
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: '¡Consulta Enviada!',
+                                                text: 'Nos estaremos comunicando contigo',
+                                                showConfirmButton: false,
+                                            })
+                                            setTimeout(() => {
+                                                form = document.getElementById('formN');
+                                                form.submit();
+                                                <?php
+                                                $registroC = new consultaControlador();
+                                                $registroC->registroConsultaControlador();
+                                                ?>
+                                            }, 3000);
+                                        }
+                                    </script>
                                 </form>
-                                <?php
-                                $registroC = new consultaControlador();
-                                $registroC->registroConsultaControlador();
-                                ?>
+
                             </td>
                         </tr>
                     </table>
