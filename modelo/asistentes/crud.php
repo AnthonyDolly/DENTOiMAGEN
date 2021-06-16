@@ -9,7 +9,7 @@ class DatosAsistentes extends Conexion
     public function ingresoAsistenteModelo($datosModelo, $tabla)
     {
 
-        $st = Conexion::conectar()->prepare("SELECT id,contra, concat(nombres, ' ', apellidos) AS Asistente, correo AS Correo FROM $tabla WHERE id = :dni");
+        $st = Conexion::conectar()->prepare("call ingresoAsistente(:dni)");
         $st->bindParam(":dni", $datosModelo["dni"], PDO::PARAM_STR);
         $st->execute();
 

@@ -9,7 +9,7 @@ class InformacionControles extends Conexion
     public function registroInformacionControlModelo($datosModelo)
     {
         echo '<script> console.log("entrando modelo") </script>';
-        $st = Conexion::conectar()->prepare("INSERT INTO informacion_controles(sede, descripcion, medico_id, control_mensual_id, cliente_id) values(:sede, :descripcion,:medico_id, :control_mensual_id, :cliente_id);");
+        $st = Conexion::conectar()->prepare("call registroInformacionControl(:sede,:descripcion,:medico_id,:control_mensual_id,:cliente_id)");
         $st->bindParam(":sede", $datosModelo["sede"], PDO::PARAM_STR);
         $st->bindParam(":descripcion", $datosModelo["descripcion"], PDO::PARAM_STR);
         $st->bindParam(":medico_id", $datosModelo["dni_medico"], PDO::PARAM_STR);

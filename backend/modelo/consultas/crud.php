@@ -8,14 +8,7 @@ class DatosConsultasB extends ConexionB
     #-----------------------------------------------------------
     public function vistaSolicitudesConsultasModelo()
     {
-        $st = ConexionB::conectar()->prepare("SELECT c.id AS 'ID', c.dni AS 'DNI', c.nombre AS 'Nombre', c.telefono AS 'Telefono', c.correo AS 'Correo', c.fecha AS 'Fecha', c.precio AS 'Importe', c.descripcion AS 'Descripcion', s.nombre AS 'Sede', concat(m.nombres,' ',m.apellidos) AS 'Medico', c.asistencia AS 'Asistencia' 
-        FROM consultas c
-        INNER JOIN medicos m
-        ON c.medico_id = m.id
-        INNER JOIN sedes s
-        ON c.sede_id = s.id
-        WHERE DATE_FORMAT(c.fecha, '%H:%i') = '00:00'
-        ORDER BY id;");
+        $st = ConexionB::conectar()->prepare("call vistaSolicitudesConsultas();");
 
         $st->execute();
 
@@ -60,13 +53,7 @@ class DatosConsultasB extends ConexionB
     #----------------------------
     public function vistaConsultasModelo()
     {
-        $st = ConexionB::conectar()->prepare("SELECT c.id AS 'ID', c.dni AS 'DNI', c.nombre AS 'Nombre', c.telefono AS 'Telefono', c.correo AS 'Correo', c.fecha AS 'Fecha', c.precio AS 'Importe', c.descripcion AS 'Descripcion', s.nombre AS 'Sede', concat(m.nombres,' ',m.apellidos) AS 'Medico', c.asistencia AS 'Asistencia' 
-        FROM consultas c
-        INNER JOIN medicos m
-        ON c.medico_id = m.id
-        INNER JOIN sedes s
-        ON c.sede_id = s.id
-        ORDER BY id;");
+        $st = ConexionB::conectar()->prepare("call vistaConsultas()");
 
         $st->execute();
 
@@ -77,14 +64,7 @@ class DatosConsultasB extends ConexionB
     #----------------------------
     public function vistaConsultasHoyModelo()
     {
-        $st = ConexionB::conectar()->prepare("SELECT c.id AS 'ID', c.dni AS 'DNI', c.nombre AS 'Nombre', c.telefono AS 'Telefono', c.correo AS 'Correo', DATE_FORMAT(c.fecha, '%d/%m/%Y %H:%i') AS 'Fecha', c.precio AS 'Importe', c.descripcion AS 'Descripcion', s.nombre AS 'Sede', concat(m.nombres,' ',m.apellidos) AS 'Medico', c.asistencia AS 'Asistencia' 
-        FROM consultas c
-        INNER JOIN medicos m
-        ON c.medico_id = m.id
-        INNER JOIN sedes s
-        ON c.sede_id = s.id
-        WHERE DATE_FORMAT(c.fecha, '%Y/%m/%d') = DATE_FORMAT(now(), '%Y/%m/%d') AND c.asistencia = 'Pendiente'
-        ORDER BY id;");
+        $st = ConexionB::conectar()->prepare("call vistaConsultasHoy()");
 
         $st->execute();
 
@@ -95,16 +75,7 @@ class DatosConsultasB extends ConexionB
     #---------------------------------------------------
     public function buscarConsultaModelo($datosModelo)
     {
-        $st = ConexionB::conectar()->prepare("SELECT c.id AS 'ID', c.dni AS 'DNI', c.nombre AS 'Nombre', c.telefono AS 'Telefono', c.correo AS 'Correo', DATE_FORMAT(c.fecha, '%d/%m/%Y %H:%i') AS 'Fecha', c.precio AS 'Importe', c.descripcion AS 'Descripcion', s.nombre AS 'Sede', concat(m.nombres,' ',m.apellidos) AS 'Medico', c.asistencia AS 'Asistencia' 
-        FROM consultas c
-        INNER JOIN medicos m
-        ON c.medico_id = m.id
-        INNER JOIN sedes s
-        ON c.sede_id = s.id
-        WHERE DATE_FORMAT(c.fecha, '%Y/%m/%d') = DATE_FORMAT(now(), '%Y/%m/%d') 
-        AND c.asistencia = 'Pendiente' 
-        AND c.dni = $datosModelo
-        ORDER BY id;");
+        $st = ConexionB::conectar()->prepare("call buscarConsulta($datosModelo)");
 
         $st->execute();
 

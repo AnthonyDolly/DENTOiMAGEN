@@ -9,8 +9,7 @@ class DatosConsultas extends Conexion
     public function registroConsultaModelo($datosModelo, $tabla)
     {
 
-        $st = Conexion::conectar()->prepare("INSERT INTO consultas (dni,nombre,telefono,correo,fecha,precio,descripcion,sede_id,medico_id)
-        VALUES (:dni,:nombre,:telefono,:correo,:fecha,:precio,:descripcion,:sede,:medico)");
+        $st = Conexion::conectar()->prepare("call registroConsulta(:dni,:nombre,:telefono,:correo,:fecha,:precio,:descripcion,:sede,:medico);");
 
         $st->bindParam(":dni", $datosModelo["dni"], PDO::PARAM_STR);
         $st->bindParam(":nombre", $datosModelo["nombre"], PDO::PARAM_STR);
