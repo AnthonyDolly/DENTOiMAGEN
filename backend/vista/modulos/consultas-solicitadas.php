@@ -1,3 +1,19 @@
+<?php
+error_reporting(0);
+if ($_SESSION["estado"] == 'agendado') {    
+?>
+    <script>
+        Swal.fire({
+            icon: "success",
+            title: "¡Consulta agendada!",
+            showConfirmButton: false,
+            timer: 1500
+        })
+    </script>
+<?php
+    $_SESSION["estado"] = 'no';
+}
+?>
 <div id="main">
     <div class="wrapper">
         <section id="content">
@@ -9,31 +25,32 @@
                                 <li class="collection-header teal accent-4">
                                     <h4 class="task-card-title">Consultas Solicitadas</h4>
                                 </li>
-                                <form method="post" id="formC">
-                                    <table class="highlight responsive-table">
-                                        <thead>
-                                            <tr>
-                                                <th style="display: none;">ID</th>
-                                                <th>DNI</th>
-                                                <th>Nombre</th>
-                                                <th>Telefono</th>
-                                                <th>Correo</th>
-                                                <th>Fecha Requerida</th>
-                                                <th>Fecha</th>
-                                                <th>Hora</th>
-                                                <th>Precio</th>
-                                                <th>Descripción</th>
-                                                <th>Sede</th>
-                                                <th>Dentista</th>
-                                                <th>Acción</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                            $vista = new consultasControladorB();
-                                            $vista->vistaSolicitudesConsultasControlador();
-                                            ?>
-                                            <script>
+                                <!-- <form method="post" id="formC"> -->
+                                <table class="highlight responsive-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="display: none;">ID</th>
+                                            <th>DNI</th>
+                                            <th>Nombre</th>
+                                            <th>Telefono</th>
+                                            <th>Correo</th>
+                                            <th>Fecha Requerida</th>
+                                            <th>Fecha</th>
+                                            <th>Hora</th>
+                                            <th>Precio</th>
+                                            <th>Descripción</th>
+                                            <th>Sede</th>
+                                            <th>Dentista</th>
+                                            <th>Acción</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <!-- <tbody> -->
+                                <?php
+                                $vista = new consultasControladorB();
+                                $vista->vistaSolicitudesConsultasControlador();
+                                ?>
+                                <!-- <script>
                                                 function btnswalC() {
                                                     Swal.fire({
                                                         title: '¿Seguro?',
@@ -78,10 +95,10 @@
                                                         }
                                                     })
                                                 }
-                                            </script>
-                                        </tbody>
-                                    </table>
-                                </form>
+                                            </script> -->
+                                <!-- </tbody> -->
+                                <!-- </table> -->
+                                <!-- </form> -->
                             </ul>
                         </div>
                     </div>

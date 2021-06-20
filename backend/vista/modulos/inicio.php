@@ -1,17 +1,5 @@
-<?php
-if (isset($_GET["action"])) {
-?>
-    <script>
-        Swal.fire({
-            icon: 'success',
-            title: 'Actualizado',
-            showConfirmButton: false,
-            timer: 2000
-        })
-    </script>
-<?php
-}
-?>
+
+
 <div id="main">
     <div class="wrapper">
         <section id="content">
@@ -248,37 +236,38 @@ if (isset($_GET["action"])) {
                                         </nav>
                                     </form>
                                 </li>
-                                <form method="POST" id="formC">
-                                    <table class="highlight responsive-table">
-                                        <thead>
-                                            <tr>
-                                                <th style="display: none;">ID</th>
-                                                <th>DNI</th>
-                                                <th>Nombre</th>
-                                                <th>Telefono</th>
-                                                <th>Correo</th>
-                                                <th>Fecha</th>
-                                                <th>Importe</th>
-                                                <th>Dentista</th>
-                                                <th style="margin: 43px 0 0 0;">Asistencia</th>
-                                                <th style="margin: 43px 0 0 0;">Acción</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                            if (!isset($_POST["dniBC"])) {
-                                                $vistaCG = new consultasControladorB();
-                                                $vistaCG->vistaConsultaHoyControlador();
-                                            }
-                                            ?>
-                                            <?php
-                                            if (isset($_POST["dniBC"])) {
-                                                $vistaB = new consultasControladorB();
-                                                $vistaB->buscarConsultaControlador();
-                                            }
+                                <!-- <form method="POST" id="formC"> -->
+                                <table class="highlight responsive-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="display: none;">ID</th>
+                                            <th>DNI</th>
+                                            <th>Nombre</th>
+                                            <th>Telefono</th>
+                                            <th>Correo</th>
+                                            <th>Fecha</th>
+                                            <th>Importe</th>
+                                            <th>Dentista</th>
+                                            <th style="margin: 43px 0 0 0;">Asistencia</th>
+                                            <th style="margin: 43px 0 0 0;">Acción</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <!-- <tbody> -->
+                                <?php
+                                if (!isset($_POST["dniBC"])) {
+                                    $vistaCG = new consultasControladorB();
+                                    $vistaCG->vistaConsultaHoyControlador();
+                                }
+                                ?>
+                                <?php
+                                if (isset($_POST["dniBC"])) {
+                                    $vistaB = new consultasControladorB();
+                                    $vistaB->buscarConsultaControlador();
+                                }
 
-                                            ?>
-                                            <script>
+                                ?>
+                                <!-- <script>
                                                 function btnswalC() {
                                                     Swal.fire({
                                                         title: '¿Seguro que quieres actualizar los estados?',
@@ -301,11 +290,11 @@ if (isset($_GET["action"])) {
                                                         }
                                                     })
                                                 }
-                                            </script>
+                                            </script> -->
 
-                                        </tbody>
-                                    </table>
-                                </form>
+                                <!-- </tbody> -->
+                                <!-- </table> -->
+                                <!-- </form> -->
                             </ul>
                         </div>
                         <div class="col s12 m4 l4">
