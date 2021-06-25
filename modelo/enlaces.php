@@ -29,7 +29,8 @@ class EnlacesPaginas {
             $enlacesModelo == "eliminar-cita" ||
             $enlacesModelo == "pay" ||
             $enlacesModelo == "proceso" ||
-            $enlacesModelo == "historial-clinico"
+            $enlacesModelo == "historial-clinico" ||
+            $enlacesModelo == "pdf" 
 
 
             ) {

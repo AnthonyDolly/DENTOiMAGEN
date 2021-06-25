@@ -51,22 +51,28 @@ class informacionControlesControlador
                     <td class="px-3 border-right pt-3">' . $item["Estado de pago"] . '</td>
                     <td class="px-3 border-right pt-3">' . $item["Asistencia"] . '</td>
             
-                    <td class="px-3 pt-3">
-                        <button  style="height: 40px;" 
-                            type="submit" 
-                            name="boton" 
-                            id="botonModal"
-                            class="btn btn-primary mx-auto borderd d-block"
-                            data-toggle="modal"
-                            data-target="#modalInfo' . $i . '"
-                            >
-                            
-                            <i class="fas fa-info-circle"></i>
-                        </button>
+                    <td class="px-3 pt-3">    
+                        <a href="index.php?action=pdf&idIC='.$item["IdIC"].'">
+                            <button  style="height: 40px;" type="submit" name="boton" class="btn btn-primary mx-auto borderd d-block">
+                                <i style="cursor: pointer;"class="fas fa-info-circle"></i>
+                            </button>
+                        </a>
                     </td>
                 </tr>';
         }
     }
+    
+    // #listado control mensual
+    #----------------------------------------
+    public function vistaPDFInformacionControlesControlador()
+    {
+        $datosControlador = $_GET['idIC'];
+        $respuesta = InformacionControles::vistaPDFInformacionControlesModelo($datosControlador, "controles_mensuales");
+        // $test = 10;
+       return $respuesta;
 
+    }
+
+    
 
 }
