@@ -32,6 +32,7 @@ class PDF extends FPDF
     // Una tabla más completa
     function ImprovedTable($header, $response)
     {
+        $this->SetFont('Arial','B',10);
         $this->SetFillColor(0,123,255);
         $this->SetTextColor(255,255,255);
         // Anchuras de las columnas
@@ -43,26 +44,25 @@ class PDF extends FPDF
         $this->SetTextColor(0);
         // Datos
         $fill = false;
-        // foreach($response as $row)
-        // {
-            // $this->Cell(10);
-            $this->Cell($w[0],10, $response['Fecha'] ,'LR', 0, 'C' , $fill,);
-            $this->Cell($w[1],10, $response['Asistencia'] ,'LR',0, 'C',  $fill);
-            $this->Cell($w[2],10, utf8_decode($response['Medico']) ,'LR',0, 'C', $fill);
-            $this->Cell($w[3],10, utf8_decode($response['Descripcion']) ,'LR',0, 'C', $fill);
-            $this->Cell($w[4],10, $response['Importe'],'LR',0, 'C', $fill);
-            $this->Ln();
-            $fill = !$fill;
-        // }
+
+        $this->SetFont('Arial','B',10);
+        $this->Cell($w[0],10, $response['Fecha'] ,1, 0, 'C' , $fill,);
+        $this->Cell($w[1],10, $response['Asistencia'] ,1,0, 'C',  $fill);
+        $this->Cell($w[2],10, utf8_decode($response['Medico']) ,1, 0, 'C', $fill);
+        $this->Cell($w[3],10, utf8_decode($response['Estado de pago']), 1, 0 ,'C', $fill);
+        $this->Cell($w[4],10, $response['Importe'],1,0, 'C', $fill);
+        $this->Ln();
+        $fill = !$fill;
         // Línea de cierre
-        $this->Cell(array_sum($w),0,'','T');
+        // $this->Cell(array_sum($w),0,'','T');
+ 
     }
 }
 
 $pdf = new PDF();
 $pdf->AliasNbPages();
 $pdf->AddPage();
-$pdf->SetFont('Arial', 'B', 16);
+// $pdf->SetFont('Arial', 'B', 16);
 // $pdf->Cell(40,10,utf8_decode('Hola Mundo!'));
 
 $controlesPDF = new informacionControlesControlador();
@@ -77,23 +77,16 @@ $pdf->Cell(30, 10, "Sede: ", 0, 0, 'L', 0);
 $pdf->Cell(30, 10, $response['Sede'], 0, 1, 'L', 0);
 $pdf->Ln();
 $pdf->Ln();
-
-$header = array('Fecha', 'Asistencia', utf8_decode('Médico'), utf8_decode('Descripción'),'Importe',);
+$pdf->SetFont('Arial','B',12);
+$header = array('Fecha', 'Asistencia', utf8_decode('Médico'), utf8_decode('Estado de Pago'),'Importe',);
 $pdf->ImprovedTable($header,$response);
+$pdf->Ln();
+$pdf->Ln();
+// $pdf->Ln();
 
 
-// //TABLE
-// $pdf->Cell(30, 10, "Fecha: ", 1, 0, 'C', 0);
-// $pdf->Cell(30, 10, "Asistencia: ", 1, 0, 'C', 0);
-// $pdf->Cell(30, 10, "Médico: ", 1, 0, 'C', 0);
-// $pdf->Cell(40, 10, "Descripción: ", 1, 0, 'C', 0);
-// $pdf->Cell(20, 10, "Precio: ", 1, 1, 'C', 0);
-// $pdf->Cell(60, 10, $response['Fecha'], 1, 0, 'C', 0);
-// $pdf->Cell(60, 10, $response['Asistencia'], 1, 0, 'C', 0);
-// $pdf->Cell(60, 10, $response['Medico'], 1, 0, 'C', 0);
-// $pdf->Cell(60, 10, $response['Descripcion'], 1, 0, 'C', 0);
-// $pdf->Cell(60, 10, $response['Importe'], 1, 1, 'C', 0);
-// $pdf->Cell(60, 10, $response['Descripcion'], 1, 0, 'C', 0);
+$pdf->Cell(30, 10, utf8_decode("Descripción y/o Recomendación: "), 0, 1, 'L', 0);
+$pdf->MultiCell(190, 5, utf8_decode($response['Descripcion']) , 0 ,'L');
 
 
 $pdf->Output();
