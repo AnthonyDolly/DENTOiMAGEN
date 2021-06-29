@@ -21,22 +21,27 @@ class informacionTramientosControlador
                     <td class="px-3 border-right pt-3">' . $item["Medico"] . '</td>
                     <td class="px-3 border-right pt-3">' . $item["Fecha Inicio"] . '</td>
                     <td class="px-3 border-right pt-3">' . $item["NombreTratamiento"] . '</td>            
-                    <td class="px-3 pt-3">
-                        <button  style="height: 40px;" 
-                            type="submit" 
-                            name="boton" 
-                            id="botonModal"
-                            class="btn btn-primary mx-auto borderd d-block"
-                            data-toggle="modal"
-                            data-target="#modalInfo' . $i . '"
-                            >
-                            
-                            <i class="fas fa-download"></i>
-                        </button>
+                    <td class="px-3 pt-3">    
+                        <a href="index.php?action=pdfTrat">
+                            <button  style="height: 40px;" type="submit" name="boton" class="btn btn-primary mx-auto borderd d-block">
+                                <i style="cursor: pointer;"class="fas fa-download"></i>
+                            </button>
+                        </a>
                     </td>
                 </tr>';
         }
     }
 
 
+
+    // #listado control mensual
+    #----------------------------------------
+    public function vistaPDFInformacionTratamientoControlador()
+    {
+        $datosControlador = $_GET['idIC'];
+        $respuesta = InformacionTramientos::vistaInformacionTramientosModelo($datosControlador, "controles_mensuales");
+        // $test = 10;
+       return $respuesta;
+
+    }
 }

@@ -30,7 +30,8 @@ class EnlacesPaginas {
             $enlacesModelo == "pay" ||
             $enlacesModelo == "proceso" ||
             $enlacesModelo == "historial-clinico" ||
-            $enlacesModelo == "pdf" 
+            $enlacesModelo == "pdf" ||
+            $enlacesModelo == "pdfTrat" 
 
 
             ) {

@@ -76,25 +76,28 @@ class controlesControlador
                                 <i class="fas fa-trash-alt"></i>
                             </button>
                         </a>
-                    </td>
+                    </td>';
             
-                    <td class="px-3 pt-3">
-                        <button  style="height: 40px;" 
-                            type="submit" 
-                            name="boton" 
-                            id="botonModal"
-                            class="btn btn-primary mx-auto borderd d-block"
-                            data-toggle="modal"
-                            data-paciente= "' . $item["Paciente"] . '"
-                            data-sede= "' . $item["Sede"] . '"
-                            data-precio= "' . $item["Precio de control"] . '"
-                            data-target="#modalInfo' . $i . '"
-                            >
-                            
-                            <i class="fas fa-share-square"></i>
-                        </button>
-                    </td>
-                </tr>';
+                    if ($item["Asistencia"] == "Asistio" && $item["Estado de pago"] == 'Pagado') {
+                        echo ' 
+                            <td class="px-3 pt-3">
+                                <button  style="height: 40px;" 
+                                    type="submit" 
+                                    name="boton" 
+                                    id="botonModal"
+                                    class="btn btn-primary mx-auto borderd d-block"
+                                    data-toggle="modal"
+                                    data-paciente= "' . $item["Paciente"] . '"
+                                    data-sede= "' . $item["Sede"] . '"
+                                    data-precio= "' . $item["Precio de control"] . '"
+                                    data-target="#modalInfo' . $i . '"
+                                    >
+        
+                                    <i class="fas fa-share-square"></i>
+                                </button>
+                            </td>
+                        </tr>';
+                    }
         }
     }
 

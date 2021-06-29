@@ -10,7 +10,7 @@ class clientes_tratamientosControlador
 
         $datosControlador = $_GET["dni"];
         $respuesta = DatosClientesTratamientos::vistaClienteTratamientoModelo($datosControlador, "clientes_tratamientos");
-
+       
         foreach ($respuesta as $row => $item) {
             echo '<tr>
                     <td class="px-3 border-right pt-3">' . $item["DNI del paciente"] . '</td>
@@ -84,8 +84,8 @@ class clientes_tratamientosControlador
                 "dni" => $_POST["DNIPaciente"],
                 "descripcion" => $_POST["descripcion"],
                 "cantsesiones" => $_POST["sesiones"],
-                "estado" => $_POST["gridRadios"],
-                "tratamiento" => 1
+                "estado" => 'Activo',
+                "tratamiento" => $_POST["tratamiento"]
             );
 
             $respuesta = DatosClientesTratamientos::RegistroClienteTratamientoModelo($datosControlador, "clientes_tratamientos");
