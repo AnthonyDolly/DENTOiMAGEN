@@ -31,42 +31,48 @@ class controlesControladorB
         $respuesta = DatosControlesB::vistaControlesHoyModelo();
 
         foreach ($respuesta as $key => $item) {
-            echo '<tr>
-                    <td style="display: none;">
-                        <input type="text" class="form-control "  
-                        name="idCM" value =' . $item["ID"] . '>
-                    </td>
-                    <td>' . $item["DNI"] . '</td>
-                    <td>' . $item["Paciente"] . '</td>
-                    <td>' . $item["Fecha"] . '</td>
-                    <td>' . $item["Importe"] . '</td>';
+            echo '<form method="post">
+                    <table class="highlight responsive-table">
+                        <tbody>
+                            <tr>
+                                <td style="display: none;">
+                                    <input type="text" class="form-control "  
+                                    name="idCM" value =' . $item["ID"] . '>
+                                </td>
+                                <td>' . $item["DNI"] . '</td>
+                                <td>' . $item["Paciente"] . '</td>
+                                <td>' . $item["Fecha"] . '</td>
+                                <td>' . $item["Importe"] . '</td>';
             if ($item["Estado de Pago"] == 'Pendiente') {
-                echo '<td>
-                        <select name="pago">
-                            <option value="1" selected>Pendiente</option>
-                            <option value="2">Pagado</option>
-                        </select>
-                    </td>';
+                echo '          <td>
+                                    <select name="pago">
+                                        <option value="1" selected>Pendiente</option>
+                                        <option value="2">Pagado</option>
+                                    </select>
+                                </td>';
             } else if ($item["Estado de Pago"] == 'Pagado') {
-                echo '<td>
-                        <select name="pago">
-                            <option value="1">Pendiente</option>
-                            <option value="2" selected>Pagado</option>
-                        </select>
-                    </td>';
+                echo '          <td>
+                                    <select name="pago">
+                                        <option value="1">Pendiente</option>
+                                        <option value="2" selected>Pagado</option>
+                                    </select>
+                                </td>';
             }
-            echo '<td>
-                        <select name="asistencia">
-                            <option value="1" selected>Pendiente</option>
-                            <option value="2">Asistió</option>
-                            <option value="3">Faltó</option>
-                        </select>
-                    </td>';
+            echo '              <td>
+                                    <select name="asistencia">
+                                        <option value="1" selected>Pendiente</option>
+                                        <option value="2">Asistió</option>
+                                        <option value="3">Faltó</option>
+                                    </select>
+                                </td>';
 
-            echo '<td>
-                    <input type="button" class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" name="action" id="enviar" value="Enviar" onclick="btnswal()">
-                </td>
-            </tr>';
+            echo '              <td>
+                                    <button type="submit" class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" name="actions" id="actualizar" value="actualizar">Actualizar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>';
         }
     }
 
@@ -75,7 +81,7 @@ class controlesControladorB
     public function actualizarEstadosControlControlador()
     {
 
-        if (isset($_POST["idCM"])) {
+        if (isset($_POST["idCM"]) && $_POST["actions"] == 'actualizar') {
 
             $datosControlador = array(
                 "idCM" => $_POST["idCM"],
@@ -84,6 +90,8 @@ class controlesControladorB
             );
 
             $respuesta = DatosControlesB::actualizarEstadosControlModelo($datosControlador, "controles_mensuales");
+
+            $_SESSION["estado"] = 'actualizado';
 
             if ($respuesta == "success") {
                 header('location:index.php?action=inicio');
@@ -127,44 +135,48 @@ class controlesControladorB
 
             if (isset($respuesta)) {
                 foreach ($respuesta as $key => $item) {
-                    echo '<tr>
-                            <td style="display: none;">
-                                <input type="text" class="form-control "  
-                                name="idCM" value =' . $item["ID"] . '>
-                            </td>
-                            <td>' . $item["DNI"] . '</td>
-                            <td>' . $item["Paciente"] . '</td>
-                            <td>' . $item["Fecha"] . '</td>
-                            <td>' . $item["Importe"] . '</td>';
+                    echo '<form method="post">
+                            <table class="highlight responsive-table">
+                                <tbody>
+                                    <tr>
+                                        <td style="display: none;">
+                                            <input type="text" class="form-control "  
+                                            name="idCM" value =' . $item["ID"] . '>
+                                        </td>
+                                        <td>' . $item["DNI"] . '</td>
+                                        <td>' . $item["Paciente"] . '</td>
+                                        <td>' . $item["Fecha"] . '</td>
+                                        <td>' . $item["Importe"] . '</td>';
                     if ($item["Estado de Pago"] == 'Pendiente') {
-                        echo '<td>
-                                <select name="pago">
-                                    <option value="1" selected>Pendiente</option>
-                                    <option value="2">Pagado</option>
-                                </select>
-                            </td>';
+                        echo '          <td>
+                                            <select name="pago">
+                                                <option value="1" selected>Pendiente</option>
+                                                <option value="2">Pagado</option>
+                                            </select>
+                                        </td>';
                     } else if ($item["Estado de Pago"] == 'Pagado') {
-                        echo '<td>
-                                <select name="pago">
-                                    <option value="1">Pendiente</option>
-                                    <option value="2" selected>Pagado</option>
-                                </select>
-                            </td>';
+                        echo '          <td>
+                                            <select name="pago">
+                                                <option value="1">Pendiente</option>
+                                                <option value="2" selected>Pagado</option>
+                                            </select>
+                                        </td>';
                     }
-                    echo '<td>
-                                <select name="asistencia">
-                                    <option value="1" selected>Pendiente</option>
-                                    <option value="2">Asistió</option>
-                                    <option value="3">Faltó</option>
-                                </select>
-                            </td>';
-
-                    echo '<td>
-                            <input type="button" class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" name="action" id="enviar" value="Enviar" onclick="btnswal()">
-                        </td>
-                    </tr>';
+                    echo '              <td>
+                                            <select name="asistencia">
+                                                <option value="1" selected>Pendiente</option>
+                                                <option value="2">Asistió</option>
+                                                <option value="3">Faltó</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <button type="submit" class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" name="actions" id="actualizar" value="actualizar">Actualizar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>';
                 }
-            } else {
             }
         }
     }
