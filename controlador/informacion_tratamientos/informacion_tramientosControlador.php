@@ -22,7 +22,7 @@ class informacionTramientosControlador
                     <td class="px-3 border-right pt-3">' . $item["Fecha Inicio"] . '</td>
                     <td class="px-3 border-right pt-3">' . $item["NombreTratamiento"] . '</td>            
                     <td class="px-3 pt-3">    
-                        <a href="index.php?action=pdfTrat">
+                        <a href="index.php?action=pdfTrat&nT='.$item["NombreTratamiento"].'"">
                             <button  style="height: 40px;" type="submit" name="boton" class="btn btn-primary mx-auto borderd d-block">
                                 <i style="cursor: pointer;"class="fas fa-download"></i>
                             </button>
