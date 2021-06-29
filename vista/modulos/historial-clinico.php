@@ -9,6 +9,7 @@
             <!-- <p style="text-align: end;"><i style="cursor: pointer;" class="fas fa-edit"></i></p> -->
             <table class="text-center">
                 <tr class="border-bottom">
+                    <td class="font-weight-bold px-3 border-right d-none">Id ct</td>
                     <td class="font-weight-bold px-3 border-right ">DNI del paciente</td>
                     <td class="font-weight-bold px-3 border-right ">Doctor(a)</td>
                     <td class="font-weight-bold px-3 border-right ">Fecha de inicio</td>

@@ -14,7 +14,7 @@
                         <option value="1">1.Los Olivos - Ortodoncia - Dr.Jacqueline Urrutia Fuentes</option>
                         <option value="2">2.Cercado de Lima - Ortodoncia Dr.Marta Cabrera Palacios</option>
                         <option value="3">3.Trujillo - Ortodoncia - Dr.Elisa Bermudez Caceres</option>
-                        <option value="3">3.Trujillo - Ortodoncia - Dr.Elisa Bermudez Caceres</option>
+                        <option value="4">4.Los Olivos - Ortodoncia - Dr.Sara Garrido Pérez</option>
                         <option value="5">5.Los Olivos - Diseño de sonrisa - Dr.Jacqueline Urrutia Fuentes</option>
                     </select>
                 </div>

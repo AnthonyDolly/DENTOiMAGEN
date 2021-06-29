@@ -51,7 +51,12 @@ class clientes_tratamientosControlador
                             </button>
                         </a>
                         <a href="index.php?action=agendar-cita&id=' . $item["id"] . '&dni=' . $item["DNI del paciente"] . '&idM=' . $item["Medico"] . '">
-                            <button style="position: absolute; right: 0;"  type="submit" name="boton" class="btn btn-light borderd d-block">+</button>
+                            <button style="border: 1px solid #ccc; border-radius:5px; position: absolute; right: 170px;"  type="submit" name="boton" class="btn btn-light borderd d-block">+</button>
+                        </a>
+                        <a href="index.php?action=pdfTrat&dni=' . $item["DNI del paciente"]  . '&idCT=' . $item["id"] . '">
+                            <button  style="height: 40px; margin-right: 10px;" type="submit" name="boton" class="btn btn-primary borderd d-block">
+                                <i class="fas fa-book-medical"></i>
+                            </button>
                         </a>
                     </div>   
                 </div>
