@@ -7,7 +7,7 @@ if (!$_SESSION["validarM"]) {
 }
 ?>
 
-<main>
+<main class="heightBlock">
     <!-- new table -->
     <div class="content-citas-personal">
         <h1>Citas</h1>

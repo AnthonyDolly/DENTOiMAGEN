@@ -10,16 +10,18 @@ class controlesControladorB
         $respuesta = DatosControlesB::vistaControlesModelo();
 
         foreach ($respuesta as $key => $item) {
-            echo '<tr>
-                    <td>' . $item["ID"] . '</td>
-                    <td>' . $item["DNI"] . '</td>
-                    <td>' . $item["Paciente"] . '</td>
-                    <td>' . $item["Dentista"] . '</td>
-                    <td>' . $item["Fecha"] . '</td>
-                    <td>' . $item["Importe"] . '</td>
-                    <td>' . $item["Estado de Pago"] . '</td>
-                    <td>' . $item["Asistencia"] . '</td>
-                </tr>';
+            echo '
+                    <tr>   
+                        <td>' . $item["ID"] . '</td>
+                        <td>' . $item["DNI"] . '</td>
+                        <td>' . $item["Paciente"] . '</td>
+                        <td>' . $item["Dentista"] . '</td>
+                        <td>' . $item["Fecha"] . '</td>
+                        <td>' . $item["Importe"] . '</td>
+                        <td>' . $item["Estado de Pago"] . '</td>
+                        <td>' . $item["Asistencia"] . '</td>
+                    </tr>
+                ' ;
         }
     }
 
@@ -31,7 +33,8 @@ class controlesControladorB
         $respuesta = DatosControlesB::vistaControlesHoyModelo();
 
         foreach ($respuesta as $key => $item) {
-            echo '<tr>
+            echo '
+                <tr>
                     <td style="display: none;">
                         <input type="text" class="form-control "  
                         name="idCM" value =' . $item["ID"] . '>
@@ -66,7 +69,9 @@ class controlesControladorB
             echo '<td>
                     <input type="button" class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" name="action" id="enviar" value="Enviar" onclick="btnswal()">
                 </td>
-            </tr>';
+            </tr>
+            
+            ';
         }
     }
 

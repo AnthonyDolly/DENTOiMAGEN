@@ -1,4 +1,4 @@
-<main style="margin: 10rem auto;">
+<main class="heightBlock" style="margin: 10rem auto;">
     <div class="content-citas-personal">
         <h1>Editar Tratamientos</h1>
         <div class="table-citas-personal " style="max-width: 900px;">

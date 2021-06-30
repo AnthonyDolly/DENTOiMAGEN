@@ -115,6 +115,7 @@ class consultasControladorB
     #----------------------------------------
     public function vistaConsultaHoyControlador()
     {
+            //sasdasd
         // $datosControlador = $_GET["dni"];
         $respuesta = DatosConsultasB::vistaConsultasHoyModelo();
 

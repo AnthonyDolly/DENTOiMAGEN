@@ -7,7 +7,7 @@ if (!$_SESSION["validar"]) {
 }
 ?>
 
-<main>
+<main class="heightBlock">
     <!-- new table -->
     <div class="content-treatment-user">
         <h1>Mi Tratamiento</h1>

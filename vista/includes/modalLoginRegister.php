@@ -19,12 +19,13 @@
                         <input class="form-control w-75 mx-auto" type="Password" name="passwordI" required="" size="30">
                     </div>
                     <div class="group-submit-Login">
-                        <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
+                        <!-- <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
                             data-toggle="modal" data-target="#RegisterModal"
                             style="display: inline-block; font-size: .8em; color: #3498db;">¿No
                             tienes cuenta? Regístrate
-                        </button>
+                        </button> -->
                         <input type="submit" name="btningresar" value="Ingresar"
+                            class="w-50"
                             style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;">
                     </div>
                 </div>
@@ -61,13 +62,13 @@
                             <input type="password" class="form-control w-100 d-block" name="r-password" placeholder="Repetir contraseña" required>
                         </div>
                         <div class="group-submit">
-                            <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
+                            <!-- <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
                                 data-toggle="modal" data-target="#LoginModal"
                                 style="display: inline-block; font-size: .8em; color: #3498db;">¿Ya
                                 tienes cuenta? Iniciar sesión
-                            </button>
-                            <input type="submit" class="right" name="btnregistrar" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;
-                                        ">
+                            </button> -->
+                            <input type="submit" name="btnregistrar" class="w-50 mx-auto" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em; display: block;
+                                      ">
                         </div>
                     </div>
                 </div>

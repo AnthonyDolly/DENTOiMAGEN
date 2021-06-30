@@ -36,7 +36,7 @@ class clientes_tratamientosControlador
             echo '
                 <div class="border-botom" style="position: relative;">
                     <div class="border-botom d-flex" style="position: relative;">
-                        <p style="width: 82%; padding-left: 20%" class="text-center mb-2">
+                        <p style="width: 82%; padding-left: 20%" class="text-center mb-4">
                             <strong>Paciente: ' . $item["Paciente"] . '
                             </strong>
                         </p>

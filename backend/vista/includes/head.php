@@ -28,4 +28,10 @@
     <link rel="stylesheet" href="vista/plugins/pickadate/themes/default.css">
     <link rel="stylesheet" href="vista/plugins/pickadate/themes/default.date.css">
     <link rel="stylesheet" href="vista/plugins/pickadate/themes/default.time.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.js'></script>
+    <!-- <link href='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@5.8.0/main.css' rel='stylesheet' /> -->
+    <!-- <script type="text/javascript" src="vista/js/es.js"></script> -->
+
+    <!-- <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@5.8.0/main.js'></script> -->
 </head>

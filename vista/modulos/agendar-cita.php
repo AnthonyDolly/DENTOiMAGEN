@@ -1,6 +1,6 @@
-<main>
+<main >
     <div class="content-citas-personal">
-        <h1>Agendar Cita Mensual</h1>
+        <h1 class="pt-4">Agendar Cita Mensual</h1>
         <div class="table-citas-personal" style="max-width: 900px;">
             <div class="table-register-treatment">
                 <form method="POST" id="formCM">

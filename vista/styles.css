@@ -58,6 +58,9 @@ ul{
 main{
     margin-top: 8rem;
 }
+.heightBlock{
+    min-height: 70vh;
+}
 main > section > table {
     box-shadow: 0 1px 4px rgba(146, 161, 176, 15);
 }
@@ -105,9 +108,9 @@ div > p > input[type = submit]:hover {
 /* --Modal Register-- */
 
 .group-submit-Login {
-    display: grid;
-    grid-template: 1fr / 1fr 1fr;
-    margin: 1em;
+    /* display: grid;
+    grid-template: 1fr / 1fr 1fr; */
+    margin: 2em;
 }
 
 .group-names {
@@ -115,15 +118,15 @@ div > p > input[type = submit]:hover {
     display: grid;
     grid-template: 1fr / 1fr 1fr;
     grid-gap: 1em;
-    margin-bottom: .6em;
+    margin-bottom: .9em;
 }
 
 .group-correo-username {
     width: 100%;
     display: grid;
-    grid-template: 1fr / 2fr 1fr;
+    /* grid-template: 1fr / 2fr 1fr; */
     grid-gap: 1em;
-    margin-bottom: .6em;
+    margin-bottom: .9em;
 }
 
 .group-password {
@@ -131,13 +134,13 @@ div > p > input[type = submit]:hover {
     display: grid;
     grid-template: 1fr / 1fr 1fr;
     grid-gap: 1em;
-    margin-bottom: .6em;
+    margin-bottom: .9em;
 }
 
 .group-submit {
-    display: grid;
-    grid-template: 1fr / 1fr 1fr ;
-    margin-bottom: 1em;
+    /* display: grid; */
+    /* grid-template: 1fr / 1fr 1fr ; */
+    margin: 2em 0;
 }
 
 

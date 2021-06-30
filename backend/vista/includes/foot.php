@@ -3,6 +3,8 @@
 <script type="text/javascript" src="vista/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 <script type="text/javascript" src="vista/js/plugins.js"></script>
 <script type="text/javascript" src="vista/js/custom-script.js"></script>
+<script type="text/javascript" src="vista/js/script.js"></script>
+<script type="text/javascript" src="vista/js/es.js"></script>
 <script src="vista/plugins/pickadate/picker.js"></script>
 <script src="vista/plugins/pickadate/picker.date.js"></script>
 <script src="vista/plugins/pickadate/picker.time.js"></script>

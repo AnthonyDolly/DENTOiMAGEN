@@ -1,5 +1,5 @@
 
-<main>
+<main class="heightBlock">
     <!-- new table -->
     <div class="content-historial-clinico">
         <!-- <h1>Mi historial Clínico</h1> -->

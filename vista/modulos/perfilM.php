@@ -27,8 +27,8 @@ if (!$_SESSION["validarM"]) {
                                 ?>
                             </p>
                             <a href="index.php?action=citas-medicos&dni=<?php echo $_SESSION['id']; ?>">Mis citas</a>
-                            <a href="index.php?action=horario-medicos" style="margin-left: 1em;">Horario de trabajo</a>
-                            <a href="index.php?action=registrar-incidencia" style="display: block; margin-top: .5em;">Registrar incidencia</a>
+                            <!-- <a href="index.php?action=horario-medicos" style="margin-left: 1em;">Horario de trabajo</a> -->
+                            <!-- <a href="index.php?action=registrar-incidencia" style="display: block; margin-top: .5em;">Registrar incidencia</a> -->
                             <a href="index.php?action=registrar-tratamiento" style="display: block; margin-top: .5em;">Registrar Tramiento</a>
                             <a href="index.php?action=mis-tratamientos&dni=<?php echo $_SESSION['id']; ?>" style="display: block; margin-top: .5em;">Ver mis
                                 Tratamientos</a>
