@@ -21,7 +21,7 @@ class controlesControladorB
                         <td>' . $item["Estado de Pago"] . '</td>
                         <td>' . $item["Asistencia"] . '</td>
                     </tr>
-                ' ;
+                ';
         }
     }
 
@@ -38,8 +38,7 @@ class controlesControladorB
                         <tbody>
                             <tr style="width: 100%;">
                                 <td style="display: none;">
-                                    <input type="text" class="form-control "  
-                                    name="idCM" value =' . $item["ID"] . '>
+                                    <input type="text" class="form-control" name="idCM" value =' . $item["ID"] . '>
                                 </td>
                                 <td style="width:9% ;">' . $item["DNI"] . '</td>
                                 <td style="width:15%; ">' . $item["Paciente"] . '</td>
@@ -66,15 +65,26 @@ class controlesControladorB
                                         <option value="2">Asistió</option>
                                         <option value="3">Faltó</option>
                                     </select>
-                                </td>';
-
-            echo '              <td style="width:20%">
+                                </td>
+                                <td style="width:20%">
                                     <button type="submit" class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" name="actions" id="actualizar" value="actualizar">Actualizar</button>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                </form>';
+                </form>
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header" style="display:block !important;padding:.2rem;">
+                            <span style="font-weight:bold;">Contactar...</span>
+                        </div>
+                        <div class="collapsible-body" style="display:flex;justify-content:space-around;">
+                            <p>Nombre: ' . $item["Paciente"] . '</p>
+                            <p><a style="color:black;" href="mailto:' . $item["Correo"] . '"> Correo: ' . $item["Correo"] . '</a></p>
+                            <p><a style="color:black;"href="https://api.whatsapp.com/send?phone=51' . $item["Telefono"] . '&amp;text=Hola%20' . $item["Paciente"] . '" target="_blank">Telefono: ' . $item["Telefono"] . '</a></p>
+                        </div>
+                    </li>
+                </ul>';
         }
     }
 
@@ -177,19 +187,21 @@ class controlesControladorB
                                     </tr>
                                 </tbody>
                             </table>
-                        </form>';
+                        </form>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header" style="display:block !important;padding:.2rem;">
+                                    <span style="font-weight:bold;">Contactar...</span>
+                                </div>
+                                <div class="collapsible-body" style="display:flex;justify-content:space-around;">
+                                    <p>Nombre: ' . $item["Paciente"] . '</p>
+                                    <p><a style="color:black;" href="mailto:' . $item["Correo"] . '"> Correo: ' . $item["Correo"] . '</a></p>
+                                    <p><a style="color:black;"href="https://api.whatsapp.com/send?phone=51' . $item["Telefono"] . '&amp;text=Hola%20' . $item["Paciente"] . '" target="_blank">Telefono: ' . $item["Telefono"] . '</a></p>
+                                </div>
+                            </li>
+                        </ul>';
                 }
             }
         }
     }
 }
-
-?>
-<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<script>
-    $("#btnrow").click( function() {
-        // alert("hola");
-        console.log("sads");
-    });
-</script> -->
-

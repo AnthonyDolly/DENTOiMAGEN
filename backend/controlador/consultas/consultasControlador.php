@@ -131,8 +131,6 @@ class consultasControladorB
                                 </td>
                                 <td style="width: 7%;" >' . $item["DNI"] . '</td>
                                 <td style="width: 10%;" >' . $item["Nombre"] . '</td>
-                                <td style="width: 10%;" >' . $item["Telefono"] . '</td>
-                                <td style="width: 13%;" >' . $item["Correo"] . '</td>
                                 <td style="width: 10%;" >' . $item["Fecha"] . '</td>
                                 <td style="width: 10%;" >' . $item["Importe"] . '</td>
                                 <td style="width: 10%;" >' . $item["Medico"] . '</td> 
@@ -149,7 +147,20 @@ class consultasControladorB
                             </tr>
                         </tbody>
                     </table>
-                </form>';
+                </form>
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header" style="display:block !important;padding:.2rem;">
+                            <span style="font-weight:bold;">Contactar...</span>
+                        </div>
+                        <div class="collapsible-body" style="display:flex;justify-content:space-around;">
+                            <p>Nombre: ' . $item["Nombre"] . '</p>
+                            <p><a style="color:black;" href="mailto:' . $item["Correo"] . '"> Correo: ' . $item["Correo"] . '</a></p>
+                            <p><a style="color:black;"href="https://api.whatsapp.com/send?phone=51' . $item["Telefono"] . '&amp;text=Hola%20' . $item["Cliente"] . '" target="_blank">Telefono: ' . $item["Telefono"] . '</a></p>
+                        </div>
+                    </li>
+                </ul>';
+                
         }
     }
 
@@ -173,8 +184,6 @@ class consultasControladorB
                                         </td>
                                         <td style="width: 7%;" >' . $item["DNI"] . '</td>
                                         <td style="width: 10%;" >' . $item["Nombre"] . '</td>
-                                        <td style="width: 10%;" >' . $item["Telefono"] . '</td>
-                                        <td style="width: 13%;" >' . $item["Correo"] . '</td>
                                         <td style="width: 10%;" >' . $item["Fecha"] . '</td>
                                         <td style="width: 10%;" >' . $item["Importe"] . '</td>
                                         <td style="width: 10%;" >' . $item["Medico"] . '</td>
@@ -191,7 +200,19 @@ class consultasControladorB
                                     </tr>
                                 </tbody>
                             </table>
-                        </form>';
+                        </form>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header" style="display:block !important;padding:.2rem;">
+                                    <span style="font-weight:bold;">Contactar...</span>
+                                </div>
+                                <div class="collapsible-body" style="display:flex;justify-content:space-around;">
+                                    <p>Nombre: ' . $item["Nombre"] . '</p>
+                                    <p><a style="color:black;" href="mailto:' . $item["Correo"] . '"> Correo: ' . $item["Correo"] . '</a></p>
+                                    <p><a style="color:black;"href="https://api.whatsapp.com/send?phone=51' . $item["Telefono"] . '&amp;text=Hola%20' . $item["Cliente"] . '" target="_blank">Telefono: ' . $item["Telefono"] . '</a></p>
+                                </div>
+                            </li>
+                        </ul>';
                 }
             }
         }
