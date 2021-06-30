@@ -1,5 +1,31 @@
-
-
+<?php
+error_reporting(0);
+if ($_SESSION["estado"] == 'actualizado') {
+?>
+    <script>
+        Swal.fire({
+            icon: "success",
+            title: "¡Control Actualizado!",
+            showConfirmButton: false,
+            timer: 1500
+        })
+    </script>
+<?php
+    $_SESSION["estado"] = 'no';
+} elseif ($_SESSION["estado"] == 'agendado') {
+?>
+    <script>
+        Swal.fire({
+            icon: "success",
+            title: "¡Consulta Actualizada!",
+            showConfirmButton: false,
+            timer: 1500,
+        })
+    </script>
+<?php
+    $_SESSION["estado"] = 'no';
+}
+?>
 <div id="main">
     <div class="wrapper">
         <section id="content">
@@ -136,62 +162,36 @@
                                         </nav>
                                     </form>
                                 </li>
-                                <form method="POST" id="form">
-                                    <table class="highlight responsive-table">
-                                        <thead>
-                                            <tr>
-                                                <th style="display: none;">ID</th>
-                                                <th>DNI</th>
-                                                <th>Paciente</th>
-                                                <th>Fecha y Hora</th>
-                                                <th>Importe</th>
-                                                <th style="margin: 10px 0 0 0;">Estado de Pago</th>
-                                                <th style="margin: 43px 0 0 0;">Asistencia</th>
-                                                <th style="margin: 38px 0 0 0;">Acción</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                            if (!isset($_POST["dniB"])) {
-                                                $vista = new controlesControladorB();
-                                                $vista->vistaControlesHoyControlador();
-                                            }
-                                            ?>
-                                            <?php
-                                            if (isset($_POST["dniB"])) {
-                                                $vistaB = new controlesControladorB();
-                                                $vistaB->buscarClienteControlador();
-                                            }
-
-                                            ?>
-                                            <script>
-                                                function btnswal() {
-                                                    Swal.fire({
-                                                        title: '¿Seguro que quieres actualizar los estados?',
-                                                        showDenyButton: true,
-                                                        showCancelButton: true,
-                                                        confirmButtonText: `Actualizar`,
-                                                        denyButtonText: `No`,
-                                                    }).then((result) => {
-                                                        /* Read more about isConfirmed, isDenied below */
-                                                        if (result.isConfirmed) {
-                                                            form = document.getElementById('form');
-                                                            form.submit();
-
-                                                            <?php
-                                                            $actualizarECM = new controlesControladorB();
-                                                            $actualizarECM->actualizarEstadosControlControlador();
-                                                            ?>
-                                                        } else if (result.isDenied) {
-                                                            Swal.fire('Cancelado', '', 'error')
-                                                        }
-                                                    })
-                                                }
-                                            </script>
-
-                                        </tbody>
-                                    </table>
-                                </form>
+                                <table class="highlight responsive-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="display: none;">ID</th>
+                                            <th>DNI</th>
+                                            <th>Paciente</th>
+                                            <th>Fecha y Hora</th>
+                                            <th>Importe</th>
+                                            <th style="margin: 10px 0 0 0;">Estado de Pago</th>
+                                            <th style="margin: 43px 0 0 0;">Asistencia</th>
+                                            <th style="margin: 38px 0 0 0;">Acción</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <?php
+                                if (!isset($_POST["dniB"])) {
+                                    $vista = new controlesControladorB();
+                                    $vista->vistaControlesHoyControlador();
+                                }
+                                ?>
+                                <?php
+                                if (isset($_POST["dniB"])) {
+                                    $vistaB = new controlesControladorB();
+                                    $vistaB->buscarClienteControlador();
+                                }
+                                ?>
+                                <?php
+                                $actualizarECM = new controlesControladorB();
+                                $actualizarECM->actualizarEstadosControlControlador();
+                                ?>
                             </ul>
                         </div>
                         <div class="col s12 m4 l12">
@@ -236,7 +236,6 @@
                                         </nav>
                                     </form>
                                 </li>
-                                <!-- <form method="POST" id="formC"> -->
                                 <table class="highlight responsive-table">
                                     <thead>
                                         <tr>
@@ -253,7 +252,6 @@
                                         </tr>
                                     </thead>
                                 </table>
-                                <!-- <tbody> -->
                                 <?php
                                 if (!isset($_POST["dniBC"])) {
                                     $vistaCG = new consultasControladorB();
@@ -265,36 +263,11 @@
                                     $vistaB = new consultasControladorB();
                                     $vistaB->buscarConsultaControlador();
                                 }
-
                                 ?>
-                                <!-- <script>
-                                                function btnswalC() {
-                                                    Swal.fire({
-                                                        title: '¿Seguro que quieres actualizar los estados?',
-                                                        showDenyButton: true,
-                                                        showCancelButton: true,
-                                                        confirmButtonText: `Actualizar`,
-                                                        denyButtonText: `No`,
-                                                    }).then((result) => {
-                                                        /* Read more about isConfirmed, isDenied below */
-                                                        if (result.isConfirmed) {
-                                                            form = document.getElementById('formC');
-                                                            form.submit();
-
-                                                            <?php
-                                                            $actualizarECM = new consultasControladorB();
-                                                            $actualizarECM->actualizarEstadoConsultaControlador();
-                                                            ?>
-                                                        } else if (result.isDenied) {
-                                                            Swal.fire('Cancelado', '', 'error')
-                                                        }
-                                                    })
-                                                }
-                                            </script> -->
-
-                                <!-- </tbody> -->
-                                <!-- </table> -->
-                                <!-- </form> -->
+                                <?php
+                                $actualizarECM = new consultasControladorB();
+                                $actualizarECM->actualizarEstadoConsultaControlador();
+                                ?>
                             </ul>
                         </div>
                         <div class="col s12 m4 l4">

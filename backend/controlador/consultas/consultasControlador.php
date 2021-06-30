@@ -58,7 +58,6 @@ class consultasControladorB
 
             $respuesta = DatosConsultasB::actualizarFechaConsultaModelo($datosControlador, "consultas");
 
-            // session_start();
             $_SESSION["estado"] = 'agendado';
 
             if ($respuesta == "success") {
@@ -78,6 +77,8 @@ class consultasControladorB
             $datosControlador = $_POST["idC"];
 
             $respuesta = DatosConsultasB::eliminarConsultasBasuraModelo($datosControlador, "consultas");
+
+            $_SESSION["estado"] = 'eliminado';
 
             if ($respuesta == "success") {
                 header('location:index.php?action=consultas-solicitadas');
@@ -162,31 +163,36 @@ class consultasControladorB
 
             if (isset($respuesta)) {
                 foreach ($respuesta as $key => $item) {
-                    echo '<tr>
-                            <td style="display: none;">
-                                <input type="text" class="form-control "  
-                                name="idC" value =' . $item["ID"] . '>
-                            </td>
-                            <td>' . $item["DNI"] . '</td>
-                            <td>' . $item["Nombre"] . '</td>
-                            <td>' . $item["Telefono"] . '</td>
-                            <td>' . $item["Correo"] . '</td>
-                            <td>' . $item["Fecha"] . '</td>
-                            <td>' . $item["Importe"] . '</td>
-                            <td>' . $item["Medico"] . '</td>';
-                    echo '  <td>
-                                <select name="asistencia">
-                                    <option value="1" selected>Pendiente</option>
-                                    <option value="2">Asistió</option>
-                                    <option value="3">Faltó</option>
-                                </select>
-                            </td>';
-                    echo '  <td>
-                                <button type="submit" class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" name="actions" id="actualizar" value="actualizar">Actualizar</button>
-                            </td>
-                        </tr>';
+                    echo '<form method="post">
+                            <table class="highlight responsive-table">
+                                <tbody>
+                                    <tr>
+                                        <td style="display: none;">
+                                            <input type="text" class="form-control "  
+                                            name="idC" value =' . $item["ID"] . '>
+                                        </td>
+                                        <td>' . $item["DNI"] . '</td>
+                                        <td>' . $item["Nombre"] . '</td>
+                                        <td>' . $item["Telefono"] . '</td>
+                                        <td>' . $item["Correo"] . '</td>
+                                        <td>' . $item["Fecha"] . '</td>
+                                        <td>' . $item["Importe"] . '</td>
+                                        <td>' . $item["Medico"] . '</td>
+                                        <td>
+                                            <select name="asistencia">
+                                                <option value="1" selected>Pendiente</option>
+                                                <option value="2">Asistió</option>
+                                                <option value="3">Faltó</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <button type="submit" class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" name="actions" id="actualizar" value="actualizar">Actualizar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>';
                 }
-            } else {
             }
         }
     }
@@ -195,7 +201,7 @@ class consultasControladorB
     #----------------------------------------
     public function actualizarEstadoConsultaControlador()
     {
-        if ($_POST["actions"] == 'actualizar') {
+        if (isset($_POST["idC"]) && $_POST["actions"] == 'actualizar') {
 
             $datosControlador = array(
                 "idC" => $_POST["idC"],
@@ -204,20 +210,13 @@ class consultasControladorB
 
             $respuesta = DatosConsultasB::actualizarEstadoConsultaModelo($datosControlador, "consultas");
 
+            $_SESSION["estado"] = 'agendado';
+
             if ($respuesta == "success") {
                 header('location:index.php?action=inicio');
             } else {
                 header("location:index.php");
             }
         }
-    }
-
-    public function horas()
-    {
-        $array = array(
-            13,
-            14
-        );
-        return $array;
     }
 }

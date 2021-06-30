@@ -12,6 +12,18 @@ if ($_SESSION["estado"] == 'agendado') {
     </script>
 <?php
     $_SESSION["estado"] = 'no';
+} elseif ($_SESSION["estado"] == 'eliminado') {
+?>
+    <script>
+        Swal.fire({
+            icon: "success",
+            title: "¡Consulta eliminada!",
+            showConfirmButton: false,
+            timer: 1500,
+        })
+    </script>
+<?php
+    $_SESSION["estado"] = 'no';
 }
 ?>
 <div id="main">
@@ -45,60 +57,18 @@ if ($_SESSION["estado"] == 'agendado') {
                                         </tr>
                                     </thead>
                                 </table>
-                                <!-- <tbody> -->
                                 <?php
                                 $vista = new consultasControladorB();
                                 $vista->vistaSolicitudesConsultasControlador();
                                 ?>
-                                <!-- <script>
-                                                function btnswalC() {
-                                                    Swal.fire({
-                                                        title: '¿Seguro?',
-                                                        showDenyButton: true,
-                                                        showCancelButton: true,
-                                                        confirmButtonText: `Agendar`,
-                                                        denyButtonText: `No`,
-                                                    }).then((result) => {
-                                                        /* Read more about isConfirmed, isDenied below */
-                                                        if (result.isConfirmed) {
-                                                            form = document.getElementById('formC');
-                                                            form.submit();
-
-                                                            <?php
-                                                            $actualizarFC = new consultasControladorB();
-                                                            $actualizarFC->actualizarFechaConsultaControlador();
-                                                            ?>
-                                                        } else if (result.isDenied) {
-                                                            Swal.fire('Cancelado', '', 'error')
-                                                        }
-                                                    })
-                                                }
-
-                                                function btnswalCE() {
-                                                    Swal.fire({
-                                                        title: '¿Estas seguro?',
-                                                        text: "¡No se podrá revertir!",
-                                                        icon: 'warning',
-                                                        showCancelButton: true,
-                                                        confirmButtonColor: '#3085d6',
-                                                        cancelButtonColor: '#d33',
-                                                        confirmButtonText: '¡Sí, Eliminar!'
-                                                    }).then((result) => {
-                                                        if (result.isConfirmed) {
-                                                            form = document.getElementById('formC');
-                                                            form.submit();
-
-                                                            <?php
-                                                            $eliminarCB = new consultasControladorB();
-                                                            $eliminarCB->eliminarConsultasBasuraControlador();
-                                                            ?>
-                                                        }
-                                                    })
-                                                }
-                                            </script> -->
-                                <!-- </tbody> -->
-                                <!-- </table> -->
-                                <!-- </form> -->
+                                <?php
+                                $actualizarFC = new consultasControladorB();
+                                $actualizarFC->actualizarFechaConsultaControlador();
+                                ?>
+                                <?php
+                                $eliminarCB = new consultasControladorB();
+                                $eliminarCB->eliminarConsultasBasuraControlador();
+                                ?>
                             </ul>
                         </div>
                     </div>
