@@ -19,9 +19,7 @@ class DatosConsultasB extends ConexionB
     #---------------------------------------------
     public function actualizarFechaConsultaModelo($datosModelo, $tabla)
     {
-        $st = ConexionB::conectar()->prepare("UPDATE consultas 
-        SET fecha = :fecha
-        WHERE id = :idC;");
+        $st = ConexionB::conectar()->prepare("call actualizarFechaConsulta(:fecha,:idC);");
 
         $st->bindParam(":idC", $datosModelo["idC"], PDO::PARAM_STR);
         $st->bindParam(":fecha", $datosModelo["fecha"], PDO::PARAM_STR);
@@ -37,7 +35,7 @@ class DatosConsultasB extends ConexionB
     #---------------------------------------------
     public function eliminarConsultasBasuraModelo($datosModelo)
     {
-        $st = ConexionB::conectar()->prepare("DELETE FROM consultas WHERE id = $datosModelo;");
+        $st = ConexionB::conectar()->prepare("call eliminarConsultasBasura($datosModelo);");
 
         if ($st->execute()) {
             return "success";
@@ -86,9 +84,7 @@ class DatosConsultasB extends ConexionB
     #--------------------------------------------------------
     public function actualizarEstadoConsultaModelo($datosModelo, $tabla)
     {
-        $st = ConexionB::conectar()->prepare("UPDATE consultas 
-        SET asistencia = :estadoAsistencia, fecha = fecha
-        WHERE id = :idC;");
+        $st = ConexionB::conectar()->prepare("call actualizarEstadoConsulta(:idC,:estadoAsistencia);");
 
         $st->bindParam(":idC", $datosModelo["idC"], PDO::PARAM_STR);
         $st->bindParam(":estadoAsistencia", $datosModelo["estadoAsistencia"], PDO::PARAM_STR);
