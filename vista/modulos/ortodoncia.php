@@ -1,6 +1,6 @@
 <main>
     <section min-width="360">
-        <h4 style="padding-top: 10px;">Los brackets o también conocido como frenos, son los instrumentos
+        <h4 style="padding-top: 10px; width: 75%;">Los brackets o también conocido como frenos, son los instrumentos
             terapéuticos utilizados por el ortodontista para poder ejercer la ortodoncia.
         </h4>
         <div class="alineados">
@@ -15,6 +15,7 @@
                     transparente y el zafiro prácticamente traslúcido.
             </div>
         </div>
+        <br>
         <br>
         <div class="alineados">
             <div id="cuadro10">

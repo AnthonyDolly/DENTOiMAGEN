@@ -36,31 +36,31 @@ class controlesControladorB
             echo '<form method="post">
                     <table class="highlight responsive-table">
                         <tbody>
-                            <tr>
+                            <tr style="width: 100%;">
                                 <td style="display: none;">
                                     <input type="text" class="form-control "  
                                     name="idCM" value =' . $item["ID"] . '>
                                 </td>
-                                <td>' . $item["DNI"] . '</td>
-                                <td>' . $item["Paciente"] . '</td>
-                                <td>' . $item["Fecha"] . '</td>
-                                <td>' . $item["Importe"] . '</td>';
+                                <td style="width:9% ;">' . $item["DNI"] . '</td>
+                                <td style="width:15%; ">' . $item["Paciente"] . '</td>
+                                <td style="width:16%;">' . $item["Fecha"] . '</td>
+                                <td style="width:10% ;">' . $item["Importe"] . '</td>';
             if ($item["Estado de Pago"] == 'Pendiente') {
-                echo '          <td>
+                echo '          <td style="width:15%"> 
                                     <select name="pago">
                                         <option value="1" selected>Pendiente</option>
                                         <option value="2">Pagado</option>
                                     </select>
                                 </td>';
             } else if ($item["Estado de Pago"] == 'Pagado') {
-                echo '          <td>
+                echo '          <td style="width:15%">
                                     <select name="pago">
                                         <option value="1">Pendiente</option>
                                         <option value="2" selected>Pagado</option>
                                     </select>
                                 </td>';
             }
-            echo '              <td>
+            echo '              <td style="width:15%">
                                     <select name="asistencia">
                                         <option value="1" selected>Pendiente</option>
                                         <option value="2">Asistió</option>
@@ -68,7 +68,7 @@ class controlesControladorB
                                     </select>
                                 </td>';
 
-            echo '              <td>
+            echo '              <td style="width:20%">
                                     <button type="submit" class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" name="actions" id="actualizar" value="actualizar">Actualizar</button>
                                 </td>
                             </tr>
@@ -145,33 +145,33 @@ class controlesControladorB
                                             <input type="text" class="form-control "  
                                             name="idCM" value =' . $item["ID"] . '>
                                         </td>
-                                        <td>' . $item["DNI"] . '</td>
-                                        <td>' . $item["Paciente"] . '</td>
-                                        <td>' . $item["Fecha"] . '</td>
-                                        <td>' . $item["Importe"] . '</td>';
+                                        <td style="width:9% ;">' . $item["DNI"] . '</td>
+                                        <td style="width:15%; ">' . $item["Paciente"] . '</td>
+                                        <td style="width:16%;">' . $item["Fecha"] . '</td>
+                                        <td style="width:10% ;">' . $item["Importe"] . '</td>';
                     if ($item["Estado de Pago"] == 'Pendiente') {
-                        echo '          <td>
+                        echo '          <td style="width:15%">
                                             <select name="pago">
                                                 <option value="1" selected>Pendiente</option>
                                                 <option value="2">Pagado</option>
                                             </select>
                                         </td>';
                     } else if ($item["Estado de Pago"] == 'Pagado') {
-                        echo '          <td>
+                        echo '          <td style="width:15%">
                                             <select name="pago">
                                                 <option value="1">Pendiente</option>
                                                 <option value="2" selected>Pagado</option>
                                             </select>
                                         </td>';
                     }
-                    echo '              <td>
+                    echo '              <td style="width:15%">
                                             <select name="asistencia">
                                                 <option value="1" selected>Pendiente</option>
                                                 <option value="2">Asistió</option>
                                                 <option value="3">Faltó</option>
                                             </select>
                                         </td>
-                                        <td>
+                                        <td style="width:20%">
                                             <button type="submit" class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" name="actions" id="actualizar" value="actualizar">Actualizar</button>
                                         </td>
                                     </tr>
@@ -183,3 +183,13 @@ class controlesControladorB
         }
     }
 }
+
+?>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script>
+    $("#btnrow").click( function() {
+        // alert("hola");
+        console.log("sads");
+    });
+</script> -->
+

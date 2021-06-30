@@ -1,6 +1,6 @@
 <main>
     <section min-width="360">
-        <h4 style="padding-top: 10px;">El cuidado dental preventivo es clave para mantener tus dientes sanos a
+        <h4 style="padding-top: 10px; width: 75%;">El cuidado dental preventivo es clave para mantener tus dientes sanos a
             lo largo de tu vida. Pero va más allá de eso. La buena salud oral también puede impactar tu salud
             general.
         </h4>

@@ -1,6 +1,6 @@
 <main>
     <section min-width="360">
-        <h4 style="padding-top: 10px;">El diseño dental sirve para aumentar el autoestima del paciente ayudando
+        <h4 style="padding-top: 10px; width: 75%;">El diseño dental sirve para aumentar el autoestima del paciente ayudando
             a darle un aspecto mas frezco y naturalmente cuidado.</h4>
         <div class="alinea">
             <div id="cuadro3">

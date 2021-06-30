@@ -62,7 +62,7 @@ main{
     min-height: 70vh;
 }
 main > section > table {
-    box-shadow: 0 1px 4px rgba(146, 161, 176, 15);
+    /* box-shadow: 0 1px 4px rgba(146, 161, 176, 15); */
 }
 
 .navigator ul li a{

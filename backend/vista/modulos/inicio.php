@@ -164,15 +164,15 @@ if ($_SESSION["estado"] == 'actualizado') {
                                 </li>
                                 <table class="highlight responsive-table">
                                     <thead>
-                                        <tr>
+                                        <tr style="width: 100%;">
                                             <th style="display: none;">ID</th>
-                                            <th>DNI</th>
-                                            <th>Paciente</th>
-                                            <th>Fecha y Hora</th>
-                                            <th>Importe</th>
-                                            <th style="margin: 10px 0 0 0;">Estado de Pago</th>
-                                            <th style="margin: 43px 0 0 0;">Asistencia</th>
-                                            <th style="margin: 38px 0 0 0;">Acción</th>
+                                            <th style="width: 9%;" >DNI</th>
+                                            <th style="width: 15%;" >Paciente</th>
+                                            <th style="width: 16%;" >Fecha y Hora</th>
+                                            <th style="width: 10%;" >Importe</th>
+                                            <th style="width: 15%;" >Estado de Pago</th>
+                                            <th style="width: 15%;" >Asistencia</th>
+                                            <th style="width: 20%;" >Acción</th>
                                         </tr>
                                     </thead>
                                 </table>
@@ -240,15 +240,15 @@ if ($_SESSION["estado"] == 'actualizado') {
                                     <thead>
                                         <tr>
                                             <th style="display: none;">ID</th>
-                                            <th>DNI</th>
-                                            <th>Nombre</th>
-                                            <th>Telefono</th>
-                                            <th>Correo</th>
-                                            <th>Fecha</th>
-                                            <th>Importe</th>
-                                            <th>Dentista</th>
-                                            <th style="margin: 43px 0 0 0;">Asistencia</th>
-                                            <th style="margin: 43px 0 0 0;">Acción</th>
+                                            <th style="width: 7%;" >DNI</th>
+                                            <th style="width: 10%;" >Nombre</th>
+                                            <th style="width: 10%;" >Telefono</th>
+                                            <th style="width: 13%;" >Correo</th>
+                                            <th style="width: 10%;" >Fecha</th>
+                                            <th style="width: 10%;" >Importe</th>
+                                            <th style="width: 10%;" >Dentista</th>
+                                            <th style="width: 15%;" >Asistencia</th>
+                                            <th style="width: 15%;" >Acción</th>
                                         </tr>
                                     </thead>
                                 </table>
@@ -270,7 +270,7 @@ if ($_SESSION["estado"] == 'actualizado') {
                                 ?>
                             </ul>
                         </div>
-                        <div class="col s12 m4 l4">
+                        <div  class="col s12 m4 l4">
                             <div id="profile-card" class="card">
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="activator" src="vista/images/gallary/3.png" alt="user bg">

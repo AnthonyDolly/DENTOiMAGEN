@@ -129,21 +129,21 @@ class consultasControladorB
                                     <input type="text" class="form-control "  
                                     name="idC" value =' . $item["ID"] . '>
                                 </td>
-                                <td>' . $item["DNI"] . '</td>
-                                <td>' . $item["Nombre"] . '</td>
-                                <td>' . $item["Telefono"] . '</td>
-                                <td>' . $item["Correo"] . '</td>
-                                <td>' . $item["Fecha"] . '</td>
-                                <td>' . $item["Importe"] . '</td>
-                                <td>' . $item["Medico"] . '</td> 
-                                <td>
+                                <td style="width: 7%;" >' . $item["DNI"] . '</td>
+                                <td style="width: 10%;" >' . $item["Nombre"] . '</td>
+                                <td style="width: 10%;" >' . $item["Telefono"] . '</td>
+                                <td style="width: 13%;" >' . $item["Correo"] . '</td>
+                                <td style="width: 10%;" >' . $item["Fecha"] . '</td>
+                                <td style="width: 10%;" >' . $item["Importe"] . '</td>
+                                <td style="width: 10%;" >' . $item["Medico"] . '</td> 
+                                <td style="width: 15%;" >
                                     <select name="asistencia">
                                         <option value="1" selected>Pendiente</option>
                                         <option value="2">Asistió</option>
                                         <option value="3">Faltó</option>
                                     </select>
                                 </td>
-                                <td>
+                                <td style="width: 15%;">
                                     <button type="submit" class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" name="actions" id="actualizar" value="actualizar">Actualizar</button>
                                 </td>
                             </tr>
@@ -171,21 +171,21 @@ class consultasControladorB
                                             <input type="text" class="form-control "  
                                             name="idC" value =' . $item["ID"] . '>
                                         </td>
-                                        <td>' . $item["DNI"] . '</td>
-                                        <td>' . $item["Nombre"] . '</td>
-                                        <td>' . $item["Telefono"] . '</td>
-                                        <td>' . $item["Correo"] . '</td>
-                                        <td>' . $item["Fecha"] . '</td>
-                                        <td>' . $item["Importe"] . '</td>
-                                        <td>' . $item["Medico"] . '</td>
-                                        <td>
+                                        <td style="width: 7%;" >' . $item["DNI"] . '</td>
+                                        <td style="width: 10%;" >' . $item["Nombre"] . '</td>
+                                        <td style="width: 10%;" >' . $item["Telefono"] . '</td>
+                                        <td style="width: 13%;" >' . $item["Correo"] . '</td>
+                                        <td style="width: 10%;" >' . $item["Fecha"] . '</td>
+                                        <td style="width: 10%;" >' . $item["Importe"] . '</td>
+                                        <td style="width: 10%;" >' . $item["Medico"] . '</td>
+                                        <td style="width: 15%;" >
                                             <select name="asistencia">
                                                 <option value="1" selected>Pendiente</option>
                                                 <option value="2">Asistió</option>
                                                 <option value="3">Faltó</option>
                                             </select>
                                         </td>
-                                        <td>
+                                        <td style="width: 15%;">
                                             <button type="submit" class="btn waves-effect waves-light gradient-45deg-light-blue-cyan" name="actions" id="actualizar" value="actualizar">Actualizar</button>
                                         </td>
                                     </tr>

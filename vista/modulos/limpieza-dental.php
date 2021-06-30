@@ -1,6 +1,6 @@
 <main>
     <section min-width="360">
-        <h4 style="padding-top: 10px;">La limpieza dental es muy importante en tu vida cotidiana, ya que se debe
+        <h4 style="padding-top: 10px; width: 75%;">La limpieza dental es muy importante en tu vida cotidiana, ya que se debe
             recurrir al odontólogo 2 veces por año.
         </h4>
         <div class="alineacion">
@@ -13,6 +13,7 @@
                     radiculares, entre otras prestaciones para una mejor salud dental.
             </div>
         </div>
+        <br>
         <br>
         <div class="alineacion">
             <div id="cuadro8">

@@ -1,7 +1,7 @@
 <main>
     <section min-width="360">
-        <h4 style="padding-top: 10px;">Los dientes no son, por naturaleza, perfectamente blancos, la mayoría de
-            la gente siente que puede mejorar su sonrisa con unos dientes más blancos, más brillantes.
+        <h4 style="padding-top: 10px; width: 75%;">Los dientes no son por naturaleza perfectamente blancos, la mayoría de
+            la gente siente que puede mejorar su sonrisa con unos dientes más blancos más brillantes.
         </h4>
         <div class="alineador">
             <div id="cuadro5">
@@ -15,6 +15,7 @@
                     estos tratamientos blanqueadores en consultorio.
             </div>
         </div>
+        <br>
         <br>
         <div class="alineador">
             <div id="cuadro6">

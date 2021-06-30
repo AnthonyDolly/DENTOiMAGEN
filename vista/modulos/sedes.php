@@ -18,7 +18,7 @@
                     </p>
                 </td>
                 <td align="end" width="50%">
-                    <img width="90%" height="33%" src="vista/image/clinica1.jpg" alt="sedes">
+                    <img style="width:470px;" src="vista/image/clinica1.jpg" alt="sedes">
                 </td>
             </tr>
         </table>
@@ -127,7 +127,7 @@
                     </p>
                 </td>
                 <td align="end" width="50%">
-                    <a href="https://www.google.com/maps/uv?pb=!1s0x9105cfebbaa8fb8d%3A0x65369b1deb7cbc55!3m1!7e115!4s%2F%2Fgeo2.ggpht.com%2Fcbk%3Fpanoid%3DXOOT7by8DDEoTylJP6GM2A%26output%3Dthumbnail%26cb_client%3Dsearch.gws-prod.gps%26thumb%3D2%26yaw%3D9.493341%26pitch%3D0%26thumbfov%3D100%26w%3D520%26h%3D175!5sdentoimagen%20peru%20-%20Buscar%20con%20Google!15sCgIgAQ&imagekey=!1e2!2sXOOT7by8DDEoTylJP6GM2A&hl=es-419"><img width="90%" height="33%" src="vista/image/ubicacion1.png" alt="sedes"></a>
+                    <a href="https://www.google.com/maps/uv?pb=!1s0x9105cfebbaa8fb8d%3A0x65369b1deb7cbc55!3m1!7e115!4s%2F%2Fgeo2.ggpht.com%2Fcbk%3Fpanoid%3DXOOT7by8DDEoTylJP6GM2A%26output%3Dthumbnail%26cb_client%3Dsearch.gws-prod.gps%26thumb%3D2%26yaw%3D9.493341%26pitch%3D0%26thumbfov%3D100%26w%3D520%26h%3D175!5sdentoimagen%20peru%20-%20Buscar%20con%20Google!15sCgIgAQ&imagekey=!1e2!2sXOOT7by8DDEoTylJP6GM2A&hl=es-419"><img style="max-width: 700px;" src="vista/image/ubicacion1.png" alt="sedes"></a>
                 </td>
             </tr>
         </table>
