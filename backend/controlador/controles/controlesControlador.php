@@ -78,10 +78,10 @@ class controlesControladorB
                         <div class="collapsible-header" style="display:block !important;padding:.2rem;">
                             <span style="font-weight:bold;">Contactar...</span>
                         </div>
-                        <div class="collapsible-body" style="display:flex;justify-content:space-around;">
-                            <p>Nombre: ' . $item["Paciente"] . '</p>
-                            <p><a style="color:black;" href="mailto:' . $item["Correo"] . '"> Correo: ' . $item["Correo"] . '</a></p>
-                            <p><a style="color:black;"href="https://api.whatsapp.com/send?phone=51' . $item["Telefono"] . '&amp;text=Hola%20' . $item["Paciente"] . '" target="_blank">Telefono: ' . $item["Telefono"] . '</a></p>
+                        <div class="collapsible-body" style="display:flex;justify-content:space-around;background: white;">
+                            <p><i class="material-icons">perm_identity</i>Nombre: ' . $item["Paciente"] . '</p>
+                            <p><i class="material-icons">email</i><a style="color:black;" href="mailto:' . $item["Correo"] . '"> Correo: ' . $item["Correo"] . '</a></p>
+                            <p><i class="material-icons">perm_phone_msg</i><a style="color:black;"href="https://api.whatsapp.com/send?phone=51' . $item["Telefono"] . '&amp;text=Hola%20' . $item["Paciente"] . '" target="_blank">Telefono: ' . $item["Telefono"] . '</a></p>
                         </div>
                     </li>
                 </ul>';
@@ -193,10 +193,10 @@ class controlesControladorB
                                 <div class="collapsible-header" style="display:block !important;padding:.2rem;">
                                     <span style="font-weight:bold;">Contactar...</span>
                                 </div>
-                                <div class="collapsible-body" style="display:flex;justify-content:space-around;">
-                                    <p>Nombre: ' . $item["Paciente"] . '</p>
-                                    <p><a style="color:black;" href="mailto:' . $item["Correo"] . '"> Correo: ' . $item["Correo"] . '</a></p>
-                                    <p><a style="color:black;"href="https://api.whatsapp.com/send?phone=51' . $item["Telefono"] . '&amp;text=Hola%20' . $item["Paciente"] . '" target="_blank">Telefono: ' . $item["Telefono"] . '</a></p>
+                                <div class="collapsible-body" style="display:flex;justify-content:space-around;background: white;">
+                                    <p><i class="material-icons">perm_identity</i>Nombre: ' . $item["Paciente"] . '</p>
+                                    <p><i class="material-icons">email</i><a style="color:black;" href="mailto:' . $item["Correo"] . '"> Correo: ' . $item["Correo"] . '</a></p>
+                                    <p><i class="material-icons">perm_phone_msg</i><a style="color:black;"href="https://api.whatsapp.com/send?phone=51' . $item["Telefono"] . '&amp;text=Hola%20' . $item["Paciente"] . '" target="_blank">Telefono: ' . $item["Telefono"] . '</a></p>
                                 </div>
                             </li>
                         </ul>';
