@@ -19,14 +19,7 @@
                         <input class="form-control w-75 mx-auto" type="Password" name="passwordI" required="" size="30">
                     </div>
                     <div class="group-submit-Login">
-                        <!-- <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
-                            data-toggle="modal" data-target="#RegisterModal"
-                            style="display: inline-block; font-size: .8em; color: #3498db;">¿No
-                            tienes cuenta? Regístrate
-                        </button> -->
-                        <input type="submit" name="btningresar" value="Ingresar"
-                            class="w-50"
-                            style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;">
+                        <input type="submit" name="btningresar" value="Ingresar" class="w-50" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;">
                     </div>
                 </div>
             </form>
@@ -54,19 +47,13 @@
                             <input type="text" class="form-control w-100 d-block" name="telefono" placeholder="Telefono" required>
                         </div>
                         <div class="group-correo-username">
-                            <input type="email" class="form-control w-100 d-block" name="correo" placeholder="Correo Electrónico" class="email"
-                                required>
+                            <input type="email" class="form-control w-100 d-block" name="correo" placeholder="Correo Electrónico" class="email" required>
                         </div>
                         <div class="group-password">
                             <input type="password" class="form-control w-100 d-block" name="password" placeholder="Contraseña" required>
                             <input type="password" class="form-control w-100 d-block" name="r-password" placeholder="Repetir contraseña" required>
                         </div>
                         <div class="group-submit">
-                            <!-- <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"
-                                data-toggle="modal" data-target="#LoginModal"
-                                style="display: inline-block; font-size: .8em; color: #3498db;">¿Ya
-                                tienes cuenta? Iniciar sesión
-                            </button> -->
                             <input type="submit" name="btnregistrar" class="w-50 mx-auto" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em; display: block;
                                       ">
                         </div>

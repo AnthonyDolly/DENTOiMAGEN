@@ -82,25 +82,24 @@ ob_start();
     <?php
 
     $ingreso = new clienteControlador();
-    $ingreso->ingresoClienteControlador();
-    $ingresoM = new medicoControlador();
-    $ingresoM->ingresoMedicoControlador();
-    $ingresoA = new asistenteControlador();
-    $ingresoA->ingresoAsistenteControlador();
+    $ingreso->ingresoControlador();
 
-    if (isset($_GET["action"])) {
-        if ($_GET["action"] == "fallo") {
-            echo "Fallo al ingresar";
-        }
+    if ($_GET["action"] == 'fallo') {
+
+        echo '
+            <script>
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Fallo en la autenticación",
+                })
+                setTimeout(() => {
+                    window.location.assign("index.php")
+                }, 1000);
+            </script>
+            ';
     }
     ?>
-
-    
-
-
-
-
-
 
 
 

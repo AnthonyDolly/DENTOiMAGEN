@@ -11,7 +11,7 @@
                     <table width="100%" bgcolor="#fff">
                         <tr>
                             <td>
-                                <a href="servicios.php">
+                                <a href="index.php?action=servicios">
                                     <h1>Servicios</h1>
                                 </a>
                                 <p>
@@ -27,7 +27,7 @@
                     <table width="100%" bgcolor="#fff">
                         <tr>
                             <td>
-                                <a href="sedes.php">
+                                <a href="index.php?action=sedes">
                                     <h1>Sedes</h1>
                                 </a>
                                 <p>
@@ -42,7 +42,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <a href="nosotros.php">
+                    <a href="index.php?action=nosotros">
                         <h1>Nosotros</h1>
                     </a>
                     <p>
