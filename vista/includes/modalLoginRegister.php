@@ -38,20 +38,26 @@
 <div class="modal fade" id="RegisterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="border: 0;">
-            <form method="post">
-                <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
+            <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
                     <h5>Registrarse</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+            <!-- <form action="" method="POST"> -->
+                <!-- <input class="form-control w-50 " type="search" name="dniConsulta" id="">
+                <button>Buscar</button> -->
+                
+            <!-- </form> -->
+            <form method="post">
                 <div style="margin-left: .2em; margin-right: .2em;">
                     <div class="form-group-register w-75 mx-auto py-4 ">
                         <div class="group-names">
-                            <input type="text" class="form-control w-100 d-block" name="dni" placeholder="DNI" required>
+                            <input type="text" class="form-control w-100 d-block dniForm" name="dni" placeholder="DNI" required>
+
                             <input type="text" class="form-control w-100 d-block" name="nombres" placeholder="Nombres" required>
                             <input type="text" class="form-control w-100 d-block" name="apellidos" placeholder="Apellidos" required>
-                            <input type="text" class="form-control w-100 d-block" name="telefono" placeholder="Telefono" required>
+                            <input type="text" minlength="9" class="form-control w-100 d-block" name="telefono" placeholder="Telefono" required>
                         </div>
                         <div class="group-correo-username">
                             <input type="email" class="form-control w-100 d-block" name="correo" placeholder="Correo Electrónico" class="email"
@@ -67,8 +73,7 @@
                                 style="display: inline-block; font-size: .8em; color: #3498db;">¿Ya
                                 tienes cuenta? Iniciar sesión
                             </button> -->
-                            <input type="submit" name="btnregistrar" class="w-50 mx-auto" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em; display: block;
-                                      ">
+                            <input type="submit" id="btnFormRegister" name="btnregistrar" class="w-50 mx-auto" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em; display: block;">
                         </div>
                     </div>
                 </div>
@@ -76,3 +81,4 @@
         </div>
     </div>
 </div>
+

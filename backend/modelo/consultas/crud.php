@@ -95,4 +95,7 @@ class DatosConsultasB extends ConexionB
             return "error";
         }
     }
+
+
+
 }

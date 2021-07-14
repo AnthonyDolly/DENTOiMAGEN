@@ -36,4 +36,24 @@ class consultaControlador
             }
         }
     }
+
+
+       //BUSCAR CLIENTE CONSULTA
+       public function buscarClienteConsultaControlador()
+       {
+           $datosControlador = $_POST["dniConsulta"];
+           $respuesta = DatosConsultas::buscarClienteConsultaModelo($datosControlador, "consultas");
+   
+           echo
+               ' 
+               <script>
+                   var dni = document.getElementsByClassName("dniForm")
+                   dni.value = "hgola"
+                   
+               </script>
+               ';
+   
+   
+   
+       }
 }

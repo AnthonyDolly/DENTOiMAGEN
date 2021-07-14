@@ -240,4 +240,8 @@ class consultasControladorB
             }
         }
     }
+
+
+
+ 
 }
