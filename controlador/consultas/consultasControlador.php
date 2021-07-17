@@ -17,12 +17,14 @@ class consultaControlador
             }
             $datosControlador = array(
                 "dni" => $_POST["dniR"],
-                "nombre" => $_POST["nombresR"] . ' ' . $_POST["apellidosR"],
+                "nombres" => $_POST["nombresR"],
+                "apellidos" => $_POST["apellidosR"],
                 "telefono" => $_POST["telefonoR"],
                 "correo" => $_POST["correoR"],
                 "fecha" => $_POST["fechaR"],
                 "precio" => 60,
                 "descripcion" => $_POST["descripcionR"],
+                "asistencia" => 'Pendiente',
                 "sede" => $_POST["sedesR"],
                 "medico" => $medico
             );
@@ -37,4 +39,25 @@ class consultaControlador
         }
     }
 
+    #Datos de los clientes de una consulta general
+    #----------------------------------------
+    public function DatosClientesConsultaControlador()
+    {
+        $respuesta = DatosConsultas::DatosClientesConsultaModelo();
+        echo '<script>
+                const pacientes = [';
+        foreach ($respuesta as $key => $item) {
+            echo   '{
+                        dni: "' . $item["DNI"] . '",
+                        nombres: "' . $item["Nombres"] . '",
+                        apellidos: "'.$item["Apellidos"].'",
+                        telefono: "' . $item["Telefono"] . '",
+                        email: "' . $item["Email"] . '",
+                    },
+                    ';
+        }
+        echo '
+                ]
+            </script>';
+    }
 }

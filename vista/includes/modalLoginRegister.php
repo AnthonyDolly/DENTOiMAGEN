@@ -41,13 +41,13 @@
                 <div style="margin-left: .2em; margin-right: .2em;">
                     <div class="form-group-register w-75 mx-auto py-4 ">
                         <div class="group-names">
-                            <input type="text" class="form-control w-100 d-block dniForm" name="dni" placeholder="DNI" required>
-                            <input type="text" class="form-control w-100 d-block" name="nombres" placeholder="Nombres" required>
-                            <input type="text" class="form-control w-100 d-block" name="apellidos" placeholder="Apellidos" required>
-                            <input type="text" minlength="9" class="form-control w-100 d-block" name="telefono" placeholder="Telefono" required>
+                            <input type="text" class="form-control w-100 d-block dniForm" name="dni" placeholder="DNI" id="dniB" required>
+                            <input type="text" class="form-control w-100 d-block" name="nombres" placeholder="Nombres" id="nombres" required>
+                            <input type="text" class="form-control w-100 d-block" name="apellidos" placeholder="Apellidos" id="apellidos" required>
+                            <input type="text" minlength="9" class="form-control w-100 d-block" name="telefono" placeholder="Telefono" id="telefono" required>
                         </div>
                         <div class="group-correo-username">
-                            <input type="email" class="form-control w-100 d-block" name="correo" placeholder="Correo Electrónico" class="email" required>
+                            <input type="email" class="form-control w-100 d-block" name="correo" placeholder="Correo Electrónico" class="email" id="email" required>
                         </div>
                         <div class="group-password">
                             <input type="password" class="form-control w-100 d-block" name="password" placeholder="Contraseña" required>
@@ -63,3 +63,31 @@
         </div>
     </div>
 </div>
+
+<script>
+    const dniB = document.getElementById('dniB');
+    const nombres = document.getElementById('nombres');
+    const apellidos = document.getElementById('apellidos');
+    const telefono = document.getElementById('telefono');
+    const email = document.getElementById('email');
+
+    const filtrar = () => {
+        const texto = dniB.value.toLowerCase();
+
+        nombres.value = '';
+        apellidos.value = '';
+        telefono.value = '';
+        email.value = '';
+
+        for (let paciente of pacientes) {
+            let dni = paciente.dni.toLowerCase()
+            if (dni.indexOf(texto) != -1) {
+                nombres.value = `${paciente.nombres}`
+                apellidos.value = `${paciente.apellidos}`
+                telefono.value = `${paciente.telefono}`
+                email.value = `${paciente.email}`
+            }
+        }
+    }
+    dniB.addEventListener('keyup', filtrar);
+</script>
