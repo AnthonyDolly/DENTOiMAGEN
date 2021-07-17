@@ -43,7 +43,6 @@ class DatosConsultasB extends ConexionB
             return "error";
         }
 
-        $st->close();
     }
 
 
@@ -95,4 +94,5 @@ class DatosConsultasB extends ConexionB
             return "error";
         }
     }
+
 }

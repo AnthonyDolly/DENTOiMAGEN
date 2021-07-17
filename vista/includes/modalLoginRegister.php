@@ -41,10 +41,10 @@
                 <div style="margin-left: .2em; margin-right: .2em;">
                     <div class="form-group-register w-75 mx-auto py-4 ">
                         <div class="group-names">
-                            <input type="text" class="form-control w-100 d-block" name="dni" placeholder="DNI" required>
+                            <input type="text" class="form-control w-100 d-block dniForm" name="dni" placeholder="DNI" required>
                             <input type="text" class="form-control w-100 d-block" name="nombres" placeholder="Nombres" required>
                             <input type="text" class="form-control w-100 d-block" name="apellidos" placeholder="Apellidos" required>
-                            <input type="text" class="form-control w-100 d-block" name="telefono" placeholder="Telefono" required>
+                            <input type="text" minlength="9" class="form-control w-100 d-block" name="telefono" placeholder="Telefono" required>
                         </div>
                         <div class="group-correo-username">
                             <input type="email" class="form-control w-100 d-block" name="correo" placeholder="Correo Electrónico" class="email" required>

@@ -31,4 +31,15 @@ class DatosConsultas extends Conexion
 
         $st->close();
     }
+
+
+        #Buscar cliente consulta para registrarlo.
+    #--------------------------------------------------------
+    public function buscarClienteConsultaModelo($datosModelo, $tabla)
+    {
+        $st = Conexion::conectar()->prepare("SELECT id, dni, nombre, telefono, correo from consultas where dni= $datosModelo;");
+        $st->execute();
+        return $st->fetch();
+       
+    }
 }

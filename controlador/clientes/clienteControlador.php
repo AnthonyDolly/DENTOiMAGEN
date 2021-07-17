@@ -20,11 +20,28 @@ class clienteControlador
             );
 
             $respuesta = Datos::registroClienteModelo($datosControlador, "clientes");
+            $respuesta2 = Datos::ingresoClienteModelo($datosControlador, "clientes");
 
             if ($respuesta == "success") {
                 header("location:index.php?action=ok");
             } else {
-                header("location:index.php");
+                if($respuesta2["id"] == $_POST["dni"]){
+                    echo'<script> 
+                        
+                        setTimeout(() => {
+                            Swal.fire({
+                                icon: "error",
+                                title: "Oops...",
+                                text: "USUARIO YA EXISTENTE!",
+                              })
+                        }, 0);
+                       
+                    </script>';
+                }
+                else{
+                    header("location:index.php");
+                }
+                
             }
         }
     }
