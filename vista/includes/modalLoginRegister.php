@@ -81,12 +81,22 @@
 
         for (let paciente of pacientes) {
             let dni = paciente.dni.toLowerCase()
-            if (dni.indexOf(texto) != -1) {
+            
+            if(dni.indexOf(texto) != -1) {
                 nombres.value = `${paciente.nombres}`
                 apellidos.value = `${paciente.apellidos}`
                 telefono.value = `${paciente.telefono}`
                 email.value = `${paciente.email}`
             }
+
+            if(dniB.value == ''){
+                nombres.value = '';
+                apellidos.value = '';
+                telefono.value = '';
+                email.value = '';
+            }
+
+            
         }
     }
     dniB.addEventListener('keyup', filtrar);
