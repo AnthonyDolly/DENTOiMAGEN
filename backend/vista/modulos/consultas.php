@@ -21,7 +21,7 @@
                                             <th>Importe</th>
                                             <th>Descripción</th>
                                             <th>Sede</th>
-                                            <th>Dentista</th>
+                                            <th>Doctor</th>
                                             <th>Asistencia</th>
                                         </tr>
                                     </thead>

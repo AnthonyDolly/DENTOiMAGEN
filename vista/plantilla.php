@@ -13,7 +13,7 @@ ob_start();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <script src="vista/apps.js"></script>
     <script src="https://kit.fontawesome.com/dbc2195786.js" crossorigin="anonymous"></script>
-    <title>Dento Imagen</title>
+    <title>MED SOLUTIONS</title>
     <script type="text/javascript" src="https://checkout.culqi.com/js/v3"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="vista/plugins/pickadate/themes/default.css">
@@ -80,7 +80,7 @@ ob_start();
 
 
     <?php
-
+    error_reporting(0);
     $ingreso = new clienteControlador();
     $ingreso->ingresoControlador();
 

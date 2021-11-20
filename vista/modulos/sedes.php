@@ -4,16 +4,16 @@
         <table width="80%">
             <tr>
                 <td width="50%">
-                    <h1>Sedes</h1> <small>DENTOiMAGEN</small>
+                    <h1>Sedes</h1> <small>SISOL</small>
                     <p>
                         <font size="5">
                             <font color="red"><b><u>Cercado de Lima</b></u></font>
-                            <p>
+                            <!-- <p>
                                 Somos un centro dedicado exclusivamente a la radiología odontológica, brindando
                                 la mayor
                                 calidad de imágenes e informes radiográficos detallados, contando con una rápida
                                 atención personalizada.
-                            <p>
+                            <p> -->
                         </font>
                     </p>
                 </td>
@@ -31,13 +31,13 @@
                 <td width="50%">
                     <font size="5">
                         <font color="red"><b><u>Los Olivos</b></u></font>
-                        <p>
+                        <!-- <p>
                             Somos un gran equipo de profesionales con alta experiencia y alto trabajo de
                             calidad,
                             contamos con dentistas especializados en todos los rubros de la odontología, en
                             busqueda de
                             ofrecer los mejores servicios con la mejor relación calidad-precio.
-                        <p>
+                        <p> -->
                     </font>
                 </td>
             </tr>
@@ -49,13 +49,13 @@
                 <td width="50%">
                     <font size="5">
                         <font color="red"><b><u>Trujillo</b></u></font>
-                        <p>
+                        <!-- <p>
                             Este nuevo centro odontológico que se encuentra en la ciudad de Trujillo cuenta con
                             las
                             mejores herramientas-maquinarias para ofrecerles un mejor servicio. También contamos
                             con los
                             mejores odontólogos de la región.
-                        <p>
+                        <p> -->
                     </font>
                 </td>
                 <td align="end" width="50%">

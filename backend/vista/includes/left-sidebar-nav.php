@@ -7,7 +7,7 @@
                 </div>
                 <div class="col col s8 m8 l8">
                     <ul id="profile-dropdown-nav" class="dropdown-content">
-                        <li>
+                        <!-- <li>
                             <a href="#" class="grey-text text-darken-1">
                                 <i class="material-icons">face</i> Profile</a>
                         </li>
@@ -23,7 +23,7 @@
                         <li>
                             <a href="#" class="grey-text text-darken-1">
                                 <i class="material-icons">lock_outline</i> Lock</a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="index.php?action=cerrar-sesion" class="grey-text text-darken-1">
                                 <i class="material-icons">keyboard_tab</i> Logout</a>
@@ -63,7 +63,7 @@
                 <li class="bold">
                     <a href="index.php?action=dentistas" class="waves-effect waves-cyan">
                         <i class="material-icons">person</i>
-                        <span class="nav-text">Dentistas</span>
+                        <span class="nav-text">Doctores</span>
                     </a>
                 </li>
                 <li class="bold">

@@ -1,9 +1,9 @@
 <main>
     <section min-width="360">
         <table width="80%">
-            <tr>
+            <tr class="">
                 <td colspan="2">
-                    <img src="vista/image/imagen3.jpg" alt="imagen de portada" width="100%" min-height="90%">
+                    <img class="py-5" src="vista/image/covid-Panamericana.jpg" alt="imagen de portada" width="100%" min-height="90%">
                 </td>
             </tr>
             <tr>
@@ -47,7 +47,7 @@
                     </a>
                     <p>
                         <font size="5">Somos un equipo especializado
-                            en la ortodoncia con un precio asequible!Puedes realizar tu consulta virtual.
+                            en la atención médica con un precio acesible! Puedes realizar tu consulta virtual.
                             ¡Ahora!
                         </font>
                     </p>

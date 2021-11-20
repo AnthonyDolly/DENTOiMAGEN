@@ -5,7 +5,7 @@ session_start();
     <div class="d-flex align-items-center content-header">
         <div class="col-4">
             <a href="index.php">
-                <img style="width: 200px;" src="vista/image/logo-clinica.svg" alt="Logo de Clinica">
+                <img style="width: 150px;" src="vista/image/logo3.png" alt="Logo de Clinica">
             </a>
         </div>
         <nav class="col-8 navigator">

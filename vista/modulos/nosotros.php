@@ -4,33 +4,42 @@
         <table width="80%">
             <tr>
                 <td width="50%">
-                    <h1>Nosotros </h1> <small>DENTOiMAGEN</small>
+                    <h1>Nosotros </h1> <small>SISOL</small>
                     <p>
                         <font size="5">
-                            Somos una Clínica especializada en tratamiento como inplantalogía oral,
+                            <!-- Somos una Clínica especializada en tratamiento como inplantalogía oral,
                             rehabilitación,
                             ortodoncia y estética. Un equipo comprometido a brindar servicios de sensibilidad,
                             cordialidad y trato humano que satisfaga todas las expectativas de nuestros
                             clientes.
                             ¡Con
-                            los más altos estándares de calidad!.
+                            los más altos estándares de calidad!. -->
+                            SISOL registró mas de 45mil consultas en solo su primer mes y a los 10 meces 1 millón
+                            de atenciones medicas. Ahora hemos adquirido nueva tecnologia que nos caracteriza 
+                            por nuestra excelente atencion inmedita, dandole la posibilidad al paciente de atenderse
+                            el mismo dia en diferentes servicios médicos. Los precios son accesibles y nuestros médicos son 
+                            excelentes especialistas con abundante experiencia.
                         </font>
 
                     </p>
                     <br>
                     <p>
                         <font size="5">
-                            Clínica fundada en el año 2015 por la Dra. Vásquez Acevedo en el distrito de los
+                            Hospital fundada en el año 2015 por la Dra. Vásquez Acevedo en el distrito de los
                             Olivos.
                             Con
                             su compañero de trabajo el Dr. Herrera García decidieron tomar juntos este trayecto
                             de
-                            implementar un sistema de atención dental con la mejor calidad de servicio.
+                            implementar un sistema de atención a la salud con la mejor calidad de servicio.
                         </font>
                     </p>
                 </td>
                 <td align="end" width="50%">
-                    <img width="90%" src="vista/image/dentista.jpg" alt="dentista">
+                <!-- vista/image/dentista.jpg" -->
+                    <img 
+                        width="90%" 
+                        src="https://www.esan.edu.pe/apuntes-empresariales/2021/06/01/1500x844_analisis_modos_efectos_fallas_aten_medica.jpg" 
+                        alt="dentista">
                 </td>
             </tr>
         </table>
@@ -39,15 +48,15 @@
         <table width="80%">
             <tr>
                 <td align="start" width="50%">
-                    <img width="90%" src="vista/image/paciente2.jpg" alt="dentista">
+                    <img width="90%" src="https://www.cdc.gov/cancer/preventinfections/images/oncologist-394.jpg" alt="dentista">
                 </td>
                 <td width="50%">
                     <h1>Objetivos </h1>
                     <p>
                         <font size="5">
                             <ul>
-                                <li>Obtener prestigio con la profesión médica y odontológica que brindamos.</li>
-                                <li>Crear un estilo propio de atención odontológica.</li>
+                                <li>Obtener prestigio con la profesión médica que brindamos.</li>
+                                <li>Crear un estilo propio de atención médica.</li>
                                 <li>Pacientes plenamente satisfechos con la atención recibida.</li>
                                 <li>Formación de un equipo de profesionales sanitarios comprometidos con la
                                     salud.
@@ -72,14 +81,15 @@
                     <font size="5" color="#fff">
                         <h1 color="#ffffff">NUESTRA MISIÓN</h1>
                         <p>
-                            Brindar el mejor servicio de calidad y con excelencia a nuestros pacientes a precios
-                            accesibles para todos ellos.
+                            Brindar el mejor servicio de calidad y con excelencia a nuestros pacientes, a traves de un 
+                            enfoque integral e innovador, promoviendo hábitos de vida saludables para fomentar la salud 
+                            y la convivencia.
                         </p>
                     </font>
                 </td>
             </tr>
             <tr>
-                <td align="center"><img width="550px" src="vista/image/girl.jpg" alt="" style="padding-top:60px"></td>
+                <td align="center"><img width="550px" src="https://www.healthychildren.org/SiteCollectionImagesArticleImages/Doctor-talking-to-mother-and-child-hospital_news.jpg" alt="" style="padding-top:60px"></td>
             </tr>
         </table>
         <br>
@@ -93,14 +103,19 @@
                     <font size="5" color="#fff">
                         <h1 color="#ffffff">NUESTRA VISIÓN</h1>
                         <p>
-                            Ser una de las clínicas dentales más grandes en el Perú, generando utilidades y ser
-                            reconocida por nuestra calidad de nuestros servicios.
+                            <!-- Ser una de las clínicas dentales más grandes en el Perú, generando utilidades y ser
+                            reconocida por nuestra calidad de nuestros servicios. -->
+                            Ser una institución integrada a la comunidad, que presta servicios de salud 
+                            integrales con estándares nacionales e internacionales, contribuyendo al 
+                            aseguramiento universal; aliado del ciudadano para su desarrollo, a través 
+                            de una vida saludable y el cuidado integral de la salud en todas las etapas 
+                            de su vida
                         </p>
                     </font>
                 </td>
             </tr>
             <tr>
-                <td align="center"> <img width="550px" src="vista/image/dentista2.jpg" alt="" style="padding-top:60px"></td>
+                <td align="center"> <img width="550px" src="https://www.cdc.gov/ncezid/es/images/division-pages/DHQP.jpg" alt="" style="padding-top:60px"></td>
             </tr>
         </table>
         <br>
@@ -128,7 +143,7 @@
                                     <h1 class="text-center mb-3 mt-2">Envíanos tu datos</h1>
                                     <div class="col-12 mb-3 d-flex">
                                         <label class="w-50" for="validationTooltip01">DNI</label>
-                                        <input type="text" class="form-control" name="dniR" id="validationTooltip01" required>
+                                        <input  type="text" class="form-control" name="dniR" id="validationTooltip01" required>
                                     </div>
                                     <div class="col-12 mb-3 d-flex">
                                         <label class="w-50" for="validationTooltip01">Nombres</label>

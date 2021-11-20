@@ -4,10 +4,10 @@
             <span>Copyright ©
                 <script type="text/javascript">
                     document.write(new Date().getFullYear());
-                </script> <a class="grey-text text-lighten-2" href="#!" target="_blank">DENTOiMAGEN</a> All
+                </script> <a class="grey-text text-lighten-2" href="#!" target="_blank">MEDSOLUTIONS</a> All
                 rights reserved.
             </span>
-            <span class="right hide-on-small-only"> Design and Developed by <a class="grey-text text-lighten-2" href="#!">Grupo 2</a></span>
+            <!-- <span class="right hide-on-small-only"> Design and Developed by <a class="grey-text text-lighten-2" href="#!">Grupo 2</a></span> -->
         </div>
     </div>
 </footer>

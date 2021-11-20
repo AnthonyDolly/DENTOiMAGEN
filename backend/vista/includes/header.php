@@ -99,7 +99,7 @@
                 ?>
                 <!-- profile-dropdown -->
                 <ul id="profile-dropdown" class="dropdown-content">
-                    <li>
+                    <!-- <li>
                         <a href="#" class="grey-text text-darken-1">
                             <i class="material-icons">face</i> Profile</a>
                     </li>
@@ -115,7 +115,7 @@
                     <li>
                         <a href="#" class="grey-text text-darken-1">
                             <i class="material-icons">lock_outline</i> Lock</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="index.php?action=cerrar-sesion" class="grey-text text-darken-1">
                             <i class="material-icons">keyboard_tab</i> Logout</a>

@@ -7,7 +7,7 @@
                         <div class="col s12 m4 l12">
                             <ul id="task-card" class="collection with-header">
                                 <li class="collection-header gradient-45deg-amber-amber">
-                                    <h4 class="task-card-title">Dentistas del sistema</h4>
+                                    <h4 class="task-card-title">Doctores del sistema</h4>
                                 </li>
                                 <table class="highlight responsive-table">
                                     <thead>
