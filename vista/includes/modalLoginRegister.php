@@ -3,8 +3,8 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="border: 0;">
             <form method="post">
-                <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
-                    <h5 class="modal-title">Iniciar Sesión</h5>
+                <div class="modal-header" style="background-color: #a30d36; margin-bottom: 1em;">
+                    <h5 style="color: #Fff;" class="modal-title">Iniciar Sesión</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -19,7 +19,7 @@
                         <input class="form-control w-75 mx-auto" type="Password" name="passwordI" required="" size="30">
                     </div>
                     <div class="group-submit-Login">
-                        <input type="submit" name="btningresar" value="Ingresar" class="w-50" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em;">
+                        <input type="submit" name="btningresar" value="Ingresar" class="w-50" style="color: white; padding: .3em 2em; background-color: #a30d36; border: 0; border-radius: .3em;">
                     </div>
                 </div>
             </form>
@@ -32,7 +32,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="border: 0;">
             <form method="post">
-                <div class="modal-header" style="background-color: skyblue; margin-bottom: 1em;">
+                <div class="modal-header" style="background-color: #a30d36; margin-bottom: 1em;">
                     <h5>Registrarse</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -54,7 +54,7 @@
                             <input type="password" class="form-control w-100 d-block" name="r-password" placeholder="Repetir contraseña" required>
                         </div>
                         <div class="group-submit">
-                            <input type="submit" name="btnregistrar" class="w-50 mx-auto" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #3498db; border: 0; border-radius: .3em; display: block;
+                            <input type="submit" name="btnregistrar" class="w-50 mx-auto" value="Registrarse" style="color: white; padding: .3em 2em; background-color: #a30d36; border: 0; border-radius: .3em; display: block;
                                       ">
                         </div>
                     </div>

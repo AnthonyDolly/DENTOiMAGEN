@@ -17,7 +17,7 @@ if ($_SESSION["estado"] == 'actualizado') {
     <script>
         Swal.fire({
             icon: "success",
-            title: "¡Consulta Actualizada!",
+            title: "Reserva Actualizada!",
             showConfirmButton: false,
             timer: 1500,
         })
@@ -38,7 +38,7 @@ if ($_SESSION["estado"] == 'actualizado') {
 
 
 
-                <div id="card-stats">
+                <!-- <div id="card-stats">
                     <div class="row mt-1">
                         <a href="index.php?action=tratamientos">
                             <div class="col s12 m6 l3">
@@ -125,14 +125,14 @@ if ($_SESSION["estado"] == 'actualizado') {
                             </div>
                         </a>
                     </div>
-                </div>
+                </div> -->
                 <div id="card-widgets">
                     <div class="row">
                         <div class="col s12 m4 l12">
                             <ul id="task-card" class="collection with-header">
                                 <li class="collection-header gradient-45deg-green-teal">
                                     <a href="index.php?action=inicio">
-                                        <h4 class="task-card-title">Citas del día</h4>
+                                        <h4 class="task-card-title">Solicitudes del día</h4>
                                     </a>
                                     <p class="task-card-date">
                                         <script type="text/javascript">
@@ -175,7 +175,7 @@ if ($_SESSION["estado"] == 'actualizado') {
                                         <tr style="width: 100%;">
                                             <th style="display: none;">ID</th>
                                             <th style="width: 9%;">DNI</th>
-                                            <th style="width: 15%;">Paciente</th>
+                                            <th style="width: 15%;">Cliente</th>
                                             <th style="width: 16%;">Fecha y Hora</th>
                                             <th style="width: 10%;">Importe</th>
                                             <th style="width: 15%;">Estado de Pago</th>
@@ -206,7 +206,7 @@ if ($_SESSION["estado"] == 'actualizado') {
                             <ul id="task-card" class="collection with-header">
                                 <li class="collection-header gradient-45deg-blue-grey-blue">
                                     <a href="index.php?action=inicio">
-                                        <h4 class="task-card-title">Consultas del día</h4>
+                                        <h4 class="task-card-title">Reservas del día</h4>
                                     </a>
                                     <p class="task-card-date">
                                         <script type="text/javascript">
@@ -252,7 +252,7 @@ if ($_SESSION["estado"] == 'actualizado') {
                                             <th style="width: 10%;">Nombre</th>
                                             <th style="width: 10%;">Fecha</th>
                                             <th style="width: 10%;">Importe</th>
-                                            <th style="width: 10%;">Doctor</th>
+                                            <th style="width: 10%;">Botones</th>
                                             <th style="width: 15%;">Asistencia</th>
                                             <th style="width: 15%;">Acción</th>
                                         </tr>

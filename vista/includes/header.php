@@ -5,7 +5,7 @@ session_start();
     <div class="d-flex align-items-center content-header">
         <div class="col-4">
             <a href="index.php">
-                <img style="width: 150px;" src="vista/image/logo3.png" alt="Logo de Clinica">
+                <img style="width: 150px;" src="vista/image/logo-hotel.png" alt="Logo de Clinica">
             </a>
         </div>
         <nav class="col-8 navigator">
@@ -48,11 +48,11 @@ session_start();
             </ul>
             <ul class="d-flex justify-content-between">
                 <li>
-                    <a href="index.php" style="background: #1089bf; color: #fff;"> <i class="fas fa-home"></i>
+                    <a href="index.php" style="background: #a30d36; color: #fff;"> <i class="fas fa-home"></i>
                         Inicio</a>
                 </li>
                 <li>
-                    <a href="index.php?action=servicios"><i class="fa fa-stethoscope fa-fw">
+                    <a href="index.php?action=servicios"><i class="fas fa-hotel"></i>
                             </i> Servicios</a>
                             <ul>
                             <li><a href="index.php?action=diseno-sonrisa">Diseño de Sonrisa</a></li>

@@ -4,7 +4,7 @@
         <table width="80%">
             <tr>
                 <td width="50%">
-                    <h1>Nosotros </h1> <small>SISOL</small>
+                    <h1>Nosotros </h1> <small>DUBAI</small>
                     <p>
                         <font size="5">
                             <!-- Somos una Clínica especializada en tratamiento como inplantalogía oral,
@@ -14,16 +14,15 @@
                             clientes.
                             ¡Con
                             los más altos estándares de calidad!. -->
-                            SISOL registró mas de 45mil consultas en solo su primer mes y a los 10 meces 1 millón
-                            de atenciones medicas. Ahora hemos adquirido nueva tecnologia que nos caracteriza 
-                            por nuestra excelente atencion inmedita, dandole la posibilidad al paciente de atenderse
-                            el mismo dia en diferentes servicios médicos. Los precios son accesibles y nuestros médicos son 
-                            excelentes especialistas con abundante experiencia.
+                            Somos una empresa acreditada por el Ministerio de Turismo, en la categoría de HOTEL TRES ESTRELLAS y con todas las certificaciones de acuerdo a las normas vigentes.
+                            Contamos con 35 habitaciones, todas ellas acondicionadas para una grata estadía, asimismo; destacamos por la atención personalizada que ofrecemos a nuestros huéspedes, garantizando el cumplimiento de cada uno de nuestros objetivos, comprometidos con ofrecer servicios de calidad. 
+                            Con el pasar de los años hemos ido innovando, logrando así posicionarnos como uno de los hoteles de prestigio en la ciudad de Lima.
+                            En nuestro Hotel Dubai, ofrecemos servicios de alojamiento cumpliendo con criterios de excelencia y responsabilidad que caracteriza nuestra sostenibilidad.
                         </font>
 
                     </p>
                     <br>
-                    <p>
+                    <!-- <p>
                         <font size="5">
                             Hospital fundada en el año 2015 por la Dra. Vásquez Acevedo en el distrito de los
                             Olivos.
@@ -32,13 +31,13 @@
                             de
                             implementar un sistema de atención a la salud con la mejor calidad de servicio.
                         </font>
-                    </p>
+                    </p> -->
                 </td>
                 <td align="end" width="50%">
                 <!-- vista/image/dentista.jpg" -->
                     <img 
                         width="90%" 
-                        src="https://www.esan.edu.pe/apuntes-empresariales/2021/06/01/1500x844_analisis_modos_efectos_fallas_aten_medica.jpg" 
+                        src="https://tecnohotelnews.com/wp-content/uploads/2019/06/mature-businessman-at-hotel-reception-PSCUC9L.jpg" 
                         alt="dentista">
                 </td>
             </tr>
@@ -48,7 +47,7 @@
         <table width="80%">
             <tr>
                 <td align="start" width="50%">
-                    <img width="90%" src="https://www.cdc.gov/cancer/preventinfections/images/oncologist-394.jpg" alt="dentista">
+                    <img width="90%" src="https://www.inoutviajes.com/fotos/20/8904_TheWestinLima-ExecutiveSuiteRoom.CrditoTheWestinLimaHotel_amp_ConventionCenter.jpg" alt="dentista">
                 </td>
                 <td width="50%">
                     <h1>Objetivos </h1>
@@ -56,10 +55,9 @@
                         <font size="5">
                             <ul>
                                 <li>Obtener prestigio con la profesión médica que brindamos.</li>
-                                <li>Crear un estilo propio de atención médica.</li>
-                                <li>Pacientes plenamente satisfechos con la atención recibida.</li>
-                                <li>Formación de un equipo de profesionales sanitarios comprometidos con la
-                                    salud.
+                                <li>Crear un estilo propio de atención .</li>
+                                <li>Clientes plenamente satisfechos con la atención recibida.</li>
+                                <li>Cubrir la necesidad del mercado Hoteleto
                                 </li>
                             </ul>
                         </font>
@@ -76,20 +74,18 @@
 
 
         <table width="80%">
-            <tr height="20" bgcolor="#52c1f3">
+            <tr height="20" bgcolor="#a30d36">
                 <td align="center">
                     <font size="5" color="#fff">
                         <h1 color="#ffffff">NUESTRA MISIÓN</h1>
                         <p>
-                            Brindar el mejor servicio de calidad y con excelencia a nuestros pacientes, a traves de un 
-                            enfoque integral e innovador, promoviendo hábitos de vida saludables para fomentar la salud 
-                            y la convivencia.
+                        Brindar un servicio hotelero de excelencia, ofreciendo a nuestros huéspedes hospitalidad, mediante un trato individualizado por un personal altamente motivado, buscando superar las expectativas de nuestros visitantes.
                         </p>
                     </font>
                 </td>
             </tr>
             <tr>
-                <td align="center"><img width="550px" src="https://www.healthychildren.org/SiteCollectionImagesArticleImages/Doctor-talking-to-mother-and-child-hospital_news.jpg" alt="" style="padding-top:60px"></td>
+                <td align="center"><img width="550px" src="https://www.turijobs.com/blog/wp-content/uploads/2018/08/recepcion-hoteles.jpg" alt="" style="padding-top:60px"></td>
             </tr>
         </table>
         <br>
@@ -98,24 +94,20 @@
 
         <!-- segundo bloque -->
         <table width="80%">
-            <tr height="20" bgcolor="#52c1f3">
+            <tr height="20" bgcolor="#a30d36">
                 <td align="center">
                     <font size="5" color="#fff">
                         <h1 color="#ffffff">NUESTRA VISIÓN</h1>
                         <p>
                             <!-- Ser una de las clínicas dentales más grandes en el Perú, generando utilidades y ser
                             reconocida por nuestra calidad de nuestros servicios. -->
-                            Ser una institución integrada a la comunidad, que presta servicios de salud 
-                            integrales con estándares nacionales e internacionales, contribuyendo al 
-                            aseguramiento universal; aliado del ciudadano para su desarrollo, a través 
-                            de una vida saludable y el cuidado integral de la salud en todas las etapas 
-                            de su vida
+                            Convertirnos en una empresa con sólido prestigio hotelero a nivel local, nacional e internacional, fomentando el desarrollo empresarial y turístico de la ciudad de Talara; ofreciendo un servicio personalizado que permita una grata estadía de nuestros clientes.Siempre comprometidos a través de la mejora continua dentro de un marco de cultura, valores y hospitalidad talareña.
                         </p>
                     </font>
                 </td>
             </tr>
             <tr>
-                <td align="center"> <img width="550px" src="https://www.cdc.gov/ncezid/es/images/division-pages/DHQP.jpg" alt="" style="padding-top:60px"></td>
+                <td align="center"> <img width="550px" src="https://2.bp.blogspot.com/-kewmJI0R5eA/WgLFe01uJ_I/AAAAAAAAAAg/tuFrTfoP-5oMa8VhCvCh0NumOVEuQ47FgCPcBGAYYCw/s1600/vstrecha-v-aeroport-1.jpg" alt="" style="padding-top:60px"></td>
             </tr>
         </table>
         <br>
@@ -124,16 +116,16 @@
 
         <!-- tercer bloque -->
         <table width="80%">
-            <tr height="20" bgcolor="#52c1f3">
+            <tr height="20" bgcolor="#a30d36">
                 <td align="center" colspan="2">
                     <font size="5" color="#fff">
-                        <h1 color="#ffffff">Agenda tu consulta</h1>
+                        <h1 color="#ffffff">Reserva tu estadía</h1>
                     </font>
                 </td>
             </tr>
             <tr>
                 <td align="center" width="50%">
-                    <img width="70%" src="vista/image/doctora.jpg" alt="dentista">
+                    <img width="70%" src="https://image.freepik.com/foto-gratis/recepcionista-hotel-femenino-uniforme-espacio-blanco_392895-17364.jpg" alt="dentista">
                 </td>
                 <td width="50%">
                     <table>
@@ -180,13 +172,13 @@
                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descripcionR"></textarea>
                                     </div>
                                     <div class="col-12 mb-3 text-center">
-                                        <input type="button" class="btn btn-primary mt-3 w-50" name="boton" id="enviar" value="Enviar" onclick="btnswalN()">
+                                        <input type="button" class="btn btn-danger mt-3 w-50" name="boton" id="enviar" value="Enviar" onclick="btnswalN()">
                                     </div>
                                     <script>
                                         function btnswalN() {
                                             Swal.fire({
                                                 icon: 'success',
-                                                title: '¡Consulta Enviada!',
+                                                title: 'Reserva Enviada!',
                                                 text: 'Nos estaremos comunicando contigo',
                                                 showConfirmButton: false,
                                             })

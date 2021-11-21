@@ -7,7 +7,7 @@
                         <div class="col s12 m4 l12">
                             <ul id="task-card" class="collection with-header">
                                 <li class="collection-header teal accent-4">
-                                    <h4 class="task-card-title">Consultas del sistema</h4>
+                                    <h4 class="task-card-title">Reservas del sistema</h4>
                                 </li>
                                 <table class="highlight responsive-table">
                                     <thead>
@@ -21,7 +21,7 @@
                                             <th>Importe</th>
                                             <th>Descripción</th>
                                             <th>Sede</th>
-                                            <th>Doctor</th>
+                                            <th>Botones</th>
                                             <th>Asistencia</th>
                                         </tr>
                                     </thead>

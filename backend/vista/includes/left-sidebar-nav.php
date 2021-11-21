@@ -42,43 +42,43 @@
                         <span class="nav-text">Tablero</span>
                     </a>
                 </li>
-                <li class="bold">
+                <!-- <li class="bold">
                     <a href="index.php?action=tratamientos" class="waves-effect waves-cyan">
                         <i class="material-icons">assignment_ind</i>
                         <span class="nav-text">Tratamientos</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="bold">
                     <a href="index.php?action=clientes" class="waves-effect waves-cyan">
                         <i class="material-icons">perm_identity</i>
                         <span class="nav-text">Clientes</span>
                     </a>
                 </li>
-                <li class="bold">
+                <!-- <li class="bold">
                     <a href="index.php?action=controles" class="waves-effect waves-cyan">
                         <i class="material-icons">event</i>
                         <span class="nav-text">Controles</span>
                     </a>
-                </li>
-                <li class="bold">
+                </li> -->
+                <!-- <li class="bold">
                     <a href="index.php?action=dentistas" class="waves-effect waves-cyan">
                         <i class="material-icons">person</i>
                         <span class="nav-text">Doctores</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="bold">
                     <a href="index.php?action=consultas" class="waves-effect waves-cyan">
                         <i class="material-icons">event_note</i>
-                        <span class="nav-text">Consultas</span>
+                        <span class="nav-text">Reservas</span>
                     </a>
                 </li>
                 <div class="divider"></div>
-                <li class="bold">
+                <!-- <li class="bold">
                     <a href="index.php?action=consultas-solicitadas" class="waves-effect waves-cyan">
                         <i class="material-icons">assignment</i>
                         <span class="nav-text">Solicitudes de consultas</span>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </li>
     </ul>

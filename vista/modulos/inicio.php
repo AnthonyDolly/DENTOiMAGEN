@@ -3,7 +3,7 @@
         <table width="80%">
             <tr class="">
                 <td colspan="2">
-                    <img class="py-5" src="vista/image/covid-Panamericana.jpg" alt="imagen de portada" width="100%" min-height="90%">
+                    <img class="py-5" src="https://www.tendenciashoy.com/wp-content/uploads/2021/09/Las-habitaciones-de-este-hotel-de-la-India-cuestan-menos-de-30-euros-la-noche.-Foto-Novotel-Ahmedabad.jpg" alt="imagen de portada" width="100%" min-height="90%">
                 </td>
             </tr>
             <tr>
@@ -11,7 +11,7 @@
                     <table width="100%" bgcolor="#fff">
                         <tr>
                             <td>
-                                <a href="index.php?action=servicios">
+                                <a style="color: #a30d36;" href="index.php?action=servicios">
                                     <h1>Servicios</h1>
                                 </a>
                                 <p>
@@ -27,7 +27,7 @@
                     <table width="100%" bgcolor="#fff">
                         <tr>
                             <td>
-                                <a href="index.php?action=sedes">
+                                <a style="color: #a30d36;" href="index.php?action=sedes">
                                     <h1>Sedes</h1>
                                 </a>
                                 <p>
@@ -42,7 +42,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <a href="index.php?action=nosotros">
+                    <!-- <a href="index.php?action=nosotros">
                         <h1>Nosotros</h1>
                     </a>
                     <p>
@@ -50,14 +50,14 @@
                             en la atención médica con un precio acesible! Puedes realizar tu consulta virtual.
                             ¡Ahora!
                         </font>
-                    </p>
+                    </p> -->
                 </td>
             </tr>
         </table>
     </section>
 
     <div class="skyblue people-list">
-        <h1 class="py-3">Nuestros pacientes</h1>
+        <h1 class="py-3">Nuestros Clientes</h1>
     </div>
 
     <div class="carousel">
@@ -73,9 +73,9 @@
                 <div class="carousel-elements">
                     <img src="vista/image/sonrisa2.jpg" alt="">
                 </div>
-                <div class="carousel-elements">
+                <!-- <div class="carousel-elements">
                     <img src="vista/image/sonrisa3.jpg" alt="">
-                </div>
+                </div> -->
                 <div class="carousel-elements">
                     <img src="vista/image/sonrisa4.jpg" alt="">
                 </div>

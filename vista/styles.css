@@ -10,7 +10,7 @@ p{
 
 /* --colors-- */
 .skyblue{   
-    background: #1089bf;
+    background: #a30d36;
 }
 .white{
     background: #fff;
@@ -75,7 +75,7 @@ main > section > table {
     font-weight: 500px  ;
 }
 .navigator ul li a:hover{
-    background: #1089bf;
+    background: #a30d36;
     color: #fff;
     cursor: pointer;
 }
@@ -84,7 +84,7 @@ main > section > table {
     color: #fff;
     font-size: .8em;
     border: 0;
-    background-color: #0394cb;
+    background-color: #a30d36;
 }
 
 .navigator ul:first-child li button:focus {
@@ -152,7 +152,7 @@ div > p > input[type = submit]:hover {
     margin-top: 5rem;
 }
 .footer-page .image-bg{
-    background-image: url(image/dentista2.jpg);
+    /* background-image: url(image/dentista2.jpg); */
     position: absolute;
     top: 0;
     left: 0;

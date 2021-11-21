@@ -4,12 +4,12 @@
     <div class="d-flex content-footer">
         <div class="col-4">
             <div>
-                <h1>Med Solutions</h1>
-                <p>C. Los Olivos 62, Los Olivos 15304</p>
+                <h1>Hotel Dubai</h1>
+                <!-- <p>C. Los Olivos 62, Los Olivos 15304</p>
                 <p><span>Horario de atención:</span> <br>
                     Lun a Vie. de 8am - 1pm y 3pm-8pm <br>
                     Sab y Dom. de 9am a 2pm
-                </p>
+                </p> -->
             </div>
         </div>
         <div class="col-4">
@@ -25,7 +25,7 @@
                     <strong>Cel: </strong> +51 924 800 500
                 </li>
                 <li>
-                    <strong>Correo: </strong> medsolutions@servicios.pe
+                    <strong>Correo: </strong> hoteldubai@servicios.pe
                 </li>
             </ul>
             <div>
@@ -45,6 +45,6 @@
         </div>
     </div>
     <div class="col-12 pt-4 pb-2">
-        <p>Todos los derechos reservados © 2020 | MEDSOLUTIONS</p>
+        <p>Todos los derechos reservados © 2020 | DUBAI</p>
     </div>
 </footer>
